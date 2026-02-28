@@ -1,0 +1,278 @@
+.wrapper {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background: #edeef1;
+  padding-top: 56px;
+}
+@media (min-width: 640px) {
+  .wrapper {
+    left: 195px;
+    width: calc(100% - 195px);
+    padding-top: 0;
+  }
+}
+
+.hero {
+  background: #050828;
+  color: #fffcff;
+  padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
+}
+.hero .label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+}
+.hero .title {
+  font-size: clamp(32px, 5.5vw, 68px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+.hero .description {
+  font-size: clamp(13px, 1.8vw, 16px);
+  font-weight: 300;
+  opacity: 0.65;
+  line-height: 2.1;
+  max-width: 520px;
+}
+
+.section {
+  padding: clamp(3rem, 7vw, 6rem) clamp(2rem, 5vw, 5rem);
+}
+
+.sectionInner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: #3364AE;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #050828;
+  margin-bottom: 1rem;
+}
+
+.sectionDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  line-height: 2;
+  color: rgba(5, 8, 40, 0.6);
+  margin-bottom: 3rem;
+  max-width: 620px;
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 639px) {
+  .valueGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.valueCard {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--box-shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.valueCard::before {
+  content: attr(data-number);
+  position: absolute;
+  top: -0.75rem;
+  right: 1rem;
+  font-size: clamp(64px, 8vw, 88px);
+  font-weight: 700;
+  color: #3364AE;
+  opacity: 0.06;
+  line-height: 1;
+  font-family: var(--font-en);
+  pointer-events: none;
+}
+.valueCard .valueTitle {
+  font-size: clamp(15px, 1.8vw, 17px);
+  font-weight: 700;
+  color: #050828;
+  margin-bottom: 0.875rem;
+}
+.valueCard .valueDesc {
+  font-size: 13px;
+  line-height: 1.9;
+  color: rgba(5, 8, 40, 0.6);
+}
+
+.servicesBg {
+  background: white;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 639px) {
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.serviceCard {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #edeef1;
+  box-shadow: var(--box-shadow-sm);
+}
+.serviceCard .serviceHeader {
+  background: #050828;
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.serviceCard .serviceNumber {
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 700;
+  color: #fffcff;
+  opacity: 0.18;
+  font-family: var(--font-en);
+  line-height: 1;
+}
+.serviceCard .serviceBody {
+  padding: 1.5rem;
+}
+.serviceCard .serviceTag {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  color: #3364AE;
+  margin-bottom: 0.5rem;
+}
+.serviceCard .serviceTitle {
+  font-size: clamp(14px, 1.8vw, 17px);
+  font-weight: 700;
+  color: #050828;
+  margin-bottom: 0.75rem;
+}
+.serviceCard .serviceDesc {
+  font-size: 13px;
+  line-height: 1.9;
+  color: rgba(5, 8, 40, 0.6);
+}
+
+.profileCard {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-sm);
+}
+.profileCard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.profileCard tr {
+  border-bottom: 1px solid #edeef1;
+}
+.profileCard tr:last-child {
+  border-bottom: none;
+}
+.profileCard th {
+  width: 28%;
+  padding: 1.25rem 1.75rem;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(5, 8, 40, 0.5);
+  background: #edeef1;
+  white-space: nowrap;
+  vertical-align: top;
+}
+@media (max-width: 639px) {
+  .profileCard th {
+    width: 36%;
+    padding: 1rem;
+    white-space: normal;
+  }
+}
+.profileCard td {
+  padding: 1.25rem 1.75rem;
+  font-size: 14px;
+  color: #050828;
+  line-height: 1.9;
+}
+@media (max-width: 639px) {
+  .profileCard td {
+    padding: 1rem;
+    font-size: 13px;
+  }
+}
+
+.cta {
+  background: #050828;
+  color: #fffcff;
+  text-align: center;
+  padding: clamp(4rem, 8vw, 7rem) 2rem;
+}
+.cta .ctaLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+}
+.cta .ctaTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.cta .ctaDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  opacity: 0.55;
+  margin-bottom: 3rem;
+  line-height: 2.1;
+}
+
+.ctaButton {
+  color: #D95911;
+  border: solid 2px #D95911;
+  position: relative;
+  transition: color 0.4s cubic-bezier(1, 0, 0, 1);
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50rem;
+  display: inline-block;
+}
+.ctaButton::before {
+  content: "";
+  background-color: #D95911;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.ctaButton:hover {
+  color: #fffcff;
+}
+.ctaButton:hover::before {
+  clip-path: inset(0);
+}/*# sourceMappingURL=About.module.css.map */

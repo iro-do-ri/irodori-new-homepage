@@ -1,0 +1,54 @@
+@use "./_variables" as *;
+
+.container {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    @include sm {
+        left: 195px;
+        width: calc(100% - 195px);
+        padding: calc($space_sm)*10 clamp(2rem, 5vw, 4rem);
+    }
+    .contact {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: var(--spacing-xl);
+        background: var(--background);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        box-shadow: var(--box-shadow-sm);
+        .img {
+            margin: -24px -24px 24px;
+            aspect-ratio: 16 / 9;
+        }
+    h1 {
+        line-height: 1.2;
+        font-size: clamp(20px,5vw,32px);
+        font-weight: bold;
+    }
+    h2 {
+        line-height: 1.4;
+        font-size: clamp(20px,4.2vw,24px);
+        font-weight: bold;
+        padding-bottom: var(--spacing-md);
+        border-bottom: 1px solid $bg-color;
+    }
+    form {
+    input,textarea {
+        background: $bg-color;
+        border-radius: var(--radius-xs);
+    }
+    button {
+        background: var(--maincolor);
+        color: var(--background);
+        padding: var(--spacing-md);
+        border-radius: var(--radius-xs);
+    }
+}
+}
+}

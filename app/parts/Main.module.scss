@@ -1,0 +1,227 @@
+@use "./_variables" as *;
+
+@import './Footer.module.scss';
+@import './Header.module.scss';
+@import './Page.module.scss';
+
+
+.main {position: relative;left: 0;width: 100%;
+@include sm {
+    left: 195px;
+    width: calc(100% - 195px);
+}
+padding-top: 56px;
+@include sm { padding-top: 0; }
+}
+
+.container {
+    h1,h2,h3,p,span,button,a,li {
+        color: $main-color;
+    }
+    section {
+        height: 100dvh;
+    }
+    h1 {
+        top: clamp(76px, 22vw, 140px);
+        left: calc($space)*30;
+        right: calc($space)*30;
+        line-height: 1.2;
+        font-size: clamp(24px,5.5vw,80px);
+        font-weight: bold;
+        @include sm {
+            top: calc($space)*20;
+            left: calc($space)*20;
+            right: auto;
+        }
+    }
+    h2 {
+        line-height: 1.4;
+        font-size: clamp(22px,4.2vw,48px);
+        font-weight: bold;
+    }
+    h3 {
+        line-height: 1.4;
+        font-size: clamp(18px,3.8vw,24px);
+        font-weight: bold;
+    }
+    .contact { color: $contact-color;
+               border: solid 2px $contact-color;
+               position: relative;
+               transition: color 0.4s $cubic-bezier;
+               z-index: 1;
+               overflow: hidden;
+               border-radius: 50rem;
+               &::before {
+                content: "";
+                background-color: #D95911;
+                background-size: contain;
+                display: block;
+                position: absolute;
+                z-index: -1;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                clip-path: inset(0 100% 0 0);
+                transition: clip-path 0.4s $cubic-bezier;
+               }
+               &:hover {
+                color: $main-color;
+                transition: color 0.4s $cubic-bezier;
+                &::before {
+                    clip-path: inset(0);
+                    transition: clip-path 0.4s $cubic-bezier;
+                    }
+               }
+            }
+    p {line-height: 1.6;}
+    // top
+    .top {
+        span {
+            font-size: clamp(14px,2.12vw,16px);
+            line-height: 1.6;
+            @include sm {
+                line-height: 1;
+            }
+        }
+        .subText {
+            bottom: calc($space_sm)*30;
+            left: calc($space)*30;
+            right: calc($space)*30;
+            @include sm {
+                bottom: calc($space)*20;
+                left: calc($space)*20;
+                right: auto;
+            }
+        }
+    }
+    // news
+    .news {
+        opacity: 0;
+        .newsContainer {
+            position: absolute;
+            top: calc($space)*20;
+            left: calc($space)*20;
+            right: calc($space)*20;
+            @media (max-width: 639px) {
+                top: clamp(76px, 20vw, 120px);
+                left: 5vw;
+                right: 5vw;
+            }
+        }
+    }
+    .company,.price,.works,.footer {
+        .contentsContainer {
+            position: absolute;
+            top: calc($space)*20;
+            left: calc($space)*20;
+            right: calc($space)*20;
+            @media (max-width: 639px) {
+                top: clamp(76px, 20vw, 120px);
+                left: 5vw;
+                right: 5vw;
+            }
+            .newsList {
+                article {
+                    span {width: 9vw;height: 4vw;background-color: #050828; display: inline-block; min-width: 100px; min-height: 50px;}
+                }
+            }
+        }
+    }
+
+    .curtain {
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path .8s ease;
+        &.company {
+            background-color: rgb(5,8,40,0.9);
+        }
+        &.price {
+            background-color: rgba(12, 18, 92, 0.9);
+        }
+         &.works {
+            background-color: rgba(18, 29, 145, 0.9);
+        }
+        &.clipPathAnimation {
+            clip-path: inset(0 0 0 0);
+            transition: clip-path .8s ease;
+        }
+    }
+
+    .button { color: $button-color;
+        border: solid 2px $button-color;
+        position: relative;
+        transition: color 0.4s $cubic-bezier;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 50rem;
+        &::before {
+         content: "";
+         background-color: $button-color;
+         background-size: contain;
+         display: block;
+         position: absolute;
+         z-index: -1;
+         height: 100%;
+         width: 100%;
+         left: 0;
+         top: 0;
+         clip-path: inset(0 100% 0 0);
+         transition: clip-path 0.4s $cubic-bezier;
+        }
+        &:hover {
+         color: $main-color;
+         transition: color 0.4s $cubic-bezier;
+         &::before {
+             clip-path: inset(0);
+             transition: clip-path 0.4s $cubic-bezier;
+             }
+        }
+     }
+}
+
+.newsList {
+    li {
+        max-height: 80px;
+        display: flex;
+        align-items: center;
+        @media (max-width: 639px) {
+            max-height: none;
+            align-items: flex-start;
+        }
+        article {
+            max-height: 80px;
+            @media (max-width: 639px) {
+                max-height: none;
+            }
+            a {
+                flex-wrap: wrap;
+                .img {
+                    width: 8vw;
+                    max-width: 160px;
+                    min-width: 100px;
+                    min-height: 50px;
+                    -o-object-position: center;
+                    object-position: center;
+                    -o-object-fit: contain;
+                    object-fit: contain;
+                    overflow: hidden;
+                    display: inline-flex;
+                    align-items: center;
+                    aspect-ratio: 16 / 9;
+                    @media (max-width: 639px) {
+                        width: 80px;
+                        min-width: 80px;
+                        min-height: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Blog {
+    background-color: #D95911;
+}
+.News {
+    background-color: #D95911;
+}

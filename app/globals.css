@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  html { line-height: 1 }
+  body { line-height: inherit; }
+}
+
+:root {
+  --background: #ffffff;
+  --color: #171717;
+  --maincolor: #3364AE;
+  --font-en: var(--font-Montserrat);
+  --font-ja: var(--font-Murecho);
+  --spacing-xl: 36px;
+  --spacing-lg: 24px;
+  --spacing-md: 16px;
+  --spacing-sm: 12px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --radius-xs: 4px;
+  --box-shadow-sm: 0px 2px 4px -1px rgba(0, 0, 0, 0.08), 0px 1px 3px -2px rgba(0, 0, 0, 0.03);
+}
+
+html {
+  background: var(--background);
+  color: var(--color);
+  font-family: var(--font-en), var(--font-ja), sans-serif;
+}
+
+p,span,h1,h2,h3 {
+  letter-spacing: .05em;
+}
+
+p {
+  font-size: clamp(14px,4vw,18px);
+}
+
+span {
+  font-size: clamp(12px,4vw,14px);
+}
+
+time {
+  font-size: 12px;
+}
+
+/* Splide — works セクション（ダーク背景）用カスタマイズ */
+.splide__arrow {
+  background: rgba(255, 252, 255, 0.15);
+}
+.splide__arrow svg {
+  fill: #fffcff;
+}
+.splide__arrow:hover {
+  background: rgba(255, 252, 255, 0.3);
+}
+.splide__pagination__page {
+  background: rgba(255, 252, 255, 0.4);
+}
+.splide__pagination__page.is-active {
+  background: #fffcff;
+}

@@ -1,0 +1,14 @@
+$contact-color: #D95911;
+$button-color: #3364AE;
+$text-color: #050828;
+$main-color: #fffcff;
+$cubic-bezier :cubic-bezier(1, 0, 0, 1);
+$space: .25vw;
+$space_sm: .55vw;
+$bg-color: #edeef1;
+
+@mixin sm {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }

@@ -1,0 +1,133 @@
+@use "./_variables" as *;
+
+.header {
+    background-color: #fffcff;
+    span:first-child {
+        font-size: clamp(16px,4vw,24px);
+        font-weight: 400;
+    }
+    span {
+        font-size: clamp(12px,4vw,12px);
+        font-weight: 300;
+    }
+}
+
+// ── モバイルトップバー ────────────────────────────
+.mobileBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 56px;
+    background: $main-color;
+    border-bottom: 1px solid rgba(5, 8, 40, 0.1);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+}
+
+.mobileLogo {
+    font-size: 18px;
+    font-weight: 700;
+    color: $text-color;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+}
+
+// ── ハンバーガーボタン ────────────────────────────
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.bar1, .bar2, .bar3 {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: $text-color;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bar1Active {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: $text-color;
+    border-radius: 2px;
+    transform: translateY(7px) rotate(45deg);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bar2Active {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: $text-color;
+    border-radius: 2px;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.bar3Active {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: $text-color;
+    border-radius: 2px;
+    transform: translateY(-7px) rotate(-45deg);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+// ── オーバーレイ ──────────────────────────────────
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: rgba(5, 8, 40, 0.45);
+    backdrop-filter: blur(2px);
+}
+
+// ── ドロワー ──────────────────────────────────────
+.drawer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 300px;
+    height: 100%;
+    background: $main-color;
+    padding: 5rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px 0 24px rgba(5, 8, 40, 0.12);
+}
+
+.drawerLink {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid rgba(5, 8, 40, 0.07);
+    text-decoration: none;
+    color: $text-color;
+
+    span:first-child {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+    }
+
+    span:last-child {
+        font-size: 11px;
+        font-weight: 300;
+        opacity: 0.5;
+    }
+}

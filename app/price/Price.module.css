@@ -1,0 +1,321 @@
+@charset "UTF-8";
+.wrapper {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background: #edeef1;
+  padding-top: 56px;
+}
+@media (min-width: 640px) {
+  .wrapper {
+    left: 195px;
+    width: calc(100% - 195px);
+    padding-top: 0;
+  }
+}
+
+.hero {
+  background: #050828;
+  color: #fffcff;
+  padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
+}
+.hero .label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+}
+.hero .title {
+  font-size: clamp(32px, 5.5vw, 68px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+}
+.hero .description {
+  font-size: clamp(13px, 1.8vw, 16px);
+  font-weight: 300;
+  opacity: 0.65;
+  line-height: 2.1;
+  max-width: 520px;
+}
+
+.section {
+  padding: clamp(3rem, 7vw, 6rem) clamp(2rem, 5vw, 5rem);
+}
+
+.sectionInner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: #3364AE;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #050828;
+  margin-bottom: 1rem;
+}
+
+.sectionDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  line-height: 2;
+  color: rgba(5, 8, 40, 0.6);
+  margin-bottom: 3rem;
+  max-width: 620px;
+}
+
+.conceptCard {
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--box-shadow-sm);
+  padding: 2.5rem;
+  border-left: 4px solid #3364AE;
+}
+.conceptCard .conceptTitle {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  color: #050828;
+  margin-bottom: 1rem;
+}
+.conceptCard .conceptDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  line-height: 2;
+  color: rgba(5, 8, 40, 0.65);
+}
+
+.plansBg {
+  background: white;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+@media (max-width: 639px) {
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.planCard {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #edeef1;
+  box-shadow: var(--box-shadow-sm);
+  position: relative;
+}
+.planCard.featured {
+  background: #050828;
+  transform: scale(1.03);
+}
+@media (max-width: 639px) {
+  .planCard.featured {
+    transform: none;
+  }
+}
+.planCard.featured .planHeader {
+  background: rgba(51, 100, 174, 0.3);
+}
+.planCard.featured .planName,
+.planCard.featured .planPrice,
+.planCard.featured .planUnit,
+.planCard.featured .planDesc,
+.planCard.featured .featureItem {
+  color: #fffcff;
+}
+.planCard.featured .featureItem::before {
+  color: #3364AE;
+  opacity: 1;
+}
+.planCard.featured .planDivider {
+  border-color: rgba(255, 252, 255, 0.15);
+}
+.planCard .featuredBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #3364AE;
+  color: #fffcff;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50rem;
+}
+.planCard .planHeader {
+  background: rgba(5, 8, 40, 0.06);
+  padding: 2rem 1.75rem 1.5rem;
+}
+.planCard .planType {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: #3364AE;
+  margin-bottom: 0.75rem;
+}
+.planCard .planName {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  color: #050828;
+  margin-bottom: 1.25rem;
+}
+.planCard .planPriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+.planCard .planPrice {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  color: #050828;
+  font-family: var(--font-en);
+  line-height: 1;
+}
+.planCard .planUnit {
+  font-size: 13px;
+  color: rgba(5, 8, 40, 0.5);
+}
+.planCard .planBody {
+  padding: 1.5rem 1.75rem 2rem;
+}
+.planCard .planDesc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(5, 8, 40, 0.6);
+  margin-bottom: 1.25rem;
+}
+.planCard .planDivider {
+  border: none;
+  border-top: 1px solid rgba(5, 8, 40, 0.08);
+  margin-bottom: 1.25rem;
+}
+.planCard .featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.planCard .featureItem {
+  font-size: 13px;
+  color: rgba(5, 8, 40, 0.75);
+  padding-left: 1.25rem;
+  position: relative;
+}
+.planCard .featureItem::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #3364AE;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--box-shadow-sm);
+  overflow: hidden;
+}
+.faqItem .faqQ {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.faqItem .faqQ .qMark {
+  flex-shrink: 0;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  color: #3364AE;
+  font-family: var(--font-en);
+  line-height: 1.4;
+}
+.faqItem .faqQ .qText {
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 700;
+  color: #050828;
+  line-height: 1.5;
+}
+.faqItem .faqA {
+  padding: 0 1.75rem 1.5rem 1.75rem;
+  padding-left: 3.75rem;
+}
+.faqItem .faqA p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: rgba(5, 8, 40, 0.65);
+}
+
+.cta {
+  background: #050828;
+  color: #fffcff;
+  text-align: center;
+  padding: clamp(4rem, 8vw, 7rem) 2rem;
+}
+.cta .ctaLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+}
+.cta .ctaTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.cta .ctaDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  opacity: 0.55;
+  margin-bottom: 3rem;
+  line-height: 2.1;
+}
+
+.ctaButton {
+  color: #D95911;
+  border: solid 2px #D95911;
+  position: relative;
+  transition: color 0.4s cubic-bezier(1, 0, 0, 1);
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50rem;
+  display: inline-block;
+}
+.ctaButton::before {
+  content: "";
+  background-color: #D95911;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.ctaButton:hover {
+  color: #fffcff;
+}
+.ctaButton:hover::before {
+  clip-path: inset(0);
+}/*# sourceMappingURL=Price.module.css.map */

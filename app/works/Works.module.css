@@ -1,0 +1,188 @@
+.wrapper {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background: #edeef1;
+  padding-top: 56px;
+}
+@media (min-width: 640px) {
+  .wrapper {
+    left: 195px;
+    width: calc(100% - 195px);
+    padding-top: 0;
+  }
+}
+
+.hero {
+  background: #050828;
+  color: #fffcff;
+  padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
+}
+.hero .label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+}
+.hero .title {
+  font-size: clamp(32px, 5.5vw, 68px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.hero .description {
+  font-size: clamp(13px, 1.8vw, 16px);
+  font-weight: 300;
+  opacity: 0.65;
+  line-height: 2.1;
+}
+
+.section {
+  padding: clamp(3rem, 7vw, 5rem) clamp(2rem, 5vw, 5rem);
+}
+
+.sectionInner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: #3364AE;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #050828;
+  margin-bottom: 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 639px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  text-decoration: none;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 24px -4px rgba(0, 0, 0, 0.12);
+}
+.card:hover .cardImage img {
+  transform: scale(1.06);
+}
+.card .cardImage {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.card .cardImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.card .cardBody {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+.card .cardCategory {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #3364AE;
+  margin-bottom: 0.5rem;
+}
+.card .cardTitle {
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 700;
+  color: #050828;
+  line-height: 1.5;
+}
+
+.cta {
+  background: #050828;
+  color: #fffcff;
+  text-align: center;
+  padding: clamp(4rem, 8vw, 7rem) 2rem;
+}
+.cta .ctaLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+}
+.cta .ctaTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.cta .ctaDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  opacity: 0.55;
+  margin-bottom: 3rem;
+  line-height: 2.1;
+}
+
+.ctaButton {
+  color: #D95911;
+  border: solid 2px #D95911;
+  position: relative;
+  transition: color 0.4s cubic-bezier(1, 0, 0, 1);
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50rem;
+  display: inline-block;
+}
+.ctaButton::before {
+  content: "";
+  background-color: #D95911;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.ctaButton:hover {
+  color: #fffcff;
+}
+.ctaButton:hover::before {
+  clip-path: inset(0);
+}
+
+.empty {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: rgba(5, 8, 40, 0.4);
+  font-size: 14px;
+}/*# sourceMappingURL=Works.module.css.map */

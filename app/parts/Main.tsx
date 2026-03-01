@@ -29,7 +29,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const HTMLElement = textRef_3.current;
+      const el = textRef_3.current;
       if (!el) return;
   
       // ニュースの初期位置（wrapper 内の Y）を取得

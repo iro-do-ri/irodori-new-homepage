@@ -77,7 +77,6 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
         end: "+=100%",
         pin: true,
         anticipatePin: 1,
-        markers: true,
         scrub: true,
         snap: 1,
   

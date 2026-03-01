@@ -23,13 +23,13 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
   // GSAP
   const textRef = useRef(null);
   const textRef_2 = useRef(null);
-  const textRef_3 = useRef(null);
+  const textRef_3 = useRef<HTMLDivElement | null>(null);
   const companyRef = useRef(null);
   const wrapperRef = useRef(null);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const el = textRef_3.current;
+      const HTMLElement = textRef_3.current;
       if (!el) return;
   
       // ニュースの初期位置（wrapper 内の Y）を取得

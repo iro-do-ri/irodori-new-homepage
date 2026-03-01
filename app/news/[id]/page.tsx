@@ -4,9 +4,16 @@ import Contact  from "./Contact";
 import page from "@/app/parts/_Page.module.scss";
 
 
-export default async function NewsDetail ({params}) {
-    const { id } = await params
-    const data = await client.get({ endpoint: "news",contentId: id})
+export default async function NewsDetail({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const { id } = params;
+  const data = await client.get({
+    endpoint: "news",
+    contentId: id,
+  });
 
     return (
   <section className={`${page.page} relative`}>

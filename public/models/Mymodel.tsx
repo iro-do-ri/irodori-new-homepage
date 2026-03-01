@@ -3,8 +3,11 @@
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useEffect } from "react";
 import * as THREE from "three";
+import { ThreeElements } from "@react-three/fiber";
 
-export default function MyModel(props) {
+export default function MyModel(
+  props: ThreeElements["group"]
+) {
   const { scene, animations } = useGLTF("/models/my-model.glb");
   const { actions } = useAnimations(animations, scene);
 

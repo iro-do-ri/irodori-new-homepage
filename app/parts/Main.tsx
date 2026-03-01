@@ -100,7 +100,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
           }
         },
       });
-      gsap.utils.toArray(`.${styles.curtain}`).forEach((el) => {
+      gsap.utils.toArray<HTMLElement>(`.${styles.curtain}`).forEach((el) => {
         ScrollTrigger.create({
           trigger: el,
           start: "top -20%",

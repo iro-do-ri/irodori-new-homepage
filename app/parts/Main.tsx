@@ -103,7 +103,6 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
         ScrollTrigger.create({
           trigger: el,
           start: "top -20%",
-          markers: true,
           scrub: true,
           onEnter: () => {
             el.classList.add(styles.clipPathAnimation);

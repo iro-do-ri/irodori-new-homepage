@@ -7,9 +7,10 @@ import page from "@/app/parts/_Page.module.scss";
 export default async function NewsDetail({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const { id } = params;
+  const { id } = await params;
+
   const data = await client.get({
     endpoint: "news",
     contentId: id,

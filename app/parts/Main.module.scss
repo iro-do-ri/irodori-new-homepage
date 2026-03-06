@@ -5,13 +5,16 @@
 @import './Page.module.scss';
 
 
-.main {position: relative;left: 0;width: 100%;
-@include sm {
-    left: 195px;
-    width: calc(100% - 195px);
-}
-padding-top: 56px;
-@include sm { padding-top: 0; }
+.main {
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding-top: 56px;
+    @include sm {
+        left: 195px;
+        width: calc(100% - 195px);
+        padding-top: 0;
+    }
 }
 
 .container {
@@ -21,109 +24,124 @@ padding-top: 56px;
     section {
         height: 100dvh;
     }
+
+    // ── H1 ──
     h1 {
-        top: clamp(76px, 22vw, 140px);
-        left: calc($space)*30;
-        right: calc($space)*30;
-        line-height: 1.2;
-        font-size: clamp(24px,5.5vw,80px);
+        top: clamp(80px, 18vw, 140px);
+        left: 5vw;
+        right: 5vw;
+        line-height: 1.25;
+        font-size: clamp(22px, 5.5vw, 80px);
         font-weight: bold;
         @include sm {
-            top: calc($space)*20;
-            left: calc($space)*20;
+            top: 5vw;
+            left: 5vw;
             right: auto;
+            font-size: clamp(28px, 5.5vw, 80px);
         }
     }
+
     h2 {
         line-height: 1.4;
-        font-size: clamp(22px,4.2vw,48px);
+        font-size: clamp(18px, 4.2vw, 48px);
         font-weight: bold;
     }
     h3 {
         line-height: 1.4;
-        font-size: clamp(18px,3.8vw,24px);
+        font-size: clamp(14px, 3.2vw, 24px);
         font-weight: bold;
     }
-    .contact { color: $contact-color;
-               border: solid 2px $contact-color;
-               position: relative;
-               transition: color 0.4s $cubic-bezier;
-               z-index: 1;
-               overflow: hidden;
-               border-radius: 50rem;
-               &::before {
-                content: "";
-                background-color: #D95911;
-                background-size: contain;
-                display: block;
-                position: absolute;
-                z-index: -1;
-                height: 100%;
-                width: 100%;
-                left: 0;
-                top: 0;
-                clip-path: inset(0 100% 0 0);
+
+    .contact {
+        color: $contact-color;
+        border: solid 2px $contact-color;
+        position: relative;
+        transition: color 0.4s $cubic-bezier;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 50rem;
+        &::before {
+            content: "";
+            background-color: #D95911;
+            background-size: contain;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 0.4s $cubic-bezier;
+        }
+        &:hover {
+            color: $main-color;
+            transition: color 0.4s $cubic-bezier;
+            &::before {
+                clip-path: inset(0);
                 transition: clip-path 0.4s $cubic-bezier;
-               }
-               &:hover {
-                color: $main-color;
-                transition: color 0.4s $cubic-bezier;
-                &::before {
-                    clip-path: inset(0);
-                    transition: clip-path 0.4s $cubic-bezier;
-                    }
-               }
-            }
-    p {line-height: 1.6;}
-    // top
-    .top {
-        span {
-            font-size: clamp(14px,2.12vw,16px);
-            line-height: 1.6;
-            @include sm {
-                line-height: 1;
             }
         }
+    }
+
+    p { line-height: 1.7; font-size: clamp(13px, 2vw, 16px); }
+
+    // ── TOP セクション ──
+    .top {
+        span {
+            font-size: clamp(13px, 2vw, 16px);
+            line-height: 1.7;
+        }
         .subText {
-            bottom: calc($space_sm)*30;
-            left: calc($space)*30;
-            right: calc($space)*30;
+            bottom: clamp(24px, 10vw, 80px);
+            left: 5vw;
+            right: 5vw;
             @include sm {
-                bottom: calc($space)*20;
-                left: calc($space)*20;
+                bottom: 5vw;
+                left: 5vw;
                 right: auto;
             }
         }
     }
-    // news
+
+    // ── NEWS セクション ──
     .news {
         opacity: 0;
         .newsContainer {
             position: absolute;
-            top: calc($space)*20;
-            left: calc($space)*20;
-            right: calc($space)*20;
-            @media (max-width: 639px) {
-                top: clamp(76px, 20vw, 120px);
+            top: clamp(72px, 16vw, 120px);
+            left: 5vw;
+            right: 5vw;
+            @include sm {
+                top: 5vw;
                 left: 5vw;
                 right: 5vw;
             }
         }
     }
-    .company,.price,.works,.footer {
+
+    // ── COMPANY / PRICE / WORKS セクション ──
+    .company, .price, .works, .footer {
         .contentsContainer {
             position: absolute;
-            top: calc($space)*20;
-            left: calc($space)*20;
-            right: calc($space)*20;
-            @media (max-width: 639px) {
-                top: clamp(76px, 20vw, 120px);
+            top: clamp(72px, 16vw, 120px);
+            left: 5vw;
+            right: 5vw;
+            @include sm {
+                top: 5vw;
                 left: 5vw;
                 right: 5vw;
             }
             .newsList {
                 article {
-                    span {width: 9vw;height: 4vw;background-color: #050828; display: inline-block; min-width: 100px; min-height: 50px;}
+                    span {
+                        width: 9vw;
+                        height: 4vw;
+                        background-color: #050828;
+                        display: inline-block;
+                        min-width: 100px;
+                        min-height: 50px;
+                    }
                 }
             }
         }
@@ -132,22 +150,17 @@ padding-top: 56px;
     .curtain {
         clip-path: inset(0 100% 0 0);
         transition: clip-path .8s ease;
-        &.company {
-            background-color: rgb(5,8,40,0.9);
-        }
-        &.price {
-            background-color: rgba(12, 18, 92, 0.9);
-        }
-         &.works {
-            background-color: rgba(18, 29, 145, 0.9);
-        }
+        &.company  { background-color: rgb(5,8,40,0.9); }
+        &.price    { background-color: rgba(12, 18, 92, 0.9); }
+        &.works    { background-color: rgba(18, 29, 145, 0.9); }
         &.clipPathAnimation {
             clip-path: inset(0 0 0 0);
             transition: clip-path .8s ease;
         }
     }
 
-    .button { color: $button-color;
+    .button {
+        color: $button-color;
         border: solid 2px $button-color;
         position: relative;
         transition: color 0.4s $cubic-bezier;
@@ -155,63 +168,65 @@ padding-top: 56px;
         overflow: hidden;
         border-radius: 50rem;
         &::before {
-         content: "";
-         background-color: $button-color;
-         background-size: contain;
-         display: block;
-         position: absolute;
-         z-index: -1;
-         height: 100%;
-         width: 100%;
-         left: 0;
-         top: 0;
-         clip-path: inset(0 100% 0 0);
-         transition: clip-path 0.4s $cubic-bezier;
+            content: "";
+            background-color: $button-color;
+            background-size: contain;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 0.4s $cubic-bezier;
         }
         &:hover {
-         color: $main-color;
-         transition: color 0.4s $cubic-bezier;
-         &::before {
-             clip-path: inset(0);
-             transition: clip-path 0.4s $cubic-bezier;
-             }
+            color: $main-color;
+            transition: color 0.4s $cubic-bezier;
+            &::before {
+                clip-path: inset(0);
+                transition: clip-path 0.4s $cubic-bezier;
+            }
         }
-     }
+    }
 }
 
+// ── ニュース一覧 ──
 .newsList {
     li {
-        max-height: 80px;
+        max-height: none;
         display: flex;
-        align-items: center;
-        @media (max-width: 639px) {
-            max-height: none;
-            align-items: flex-start;
+        align-items: flex-start;
+        @include sm {
+            max-height: 80px;
+            align-items: center;
         }
         article {
-            max-height: 80px;
-            @media (max-width: 639px) {
-                max-height: none;
+            max-height: none;
+            width: 100%;
+            @include sm {
+                max-height: 80px;
             }
             a {
                 flex-wrap: wrap;
+                gap: 8px 0;
                 .img {
-                    width: 8vw;
-                    max-width: 160px;
-                    min-width: 100px;
-                    min-height: 50px;
-                    -o-object-position: center;
+                    width: 72px;
+                    min-width: 72px;
+                    min-height: 40px;
                     object-position: center;
-                    -o-object-fit: contain;
-                    object-fit: contain;
+                    object-fit: cover;
                     overflow: hidden;
                     display: inline-flex;
                     align-items: center;
                     aspect-ratio: 16 / 9;
-                    @media (max-width: 639px) {
-                        width: 80px;
-                        min-width: 80px;
-                        min-height: 45px;
+                    flex-shrink: 0;
+                    @include sm {
+                        width: 8vw;
+                        max-width: 160px;
+                        min-width: 100px;
+                        min-height: 50px;
                     }
                 }
             }

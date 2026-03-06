@@ -138,7 +138,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
                           <li key={news.id} className="mb-4">
                             <article>
                               <Link href={`news/${news.id}`} className="inline-flex items-center">
-                                <span className={`${styles.img} mr-4`}><img src={news.img?.url??"https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"}/></span>
+                                <span className={`${styles.img} mr-4`}><img src={news.img?.url??"https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"} alt={news.title}/></span>
                                 <span className={`${news.category} p-4 mr-4`}>{news.category}</span>
                                 <div className="flex flex-col">
                                 <time>{new Date(news.publishedAt).toLocaleDateString("ja-JP")}</time>
@@ -192,7 +192,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
                     <SplideSlide key={work.id}>
                       <div className="overflow-hidden">
                         <div className="aspect-video overflow-hidden mb-3">
-                          <img src={work.image.url} alt={work.title} className="w-full h-full object-cover" />
+                          <img src={work.image.url} alt={`${work.title}のホームページ制作実績｜イロドリ`} className="w-full h-full object-cover" />
                         </div>
                         <span className="inline-block text-xs px-2 py-1 mb-2 border border-white/40 rounded-full">
                           {work.category}

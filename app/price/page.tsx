@@ -1,7 +1,30 @@
+import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import styles from "./Price.module.scss";
+
+export const metadata: Metadata = {
+  title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+  description:
+    "ホームページ制作の料金はライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。船橋・千葉の中小企業向けに明瞭会計でご提供します。",
+  alternates: { canonical: "https://iro-do-ri.jp/price" },
+  openGraph: {
+    title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+    description:
+      "ホームページ制作の料金はライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。船橋・千葉の中小企業向けに明瞭会計でご提供します。",
+    url: "https://iro-do-ri.jp/price",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+    description:
+      "ライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。明瞭会計。",
+    images: ["/og-image.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 const plans = [
   {
@@ -84,7 +107,7 @@ export default function Price() {
             料金について
           </h1>
           <p className={styles.description}>
-            スモールビジネス向けにコストを抑えた高品質なプランをご用意。<br />
+            スモールビジネス向けから法人・中規模企業向けまで、幅広いプランをご用意。<br />
             8万円から、あなたのビジネスに合ったサイトを制作します。
           </p>
         </div>
@@ -150,6 +173,88 @@ export default function Price() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* ── 法人・中規模向けプラン ── */}
+        <div className={`${styles.section} ${styles.corporateBg}`}>
+          <div className={styles.sectionInner}>
+            <span className={styles.sectionLabel}>FOR BUSINESS</span>
+            <h2 className={styles.sectionTitle}>法人・中規模企業向けプラン</h2>
+            <p className={styles.sectionDesc}>
+              ブランディング・SEO設計・独自機能まで対応した、法人向け本格コーポレートサイト制作プランです。<br />
+              ※表示価格は税抜きの目安です。詳細はお見積りにてご確認ください。
+            </p>
+            <div className={styles.corporateGrid}>
+              {/* プランA */}
+              <div className={styles.corporateCard}>
+                <div className={styles.corporateHeader}>
+                  <span className={styles.corporatePlanType}>PLAN A</span>
+                  <p className={styles.corporatePlanName}>コーポレートサイト 標準</p>
+                  <div className={styles.corporatePriceRow}>
+                    <span className={styles.corporatePrice}>¥300,000</span>
+                    <span className={styles.corporateUnit}>円〜（税抜）</span>
+                  </div>
+                </div>
+                <div className={styles.corporateBody}>
+                  <p className={styles.corporateDesc}>
+                    8〜10ページ構成のコーポレートサイト。SEO設計込み・レスポンシブ対応で、
+                    WordPress不使用でも対応可能です。
+                  </p>
+                  <hr className={styles.corporateDivider} />
+                  <ul className={styles.corporateFeatureList}>
+                    {[
+                      "8〜10ページ構成",
+                      "SEO設計込み",
+                      "レスポンシブ対応",
+                      "お問い合わせフォーム",
+                      "Google アナリティクス設定",
+                      "WordPress不使用でも可",
+                      "公開後サポート（3ヶ月）",
+                    ].map((f) => (
+                      <li key={f} className={styles.corporateFeatureItem}>{f}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* プランB */}
+              <div className={`${styles.corporateCard} ${styles.corporateFeatured}`}>
+                <span className={styles.corporateFeaturedBadge}>上位プラン</span>
+                <div className={styles.corporateHeader}>
+                  <span className={styles.corporatePlanType}>PLAN B</span>
+                  <p className={styles.corporatePlanName}>コーポレートサイト 上位</p>
+                  <div className={styles.corporatePriceRow}>
+                    <span className={styles.corporatePrice}>¥500,000</span>
+                    <span className={styles.corporateUnit}>円〜（税抜）</span>
+                  </div>
+                </div>
+                <div className={styles.corporateBody}>
+                  <p className={styles.corporateDesc}>
+                    アニメーション・ブランディング・独自機能込みの上位プラン。
+                    企業の世界観を最大限に表現し、競合との差別化を実現します。
+                  </p>
+                  <hr className={styles.corporateDivider} />
+                  <ul className={styles.corporateFeatureList}>
+                    {[
+                      "ページ数・構成はご要望に応じて",
+                      "オリジナルアニメーション",
+                      "ブランディングデザイン",
+                      "独自機能の開発対応",
+                      "SEO対策・分析設定",
+                      "CMS導入（自社更新可）",
+                      "公開後サポート（6ヶ月）",
+                    ].map((f) => (
+                      <li key={f} className={styles.corporateFeatureItem}>{f}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <p className={styles.corporateNote}>
+              ※ いずれもご要望・規模に応じてカスタマイズ可能です。まずはお気軽にご相談ください。
+            </p>
           </div>
         </div>
 

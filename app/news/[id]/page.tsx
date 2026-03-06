@@ -22,7 +22,7 @@ export default async function NewsDetail({
       <div className={`${page.container}`}>
         <div className={`${page.subcontainer}`}>
             <section>
-              <div className={`${page.img}`}><img src={data.img?.url??"/"} alt="" /></div>
+              <div className={`${page.img}`}><img src={data.img?.url??"/"} alt={data.title} /></div>
               <h1>{data.title}</h1>
             </section>
             {data.contents ? (<section className={`${page.document}`} dangerouslySetInnerHTML={{ __html: data.contents}} />

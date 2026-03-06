@@ -1,8 +1,32 @@
+import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import { client } from "../lib/Micro";
+import { getAllPosts } from "../lib/posts";
 import styles from "./Blog.module.scss";
+
+export const metadata: Metadata = {
+  title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+  description:
+    "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。中小企業の集客に役立つ情報を発信しています。",
+  alternates: { canonical: "https://iro-do-ri.jp/blog" },
+  openGraph: {
+    title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+    description:
+      "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。中小企業の集客に役立つ情報を発信しています。",
+    url: "https://iro-do-ri.jp/blog",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+    description:
+      "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。",
+    images: ["/og-image.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 type BlogPost = {
   id: string;
@@ -13,11 +37,20 @@ type BlogPost = {
 };
 
 export default async function BlogPage() {
-  const data = await client.get({
-    endpoint: "news",
-    queries: { limit: 20 },
-  });
-  const posts: BlogPost[] = data.contents;
+  // CMS記事
+  let cmsPosts: BlogPost[] = [];
+  try {
+    const data = await client.get({
+      endpoint: "news",
+      queries: { limit: 20 },
+    });
+    cmsPosts = data.contents;
+  } catch {
+    cmsPosts = [];
+  }
+
+  // ローカルMarkdown記事
+  const localPosts = getAllPosts();
 
   return (
     <section className="flex">
@@ -34,14 +67,45 @@ export default async function BlogPage() {
           </p>
         </div>
 
-        {/* ── 一覧 ── */}
+        {/* ── ローカル記事一覧 ── */}
+        {localPosts.length > 0 && (
+          <div className={styles.section}>
+            <div className={styles.sectionInner}>
+              <span className={styles.sectionLabel}>ARTICLES</span>
+              <h2 className={styles.sectionTitle}>ホームページ制作コラム</h2>
+              <div className={styles.grid}>
+                {localPosts.map((post) => (
+                  <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
+                    <div className={styles.cardBody}>
+                      <div className={styles.cardMeta}>
+                        <span className={styles.cardCategory}>{post.category}</span>
+                        {post.date && (
+                          <span className={styles.cardDate}>
+                            {new Date(post.date).toLocaleDateString("ja-JP", {
+                              year: "numeric",
+                              month: "2-digit",
+                              day: "2-digit",
+                            })}
+                          </span>
+                        )}
+                      </div>
+                      <p className={styles.cardTitle}>{post.title}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ── CMS記事一覧 ── */}
         <div className={styles.section}>
           <div className={styles.sectionInner}>
             <span className={styles.sectionLabel}>ALL POSTS</span>
             <h2 className={styles.sectionTitle}>すべての記事</h2>
             <div className={styles.grid}>
-              {posts.length > 0 ? (
-                posts.map((post) => (
+              {cmsPosts.length > 0 ? (
+                cmsPosts.map((post) => (
                   <div key={post.id} className={styles.card}>
                     <div className={styles.cardImage}>
                       <img
@@ -65,7 +129,7 @@ export default async function BlogPage() {
                   </div>
                 ))
               ) : (
-                <p className={styles.empty}>現在、ブログ記事を準備中です。</p>
+                <p className={styles.empty}>現在、更新情報を準備中です。</p>
               )}
             </div>
           </div>

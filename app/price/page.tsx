@@ -1,7 +1,30 @@
+import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import styles from "./Price.module.scss";
+
+export const metadata: Metadata = {
+  title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+  description:
+    "ホームページ制作の料金はライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。船橋・千葉の中小企業向けに明瞭会計でご提供します。",
+  alternates: { canonical: "https://iro-do-ri.jp/price" },
+  openGraph: {
+    title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+    description:
+      "ホームページ制作の料金はライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。船橋・千葉の中小企業向けに明瞭会計でご提供します。",
+    url: "https://iro-do-ri.jp/price",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+    description:
+      "ライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。明瞭会計。",
+    images: ["/og-image.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 const plans = [
   {

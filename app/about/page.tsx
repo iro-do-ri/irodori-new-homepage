@@ -1,7 +1,30 @@
+import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import styles from "./About.module.scss";
+
+export const metadata: Metadata = {
+  title: "イロドリについて｜船橋のWebデザイナー勝野紘太",
+  description:
+    "船橋市在住のWebデザイナー勝野紘太のプロフィール。制作会社・事業会社での実務経験10年以上。WordPress・SEO・UI設計を一気通貫で対応します。",
+  alternates: { canonical: "https://iro-do-ri.jp/about" },
+  openGraph: {
+    title: "イロドリについて｜船橋のWebデザイナー勝野紘太",
+    description:
+      "船橋市在住のWebデザイナー勝野紘太のプロフィール。制作会社・事業会社での実務経験10年以上。WordPress・SEO・UI設計を一気通貫で対応します。",
+    url: "https://iro-do-ri.jp/about",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "イロドリについて｜船橋のWebデザイナー勝野紘太",
+    description:
+      "船橋市在住のWebデザイナー勝野紘太のプロフィール。WordPress・SEO・UI設計を一気通貫で対応します。",
+    images: ["/og-image.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function About() {
   return (

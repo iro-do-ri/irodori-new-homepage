@@ -1,8 +1,31 @@
+import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import { client } from "../lib/Micro";
 import styles from "./Works.module.scss";
+
+export const metadata: Metadata = {
+  title: "制作実績｜ホームページ制作ならイロドリ【船橋】",
+  description:
+    "エステサロン・医療ソフトメーカー・動画制作会社など多業種のホームページ制作実績。デザインから実装・SEOまで一気通貫。船橋・千葉の中小企業様の実績多数。",
+  alternates: { canonical: "https://iro-do-ri.jp/works" },
+  openGraph: {
+    title: "制作実績｜ホームページ制作ならイロドリ【船橋】",
+    description:
+      "エステサロン・医療ソフトメーカー・動画制作会社など多業種のホームページ制作実績。デザインから実装・SEOまで一気通貫。",
+    url: "https://iro-do-ri.jp/works",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "制作実績｜ホームページ制作ならイロドリ【船橋】",
+    description:
+      "エステサロン・医療ソフトメーカー・動画制作会社など多業種のホームページ制作実績。デザインから実装・SEOまで一気通貫。",
+    images: ["/og-image.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 type Work = {
   id: string;

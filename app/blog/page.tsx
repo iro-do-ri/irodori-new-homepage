@@ -1,9 +1,32 @@
+import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import { client } from "../lib/Micro";
 import { getAllPosts } from "../lib/posts";
 import styles from "./Blog.module.scss";
+
+export const metadata: Metadata = {
+  title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+  description:
+    "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。中小企業の集客に役立つ情報を発信しています。",
+  alternates: { canonical: "https://iro-do-ri.jp/blog" },
+  openGraph: {
+    title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+    description:
+      "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。中小企業の集客に役立つ情報を発信しています。",
+    url: "https://iro-do-ri.jp/blog",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+    description:
+      "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。",
+    images: ["/og-image.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 type BlogPost = {
   id: string;

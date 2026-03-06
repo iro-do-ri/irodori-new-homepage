@@ -247,6 +247,161 @@
     }
 }
 
+// ── 法人・中規模向けプラン ──────────────────────────
+.corporateBg {
+    background: $text-color;
+}
+
+.corporateGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+
+    @media (max-width: 639px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.corporateCard {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: rgba(255, 252, 255, 0.06);
+    border: 1px solid rgba(255, 252, 255, 0.12);
+    position: relative;
+
+    &.corporateFeatured {
+        background: rgba(51, 100, 174, 0.18);
+        border-color: rgba(51, 100, 174, 0.5);
+        transform: scale(1.02);
+
+        @media (max-width: 639px) {
+            transform: none;
+        }
+
+        .corporateHeader {
+            background: rgba(51, 100, 174, 0.25);
+        }
+
+        .corporatePlanName,
+        .corporatePrice,
+        .corporateUnit,
+        .corporateDesc,
+        .corporateFeatureItem {
+            color: $main-color;
+        }
+
+        .corporateFeatureItem::before {
+            color: lighten(#3364AE, 20%);
+            opacity: 1;
+        }
+
+        .corporateDivider {
+            border-color: rgba(255, 252, 255, 0.15);
+        }
+    }
+
+    .corporateFeaturedBadge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: #3364AE;
+        color: $main-color;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        padding: 0.3rem 0.75rem;
+        border-radius: 50rem;
+    }
+
+    .corporateHeader {
+        background: rgba(255, 252, 255, 0.04);
+        padding: 2rem 1.75rem 1.5rem;
+    }
+
+    .corporatePlanType {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        color: #3364AE;
+        margin-bottom: 0.75rem;
+    }
+
+    .corporatePlanName {
+        font-size: clamp(16px, 2vw, 20px);
+        font-weight: 700;
+        color: $main-color;
+        margin-bottom: 1.25rem;
+    }
+
+    .corporatePriceRow {
+        display: flex;
+        align-items: baseline;
+        gap: 0.25rem;
+    }
+
+    .corporatePrice {
+        font-size: clamp(32px, 4vw, 44px);
+        font-weight: 700;
+        color: $main-color;
+        font-family: var(--font-en);
+        line-height: 1;
+    }
+
+    .corporateUnit {
+        font-size: 13px;
+        color: rgba(255, 252, 255, 0.5);
+    }
+
+    .corporateBody {
+        padding: 1.5rem 1.75rem 2rem;
+    }
+
+    .corporateDesc {
+        font-size: 13px;
+        line-height: 1.8;
+        color: rgba(255, 252, 255, 0.6);
+        margin-bottom: 1.25rem;
+    }
+
+    .corporateDivider {
+        border: none;
+        border-top: 1px solid rgba(255, 252, 255, 0.08);
+        margin-bottom: 1.25rem;
+    }
+
+    .corporateFeatureList {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .corporateFeatureItem {
+        font-size: 13px;
+        color: rgba(255, 252, 255, 0.75);
+        padding-left: 1.25rem;
+        position: relative;
+
+        &::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #3364AE;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+    }
+}
+
+.corporateNote {
+    margin-top: 2rem;
+    font-size: 12px;
+    color: rgba(255, 252, 255, 0.35);
+    text-align: center;
+}
+
 // ── FAQ ─────────────────────────────────────────
 .faqList {
     display: flex;

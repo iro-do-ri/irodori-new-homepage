@@ -45,7 +45,7 @@ export default async function WorksPage() {
                     <div className={styles.cardImage}>
                       <img
                         src={work.image.url}
-                        alt={work.title}
+                        alt={`${work.title}のホームページ制作実績｜イロドリ`}
                       />
                     </div>
                     <div className={styles.cardBody}>

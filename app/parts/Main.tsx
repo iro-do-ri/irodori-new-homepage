@@ -129,55 +129,54 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
             </section>
             <section ref={textRef_3} className={`${styles.news} absolute w-full`}>
               <div className={styles.newsContainer}>
-              <h2 className="mb-8">船橋でホームページ・WEBサイト制作を行う<br/>イロドリからのお知らせ</h2>
+              <h2 className="mb-4 sm:mb-8">船橋でホームページ・WEBサイト制作を行う<br className="hidden sm:block"/>イロドリからのお知らせ</h2>
               <div className="flex flex-col justify-center">
-               
               <h3 className="mb-2">ホームページ制作会社イロドリの更新情報</h3>
-              <ul className={`${styles.newsList} mb-12`}>
+              <ul className={`${styles.newsList} mb-6 sm:mb-12`}>
                          {news.map((news)=>(
-                          <li key={news.id} className="mb-4">
+                          <li key={news.id} className="mb-3 sm:mb-4">
                             <article>
-                              <Link href={`news/${news.id}`} className="inline-flex items-center">
-                                <span className={`${styles.img} mr-4`}><img src={news.img?.url??"https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"} alt={news.title}/></span>
-                                <span className={`${news.category} p-4 mr-4`}>{news.category}</span>
-                                <div className="flex flex-col">
-                                <time>{new Date(news.publishedAt).toLocaleDateString("ja-JP")}</time>
-                                <p>{news.title}</p>
+                              <Link href={`news/${news.id}`} className="inline-flex items-start sm:items-center flex-wrap gap-y-1">
+                                <span className={`${styles.img} mr-3`}><img src={news.img?.url??"https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"} alt={news.title}/></span>
+                                <span className="text-xs px-2 py-1 mr-3 border border-white/30 rounded-full shrink-0">{news.category}</span>
+                                <div className="flex flex-col min-w-0">
+                                  <time className="text-xs opacity-60">{new Date(news.publishedAt).toLocaleDateString("ja-JP")}</time>
+                                  <p className="text-sm leading-snug">{news.title}</p>
                                 </div>
                               </Link>
                             </article>
                           </li>
-                         ))}                        
-                <Link href={URL.Contact} className="" aria-label="無料相談ページへ移動します">ホームページ・WEBサイト制作の更新情報の一覧へ</Link>
+                         ))}
+                <Link href={URL.Blog} className="text-sm underline underline-offset-4 opacity-70" aria-label="ブログ一覧ページへ移動します">更新情報の一覧へ</Link>
               </ul>
               </div>
               </div>
             </section>
             <section className={`${styles.company} ${styles.curtain} relative`}>
               <div className={styles.contentsContainer} ref={companyRef}>
-                <h2 className="mb-12">伝わるデザインと使いやすさを<br/>両立したホームページ・WEBサイト制作</h2>
-                <h3 className="mb-3">お客様のご要望に合わせたホームページ・WEBサイト制作をします。</h3>
-                <p className="mb-3">イロドリでは、船橋を拠点にお客様の目的に合わせた<br/>ホームページ・WEBサイトサイトを制作しています。</p>
-                <p className="mb-12">見た目の美しさだけでなく、<br/>使いやすさや更新のしやすさにもこだわり、<br/>CMS導入やSEO対策を通じて、<br/>成果につながるサイトづくりをサポートします。</p>
-                <Link href={URL.About} className={`${styles.button} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="Aboutページへ移動します">会社概要を詳しく見る</Link>
+                <h2 className="mb-6 sm:mb-12">伝わるデザインと使いやすさを<br/>両立したホームページ・WEBサイト制作</h2>
+                <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせたホームページ・WEBサイト制作をします。</h3>
+                <p className="mb-2 sm:mb-3">イロドリでは、船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
+                <p className="mb-6 sm:mb-12">見た目の美しさだけでなく、<br className="hidden sm:block"/>使いやすさや更新のしやすさにもこだわり、<br className="hidden sm:block"/>CMS導入やSEO対策を通じて、<br className="hidden sm:block"/>成果につながるサイトづくりをサポートします。</p>
+                <Link href={URL.About} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="Aboutページへ移動します">会社概要を詳しく見る</Link>
               </div>
             </section>
             <section className={`${styles.price} ${styles.curtain} relative`}>
               <div className={styles.contentsContainer}>
-                <h2 className="mb-12">ホームページ・WEBサイト制作の料金について</h2>
-                <h3 className="mb-3">スモールビジネス向け｜コストを抑えた高品質ホームページ・WEBサイト制作</h3>
-                <p className="mb-12">イロドリでは、コストパフォーマンスを重視する<br/>スモールビジネスオーナー様のニーズに応えるための<br/>プランがございます。</p>
-                <h3 className="mb-3">8万円からホームページを作成します</h3>
-                <p className="mb-3">一番お求めやすいプランでは、<br/>8万円から始められるシンプルで高品質な<br/>ホームページ制作を致します。</p>
-                <p className="mb-12">初めてWEBサイトサイトを導入する方や、<br/>コストを抑えつつ信頼感のあるデザインを<br/>求める方におすすめです。</p>
-                <Link href={URL.About} className={`${styles.button} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="Aboutページへ移動します">料金体系を詳しく見る</Link>
+                <h2 className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の料金について</h2>
+                <h3 className="mb-2 sm:mb-3">スモールビジネス向け｜コストを抑えた高品質ホームページ・WEBサイト制作</h3>
+                <p className="mb-4 sm:mb-12">イロドリでは、コストパフォーマンスを重視する<br className="hidden sm:block"/>スモールビジネスオーナー様のニーズに応えるためのプランがございます。</p>
+                <h3 className="mb-2 sm:mb-3">8万円からホームページを作成します</h3>
+                <p className="mb-2 sm:mb-3">一番お求めやすいプランでは、<br className="hidden sm:block"/>8万円から始められるシンプルで高品質なホームページ制作を致します。</p>
+                <p className="mb-6 sm:mb-12">初めてWEBサイトを導入する方や、<br className="hidden sm:block"/>コストを抑えつつ信頼感のあるデザインを求める方におすすめです。</p>
+                <Link href={URL.Price} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="料金ページへ移動します">料金体系を詳しく見る</Link>
               </div>
             </section>
             <section className={`${styles.works} ${styles.curtain} relative`}>
               <div className={`${styles.contentsContainer} sm:w-[82.5vw] w-full`}>
-                <h2 className="mb-12">ホームページ・WEBサイト制作の実績</h2>
-                <h3 className="mb-3">船橋を中心に、多彩な業種のホームページを制作しています。</h3>
-                <p className="mb-12">ホームページ・WEBサイト制作の実績の一部をご紹介いたします。</p>
+                <h2 className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の実績</h2>
+                <h3 className="mb-2 sm:mb-3">船橋を中心に、多彩な業種のホームページを制作しています。</h3>
+                <p className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の実績の一部をご紹介いたします。</p>
                 <Splide
                   options={{
                     type: works.length > 3 ? "loop" : "slide",

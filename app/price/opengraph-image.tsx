@@ -66,7 +66,7 @@ export default async function Image() {
             display: "flex",
           }}
         >
-          8万円から｜スモール〜法人向けプランあり | イロドリ
+          10万円から｜スモール〜法人向けプランあり | イロドリ
         </div>
 
         <div

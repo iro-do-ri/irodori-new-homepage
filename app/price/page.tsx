@@ -5,22 +5,22 @@ import { URL } from "../url/Url";
 import styles from "./Price.module.scss";
 
 export const metadata: Metadata = {
-  title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+  title: "料金プラン｜ホームページ制作10万円〜【イロドリ・船橋】",
   description:
-    "ホームページ制作の料金はライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。船橋・千葉の中小企業向けに明瞭会計でご提供します。",
+    "ホームページ制作の料金はライトプラン10万円〜、スタンダード10万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。船橋・千葉の中小企業向けに明瞭会計でご提供します。",
   alternates: { canonical: "https://iro-do-ri.jp/price" },
   openGraph: {
-    title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+    title: "料金プラン｜ホームページ制作10万円〜【イロドリ・船橋】",
     description:
-      "ホームページ制作の料金はライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。船橋・千葉の中小企業向けに明瞭会計でご提供します。",
+      "ホームページ制作の料金はライトプラン10万円〜、スタンダード10万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。船橋・千葉の中小企業向けに明瞭会計でご提供します。",
     url: "https://iro-do-ri.jp/price",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "料金プラン｜ホームページ制作15万円〜【イロドリ・船橋】",
+    title: "料金プラン｜ホームページ制作10万円〜【イロドリ・船橋】",
     description:
-      "ライトプラン8万円〜、スタンダード15万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。明瞭会計。",
+      "ライトプラン10万円〜、スタンダード10万円〜、フルカスタム25万円〜。WordPress・SEO設計込み。明瞭会計。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -30,44 +30,44 @@ const plans = [
   {
     type: "LIGHT",
     name: "ライトプラン",
-    price: "80,000",
+    price: "100,000",
     desc: "はじめてWebサイトを作る方や、シンプルで信頼感のあるサイトをお求めの方におすすめです。",
     features: [
-      "5ページ以内",
+      "1ページ以内",
+      "Wordpress CMS導入（自社更新可）",
+      "デザインは固定デザイン",
       "レスポンシブ対応",
-      "SEO基本設定",
       "お問い合わせフォーム",
-      "公開後サポート（1ヶ月）",
     ],
     featured: false,
   },
   {
     type: "STANDARD",
     name: "スタンダードプラン",
-    price: "150,000",
-    desc: "CMS導入で自社更新が可能。SEO対策もしっかり行いたいスモールビジネス向けの定番プランです。",
+    price: "300,000",
+    desc: "CMS導入で自社更新が可能。SEO対策も行いたいスモールビジネス向けの定番プランです。",
     features: [
-      "10ページ以内",
-      "CMS導入（自社更新可）",
+      "8ページ以内",
+      "Wordpress CMS導入（自社更新可）",
+      "デザインはオリジナル",
       "レスポンシブ対応",
-      "SEO対策",
+      "簡易的なSEO対策",
       "お問い合わせフォーム",
-      "公開後サポート（3ヶ月）",
+      "公開後、保守サポート（3ヶ月）",
     ],
     featured: true,
   },
   {
     type: "FULL CUSTOM",
     name: "フルカスタムプラン",
-    price: "250,000",
-    desc: "ブランドの世界観を最大限に表現したいお客様向け。アニメーションや独自機能も対応します。",
+    price: "500,000",
+    desc: "ブランドの世界観を最大限に表現したいお客様向け。Micro CMSなのでセキュリティーも万全でSEO対策も。",
     features: [
       "ページ数無制限",
-      "CMS導入（自社更新可）",
-      "オリジナルアニメーション",
-      "SEO対策・分析設定",
-      "独自機能の開発対応",
-      "公開後サポート（6ヶ月）",
+      "Micro CMS導入（自社更新可）",
+      "デザインはオリジナル",
+      "3ヶ月間のSEO対策・分析",
+      "公開後、保守サポート（6ヶ月）",
     ],
     featured: false,
   },
@@ -76,7 +76,7 @@ const plans = [
 const faqs = [
   {
     q: "制作期間はどのくらいかかりますか？",
-    a: "プランや内容によって異なりますが、ライトプランで約3〜4週間、スタンダードプランで約4〜6週間が目安です。お急ぎの場合はご相談ください。",
+    a: "プランや内容によって異なりますが、ライトプランで約3〜4週間、スタンダードプランで約6〜8週間が目安です。お急ぎの場合はご相談ください。",
   },
   {
     q: "料金に含まれるものは何ですか？",
@@ -108,7 +108,7 @@ export default function Price() {
           </h1>
           <p className={styles.description}>
             スモールビジネス向けから法人・中規模企業向けまで、幅広いプランをご用意。<br />
-            8万円から、あなたのビジネスに合ったサイトを制作します。
+            10万円から、あなたのビジネスに合ったサイトを制作します。
           </p>
         </div>
 
@@ -125,9 +125,9 @@ export default function Price() {
               コストを抑えつつ信頼感のあるデザインを求める方に特におすすめです。
             </p>
             <div className={styles.conceptCard}>
-              <p className={styles.conceptTitle}>8万円からホームページを作成します</p>
+              <p className={styles.conceptTitle}>10万円からホームページを作成します</p>
               <p className={styles.conceptDesc}>
-                一番お求めやすいライトプランでは、8万円から始められるシンプルで高品質な
+                一番お求めやすいライトプランでは、10万円から始められるシンプルで高品質な
                 ホームページ制作を致します。見た目の美しさだけでなく、
                 使いやすさや更新のしやすさにもこだわり、成果につながるサイトづくりをサポートします。
               </p>
@@ -158,7 +158,6 @@ export default function Price() {
                     <p className={styles.planName}>{plan.name}</p>
                     <div className={styles.planPriceRow}>
                       <span className={styles.planPrice}>¥{plan.price}</span>
-                      <span className={styles.planUnit}>円〜（税抜）</span>
                     </div>
                   </div>
                   <div className={styles.planBody}>
@@ -173,88 +172,6 @@ export default function Price() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-
-        {/* ── 法人・中規模向けプラン ── */}
-        <div className={`${styles.section} ${styles.corporateBg}`}>
-          <div className={styles.sectionInner}>
-            <span className={styles.sectionLabel}>FOR BUSINESS</span>
-            <h2 className={styles.sectionTitle}>法人・中規模企業向けプラン</h2>
-            <p className={styles.sectionDesc}>
-              ブランディング・SEO設計・独自機能まで対応した、法人向け本格コーポレートサイト制作プランです。<br />
-              ※表示価格は税抜きの目安です。詳細はお見積りにてご確認ください。
-            </p>
-            <div className={styles.corporateGrid}>
-              {/* プランA */}
-              <div className={styles.corporateCard}>
-                <div className={styles.corporateHeader}>
-                  <span className={styles.corporatePlanType}>PLAN A</span>
-                  <p className={styles.corporatePlanName}>コーポレートサイト 標準</p>
-                  <div className={styles.corporatePriceRow}>
-                    <span className={styles.corporatePrice}>¥300,000</span>
-                    <span className={styles.corporateUnit}>円〜（税抜）</span>
-                  </div>
-                </div>
-                <div className={styles.corporateBody}>
-                  <p className={styles.corporateDesc}>
-                    8〜10ページ構成のコーポレートサイト。SEO設計込み・レスポンシブ対応で、
-                    WordPress不使用でも対応可能です。
-                  </p>
-                  <hr className={styles.corporateDivider} />
-                  <ul className={styles.corporateFeatureList}>
-                    {[
-                      "8〜10ページ構成",
-                      "SEO設計込み",
-                      "レスポンシブ対応",
-                      "お問い合わせフォーム",
-                      "Google アナリティクス設定",
-                      "WordPress不使用でも可",
-                      "公開後サポート（3ヶ月）",
-                    ].map((f) => (
-                      <li key={f} className={styles.corporateFeatureItem}>{f}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* プランB */}
-              <div className={`${styles.corporateCard} ${styles.corporateFeatured}`}>
-                <span className={styles.corporateFeaturedBadge}>上位プラン</span>
-                <div className={styles.corporateHeader}>
-                  <span className={styles.corporatePlanType}>PLAN B</span>
-                  <p className={styles.corporatePlanName}>コーポレートサイト 上位</p>
-                  <div className={styles.corporatePriceRow}>
-                    <span className={styles.corporatePrice}>¥500,000</span>
-                    <span className={styles.corporateUnit}>円〜（税抜）</span>
-                  </div>
-                </div>
-                <div className={styles.corporateBody}>
-                  <p className={styles.corporateDesc}>
-                    アニメーション・ブランディング・独自機能込みの上位プラン。
-                    企業の世界観を最大限に表現し、競合との差別化を実現します。
-                  </p>
-                  <hr className={styles.corporateDivider} />
-                  <ul className={styles.corporateFeatureList}>
-                    {[
-                      "ページ数・構成はご要望に応じて",
-                      "オリジナルアニメーション",
-                      "ブランディングデザイン",
-                      "独自機能の開発対応",
-                      "SEO対策・分析設定",
-                      "CMS導入（自社更新可）",
-                      "公開後サポート（6ヶ月）",
-                    ].map((f) => (
-                      <li key={f} className={styles.corporateFeatureItem}>{f}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <p className={styles.corporateNote}>
-              ※ いずれもご要望・規模に応じてカスタマイズ可能です。まずはお気軽にご相談ください。
-            </p>
           </div>
         </div>
 

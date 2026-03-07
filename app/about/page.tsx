@@ -99,7 +99,7 @@ export default function About() {
                   <span className={styles.serviceTag}>WEB DESIGN</span>
                   <p className={styles.serviceTitle}>ホームページ・WEBサイト制作</p>
                   <p className={styles.serviceDesc}>
-                    8万円からのプランをご用意。SEO対策・CMS導入・レスポンシブ対応まで含めた、
+                    10万円からのプランをご用意。SEO対策・CMS導入・レスポンシブ対応まで含めた、
                     高品質なWebサイトを制作します。
                   </p>
                 </div>

@@ -166,8 +166,8 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
                 <h2 className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の料金について</h2>
                 <h3 className="mb-2 sm:mb-3">スモールビジネス向け｜コストを抑えた高品質ホームページ・WEBサイト制作</h3>
                 <p className="mb-4 sm:mb-12">イロドリでは、コストパフォーマンスを重視する<br className="hidden sm:block"/>スモールビジネスオーナー様のニーズに応えるためのプランがございます。</p>
-                <h3 className="mb-2 sm:mb-3">8万円からホームページを作成します</h3>
-                <p className="mb-2 sm:mb-3">一番お求めやすいプランでは、<br className="hidden sm:block"/>8万円から始められるシンプルで高品質なホームページ制作を致します。</p>
+                <h3 className="mb-2 sm:mb-3">10万円からホームページを作成します</h3>
+                <p className="mb-2 sm:mb-3">一番お求めやすいプランでは、<br className="hidden sm:block"/>10万円から始められるシンプルで高品質なホームページ制作を致します。</p>
                 <p className="mb-6 sm:mb-12">初めてWEBサイトを導入する方や、<br className="hidden sm:block"/>コストを抑えつつ信頼感のあるデザインを求める方におすすめです。</p>
                 <Link href={URL.Price} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="料金ページへ移動します">料金体系を詳しく見る</Link>
               </div>

@@ -24,7 +24,7 @@
   font-size: 11px;
   letter-spacing: 0.4em;
   opacity: 0.4;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .hero .title {
   font-size: clamp(32px, 5.5vw, 68px);
@@ -36,7 +36,7 @@
   font-size: clamp(13px, 1.8vw, 16px);
   font-weight: 300;
   opacity: 0.65;
-  line-height: 2.1;
+  line-height: 1.6;
   max-width: 520px;
 }
 
@@ -222,6 +222,144 @@
   opacity: 0.8;
 }
 
+.corporateBg {
+  background: #050828;
+}
+
+.corporateGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+@media (max-width: 639px) {
+  .corporateGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.corporateCard {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: rgba(255, 252, 255, 0.06);
+  border: 1px solid rgba(255, 252, 255, 0.12);
+  position: relative;
+}
+.corporateCard.corporateFeatured {
+  background: rgba(51, 100, 174, 0.18);
+  border-color: rgba(51, 100, 174, 0.5);
+  transform: scale(1.02);
+}
+@media (max-width: 639px) {
+  .corporateCard.corporateFeatured {
+    transform: none;
+  }
+}
+.corporateCard.corporateFeatured .corporateHeader {
+  background: rgba(51, 100, 174, 0.25);
+}
+.corporateCard.corporateFeatured .corporatePlanName,
+.corporateCard.corporateFeatured .corporatePrice,
+.corporateCard.corporateFeatured .corporateUnit,
+.corporateCard.corporateFeatured .corporateDesc,
+.corporateCard.corporateFeatured .corporateFeatureItem {
+  color: #fffcff;
+}
+.corporateCard.corporateFeatured .corporateFeatureItem::before {
+  color: rgb(113.48, 153.3333333333, 213.52);
+  opacity: 1;
+}
+.corporateCard.corporateFeatured .corporateDivider {
+  border-color: rgba(255, 252, 255, 0.15);
+}
+.corporateCard .corporateFeaturedBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #3364AE;
+  color: #fffcff;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50rem;
+}
+.corporateCard .corporateHeader {
+  background: rgba(255, 252, 255, 0.04);
+  padding: 2rem 1.75rem 1.5rem;
+}
+.corporateCard .corporatePlanType {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  color: #3364AE;
+  margin-bottom: 0.75rem;
+}
+.corporateCard .corporatePlanName {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  color: #fffcff;
+  margin-bottom: 1.25rem;
+}
+.corporateCard .corporatePriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+.corporateCard .corporatePrice {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 700;
+  color: #fffcff;
+  font-family: var(--font-en);
+  line-height: 1;
+}
+.corporateCard .corporateUnit {
+  font-size: 13px;
+  color: rgba(255, 252, 255, 0.5);
+}
+.corporateCard .corporateBody {
+  padding: 1.5rem 1.75rem 2rem;
+}
+.corporateCard .corporateDesc {
+  font-size: 13px;
+  line-height: 1.8;
+  color: rgba(255, 252, 255, 0.6);
+  margin-bottom: 1.25rem;
+}
+.corporateCard .corporateDivider {
+  border: none;
+  border-top: 1px solid rgba(255, 252, 255, 0.08);
+  margin-bottom: 1.25rem;
+}
+.corporateCard .corporateFeatureList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.corporateCard .corporateFeatureItem {
+  font-size: 13px;
+  color: rgba(255, 252, 255, 0.75);
+  padding-left: 1.25rem;
+  position: relative;
+}
+.corporateCard .corporateFeatureItem::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #3364AE;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.corporateNote {
+  margin-top: 2rem;
+  font-size: 12px;
+  color: rgba(255, 252, 255, 0.35);
+  text-align: center;
+}
+
 .faqList {
   display: flex;
   flex-direction: column;
@@ -287,7 +425,7 @@
   font-size: clamp(13px, 1.6vw, 15px);
   opacity: 0.55;
   margin-bottom: 3rem;
-  line-height: 2.1;
+  line-height: 1.6;
 }
 
 .ctaButton {

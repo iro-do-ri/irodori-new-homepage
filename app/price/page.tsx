@@ -105,7 +105,7 @@ export default function Price() {
         <div className={styles.hero}>
           <span className={styles.label}>PRICE</span>
           <h1 className={styles.title}>
-            ホームページ・WEBサイト制作の<br />
+            ホームページ・WEBサイト制作の<br className="xl:block hidden" />
             料金について
           </h1>
           <p className={styles.description}>

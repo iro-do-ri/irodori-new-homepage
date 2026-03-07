@@ -5,12 +5,50 @@ import { useState } from "react";
 import headerStyles from "./_Header.module.scss";
 import { URL } from "../url/Url";
 
+const HomeIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/>
+    <path d="M9 21V12h6v9"/>
+  </svg>
+);
+const AboutIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="8" r="4"/>
+    <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+  </svg>
+);
+const WorksIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="7" width="20" height="14" rx="2"/>
+    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+    <line x1="2" y1="12" x2="22" y2="12"/>
+  </svg>
+);
+const BlogIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+  </svg>
+);
+const PriceIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+    <circle cx="7" cy="7" r="1" fill="currentColor"/>
+  </svg>
+);
+const ContactIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+  </svg>
+);
+
 const navItems = [
-  { href: URL.Home,    en: "HOME",    ja: "ホーム" },
-  { href: URL.About,   en: "ABOUT",   ja: "イロドリについて" },
-  { href: URL.Works,   en: "WORKS",   ja: "実績" },
-  { href: URL.Blog,    en: "BLOG",    ja: "ブログ" },
-  { href: URL.Price,   en: "PRICE",   ja: "料金" },
+  { href: URL.Home,    en: "HOME",    ja: "ホーム",          icon: <HomeIcon /> },
+  { href: URL.About,   en: "ABOUT",   ja: "イロドリについて", icon: <AboutIcon /> },
+  { href: URL.Works,   en: "WORKS",   ja: "実績",            icon: <WorksIcon /> },
+  { href: URL.Blog,    en: "BLOG",    ja: "ブログ",           icon: <BlogIcon /> },
+  { href: URL.Price,   en: "PRICE",   ja: "料金",            icon: <PriceIcon /> },
 ];
 
 export default function Header() {
@@ -31,8 +69,11 @@ export default function Header() {
           <nav className={headerStyles.sidebarNav}>
             {navItems.map(item => (
               <Link key={item.en} href={item.href} className={headerStyles.sidebarLink}>
-                <span className={headerStyles.navEn}>{item.en}</span>
-                <span className={headerStyles.navJa}>{item.ja}</span>
+                <span className={headerStyles.navIcon}>{item.icon}</span>
+                <span className={headerStyles.navText}>
+                  <span className={headerStyles.navEn}>{item.en}</span>
+                  <span className={headerStyles.navJa}>{item.ja}</span>
+                </span>
               </Link>
             ))}
           </nav>
@@ -69,15 +110,18 @@ export default function Header() {
             className={headerStyles.drawer}
             onClick={e => e.stopPropagation()}
           >
-            {[...navItems, { href: URL.Contact, en: "CONTACT", ja: "お問い合わせ" }].map(item => (
+            {[...navItems, { href: URL.Contact, en: "CONTACT", ja: "お問い合わせ", icon: <ContactIcon /> }].map(item => (
               <Link
                 key={item.en}
                 href={item.href}
                 className={headerStyles.drawerLink}
                 onClick={() => setIsOpen(false)}
               >
-                <span>{item.en}</span>
-                <span>{item.ja}</span>
+                <span className={headerStyles.navIcon}>{item.icon}</span>
+                <span className={headerStyles.drawerLinkText}>
+                  <span>{item.en}</span>
+                  <span>{item.ja}</span>
+                </span>
               </Link>
             ))}
           </nav>

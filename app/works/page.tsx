@@ -50,9 +50,9 @@ export default async function WorksPage() {
         {/* ── ヒーロー ── */}
         <div className={styles.hero}>
           <span className={styles.label}>WORKS</span>
-          <h1 className={styles.title}>制作実績</h1>
+          <h1 className={styles.title}>ホームページの制作実績</h1>
           <p className={styles.description}>
-            船橋を中心に、多彩な業種のホームページ・WEBサイトを制作しています。
+            船橋を拠点に、多彩な業種のホームページ・WEBサイトを制作しています。
           </p>
         </div>
 

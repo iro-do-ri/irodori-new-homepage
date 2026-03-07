@@ -37,13 +37,12 @@ export default function About() {
         <div className={styles.hero}>
           <span className={styles.label}>ABOUT</span>
           <h1 className={styles.title}>
-            伝わるデザインと<br />
-            使いやすさを両立した<br />
-            ホームページ制作会社
+            お客様の理想の<br className="sm:block hidden" />
+            ホームページを作成します
           </h1>
           <p className={styles.description}>
-            千葉県船橋市を拠点に、ホームページ・チラシ・動画制作を行う<br />
-            WEBデザイン会社のイロドリです。<br />
+            千葉県船橋市を拠点に、ホームページ・チラシ・動画制作を行う<br className="sm:block hidden" />
+            WEBデザイン会社のイロドリです。<br className="sm:block hidden" />
             お客様の想いを、デザインで形にします。
           </p>
         </div>

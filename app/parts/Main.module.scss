@@ -22,9 +22,9 @@
         color: $main-color;
     }
     section {
-        height: 100dvh;
+        height: 40rem;
         @include sm {
-            height: 40rem;
+            height: 100dvh;
         }
     }
 

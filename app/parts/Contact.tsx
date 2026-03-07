@@ -1,89 +1,137 @@
 "use client";
 
-import contact from "./_Contact.module.scss";
-import {useState} from "react";
+import styles from "./_Contact.module.scss";
+import { useState } from "react";
 
 export default function Contact() {
-  const [form,setForm] = useState({
+  const [form, setForm] = useState({
     company: "",
     name: "",
     email: "",
-    message: ""
-  })
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  
+    setStatus("sending");
+
     const res = await fetch("../api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),
     });
-  
+
     const data = await res.json();
-  
+
     if (data.success) {
-      setForm({
-        company: "",
-        name: "",
-        email: "",
-        message: "",
-      });
+      setForm({ company: "", name: "", email: "", message: "" });
       setStatus("success");
     } else {
       setStatus("error");
     }
   };
 
-  const ChangeEvent = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const {name,value} = e.target;
-    setForm(prev=>({
-      ...prev,
-      [name]: value
-    }));
-  }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
-    <section className={contact.container}>
-        <div className={contact.contact}>
+    <section className={styles.container}>
+      <div className={styles.card}>
+        <div className={styles.cardHeader}>
+          <span className={styles.en}>Contact</span>
+          <h1>お問い合わせ</h1>
+          <p className={styles.subtitle}>Webデザインのご相談・お見積りはこちらからどうぞ</p>
+        </div>
+
+        <div className={styles.form}>
           <form onSubmit={handleSubmit}>
-            <h2 className="mb-10">ホームページ及びその他のデザイン制作をご検討中の方へ<br/>お問い合わせは下記フォームをご利用下さい</h2>
-            <div className="flex flex-col sm:flex-row mb-2 pb-4 sm:items-center gap-2">
-              <p className="sm:flex-[20%] font-medium">会社名</p>
-              <span className="p-2 sm:flex-[10%] text-center text-sm self-start sm:self-auto border border-gray-300 rounded">必須</span>
-              <input name="company" value={form.company} className="p-4 w-full sm:flex-[70%] sm:max-w-[500px]" type="text" placeholder="株式会社山田商事" onChange={ChangeEvent} required />
+            <div className={styles.row}>
+              <div className={styles.labelGroup}>
+                <span className={styles.label}>会社名</span>
+                <span className={styles.badge}>必須</span>
+              </div>
+              <input
+                className={styles.input}
+                name="company"
+                value={form.company}
+                type="text"
+                placeholder="株式会社山田商事"
+                onChange={handleChange}
+                required
+              />
             </div>
-            <div className="flex flex-col sm:flex-row mb-2 py-4 sm:items-center gap-2">
-              <p className="sm:flex-[20%] font-medium">ご担当者名</p>
-              <input name="name" value={form.name} className="p-4 w-full sm:flex-[80%] sm:max-w-[500px]" type="text" placeholder="山田太郎" onChange={ChangeEvent} />
+
+            <div className={styles.row}>
+              <div className={styles.labelGroup}>
+                <span className={styles.label}>ご担当者名</span>
+              </div>
+              <input
+                className={styles.input}
+                name="name"
+                value={form.name}
+                type="text"
+                placeholder="山田太郎"
+                onChange={handleChange}
+              />
             </div>
-            <div className="flex flex-col sm:flex-row mb-2 py-4 sm:items-center gap-2">
-              <p className="sm:flex-[20%] font-medium">メールアドレス</p>
-              <span className="p-2 sm:flex-[10%] text-center text-sm self-start sm:self-auto border border-gray-300 rounded">必須</span>
-              <input name="email" value={form.email} className="p-4 w-full sm:flex-[70%] sm:max-w-[500px]" type="email" placeholder="aiueo@co.jp" onChange={ChangeEvent} required/>
+
+            <div className={styles.row}>
+              <div className={styles.labelGroup}>
+                <span className={styles.label}>メールアドレス</span>
+                <span className={styles.badge}>必須</span>
+              </div>
+              <input
+                className={styles.input}
+                name="email"
+                value={form.email}
+                type="email"
+                placeholder="aiueo@co.jp"
+                onChange={handleChange}
+                required
+              />
             </div>
-            <div className="flex flex-col sm:flex-row mb-2 py-4 sm:items-start gap-2">
-              <p className="sm:flex-[20%] font-medium sm:pt-4">ご相談内容</p>
-              <textarea name="message" value={form.message} className="p-4 w-full sm:flex-[80%] sm:max-w-[500px]" placeholder="何でもご相談下さい" rows={5} onChange={ChangeEvent}/>
+
+            <div className={`${styles.row} ${styles.rowTop}`}>
+              <div className={styles.labelGroup}>
+                <span className={styles.label}>ご相談内容</span>
+              </div>
+              <textarea
+                className={styles.textarea}
+                name="message"
+                value={form.message}
+                placeholder="何でもご相談ください"
+                rows={6}
+                onChange={handleChange}
+              />
             </div>
-            <div className="flex justify-center">
-              <button type="submit">
-                お問い合わせ内容を送信する
+
+            <div className={styles.submit}>
+              <button
+                className={styles.button}
+                type="submit"
+                disabled={status === "sending"}
+              >
+                {status === "sending" ? "送信中..." : "お問い合わせを送信する"}
               </button>
             </div>
           </form>
+
           {status === "success" && (
-            <p className="text-green-600 mt-4 text-center">
+            <p className={styles.success}>
               送信が完了しました。ありがとうございます。
             </p>
           )}
 
           {status === "error" && (
-            <p className="text-red-600 mt-4 text-center">
+            <p className={styles.error}>
               送信に失敗しました。もう一度お試しください。
             </p>
           )}
         </div>
-  </section>
-  )
+      </div>
+    </section>
+  );
 }

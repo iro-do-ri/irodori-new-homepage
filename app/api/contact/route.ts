@@ -16,9 +16,13 @@ export async function POST(req: Request) {
       host: process.env.NET_OWL,
       port: Number(process.env.OWL_PORT),
       secure: false,
+      requireTLS: true,
       auth: {
         user: process.env.OWL_USER,
         pass: process.env.OWL_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false,
       },
     });
 
@@ -26,6 +30,7 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: process.env.OWL_USER,
       to: process.env.OWL_USER,
+      replyTo: body.email,
       subject: "お問い合わせが届きました",
       text: `
         会社名: ${body.company}

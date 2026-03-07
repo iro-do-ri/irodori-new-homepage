@@ -23,6 +23,9 @@
     }
     section {
         height: 100dvh;
+        @include sm {
+            height: 40rem;
+        }
     }
 
     // ── H1 ──

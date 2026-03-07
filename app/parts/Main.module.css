@@ -520,6 +520,11 @@
 .container section {
   height: 100dvh;
 }
+@media (min-width: 640px) {
+  .container section {
+    height: 40rem;
+  }
+}
 .container h1 {
   top: clamp(80px, 18vw, 140px);
   left: 5vw;

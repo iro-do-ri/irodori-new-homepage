@@ -11,7 +11,6 @@ const navItems = [
   { href: URL.Works,   en: "WORKS",   ja: "実績" },
   { href: URL.Blog,    en: "BLOG",    ja: "ブログ" },
   { href: URL.Price,   en: "PRICE",   ja: "料金" },
-  { href: URL.Contact, en: "CONTACT", ja: "お問い合わせ" },
 ];
 
 export default function Header() {
@@ -20,17 +19,28 @@ export default function Header() {
   return (
     <>
       {/* ── デスクトップ サイドバー ── */}
-      <header className={`${headerStyles.header} h-screen max-w-[195px] min-w-[195px] sm:flex hidden fixed flex-col`}>
-        <div className="h-screen px-8 fixed grid grid-rows-9 min-w-[195px]">
-          <div className="row-span-5 row-start-2 inline-flex flex-col">
+      <header className={`${headerStyles.header} hidden sm:block`}>
+        <div className={headerStyles.sidebar}>
+          <div className={headerStyles.sidebarTop}>
+            <Link href={URL.Home} className={headerStyles.sidebarBrand}>
+              <span className={headerStyles.brandName}>IRODORI</span>
+              <span className={headerStyles.brandTagline}>船橋のWebデザイン</span>
+            </Link>
+          </div>
+
+          <nav className={headerStyles.sidebarNav}>
             {navItems.map(item => (
-              <p key={item.en} className="inline-block">
-                <Link href={item.href} className="inline-flex flex-col mb-6">
-                  <span className="mb-2">{item.en}</span>
-                  <span>{item.ja}</span>
-                </Link>
-              </p>
+              <Link key={item.en} href={item.href} className={headerStyles.sidebarLink}>
+                <span className={headerStyles.navEn}>{item.en}</span>
+                <span className={headerStyles.navJa}>{item.ja}</span>
+              </Link>
             ))}
+          </nav>
+
+          <div className={headerStyles.sidebarBottom}>
+            <Link href={URL.Contact} className={headerStyles.sidebarCta}>
+              お問い合わせ
+            </Link>
           </div>
         </div>
       </header>
@@ -59,7 +69,7 @@ export default function Header() {
             className={headerStyles.drawer}
             onClick={e => e.stopPropagation()}
           >
-            {navItems.map(item => (
+            {[...navItems, { href: URL.Contact, en: "CONTACT", ja: "お問い合わせ" }].map(item => (
               <Link
                 key={item.en}
                 href={item.href}

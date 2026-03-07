@@ -1,18 +1,123 @@
 @use "./_variables" as *;
 
+// ── デスクトップ サイドバー ───────────────────────
 .header {
-    background-color: #fffcff;
-    span:first-child {
-        font-size: clamp(16px,4vw,24px);
-        font-weight: 400;
-    }
-    span {
-        font-size: clamp(12px,4vw,12px);
-        font-weight: 300;
+    background: $main-color;
+    border-right: 1px solid rgba(5, 8, 40, 0.08);
+    width: 195px;
+    min-width: 195px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.sidebar {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+// ── ブランドエリア ─────────────────────────────────
+.sidebarTop {
+    padding: 2rem 1.5rem 1.75rem;
+    border-bottom: 1px solid rgba(5, 8, 40, 0.07);
+    flex-shrink: 0;
+}
+
+.sidebarBrand {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.65;
     }
 }
 
-// ── モバイルトップバー ────────────────────────────
+.brandName {
+    font-size: 20px;
+    font-weight: 700;
+    color: $text-color;
+    letter-spacing: 0.12em;
+}
+
+.brandTagline {
+    font-size: 10px;
+    color: rgba(5, 8, 40, 0.4);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+}
+
+// ── ナビゲーション ─────────────────────────────────
+.sidebarNav {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.sidebarLink {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid rgba(5, 8, 40, 0.06);
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.navEn {
+    font-size: 13px;
+    font-weight: 600;
+    color: $text-color;
+    letter-spacing: 0.1em;
+}
+
+.navJa {
+    font-size: 10px;
+    color: rgba(5, 8, 40, 0.4);
+    font-weight: 300;
+}
+
+// ── 下部 CTA ──────────────────────────────────────
+.sidebarBottom {
+    padding: 1.5rem;
+    border-top: 1px solid rgba(5, 8, 40, 0.07);
+    flex-shrink: 0;
+}
+
+.sidebarCta {
+    display: block;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    background: $text-color;
+    color: $main-color;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+// ── モバイル トップバー ────────────────────────────
 .mobileBar {
     position: fixed;
     top: 0;
@@ -118,6 +223,11 @@
     border-bottom: 1px solid rgba(5, 8, 40, 0.07);
     text-decoration: none;
     color: $text-color;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.55;
+    }
 
     span:first-child {
         font-size: 14px;
@@ -128,6 +238,6 @@
     span:last-child {
         font-size: 11px;
         font-weight: 300;
-        opacity: 0.5;
+        opacity: 0.45;
     }
 }

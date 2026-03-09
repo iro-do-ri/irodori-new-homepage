@@ -55,9 +55,14 @@
     max-width: 800px;
     margin: 0 auto;
 
+    @include sm {
+        max-width: 960px;
+        padding: clamp(3rem, 5vw, 5rem) clamp(3rem, 5vw, 4rem);
+    }
+
     :global {
         h2 {
-            font-size: clamp(18px, 2.5vw, 24px);
+            font-size: clamp(18px, 2.5vw, 26px);
             font-weight: 700;
             color: $text-color;
             margin-top: 3rem;
@@ -67,7 +72,7 @@
         }
 
         h3 {
-            font-size: clamp(15px, 2vw, 18px);
+            font-size: clamp(15px, 2vw, 20px);
             font-weight: 700;
             color: $text-color;
             margin-top: 2rem;
@@ -75,7 +80,7 @@
         }
 
         p {
-            font-size: clamp(14px, 1.8vw, 15px);
+            font-size: clamp(14px, 1.8vw, 16px);
             line-height: 2;
             color: rgba(5, 8, 40, 0.75);
             margin-bottom: 1.5rem;
@@ -86,7 +91,7 @@
             margin-bottom: 1.5rem;
 
             li {
-                font-size: clamp(14px, 1.8vw, 15px);
+                font-size: clamp(14px, 1.8vw, 16px);
                 line-height: 1.9;
                 color: rgba(5, 8, 40, 0.75);
                 margin-bottom: 0.4rem;
@@ -125,6 +130,11 @@
     padding: clamp(2rem, 4vw, 3rem) clamp(2rem, 5vw, 5rem) 0;
     max-width: 800px;
     margin: 0 auto;
+
+    @include sm {
+        max-width: 960px;
+        padding-left: clamp(3rem, 5vw, 4rem);
+    }
 
     &:hover {
         opacity: 0.7;

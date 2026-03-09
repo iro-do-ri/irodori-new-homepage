@@ -7,22 +7,22 @@ import { getAllPosts } from "../lib/posts";
 import styles from "./Blog.module.scss";
 
 export const metadata: Metadata = {
-  title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+  title: "ブログ｜船橋のホームページ制作・WebデザインTips【イロドリ】",
   description:
-    "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。中小企業の集客に役立つ情報を発信しています。",
+    "船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
   alternates: { canonical: "https://iro-do-ri.jp/blog" },
   openGraph: {
-    title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+    title: "ブログ｜船橋のホームページ制作・WebデザインTips【イロドリ】",
     description:
-      "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。中小企業の集客に役立つ情報を発信しています。",
+      "船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
     url: "https://iro-do-ri.jp/blog",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ブログ｜Webデザイン・ホームページ制作情報【イロドリ】",
+    title: "ブログ｜船橋のホームページ制作・WebデザインTips【イロドリ】",
     description:
-      "船橋のWebデザイナーイロドリによるWebデザイン・ホームページ制作・SEOに関する情報ブログ。",
+      "船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策の情報を発信。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },

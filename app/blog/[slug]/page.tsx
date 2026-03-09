@@ -15,9 +15,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
+  const title = `${post.title}｜船橋のホームページ制作 イロドリ`;
+  const url = `https://iro-do-ri.jp/blog/${slug}`;
   return {
-    title: `${post.title} | イロドリ`,
+    title: { absolute: title },
     description: post.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description: post.description,
+      url,
+      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: post.description,
+      images: ["/og-image.png"],
+    },
+    robots: { index: true, follow: true },
   };
 }
 

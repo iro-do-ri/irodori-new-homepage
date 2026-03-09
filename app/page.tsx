@@ -5,22 +5,24 @@ import Contact from "./parts/Contact";
 import {client} from "./lib/Micro";
 
 export const metadata: Metadata = {
-  title: "船橋のホームページ制作会社｜イロドリ",
+  title: {
+    absolute: "船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
+  },
   description:
-    "千葉県船橋市のWebデザイナー「イロドリ」。WordPress・SEO設計・コーポレートサイト制作を10万円〜で対応。中小企業・法人のサイト制作はお気軽にご相談ください。",
+    "千葉県船橋市のホームページ制作会社イロドリ。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。中小企業・個人事業主のホームページ制作はお気軽にご相談ください。",
   alternates: { canonical: "https://iro-do-ri.jp" },
   openGraph: {
-    title: "船橋のホームページ制作会社｜イロドリ",
+    title: "船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
     description:
-      "千葉県船橋市のWebデザイナー「イロドリ」。WordPress・SEO設計・コーポレートサイト制作を10万円〜で対応。中小企業・法人のサイト制作はお気軽にご相談ください。",
+      "千葉県船橋市のホームページ制作会社イロドリ。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。中小企業・個人事業主のホームページ制作はお気軽にご相談ください。",
     url: "https://iro-do-ri.jp",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "船橋のホームページ制作会社｜イロドリ",
+    title: "船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
     description:
-      "千葉県船橋市のWebデザイナー「イロドリ」。WordPress・SEO設計・コーポレートサイト制作を10万円〜で対応。",
+      "千葉県船橋市のホームページ制作会社イロドリ。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },

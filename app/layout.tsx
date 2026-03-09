@@ -18,6 +18,9 @@ const MurechoSans = Murecho({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://iro-do-ri.jp"),
+  verification: {
+    google: "ytk3I8cyRv8Tf4kUl-4DCqdxqTj2cIY6zPaIlAuh260",
+  },
   title: {
     default: "船橋のホームページ制作会社｜イロドリ",
     template: "%s｜イロドリ",

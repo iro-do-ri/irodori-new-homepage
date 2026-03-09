@@ -79,6 +79,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+      </head>
       <Script
         id="gtm"
         strategy="beforeInteractive"
@@ -92,7 +93,6 @@ export default function RootLayout({
           `,
         }}
       />
-      </head>
       <body>
       <noscript>
         <iframe

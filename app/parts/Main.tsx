@@ -173,7 +173,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
               </div>
             </section>
             <section className={`${styles.works} ${styles.curtain} relative`}>
-              <div className={`${styles.contentsContainer} max-w-[1200px] w-full`}>
+              <div className={`${styles.contentsContainer} sm:max-w-[1200px] sm:w-full`}>
                 <h2 className="mb-6 sm:mb-12">船橋のホームページ制作 実績紹介</h2>
                 <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
                 <p className="mb-6 sm:mb-12">船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
@@ -286,18 +286,8 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
                 </div>
               ))}
             </div>
-            <div className={styles.processCta}>
-              <Link
-                href={URL.Contact}
-                className={styles.processCtaBtn}
-                aria-label="お問い合わせページへ移動します"
-              >
-                無料で相談してみる
-              </Link>
-            </div>
           </div>
         </section>
-
     </main>
   )
 }

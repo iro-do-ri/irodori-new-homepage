@@ -62,7 +62,7 @@ export default function Header() {
           <div className={headerStyles.sidebarTop}>
             <Link href={URL.Home} className={headerStyles.sidebarBrand}>
               <span className={headerStyles.brandName}>IRODORI</span>
-              <span className={headerStyles.brandTagline}>船橋のWebデザイン</span>
+              <span className={headerStyles.brandTagline}>船橋のホームページ制作</span>
             </Link>
           </div>
 
@@ -88,7 +88,7 @@ export default function Header() {
 
       {/* ── モバイル トップバー ── */}
       <div className={`${headerStyles.mobileBar} flex sm:hidden`}>
-        <Link href={URL.Home} className={headerStyles.mobileLogo}>イロドリ</Link>
+        <Link href={URL.Home} className={headerStyles.mobileLogo}>IRODORI</Link>
         <button
           onClick={() => setIsOpen(o => !o)}
           className={headerStyles.hamburger}

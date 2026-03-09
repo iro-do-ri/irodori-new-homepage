@@ -38,7 +38,7 @@
         font-weight: bold;
         @include sm {
             top: 5vw;
-            left: 5vw;
+            left: max(2rem, calc((100% - 1200px) / 2));
             right: auto;
             font-size: clamp(28px, 5.5vw, 80px);
         }
@@ -101,7 +101,7 @@
             right: 5vw;
             @include sm {
                 bottom: 5vw;
-                left: 5vw;
+                left: max(2rem, calc((100% - 1200px) / 2));
                 right: auto;
             }
         }
@@ -117,8 +117,8 @@
             right: 5vw;
             @include sm {
                 top: 5vw;
-                left: 5vw;
-                right: 5vw;
+                left: max(2rem, calc((100% - 1200px) / 2));
+                right: max(2rem, calc((100% - 1200px) / 2));
             }
         }
     }
@@ -132,8 +132,8 @@
             right: 5vw;
             @include sm {
                 top: 5vw;
-                left: 5vw;
-                right: 5vw;
+                left: max(2rem, calc((100% - 1200px) / 2));
+                right: max(2rem, calc((100% - 1200px) / 2));
             }
             .newsList {
                 article {

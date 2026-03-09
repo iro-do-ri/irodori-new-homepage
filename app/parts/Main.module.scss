@@ -195,6 +195,331 @@
     }
 }
 
+// ═══════════════════════════════════════════════
+// 共通セクション utility
+// ═══════════════════════════════════════════════
+.secLabel {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.secTitle {
+    font-size: clamp(22px, 3.5vw, 38px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+.secDesc {
+    font-size: clamp(13px, 1.5vw, 15px);
+    line-height: 1.9;
+    margin-bottom: 3rem;
+}
+
+// ═══════════════════════════════════════════════
+// 選ばれる理由 — features
+// ═══════════════════════════════════════════════
+.features {
+    background: $text-color;
+    padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
+}
+
+.featuresInner {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .secLabel { color: rgba(255, 252, 255, 0.35); }
+    .secTitle  { color: $main-color; }
+    .secDesc   { color: rgba(255, 252, 255, 0.5); }
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+.featureCard {
+    background: rgba(255, 252, 255, 0.04);
+    border: 1px solid rgba(255, 252, 255, 0.1);
+    border-radius: 12px;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    transition: background 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+        background: rgba(255, 252, 255, 0.07);
+        border-color: rgba(51, 100, 174, 0.55);
+    }
+}
+
+.featureNum {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    color: #3364AE;
+    margin-bottom: 1rem;
+}
+
+.featureTitle {
+    font-size: clamp(15px, 1.8vw, 18px);
+    font-weight: 700;
+    color: $main-color;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.featureBody {
+    font-size: clamp(12px, 1.4vw, 14px);
+    line-height: 1.9;
+    color: rgba(255, 252, 255, 0.5);
+}
+
+// ═══════════════════════════════════════════════
+// 制作実績 showcase — worksShowcase
+// ═══════════════════════════════════════════════
+.worksShowcase {
+    background: $bg-color;
+    padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
+}
+
+.worksShowcaseInner {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .secLabel { color: rgba(5, 8, 40, 0.35); }
+    .secTitle  { color: $text-color; }
+    .secDesc   { color: rgba(5, 8, 40, 0.55); }
+}
+
+.worksGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    @include sm {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.75rem;
+    }
+}
+
+.workCard {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(5, 8, 40, 0.07);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 28px rgba(5, 8, 40, 0.13);
+
+        .workImage {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.workImageWrap {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.workImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.workNum {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #fff;
+    background: rgba(5, 8, 40, 0.55);
+    padding: 0.2rem 0.6rem;
+    border-radius: 50rem;
+}
+
+.workMeta {
+    padding: 0.875rem 1rem 1rem;
+}
+
+.workCat {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: $button-color;
+    border: 1px solid rgba(51, 100, 174, 0.35);
+    padding: 0.15rem 0.6rem;
+    border-radius: 50rem;
+    margin-bottom: 0.45rem;
+}
+
+.workTitle {
+    font-size: clamp(12px, 1.4vw, 14px);
+    color: $text-color;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.showcaseCta {
+    text-align: center;
+}
+
+.showcaseBtn {
+    display: inline-block;
+    color: $button-color;
+    border: 2px solid $button-color;
+    border-radius: 50rem;
+    padding: 0.875rem 3rem;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s $cubic-bezier;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: $button-color;
+        z-index: -1;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 0.4s $cubic-bezier;
+    }
+
+    &:hover {
+        color: $main-color;
+        &::before { clip-path: inset(0); }
+    }
+}
+
+// ═══════════════════════════════════════════════
+// 制作の流れ — process
+// ═══════════════════════════════════════════════
+.process {
+    background: #fff;
+    padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
+}
+
+.processInner {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    .secLabel { color: rgba(5, 8, 40, 0.35); }
+    .secTitle  { color: $text-color; }
+    .secDesc   { color: rgba(5, 8, 40, 0.55); }
+}
+
+.processSteps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+    @include sm {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+
+.processStep {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    @include sm {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.processNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: $text-color;
+    color: $main-color;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    @include sm {
+        margin-bottom: 1.25rem;
+    }
+}
+
+.processContent {
+    padding-top: 0.4rem;
+    @include sm { padding-top: 0; }
+}
+
+.processStepTitle {
+    font-size: clamp(14px, 1.6vw, 16px);
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.processStepDesc {
+    font-size: clamp(12px, 1.3vw, 13px);
+    line-height: 1.9;
+    color: rgba(5, 8, 40, 0.55);
+}
+
+.processCta {
+    text-align: center;
+}
+
+.processCtaBtn {
+    display: inline-block;
+    color: $contact-color;
+    border: 2px solid $contact-color;
+    border-radius: 50rem;
+    padding: 0.875rem 3rem;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s $cubic-bezier;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: $contact-color;
+        z-index: -1;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 0.4s $cubic-bezier;
+    }
+
+    &:hover {
+        color: $main-color;
+        &::before { clip-path: inset(0); }
+    }
+}
+
 // ── ニュース一覧 ──
 .newsList {
     li {

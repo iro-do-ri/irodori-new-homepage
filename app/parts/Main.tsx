@@ -123,7 +123,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
             <section className={`relative ${styles.top}`}>
                 <h1 ref={textRef} className={`${styles.mainText} absolute`}><span className="block mb-2">船橋で魅力を伝える<br className="sm:hidden block"/>ホームページ・WEBサイト制作会社</span>あなたの理想を<br/>デザインで形にします</h1>
                 <div ref={textRef_2} className={`${styles.subText} absolute`}>
-                  <p className="mb-4 block">千葉県船橋市を拠点に、<br/>ホームページ、チラシ、動画制作を行う<br/>WEBサイトデザイン会社のイロドリです。</p>
+                  <p className="mb-4 block">千葉県船橋市を拠点に、<br/>ホームページ制作・チラシ・動画制作を行う<br/>Webデザイン会社のイロドリです。<br className="hidden sm:block"/>10万円〜の明瞭価格でご対応します。</p>
                   <Link href={URL.Contact} className={`${styles.contact} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="無料相談ページへ移動します">無料で相談してみる</Link>
                 </div>
             </section>
@@ -154,8 +154,8 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
             </section>
             <section className={`${styles.company} ${styles.curtain} relative`}>
               <div className={styles.contentsContainer} ref={companyRef}>
-                <h2 className="mb-6 sm:mb-12">伝わるデザインと使いやすさを<br/>両立したホームページ・WEBサイト制作</h2>
-                <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせたホームページ・WEBサイト制作をします。</h3>
+                <h2 className="mb-6 sm:mb-12">船橋のホームページ制作｜<br/>伝わるデザインと使いやすさを両立</h2>
+                <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせた船橋のホームページ制作をします。</h3>
                 <p className="mb-2 sm:mb-3">イロドリでは、船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
                 <p className="mb-6 sm:mb-12">見た目の美しさだけでなく、<br className="hidden sm:block"/>使いやすさや更新のしやすさにもこだわり、<br className="hidden sm:block"/>CMS導入やSEO対策を通じて、<br className="hidden sm:block"/>成果につながるサイトづくりをサポートします。</p>
                 <Link href={URL.About} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="Aboutページへ移動します">会社概要を詳しく見る</Link>
@@ -174,9 +174,9 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
             </section>
             <section className={`${styles.works} ${styles.curtain} relative`}>
               <div className={`${styles.contentsContainer} sm:w-[82.5vw] w-full`}>
-                <h2 className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の実績</h2>
-                <h3 className="mb-2 sm:mb-3">船橋を中心に、多彩な業種のホームページを制作しています。</h3>
-                <p className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の実績の一部をご紹介いたします。</p>
+                <h2 className="mb-6 sm:mb-12">船橋のホームページ制作 実績紹介</h2>
+                <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
+                <p className="mb-6 sm:mb-12">船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
                 <Splide
                   options={{
                     type: works.length > 3 ? "loop" : "slide",
@@ -205,6 +205,143 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
               </div>
             </section>
         </section>
+
+        {/* ── 選ばれる理由 ── */}
+        <section className={styles.features}>
+          <div className={styles.featuresInner}>
+            <span className={styles.secLabel}>WHY IRODORI</span>
+            <h2 className={styles.secTitle}>
+              船橋のホームページ制作なら<br />
+              イロドリが選ばれる理由
+            </h2>
+            <div className={styles.featuresGrid}>
+              {[
+                {
+                  num: "01",
+                  title: "SEO設計 × デザイン品質",
+                  body: "見た目の美しさだけでなく、キーワード設計・サイト構造・表示速度を考慮したSEO対策済みのホームページを制作します。",
+                },
+                {
+                  num: "02",
+                  title: "WordPress・CMSで更新しやすい",
+                  body: "専門知識がなくても更新できるCMSを導入。ブログや実績の更新を自社で簡単に継続できる環境を構築します。",
+                },
+                {
+                  num: "03",
+                  title: "10万円〜の明瞭価格",
+                  body: "船橋の中小企業・個人事業主向けに、10万円から高品質なホームページ制作を明瞭価格でご提供します。",
+                },
+                {
+                  num: "04",
+                  title: "公開後も安心サポート",
+                  body: "制作後の修正対応・操作説明・SEO分析など、長期的なサポートで安心してお任せいただけます。",
+                },
+              ].map((f) => (
+                <div key={f.num} className={styles.featureCard}>
+                  <span className={styles.featureNum}>{f.num}</span>
+                  <h3 className={styles.featureTitle}>{f.title}</h3>
+                  <p className={styles.featureBody}>{f.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 制作実績ショーケース ── */}
+        {works.length > 0 && (
+          <section className={styles.worksShowcase}>
+            <div className={styles.worksShowcaseInner}>
+              <span className={styles.secLabel}>WORKS</span>
+              <h2 className={styles.secTitle}>
+                船橋のホームページ制作 制作実績
+              </h2>
+              <p className={styles.secDesc}>
+                飲食店・士業・美容・医療・ECサイトなど、幅広い業種のホームページ制作実績をご紹介。<br className="hidden sm:block" />
+                それぞれのビジネスに合ったデザインと機能を実装しています。
+              </p>
+              <div className={styles.worksGrid}>
+                {works.slice(0, 6).map((work, i) => (
+                  <div key={work.id} className={styles.workCard}>
+                    <div className={styles.workImageWrap}>
+                      <img
+                        src={work.image.url}
+                        alt={`${work.title}のホームページ制作実績｜船橋 イロドリ`}
+                        className={styles.workImage}
+                        loading="lazy"
+                      />
+                      <span className={styles.workNum}>
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <div className={styles.workMeta}>
+                      <span className={styles.workCat}>{work.category}</span>
+                      <p className={styles.workTitle}>{work.title}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className={styles.showcaseCta}>
+                <Link href={URL.Works} className={styles.showcaseBtn} aria-label="制作実績一覧ページへ移動します">
+                  制作実績をすべて見る
+                </Link>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ── 制作の流れ ── */}
+        <section className={styles.process}>
+          <div className={styles.processInner}>
+            <span className={styles.secLabel}>FLOW</span>
+            <h2 className={styles.secTitle}>ホームページ制作の流れ</h2>
+            <p className={styles.secDesc}>
+              無料相談から公開後のサポートまで、<br className="hidden sm:block" />
+              船橋のホームページ制作会社イロドリが丁寧にサポートします。
+            </p>
+            <div className={styles.processSteps}>
+              {[
+                {
+                  step: "01",
+                  title: "無料相談・ヒアリング",
+                  desc: "目的・予算・スケジュールなどを丁寧にヒアリングします。まずはお気軽にご連絡ください。",
+                },
+                {
+                  step: "02",
+                  title: "提案・お見積もり",
+                  desc: "ヒアリング内容をもとに最適なプランと詳細なお見積もりをご提示します。",
+                },
+                {
+                  step: "03",
+                  title: "デザイン・開発",
+                  desc: "ブランドイメージに合ったオリジナルデザインを制作。確認・修正を重ねて仕上げます。",
+                },
+                {
+                  step: "04",
+                  title: "公開・アフターサポート",
+                  desc: "サイト公開後も修正対応・SEO分析・操作説明で長期的にバックアップします。",
+                },
+              ].map((item) => (
+                <div key={item.step} className={styles.processStep}>
+                  <span className={styles.processNum}>{item.step}</span>
+                  <div className={styles.processContent}>
+                    <h3 className={styles.processStepTitle}>{item.title}</h3>
+                    <p className={styles.processStepDesc}>{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className={styles.processCta}>
+              <Link
+                href={URL.Contact}
+                className={styles.processCtaBtn}
+                aria-label="お問い合わせページへ移動します"
+              >
+                無料で相談してみる
+              </Link>
+            </div>
+          </div>
+        </section>
+
     </main>
   )
 }

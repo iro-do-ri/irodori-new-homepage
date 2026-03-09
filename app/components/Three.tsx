@@ -7,7 +7,7 @@ import MyModel from "../../public/models/Mymodel";
 export default function Three() {
   return (
     <div style={{ width: "100%", height: "100dvh", position: "fixed", zIndex: "-1", background: "#0d1b2a" }}>
-      <Canvas shadows camera={{ position: [10,11,12], fov: 40 }}>
+      <Canvas shadows camera={{ position: [12.2,15,15], fov: 32 }}>
         <ambientLight intensity={2} />
         <directionalLight
           castShadow

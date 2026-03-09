@@ -123,7 +123,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
             <section className={`relative ${styles.top}`}>
                 <h1 ref={textRef} className={`${styles.mainText} absolute`}><span className="block mb-2">船橋で魅力を伝える<br className="sm:hidden block"/>ホームページ・WEBサイト制作会社</span>あなたの理想を<br/>デザインで形にします</h1>
                 <div ref={textRef_2} className={`${styles.subText} absolute`}>
-                  <p className="mb-4 block">千葉県船橋市を拠点に、<br/>ホームページ制作・チラシ・動画制作を行う<br/>Webデザイン会社のイロドリです。<br className="hidden sm:block"/>10万円〜の明瞭価格でご対応します。</p>
+                  <p className="mb-4 block">千葉県船橋市を拠点に、<br/>ホームページ制作・チラシ・動画制作を行う<br/>Webデザイン会社のイロドリです。<br className="hidden sm:block"/>ホームページ制作を10万円からご対応します。</p>
                   <Link href={URL.Contact} className={`${styles.contact} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="無料相談ページへ移動します">無料で相談してみる</Link>
                 </div>
             </section>
@@ -173,7 +173,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
               </div>
             </section>
             <section className={`${styles.works} ${styles.curtain} relative`}>
-              <div className={`${styles.contentsContainer} sm:w-[82.5vw] w-full`}>
+              <div className={`${styles.contentsContainer} max-w-[1200px] w-full`}>
                 <h2 className="mb-6 sm:mb-12">船橋のホームページ制作 実績紹介</h2>
                 <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
                 <p className="mb-6 sm:mb-12">船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
@@ -209,7 +209,6 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
         {/* ── 選ばれる理由 ── */}
         <section className={styles.features}>
           <div className={styles.featuresInner}>
-            <span className={styles.secLabel}>WHY IRODORI</span>
             <h2 className={styles.secTitle}>
               船橋のホームページ制作なら<br />
               イロドリが選ばれる理由
@@ -247,52 +246,9 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
           </div>
         </section>
 
-        {/* ── 制作実績ショーケース ── */}
-        {works.length > 0 && (
-          <section className={styles.worksShowcase}>
-            <div className={styles.worksShowcaseInner}>
-              <span className={styles.secLabel}>WORKS</span>
-              <h2 className={styles.secTitle}>
-                船橋のホームページ制作 制作実績
-              </h2>
-              <p className={styles.secDesc}>
-                飲食店・士業・美容・医療・ECサイトなど、幅広い業種のホームページ制作実績をご紹介。<br className="hidden sm:block" />
-                それぞれのビジネスに合ったデザインと機能を実装しています。
-              </p>
-              <div className={styles.worksGrid}>
-                {works.slice(0, 6).map((work, i) => (
-                  <div key={work.id} className={styles.workCard}>
-                    <div className={styles.workImageWrap}>
-                      <img
-                        src={work.image.url}
-                        alt={`${work.title}のホームページ制作実績｜船橋 イロドリ`}
-                        className={styles.workImage}
-                        loading="lazy"
-                      />
-                      <span className={styles.workNum}>
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                    </div>
-                    <div className={styles.workMeta}>
-                      <span className={styles.workCat}>{work.category}</span>
-                      <p className={styles.workTitle}>{work.title}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className={styles.showcaseCta}>
-                <Link href={URL.Works} className={styles.showcaseBtn} aria-label="制作実績一覧ページへ移動します">
-                  制作実績をすべて見る
-                </Link>
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* ── 制作の流れ ── */}
         <section className={styles.process}>
           <div className={styles.processInner}>
-            <span className={styles.secLabel}>FLOW</span>
             <h2 className={styles.secTitle}>ホームページ制作の流れ</h2>
             <p className={styles.secDesc}>
               無料相談から公開後のサポートまで、<br className="hidden sm:block" />

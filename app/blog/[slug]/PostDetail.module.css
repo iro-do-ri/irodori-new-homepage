@@ -51,8 +51,14 @@
   max-width: 800px;
   margin: 0 auto;
 }
+@media (min-width: 640px) {
+  .article {
+    max-width: 1200px;
+    padding: clamp(3rem, 5vw, 5rem) clamp(3rem, 5vw, 4rem);
+  }
+}
 .article :global h2 {
-  font-size: clamp(18px, 2.5vw, 24px);
+  font-size: clamp(18px, 2.5vw, 26px);
   font-weight: 700;
   color: #050828;
   margin-top: 3rem;
@@ -61,14 +67,14 @@
   border-bottom: 2px solid rgba(51, 100, 174, 0.2);
 }
 .article :global h3 {
-  font-size: clamp(15px, 2vw, 18px);
+  font-size: clamp(15px, 2vw, 20px);
   font-weight: 700;
   color: #050828;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 .article :global p {
-  font-size: clamp(14px, 1.8vw, 15px);
+  font-size: clamp(14px, 1.8vw, 16px);
   line-height: 2;
   color: rgba(5, 8, 40, 0.75);
   margin-bottom: 1.5rem;
@@ -78,7 +84,7 @@
   margin-bottom: 1.5rem;
 }
 .article :global ul li, .article :global ol li {
-  font-size: clamp(14px, 1.8vw, 15px);
+  font-size: clamp(14px, 1.8vw, 16px);
   line-height: 1.9;
   color: rgba(5, 8, 40, 0.75);
   margin-bottom: 0.4rem;
@@ -110,6 +116,12 @@
   padding: clamp(2rem, 4vw, 3rem) clamp(2rem, 5vw, 5rem) 0;
   max-width: 800px;
   margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .backLink {
+    max-width: 1200px;
+    padding-left: clamp(3rem, 5vw, 4rem);
+  }
 }
 .backLink:hover {
   opacity: 0.7;

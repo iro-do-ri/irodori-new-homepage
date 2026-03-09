@@ -19,6 +19,10 @@
     background: $text-color;
     color: $main-color;
     padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
+    @include sm {
+        padding-left: max(2rem, calc((100% - 1200px) / 2));
+        padding-right: max(2rem, calc((100% - 1200px) / 2));
+    }
 
     .label {
         display: block;

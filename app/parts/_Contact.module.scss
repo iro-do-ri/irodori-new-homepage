@@ -25,6 +25,8 @@
 
     @include sm {
         padding: calc($space_sm * 10) clamp(2rem, 5vw, 4rem);
+        left: 195px;
+        width: calc(100% - 195px);
     }
 }
 

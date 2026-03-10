@@ -624,6 +624,7 @@
   top: clamp(72px, 16vw, 120px);
   left: 5vw;
   right: 5vw;
+  z-index: 1;
 }
 @media (min-width: 640px) {
   .container .company .contentsContainer, .container .price .contentsContainer, .container .works .contentsContainer, .container .footer .contentsContainer {
@@ -631,6 +632,10 @@
     left: max(2rem, (100% - 1200px) / 2);
     right: max(2rem, (100% - 1200px) / 2);
   }
+}
+.container .company .contentsContainer h2, .container .price .contentsContainer h2, .container .works .contentsContainer h2, .container .footer .contentsContainer h2 {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .container .company .contentsContainer .newsList article span, .container .price .contentsContainer .newsList article span, .container .works .contentsContainer .newsList article span, .container .footer .contentsContainer .newsList article span {
   width: 9vw;
@@ -643,15 +648,63 @@
 .container .curtain {
   clip-path: inset(0 100% 0 0);
   transition: clip-path 0.8s ease;
+  overflow: hidden;
 }
 .container .curtain.company {
-  background-color: rgba(5, 8, 40, 0.9);
+  background-color: rgba(5, 8, 40, 0.93);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.container .curtain.company::after {
+  content: "COMPANY";
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.5rem);
+  bottom: clamp(0.75rem, 3vw, 2rem);
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.035);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+  line-height: 1;
+  white-space: nowrap;
 }
 .container .curtain.price {
-  background-color: rgba(12, 18, 92, 0.9);
+  background-color: rgba(12, 18, 92, 0.93);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.container .curtain.price::after {
+  content: "PRICE";
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.5rem);
+  bottom: clamp(0.75rem, 3vw, 2rem);
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.035);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+  line-height: 1;
+  white-space: nowrap;
 }
 .container .curtain.works {
-  background-color: rgba(18, 29, 145, 0.9);
+  background-color: rgba(18, 29, 145, 0.93);
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 22px, rgba(255, 255, 255, 0.03) 22px, rgba(255, 255, 255, 0.03) 23px);
+}
+.container .curtain.works::after {
+  content: "WORKS";
+  position: absolute;
+  right: clamp(1rem, 3vw, 2.5rem);
+  bottom: clamp(0.75rem, 3vw, 2rem);
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.035);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  pointer-events: none;
+  line-height: 1;
+  white-space: nowrap;
 }
 .container .curtain.clipPathAnimation {
   clip-path: inset(0 0 0 0);
@@ -689,12 +742,41 @@
   transition: clip-path 0.4s cubic-bezier(1, 0, 0, 1);
 }
 
-.secLabel {
+.curtainEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 10px;
+  letter-spacing: 0.45em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.curtainEyebrow::before {
+  content: "";
   display: block;
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.secLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 11px;
   letter-spacing: 0.4em;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+}
+.secLabel::before {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: currentColor;
+  flex-shrink: 0;
 }
 
 .secTitle {
@@ -711,7 +793,7 @@
 }
 
 .features {
-  background: #050828;
+  background: linear-gradient(135deg, #050828 0%, #0c1260 60%, #050828 100%);
   padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
 }
 
@@ -742,15 +824,31 @@
 }
 
 .featureCard {
+  position: relative;
+  overflow: hidden;
   background: rgba(255, 252, 255, 0.04);
-  border: 1px solid rgba(255, 252, 255, 0.1);
+  border: 1px solid rgba(255, 252, 255, 0.08);
+  border-top: 2px solid rgba(51, 100, 174, 0.6);
   border-radius: 12px;
   padding: clamp(1.5rem, 3vw, 2.5rem);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.featureCard::before {
+  content: attr(data-num);
+  position: absolute;
+  right: -0.5rem;
+  bottom: -1.25rem;
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  letter-spacing: -0.05em;
 }
 .featureCard:hover {
-  background: rgba(255, 252, 255, 0.07);
-  border-color: rgba(51, 100, 174, 0.55);
+  background: rgba(255, 252, 255, 0.08);
+  border-color: rgba(51, 100, 174, 0.8);
+  box-shadow: 0 8px 32px rgba(51, 100, 174, 0.15);
 }
 
 .featureNum {
@@ -777,7 +875,7 @@
 }
 
 .worksShowcase {
-  background: #edeef1;
+  background: linear-gradient(180deg, #edeef1 0%, #dde0f5 100%);
   padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
 }
 
@@ -822,11 +920,22 @@
 .workCard:hover .workImage {
   transform: scale(1.05);
 }
+.workCard:hover .workImageWrap::after {
+  opacity: 1;
+}
 
 .workImageWrap {
   position: relative;
   aspect-ratio: 16/9;
   overflow: hidden;
+}
+.workImageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 8, 40, 0.55) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .workImage {
@@ -907,7 +1016,7 @@
 }
 
 .process {
-  background: #fff;
+  background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 60%);
   padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
 }
 
@@ -930,11 +1039,21 @@
   grid-template-columns: 1fr;
   gap: 1.75rem;
   margin-bottom: 3rem;
+  position: relative;
 }
 @media (min-width: 640px) {
   .processSteps {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+  }
+  .processSteps::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 12.5%;
+    right: 12.5%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(5, 8, 40, 0.12) 20%, rgba(5, 8, 40, 0.12) 80%, transparent);
   }
 }
 
@@ -959,12 +1078,15 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #050828;
+  background: linear-gradient(135deg, #050828 0%, #1a2a8e 100%);
+  box-shadow: 0 4px 16px rgba(5, 8, 40, 0.2);
   color: #fffcff;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.05em;
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 640px) {
   .processNum {

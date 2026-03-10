@@ -19,6 +19,12 @@
   color: #fffcff;
   padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
 }
+@media (min-width: 640px) {
+  .hero {
+    padding-left: max(2rem, (100% - 1200px) / 2);
+    padding-right: max(2rem, (100% - 1200px) / 2);
+  }
+}
 .hero .label {
   display: block;
   font-size: 11px;

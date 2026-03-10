@@ -204,7 +204,9 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
                     </SplideSlide>
                   ))}
                 </Splide>
+                <div className="flex justify-center">
                 <Link href={URL.Works} className={`${styles.button} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="実績ページへ移動します">他の実績を詳しく見る</Link>
+                </div>
               </div>
             </section>
         </section>

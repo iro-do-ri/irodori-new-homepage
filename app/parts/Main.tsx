@@ -159,7 +159,9 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
                 <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせた船橋のホームページ制作をします。</h3>
                 <p className="mb-2 sm:mb-3">イロドリでは、船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
                 <p className="mb-6 sm:mb-12">見た目の美しさだけでなく、<br className="hidden sm:block"/>使いやすさや更新のしやすさにもこだわり、<br className="hidden sm:block"/>CMS導入やSEO対策を通じて、<br className="hidden sm:block"/>成果につながるサイトづくりをサポートします。</p>
+                <div className="flex justify-center">
                 <Link href={URL.About} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="Aboutページへ移動します">会社概要を詳しく見る</Link>
+                </div>
               </div>
             </section>
             <section className={`${styles.price} ${styles.curtain} relative`}>
@@ -171,7 +173,9 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
                 <h3 className="mb-2 sm:mb-3">10万円からホームページを作成します</h3>
                 <p className="mb-2 sm:mb-3">一番お求めやすいプランでは、<br className="hidden sm:block"/>10万円から始められるシンプルで高品質なホームページ制作を致します。</p>
                 <p className="mb-6 sm:mb-12">初めてWEBサイトを導入する方や、<br className="hidden sm:block"/>コストを抑えつつ信頼感のあるデザインを求める方におすすめです。</p>
+                <div className="flex justify-center">
                 <Link href={URL.Price} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="料金ページへ移動します">料金体系を詳しく見る</Link>
+                </div>
               </div>
             </section>
             <section className={`${styles.works} ${styles.curtain} relative`}>

@@ -154,6 +154,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
             </section>
             <section className={`${styles.company} ${styles.curtain} relative`}>
               <div className={styles.contentsContainer} ref={companyRef}>
+                <span className={styles.curtainEyebrow}>ABOUT IRODORI</span>
                 <h2 className="mb-6 sm:mb-12">船橋のホームページ制作｜<br/>伝わるデザインと使いやすさを両立</h2>
                 <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせた船橋のホームページ制作をします。</h3>
                 <p className="mb-2 sm:mb-3">イロドリでは、船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
@@ -163,6 +164,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
             </section>
             <section className={`${styles.price} ${styles.curtain} relative`}>
               <div className={styles.contentsContainer}>
+                <span className={styles.curtainEyebrow}>PRICE &amp; PLAN</span>
                 <h2 className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の料金について</h2>
                 <h3 className="mb-2 sm:mb-3">スモールビジネス向け｜コストを抑えた高品質ホームページ・WEBサイト制作</h3>
                 <p className="mb-4 sm:mb-12">イロドリでは、コストパフォーマンスを重視する<br className="hidden sm:block"/>スモールビジネスオーナー様のニーズに応えるためのプランがございます。</p>
@@ -174,6 +176,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
             </section>
             <section className={`${styles.works} ${styles.curtain} relative`}>
               <div className={`${styles.contentsContainer} sm:w-[82.5vw] w-full`}>
+                <span className={styles.curtainEyebrow}>OUR WORKS</span>
                 <h2 className="mb-6 sm:mb-12">船橋のホームページ制作 実績紹介</h2>
                 <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
                 <p className="mb-6 sm:mb-12">船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>

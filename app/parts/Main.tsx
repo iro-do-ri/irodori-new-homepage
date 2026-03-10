@@ -236,7 +236,7 @@ export default function Main({ news, works }: { news: any[]; works: Work[] }) {
                   body: "制作後の修正対応・操作説明・SEO分析など、長期的なサポートで安心してお任せいただけます。",
                 },
               ].map((f) => (
-                <div key={f.num} className={styles.featureCard}>
+                <div key={f.num} className={styles.featureCard} data-num={f.num}>
                   <span className={styles.featureNum}>{f.num}</span>
                   <h3 className={styles.featureTitle}>{f.title}</h3>
                   <p className={styles.featureBody}>{f.body}</p>

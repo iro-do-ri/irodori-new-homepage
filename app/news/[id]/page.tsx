@@ -79,8 +79,24 @@ export default async function NewsDetail({
           />
         )}
 
-        {/* ── お問い合わせ ── */}
-        <Contact />
+        {/* ── CTA ── */}
+        <div className={styles.cta}>
+          <span className={styles.ctaLabel}>CONTACT</span>
+          <h2 className={styles.ctaTitle}>
+            ホームページ制作の<br />ご相談はお気軽に
+          </h2>
+          <p className={styles.ctaDesc}>
+            まずはお気軽にご相談ください。<br />
+            要件整理から提案・見積まで、無料でご対応しています。
+          </p>
+          <Link
+            href={URL.Contact}
+            className={`${styles.ctaButton} sm:px-12 px-8 sm:py-6 py-4`}
+            aria-label="お問い合わせページへ移動します"
+          >
+            無料で相談してみる
+          </Link>
+        </div>
       </div>
     </section>
   );

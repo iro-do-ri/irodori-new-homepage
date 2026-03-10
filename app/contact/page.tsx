@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Contact from "../parts/Contact";
 import Breadcrumb from "../parts/Breadcrumb";
-import styles from "../parts/_Contact.module.scss";
+import styles from "../parts/Contact.module.scss";
 
 export const metadata: Metadata = {
   title: "お問い合わせ｜船橋のホームページ制作はイロドリへ",

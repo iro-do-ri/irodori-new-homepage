@@ -4,6 +4,7 @@ import Link from "next/link";
 import { URL } from "../url/Url";
 import { client } from "../lib/Micro";
 import styles from "./Works.module.scss";
+import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "制作実績｜船橋のホームページ制作会社イロドリ",
@@ -55,6 +56,16 @@ export default async function WorksPage() {
             船橋を拠点に、多彩な業種のホームページ・WEBサイトを制作しています。
           </p>
         </div>
+
+        <Breadcrumb items={[{ label: "制作実績" }]} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "ホーム", item: "https://iro-do-ri.jp/" },
+            { "@type": "ListItem", position: 2, name: "制作実績", item: "https://iro-do-ri.jp/works" },
+          ],
+        }) }} />
 
         {/* ── 一覧 ── */}
         <div className={styles.section}>

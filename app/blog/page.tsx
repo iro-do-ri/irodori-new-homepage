@@ -5,6 +5,7 @@ import { URL } from "../url/Url";
 import { client } from "../lib/Micro";
 import { getAllPosts } from "../lib/posts";
 import styles from "./Blog.module.scss";
+import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "ブログ｜船橋のホームページ制作・WebデザインTips【イロドリ】",
@@ -66,6 +67,16 @@ export default async function BlogPage() {
             WEBデザインや制作の現場から、役立つ情報をお届けします。
           </p>
         </div>
+
+        <Breadcrumb items={[{ label: "ブログ" }]} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "ホーム", item: "https://iro-do-ri.jp/" },
+            { "@type": "ListItem", position: 2, name: "ブログ", item: "https://iro-do-ri.jp/blog" },
+          ],
+        }) }} />
 
         {/* ── ローカル記事一覧 ── */}
         {localPosts.length > 0 && (

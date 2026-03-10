@@ -3,6 +3,7 @@ import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import styles from "./Price.module.scss";
+import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "料金プラン｜船橋のホームページ制作 10万円〜【イロドリ】",
@@ -113,6 +114,16 @@ export default function Price() {
             10万円から、あなたのビジネスに合ったサイトを制作します。
           </p>
         </div>
+
+        <Breadcrumb items={[{ label: "料金プラン" }]} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "ホーム", item: "https://iro-do-ri.jp/" },
+            { "@type": "ListItem", position: 2, name: "料金プラン", item: "https://iro-do-ri.jp/price" },
+          ],
+        }) }} />
 
         {/* ── コンセプト ── */}
         <div className={styles.section}>

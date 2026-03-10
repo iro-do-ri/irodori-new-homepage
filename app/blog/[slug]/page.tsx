@@ -4,6 +4,7 @@ import Link from "next/link";
 import Header from "@/app/parts/Header";
 import { getAllPostSlugs, getPostBySlug } from "@/app/lib/posts";
 import styles from "./PostDetail.module.scss";
+import Breadcrumb from "@/app/parts/Breadcrumb";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -64,6 +65,17 @@ export default async function BlogPostPage({ params }: Props) {
           <h1 className={styles.title}>{post.title}</h1>
           {dateFormatted && <time className={styles.date}>{dateFormatted}</time>}
         </div>
+
+        <Breadcrumb items={[{ label: "ブログ", href: "/blog" }, { label: post.title }]} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "ホーム", item: "https://iro-do-ri.jp/" },
+            { "@type": "ListItem", position: 2, name: "ブログ", item: "https://iro-do-ri.jp/blog" },
+            { "@type": "ListItem", position: 3, name: post.title, item: `https://iro-do-ri.jp/blog/${slug}` },
+          ],
+        }) }} />
 
         {/* ── 戻るリンク ── */}
         <div className={styles.backLink}>

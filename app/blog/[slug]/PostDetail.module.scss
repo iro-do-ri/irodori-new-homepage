@@ -14,7 +14,7 @@
 }
 
 .hero {
-    background: $text-color;
+    background: $gradient-color
     color: $main-color;
     padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
     @include sm {
@@ -146,7 +146,7 @@
 }
 
 .cta {
-    background: $text-color;
+    background: $gradient-color
     color: $main-color;
     text-align: center;
     padding: clamp(4rem, 8vw, 7rem) 2rem;

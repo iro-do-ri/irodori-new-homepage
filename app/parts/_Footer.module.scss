@@ -4,7 +4,7 @@
     position: relative;
     left: 195px;
     width: calc(100% - 195px);
-    background: $text-color;
+    background: $gradient-color
     color: $main-color;
 
     @media (max-width: 639px) {

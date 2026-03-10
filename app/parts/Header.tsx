@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import headerStyles from "./_Header.module.scss";
+import headerStyles from "./Header.module.scss";
 import { URL } from "../url/Url";
 
 const HomeIcon = () => (

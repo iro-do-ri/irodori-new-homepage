@@ -14,7 +14,7 @@
 }
 
 .hero {
-  background: #050828;
+  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
   color: #fffcff;
   padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
 }

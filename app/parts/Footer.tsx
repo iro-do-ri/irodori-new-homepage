@@ -1,5 +1,5 @@
 import Link from "next/link";
-import footer from "./_Footer.module.scss";
+import footer from "./Footer.module.scss";
 import { URL } from "../url/Url";
 
 const navLinks = [

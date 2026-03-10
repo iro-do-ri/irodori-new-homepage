@@ -1,8 +1,8 @@
 @use "./_variables" as *;
 
-@import './Footer.module.scss';
-@import './Header.module.scss';
-@import './Page.module.scss';
+@use './Footer.module.scss';
+@use './Header.module.scss';
+@use './Page.module.scss';
 
 
 .main {

@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./_Contact.module.scss";
+import styles from "./Contact.module.scss";
 import { useState } from "react";
 
 export default function Contact() {

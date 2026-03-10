@@ -44,7 +44,7 @@
 
 // ── カードヘッダー（ダークナビー） ──────────────────
 .cardHeader {
-    background: $gradient-color
+    background: $gradient-color;
     color: $main-color;
     padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 5vw, 3rem);
 

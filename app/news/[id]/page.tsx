@@ -1,6 +1,5 @@
 import { client } from "../../lib/Micro";
 import Header from "@/app/parts/Header";
-import Contact from "./Contact";
 import Link from "next/link";
 import styles from "./NewsDetail.module.scss";
 import Breadcrumb from "@/app/parts/Breadcrumb";

@@ -23,10 +23,23 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "ホーム", item: "https://iro-do-ri.jp/" },
+    { "@type": "ListItem", position: 2, name: "会社情報", item: "https://iro-do-ri.jp/company" },
+  ],
+};
+
 export default function Home() {
   return (
-  <section className="flex">
-    <Header />
-  </section>
+    <section className="flex">
+      <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+    </section>
   );
 }

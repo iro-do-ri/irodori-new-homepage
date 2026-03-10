@@ -1,20 +1,29 @@
 @use "./_variables" as *;
 
-// ── ページラッパー ────────────────────────────────
-.container {
+// ── ページラッパー（サイドバー offset） ──────────────
+.pageWrapper {
     position: relative;
     left: 0;
     width: 100%;
-    min-height: 100vh;
     background: $bg-color;
+    padding-top: 56px;
+
+    @include sm {
+        left: 195px;
+        width: calc(100% - 195px);
+        padding-top: 0;
+    }
+}
+
+// ── コンテンツコンテナ ────────────────────────────
+.container {
+    min-height: 100vh;
     padding: clamp(1.5rem, 5vw, 3rem) 1rem;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
 
     @include sm {
-        left: 195px;
-        width: calc(100% - 195px);
         padding: calc($space_sm * 10) clamp(2rem, 5vw, 4rem);
     }
 }

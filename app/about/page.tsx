@@ -3,6 +3,7 @@ import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import styles from "./About.module.scss";
+import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "会社概要｜船橋のホームページ制作会社イロドリ",
@@ -46,6 +47,8 @@ export default function About() {
             お客様の想いを、デザインで形にします。
           </p>
         </div>
+
+        <Breadcrumb items={[{ label: "会社概要" }]} />
 
         {/* ── 私たちの想い ── */}
         <div className={styles.section}>
@@ -170,6 +173,16 @@ export default function About() {
             </div>
           </div>
         </div>
+
+        {/* ── JSON-LD ── */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "ホーム", item: "https://iro-do-ri.jp/" },
+            { "@type": "ListItem", position: 2, name: "会社概要", item: "https://iro-do-ri.jp/about" },
+          ],
+        }) }} />
 
         {/* ── CTA ── */}
         <div className={styles.cta}>

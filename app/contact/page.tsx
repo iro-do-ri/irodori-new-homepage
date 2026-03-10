@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Contact from "../parts/Contact";
+import Breadcrumb from "../parts/Breadcrumb";
+import styles from "../parts/_Contact.module.scss";
 
 export const metadata: Metadata = {
   title: "お問い合わせ｜船橋のホームページ制作はイロドリへ",
@@ -24,11 +26,27 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "ホーム", item: "https://iro-do-ri.jp/" },
+    { "@type": "ListItem", position: 2, name: "お問い合わせ", item: "https://iro-do-ri.jp/contact" },
+  ],
+};
+
 export default function ContactPage() {
   return (
     <section className="flex">
       <Header />
-      <Contact />
+      <div className={styles.pageWrapper}>
+        <Breadcrumb items={[{ label: "お問い合わせ" }]} />
+        <Contact />
+      </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
     </section>
   );
 }

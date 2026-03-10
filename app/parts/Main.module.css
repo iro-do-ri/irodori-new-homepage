@@ -2,7 +2,7 @@
   position: relative;
   left: 195px;
   width: calc(100% - 195px);
-  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+  background: #050828;
   color: #fffcff;
 }
 @media (max-width: 639px) {
@@ -519,7 +519,15 @@
   color: #fffcff;
 }
 .container section {
-  height: 40rem;
+  height: 37rem;
+}
+.container section.works {
+  height: 50rem;
+}
+@media (min-width: 640px) {
+  .container section.works {
+    height: 100dvh;
+  }
 }
 @media (min-width: 640px) {
   .container section {

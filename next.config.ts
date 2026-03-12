@@ -12,7 +12,12 @@ module.exports = {
       {
         source: '/company',
         destination: '/',
-        permanent: true, // 301リダイレクト
+        permanent: true,
+      },
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
       },
     ]
   },

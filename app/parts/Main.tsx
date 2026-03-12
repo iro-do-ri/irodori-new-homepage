@@ -128,7 +128,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
       <Three />
         <section className={styles.container} ref={wrapperRef}>
             <section className={`relative ${styles.top}`}>
-                <h1 ref={textRef} className={`${styles.mainText} absolute`}><span className="block mb-2">船橋で魅力を伝える<br className="sm:hidden block"/>ホームページ・WEBサイト制作会社</span>あなたの理想を<br/>デザインで形にします</h1>
+                <h1 ref={textRef} className={`${styles.mainText} absolute`}><span className="block mb-2">千葉県船橋で魅力を伝える<br className="sm:hidden block"/>ホームページ・WEBサイト制作会社</span>あなたの理想を<br/>デザインで形にします</h1>
                 <div ref={textRef_2} className={`${styles.subText} absolute`}>
                   <p className="mb-4 block">千葉県船橋市を拠点に、<br/>ホームページ制作・チラシ・動画制作を行う<br/>Webデザイン会社のイロドリです。<br className="hidden sm:block"/>ホームページ制作を10万円からご対応します。</p>
                   <Link href={URL.Contact} className={`${styles.contact} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="無料相談ページへ移動します">無料で相談してみる</Link>
@@ -136,7 +136,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
             </section>
             <section ref={textRef_3} className={`${styles.news} absolute w-full`}>
               <div className={styles.newsContainer}>
-              <h2 className="mb-4 sm:mb-8">船橋でホームページ・WEBサイト制作を行う<br className="hidden sm:block"/>イロドリからのお知らせ</h2>
+              <h2 className="mb-4 sm:mb-8">千葉県船橋でホームページ・WEBサイト制作を行う<br className="hidden sm:block"/>イロドリからのお知らせ</h2>
               <div className="flex flex-col justify-center">
               <h3 className="mb-2">ホームページ制作会社イロドリの更新情報</h3>
               <ul className={`${styles.newsList} mb-6 sm:mb-12`}>
@@ -162,9 +162,9 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
             <section className={`${styles.company} ${styles.curtain} relative`}>
               <div className={styles.contentsContainer} ref={companyRef}>
                 <span className={styles.curtainEyebrow}>ABOUT IRODORI</span>
-                <h2 className="mb-6 sm:mb-12">船橋のホームページ制作｜<br/>伝わるデザインと使いやすさを両立</h2>
-                <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせた船橋のホームページ制作をします。</h3>
-                <p className="mb-2 sm:mb-3">イロドリでは、船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
+                <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作｜<br/>伝わるデザインと使いやすさを両立</h2>
+                <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせた千葉県船橋のホームページ制作をします。</h3>
+                <p className="mb-2 sm:mb-3">イロドリでは、千葉県船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
                 <p className="mb-6 sm:mb-12">見た目の美しさだけでなく、<br className="hidden sm:block"/>使いやすさや更新のしやすさにもこだわり、<br className="hidden sm:block"/>CMS導入やSEO対策を通じて、<br className="hidden sm:block"/>成果につながるサイトづくりをサポートします。</p>
                 <div className="flex justify-center">
                 <Link href={URL.About} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="Aboutページへ移動します">会社概要を詳しく見る</Link>
@@ -188,9 +188,9 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
             <section className={`${styles.works} ${styles.curtain} relative`}>
               <div className={`${styles.contentsContainer} sm:max-w-[1200px] sm:w-full`}>
                 <span className={styles.curtainEyebrow}>OUR WORKS</span>
-                <h2 className="mb-6 sm:mb-12">船橋のホームページ制作 実績紹介</h2>
+                <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作 実績紹介</h2>
                 <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
-                <p className="mb-6 sm:mb-12">船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
+                <p className="mb-6 sm:mb-12">千葉県船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
                 <Splide
                   options={{
                     type: works.length > 3 ? "loop" : "slide",
@@ -226,7 +226,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
         <section className={styles.features}>
           <div className={styles.featuresInner}>
             <h2 className={styles.secTitle}>
-              船橋のホームページ制作なら<br />
+              千葉県船橋のホームページ制作なら<br />
               イロドリが選ばれる理由
             </h2>
             <div className={styles.featuresGrid}>
@@ -244,7 +244,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                 {
                   num: "03",
                   title: "10万円〜の明瞭価格",
-                  body: "船橋の中小企業・個人事業主向けに、10万円から高品質なホームページ制作を明瞭価格でご提供します。",
+                  body: "千葉県船橋の中小企業・個人事業主向けに、10万円から高品質なホームページ制作を明瞭価格でご提供します。",
                 },
                 {
                   num: "04",
@@ -268,7 +268,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
             <h2 className={styles.secTitle}>ホームページ制作の流れ</h2>
             <p className={styles.secDesc}>
               無料相談から公開後のサポートまで、<br className="hidden sm:block" />
-              船橋のホームページ制作会社イロドリが丁寧にサポートします。
+              千葉県船橋のホームページ制作会社イロドリが丁寧にサポートします。
             </p>
             <div className={styles.processSteps}>
               {[

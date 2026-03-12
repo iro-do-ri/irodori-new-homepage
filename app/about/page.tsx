@@ -6,12 +6,13 @@ import styles from "./About.module.scss";
 import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "会社概要｜船橋のホームページ制作会社イロドリ",
+  title: "会社概要｜千葉県船橋のホームページ制作会社イロドリ",
   description:
     "千葉県船橋市を拠点とするホームページ制作会社イロドリ。制作会社・事業会社での実務経験10年以上のWebデザイナーが、WordPress・SEO・UI設計を一気通貫でご対応します。",
+  keywords: ["船橋", "千葉県", "千葉県船橋市", "会社概要", "ホームページ制作", "Webデザイン", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/about" },
   openGraph: {
-    title: "会社概要｜船橋のホームページ制作会社イロドリ",
+    title: "会社概要｜千葉県船橋のホームページ制作会社イロドリ",
     description:
       "千葉県船橋市を拠点とするホームページ制作会社イロドリ。制作会社・事業会社での実務経験10年以上のWebデザイナーが、WordPress・SEO・UI設計を一気通貫でご対応します。",
     url: "https://iro-do-ri.jp/about",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "会社概要｜船橋のホームページ制作会社イロドリ",
+    title: "会社概要｜千葉県船橋のホームページ制作会社イロドリ",
     description:
       "千葉県船橋市を拠点とするホームページ制作会社イロドリ。WordPress・SEO・UI設計を一気通貫でご対応。",
     images: ["/og-image.png"],

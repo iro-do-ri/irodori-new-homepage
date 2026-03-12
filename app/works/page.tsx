@@ -67,6 +67,19 @@ export default async function WorksPage() {
             { "@type": "ListItem", position: 2, name: "制作実績", item: "https://iro-do-ri.jp/works" },
           ],
         }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "千葉県船橋のホームページ制作 実績一覧",
+          url: "https://iro-do-ri.jp/works",
+          numberOfItems: works.length,
+          itemListElement: works.map((work, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: work.title,
+            image: work.image?.url,
+          })),
+        }) }} />
 
         {/* ── 一覧 ── */}
         <div className={styles.section}>

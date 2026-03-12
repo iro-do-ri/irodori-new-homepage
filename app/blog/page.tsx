@@ -78,6 +78,25 @@ export default async function BlogPage() {
             { "@type": "ListItem", position: 2, name: "ブログ", item: "https://iro-do-ri.jp/blog" },
           ],
         }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "千葉県船橋のホームページ制作 イロドリ ブログ",
+          description: "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
+          url: "https://iro-do-ri.jp/blog",
+          publisher: {
+            "@type": "Organization",
+            name: "イロドリ",
+            url: "https://iro-do-ri.jp",
+            logo: { "@type": "ImageObject", url: "https://iro-do-ri.jp/og-image.png" },
+          },
+          blogPost: localPosts.map((post) => ({
+            "@type": "BlogPosting",
+            headline: post.title,
+            url: `https://iro-do-ri.jp/blog/${post.slug}`,
+            datePublished: post.date ?? new Date().toISOString(),
+          })),
+        }) }} />
 
         {/* ── ローカル記事一覧 ── */}
         {localPosts.length > 0 && (

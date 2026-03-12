@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: ["船橋", "千葉県", "千葉県船橋市", "ホームページ制作", "Webデザイン", "イロドリ"],
     alternates: { canonical: url },
     openGraph: {
+      type: "article",
       title,
       description: post.description,
       url,

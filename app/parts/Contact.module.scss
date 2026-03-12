@@ -64,6 +64,13 @@
         margin-bottom: 0.75rem;
     }
 
+    .desc {
+        font-size: clamp(13px, 1.4vw, 14px);
+        color: rgba(255, 252, 255, 0.5);
+        line-height: 1.9;
+        margin-top: 1rem;
+    }
+
     .subtitle {
         font-size: clamp(13px, 1.6vw, 15px);
         color: rgba(255, 252, 255, 0.6);

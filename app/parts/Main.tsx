@@ -143,7 +143,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                          {news.map((news)=>(
                           <li key={news.id} className="mb-3 sm:mb-4">
                             <article>
-                              <Link href={`news/${news.id}`} className="inline-flex items-start sm:items-center flex-wrap gap-y-1">
+                              <Link href={`/news/${news.id}`} className="inline-flex items-start sm:items-center flex-wrap gap-y-1">
                                 <span className={`${styles.img} mr-3`}><img src={news.img?.url??"https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"} alt={news.title}/></span>
                                 <span className="text-xs px-2 py-1 mr-3 border border-white/30 rounded-full shrink-0">{news.category}</span>
                                 <div className="flex flex-col min-w-0">

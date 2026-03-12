@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/app/parts/Header";
-import { getAllPostSlugs, getPostBySlug } from "@/app/lib/posts";
+import { getAllPostSlugs, getPostBySlug, getAllPosts } from "@/app/lib/posts";
 import styles from "./PostDetail.module.scss";
 import Breadcrumb from "@/app/parts/Breadcrumb";
 
@@ -42,6 +42,10 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) notFound();
+
+  const relatedPosts = getAllPosts()
+    .filter((p) => p.slug !== slug)
+    .slice(0, 3);
 
   const dateFormatted = post.date
     ? new Date(post.date).toLocaleDateString("ja-JP", {
@@ -87,6 +91,21 @@ export default async function BlogPostPage({ params }: Props) {
           className={styles.article}
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
+
+        {/* ── 関連記事 ── */}
+        {relatedPosts.length > 0 && (
+          <div className={styles.related}>
+            <p className={styles.relatedTitle}>関連記事</p>
+            <div className={styles.relatedGrid}>
+              {relatedPosts.map((related) => (
+                <Link key={related.slug} href={`/blog/${related.slug}`} className={styles.relatedCard}>
+                  <span className={styles.relatedCategory}>{related.category}</span>
+                  <p className={styles.relatedCardTitle}>{related.title}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* ── CTA ── */}
         <div className={styles.cta}>

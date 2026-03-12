@@ -118,7 +118,7 @@ export default async function BlogPage() {
               {cmsPosts.length > 0 ? (
                 cmsPosts.map((post) => (
                   <div key={post.id} className={styles.card}>
-                    <Link href={`news/${post.id}`} >
+                    <Link href={`/news/${post.id}`} >
                     <div className={styles.cardImage}>
                       <img
                         src={post.img?.url ?? "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"}

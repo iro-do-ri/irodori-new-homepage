@@ -44,6 +44,11 @@ export default function Contact() {
           <span className={styles.en}>Contact</span>
           <h1>お問い合わせ</h1>
           <p className={styles.subtitle}>Webデザインのご相談・お見積りはこちらからどうぞ</p>
+          <p className={styles.desc}>
+            ホームページ制作・リニューアル・SEO対策・チラシデザインなど、お気軽にご相談ください。
+            初回のご相談・お見積りは完全無料です。千葉県船橋市を拠点に、全国のお客様に対応しております。
+            フォームよりご連絡いただければ、通常2営業日以内にご返信いたします。
+          </p>
         </div>
 
         <div className={styles.form}>

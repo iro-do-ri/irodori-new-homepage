@@ -206,3 +206,61 @@
         }
     }
 }
+
+// ── 関連記事 ──────────────────────────────────────
+.related {
+    padding: clamp(3rem, 6vw, 5rem) 2rem;
+    background: #f8f9ff;
+
+    .relatedTitle {
+        font-size: clamp(16px, 2vw, 20px);
+        font-weight: 700;
+        color: #050828;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid rgba(51, 100, 174, 0.15);
+    }
+
+    .relatedGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        @media (min-width: 640px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+    }
+
+    .relatedCard {
+        display: block;
+        background: #fff;
+        border-radius: 8px;
+        padding: 1.25rem;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(5, 8, 40, 0.06);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+            box-shadow: 0 6px 20px rgba(5, 8, 40, 0.12);
+            transform: translateY(-3px);
+        }
+
+        .relatedCategory {
+            display: inline-block;
+            font-size: 10px;
+            color: #3364AE;
+            border: 1px solid rgba(51, 100, 174, 0.35);
+            padding: 0.15rem 0.6rem;
+            border-radius: 50rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .relatedCardTitle {
+            font-size: clamp(13px, 1.4vw, 14px);
+            color: #050828;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+    }
+}

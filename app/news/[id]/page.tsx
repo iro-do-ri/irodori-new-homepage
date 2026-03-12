@@ -4,6 +4,47 @@ import { URL } from "../../url/Url";
 import Link from "next/link";
 import styles from "./NewsDetail.module.scss";
 import Breadcrumb from "@/app/parts/Breadcrumb";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  try {
+    const data = await client.get({ endpoint: "news", contentId: id });
+    const title = `${data.title}｜船橋のホームページ制作 イロドリ`;
+    const url = `https://iro-do-ri.jp/news/${id}`;
+    const description = data.description
+      || (data.contents
+        ? data.contents.replace(/<[^>]*>/g, "").substring(0, 120) + "…"
+        : `${data.title}｜船橋のホームページ制作会社イロドリからのお知らせです。`);
+    return {
+      title: { absolute: title },
+      description,
+      alternates: { canonical: url },
+      openGraph: {
+        title,
+        description,
+        url,
+        type: "article",
+        images: data.img?.url
+          ? [{ url: data.img.url }]
+          : [{ url: "/og-image.png", width: 1200, height: 630 }],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title,
+        description,
+        images: data.img?.url ? [data.img.url] : ["/og-image.png"],
+      },
+      robots: { index: true, follow: true },
+    };
+  } catch {
+    return {};
+  }
+}
 
 export default async function NewsDetail({
   params,
@@ -36,7 +77,7 @@ export default async function NewsDetail({
           {data.category && (
             <span className={styles.heroCategory}>{data.category}</span>
           )}
-          <h1 className={styles.heroTitle}>{data.title}</h1>
+          <h1 className={styles.heroTitle}>{data.title || "お知らせ"}</h1>
           {dateFormatted && (
             <time className={styles.heroDate}>{dateFormatted}</time>
           )}

@@ -130,7 +130,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
             <section className={`relative ${styles.top}`}>
                 <h1 ref={textRef} className={`${styles.mainText} absolute`}><span className="block mb-2">千葉県船橋で魅力を伝える<br className="sm:hidden block"/>ホームページ・WEBサイト制作会社</span>あなたの理想を<br/>デザインで形にします</h1>
                 <div ref={textRef_2} className={`${styles.subText} absolute`}>
-                  <p className="mb-4 block">千葉県船橋市を拠点に、<br/>ホームページ制作・チラシ・動画制作を行う<br/>Webデザイン会社のイロドリです。<br className="hidden sm:block"/>ホームページ制作を10万円からご対応します。</p>
+                  <p className="mb-4 block">千葉県船橋を拠点に、<br/>ホームページ制作・チラシ・動画制作を行う<br/>Webデザイン会社のイロドリです。<br className="hidden sm:block"/>ホームページ制作を10万円からご対応します。</p>
                   <Link href={URL.Contact} className={`${styles.contact} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="無料相談ページへ移動します">無料で相談してみる</Link>
                 </div>
             </section>

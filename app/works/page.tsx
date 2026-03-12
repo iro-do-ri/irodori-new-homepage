@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "制作実績｜千葉県船橋のホームページ制作会社イロドリ",
   description:
     "千葉県船橋のホームページ制作会社イロドリの制作実績。飲食店・士業・美容・医療・ECサイトなど多業種のホームページ制作実績多数。デザインから実装・SEO対策まで一気通貫でご対応します。",
-  keywords: ["船橋", "千葉県", "千葉県船橋市", "制作実績", "ホームページ制作", "Webデザイン", "WordPress", "SEO対策", "イロドリ"],
+  keywords: ["船橋", "千葉県", "千葉県船橋", "制作実績", "ホームページ制作", "Webデザイン", "WordPress", "SEO対策", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/works" },
   openGraph: {
     title: "制作実績｜千葉県船橋のホームページ制作会社イロドリ",

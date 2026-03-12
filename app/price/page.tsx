@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "料金プラン｜千葉県船橋のホームページ制作 10万円〜【イロドリ】",
   description:
     "千葉県船橋のホームページ制作会社イロドリの料金プラン。ライトプラン10万円〜、スタンダード30万円〜、フルカスタム50万円〜。WordPress・SEO設計込み。見積もり無料でご相談ください。",
-  keywords: ["船橋", "千葉県", "千葉県船橋市", "料金プラン", "ホームページ制作", "格安", "WordPress", "SEO対策", "イロドリ"],
+  keywords: ["船橋", "千葉県", "千葉県船橋", "料金プラン", "ホームページ制作", "格安", "WordPress", "SEO対策", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/price" },
   openGraph: {
     title: "料金プラン｜千葉県船橋のホームページ制作 10万円〜【イロドリ】",

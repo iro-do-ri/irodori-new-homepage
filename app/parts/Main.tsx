@@ -18,8 +18,14 @@ type Work = {
   category: string;
   image: { url: string; width: number; height: number };
 };
+type News = {
+  id: string;
+  title: string;
+  date: string;
+  // 他にnewsに含まれるプロパティがあれば追加
+};
 
-export default function Main({ news, works }: { news: any[]; works: Work[] }) {
+export default function Main({ news, works }: { news: News[]; works: Work[] }) {
   // GSAP
   const textRef = useRef(null);
   const textRef_2 = useRef(null);

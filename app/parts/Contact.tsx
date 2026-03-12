@@ -50,10 +50,11 @@ export default function Contact() {
           <form onSubmit={handleSubmit}>
             <div className={styles.row}>
               <div className={styles.labelGroup}>
-                <span className={styles.label}>会社名</span>
+                <label htmlFor="company" className={styles.label}>会社名</label>
                 <span className={styles.badge}>必須</span>
               </div>
               <input
+                id="company"
                 className={styles.input}
                 name="company"
                 value={form.company}
@@ -66,9 +67,10 @@ export default function Contact() {
 
             <div className={styles.row}>
               <div className={styles.labelGroup}>
-                <span className={styles.label}>ご担当者名</span>
+                <label htmlFor="name" className={styles.label}>ご担当者名</label>
               </div>
               <input
+                id="name"
                 className={styles.input}
                 name="name"
                 value={form.name}
@@ -80,10 +82,11 @@ export default function Contact() {
 
             <div className={styles.row}>
               <div className={styles.labelGroup}>
-                <span className={styles.label}>メールアドレス</span>
+                <label htmlFor="email" className={styles.label}>メールアドレス</label>
                 <span className={styles.badge}>必須</span>
               </div>
               <input
+                id="email"
                 className={styles.input}
                 name="email"
                 value={form.email}
@@ -96,9 +99,10 @@ export default function Contact() {
 
             <div className={`${styles.row} ${styles.rowTop}`}>
               <div className={styles.labelGroup}>
-                <span className={styles.label}>ご相談内容</span>
+                <label htmlFor="message" className={styles.label}>ご相談内容</label>
               </div>
               <textarea
+                id="message"
                 className={styles.textarea}
                 name="message"
                 value={form.message}

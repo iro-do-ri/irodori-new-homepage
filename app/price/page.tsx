@@ -125,6 +125,15 @@ export default function Price() {
             { "@type": "ListItem", position: 2, name: "料金プラン", item: "https://iro-do-ri.jp/price" },
           ],
         }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: { "@type": "Answer", text: faq.a },
+          })),
+        }) }} />
 
         {/* ── コンセプト ── */}
         <div className={styles.section}>

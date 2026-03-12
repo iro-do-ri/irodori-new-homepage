@@ -81,6 +81,23 @@ export default async function BlogPostPage({ params }: Props) {
             { "@type": "ListItem", position: 3, name: post.title, item: `https://iro-do-ri.jp/blog/${slug}` },
           ],
         }) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description: post.description,
+          datePublished: post.date ?? new Date().toISOString(),
+          dateModified: post.date ?? new Date().toISOString(),
+          author: { "@type": "Organization", name: "イロドリ", url: "https://iro-do-ri.jp" },
+          publisher: {
+            "@type": "Organization",
+            name: "イロドリ",
+            url: "https://iro-do-ri.jp",
+            logo: { "@type": "ImageObject", url: "https://iro-do-ri.jp/og-image.png" },
+          },
+          url: `https://iro-do-ri.jp/blog/${slug}`,
+          mainEntityOfPage: { "@type": "WebPage", "@id": `https://iro-do-ri.jp/blog/${slug}` },
+        }) }} />
 
         {/* ── 戻るリンク ── */}
         <div className={styles.backLink}>

@@ -263,6 +263,18 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
         </section>
 
         {/* ── 制作の流れ ── */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: "千葉県船橋のホームページ制作の流れ",
+          description: "イロドリのホームページ制作は無料相談から公開後のサポートまで4ステップでご対応します。",
+          step: [
+            { "@type": "HowToStep", position: 1, name: "無料相談・ヒアリング", text: "目的・予算・スケジュールなどを丁寧にヒアリングします。まずはお気軽にご連絡ください。" },
+            { "@type": "HowToStep", position: 2, name: "提案・お見積もり", text: "ヒアリング内容をもとに最適なプランと詳細なお見積もりをご提示します。" },
+            { "@type": "HowToStep", position: 3, name: "デザイン・開発", text: "ブランドイメージに合ったオリジナルデザインを制作。確認・修正を重ねて仕上げます。" },
+            { "@type": "HowToStep", position: 4, name: "公開・アフターサポート", text: "サイト公開後も修正対応・SEO分析・操作説明で長期的にバックアップします。" },
+          ],
+        }) }} />
         <section className={styles.process}>
           <div className={styles.processInner}>
             <h2 className={styles.secTitle}>ホームページ制作の流れ</h2>

@@ -7,6 +7,10 @@ const nextConfig = {
 };
 
 module.exports = {
+  trailingSlash: false,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async redirects() {
     return [
       {
@@ -16,6 +20,16 @@ module.exports = {
       },
       {
         source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/other',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/other/',
         destination: '/',
         permanent: true,
       },

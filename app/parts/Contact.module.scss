@@ -21,6 +21,7 @@
     padding: clamp(1.5rem, 5vw, 3rem) 1rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: var(--spacing-md);
     position: relative;
 
@@ -197,6 +198,16 @@
         cursor: not-allowed;
         transform: none;
     }
+}
+
+// ── フォーム下の説明文 ─────────────────────────────
+.desc {
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(12px, 1.4vw, 13px);
+    color: rgba(5, 8, 40, 0.45);
+    line-height: 1.9;
+    border-top: 1px solid $bg-color;
+    text-align: center;
 }
 
 // ── ステータスメッセージ ───────────────────────────

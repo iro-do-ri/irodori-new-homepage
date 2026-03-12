@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/wp-admin/", "/wp-content/", "/wp-login.php", "/wp-includes/"],
     },
     sitemap: "https://iro-do-ri.jp/sitemap.xml",
   };

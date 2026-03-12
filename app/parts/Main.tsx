@@ -21,8 +21,9 @@ type Work = {
 type News = {
   id: string;
   title: string;
-  date: string;
-  // 他にnewsに含まれるプロパティがあれば追加
+  category: string;
+  publishedAt: string;
+  img?: { url: string };
 };
 
 export default function Main({ news, works }: { news: News[]; works: Work[] }) {

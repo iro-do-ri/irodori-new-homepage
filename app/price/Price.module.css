@@ -15,7 +15,7 @@
 }
 
 .hero {
-  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+  background: #050828;
   color: #fffcff;
   padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
 }
@@ -122,7 +122,7 @@
   position: relative;
 }
 .planCard.featured {
-  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+  background: #050828;
   transform: scale(1.03);
 }
 @media (max-width: 639px) {
@@ -229,7 +229,7 @@
 }
 
 .corporateBg {
-  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+  background: #050828;
 }
 
 .corporateGrid {

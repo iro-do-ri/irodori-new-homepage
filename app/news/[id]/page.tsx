@@ -100,6 +100,28 @@ export default async function NewsDetail({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "NewsArticle",
+              headline: data.title,
+              datePublished: data.publishedAt,
+              dateModified: data.updatedAt ?? data.publishedAt,
+              author: { "@type": "Organization", name: "イロドリ", url: "https://iro-do-ri.jp" },
+              publisher: {
+                "@type": "Organization",
+                name: "イロドリ",
+                url: "https://iro-do-ri.jp",
+                logo: { "@type": "ImageObject", url: "https://iro-do-ri.jp/og-image.png" },
+              },
+              image: data.img?.url ?? "https://iro-do-ri.jp/og-image.png",
+              url: `https://iro-do-ri.jp/news/${id}`,
+              mainEntityOfPage: { "@type": "WebPage", "@id": `https://iro-do-ri.jp/news/${id}` },
+            }),
+          }}
+        />
 
         {/* ── 戻るリンク ── */}
         <div className={styles.backLink}>

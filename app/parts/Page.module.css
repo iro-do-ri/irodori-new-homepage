@@ -1,0 +1,150 @@
+.page {
+  background: #edeef1;
+  position: relative;
+  left: 0;
+  width: 100%;
+  padding-top: 56px;
+}
+@media (min-width: 640px) {
+  .page {
+    padding-top: 0;
+  }
+}
+.page .container {
+  position: relative;
+  padding: 1rem;
+}
+@media (min-width: 640px) {
+  .page .container {
+    padding: 5.5vw 0;
+    left: 195px;
+    width: calc(100% - 195px);
+  }
+}
+.page .container .subcontainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+.page .container .document h2 {
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 700;
+  color: #050828;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(51, 100, 174, 0.15);
+}
+.page .container .document h3 {
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 700;
+  color: #050828;
+  margin-top: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+.page .container .document p {
+  font-size: clamp(14px, 1.8vw, 15px);
+  line-height: 1.9;
+  color: rgba(5, 8, 40, 0.8);
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+.page .container .document p:last-child {
+  margin-bottom: 0;
+}
+.page .container .document ul, .page .container .document ol {
+  padding-left: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+.page .container .document ul li, .page .container .document ol li {
+  font-size: clamp(14px, 1.8vw, 15px);
+  line-height: 1.9;
+  color: rgba(5, 8, 40, 0.8);
+  margin-bottom: 0.3rem;
+}
+.page .container .document blockquote {
+  background-color: #edeef1;
+  border-left: 3px solid #3364AE;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  margin: var(--spacing-md) 0;
+}
+.page .container .document blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: rgba(5, 8, 40, 0.6);
+}
+.page section {
+  padding: var(--spacing-xl);
+  background: var(--background);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-sm);
+}
+@media (max-width: 639px) {
+  .page section {
+    padding: 1.25rem;
+  }
+}
+.page section .img {
+  margin: -24px -24px 24px;
+  aspect-ratio: 16/9;
+}
+@media (max-width: 639px) {
+  .page section .img {
+    margin: -1.25rem -1.25rem 1.25rem;
+  }
+}
+.page section h1 {
+  line-height: 1.2;
+  font-size: clamp(20px, 5vw, 32px);
+  font-weight: bold;
+}
+.page section h2 {
+  line-height: 1.4;
+  font-size: clamp(20px, 4.2vw, 24px);
+  font-weight: bold;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid #edeef1;
+}
+.page section form input, .page section form textarea {
+  background: #edeef1;
+  border-radius: var(--radius-xs);
+}
+.page section form button {
+  background: var(--maincolor);
+  color: var(--background);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-xs);
+}
+.page .contact {
+  padding: var(--spacing-xl);
+  background: var(--background);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-sm);
+}
+@media (max-width: 639px) {
+  .page .contact {
+    padding: 1.25rem;
+  }
+}
+.page .contact h2 {
+  line-height: 1.4;
+  font-size: clamp(18px, 4vw, 22px);
+  font-weight: bold;
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid #edeef1;
+}
+.page .contact form input, .page .contact form textarea {
+  background: #edeef1;
+  border-radius: var(--radius-xs);
+}
+.page .contact form button {
+  background: var(--maincolor);
+  color: var(--background);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-xs);
+}/*# sourceMappingURL=Page.module.css.map */

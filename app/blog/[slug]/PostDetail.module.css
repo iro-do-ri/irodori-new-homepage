@@ -14,7 +14,7 @@
 }
 
 .hero {
-  background: #050828;
+  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
   color: #fffcff;
   padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 5vw, 5rem);
 }
@@ -187,4 +187,56 @@
 }
 .ctaButton:hover::before {
   clip-path: inset(0);
+}
+
+.related {
+  padding: clamp(3rem, 6vw, 5rem) 2rem;
+  background: #f8f9ff;
+}
+.related .relatedTitle {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 700;
+  color: #050828;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(51, 100, 174, 0.15);
+}
+.related .relatedGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .related .relatedGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+.related .relatedCard {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(5, 8, 40, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.related .relatedCard:hover {
+  box-shadow: 0 6px 20px rgba(5, 8, 40, 0.12);
+  transform: translateY(-3px);
+}
+.related .relatedCard .relatedCategory {
+  display: inline-block;
+  font-size: 10px;
+  color: #3364AE;
+  border: 1px solid rgba(51, 100, 174, 0.35);
+  padding: 0.15rem 0.6rem;
+  border-radius: 50rem;
+  margin-bottom: 0.6rem;
+}
+.related .relatedCard .relatedCardTitle {
+  font-size: clamp(13px, 1.4vw, 14px);
+  color: #050828;
+  font-weight: 500;
+  line-height: 1.6;
 }/*# sourceMappingURL=PostDetail.module.css.map */

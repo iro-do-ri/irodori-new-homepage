@@ -1,0 +1,222 @@
+.pageWrapper {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background: #edeef1;
+  padding-top: 56px;
+}
+@media (min-width: 640px) {
+  .pageWrapper {
+    left: 195px;
+    width: calc(100% - 195px);
+    padding-top: 0;
+  }
+}
+
+.container {
+  min-height: 100vh;
+  padding: clamp(1.5rem, 5vw, 3rem) 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--spacing-md);
+  position: relative;
+}
+@media (min-width: 640px) {
+  .container {
+    padding: 5.5vw clamp(2rem, 5vw, 4rem);
+    left: 195px;
+    width: calc(100% - 195px);
+  }
+}
+
+.card {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--background);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-sm);
+}
+
+.cardHeader {
+  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+  color: #fffcff;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 5vw, 3rem);
+}
+.cardHeader .en {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 252, 255, 0.4);
+  margin-bottom: 0.75rem;
+}
+.cardHeader h1 {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.cardHeader .desc {
+  font-size: clamp(13px, 1.4vw, 14px);
+  color: rgba(255, 252, 255, 0.5);
+  line-height: 1.9;
+  margin-top: 1rem;
+}
+.cardHeader .subtitle {
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: rgba(255, 252, 255, 0.6);
+  line-height: 1.8;
+}
+
+.form {
+  padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #edeef1;
+}
+@media (min-width: 640px) {
+  .row {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 640px) {
+  .rowTop {
+    align-items: flex-start;
+  }
+  .rowTop .labelGroup {
+    padding-top: 14px;
+  }
+}
+
+.labelGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+@media (min-width: 640px) {
+  .labelGroup {
+    width: 180px;
+  }
+}
+
+.label {
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vw, 15px);
+  color: #050828;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: #D95911;
+  color: white;
+  flex-shrink: 0;
+}
+
+.input,
+.textarea {
+  flex: 1;
+  width: 100%;
+  padding: 12px 14px;
+  background: #edeef1;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+}
+.input:focus,
+.textarea:focus {
+  background: white;
+  border-color: #3364AE;
+}
+.input::-moz-placeholder, .textarea::-moz-placeholder {
+  color: rgba(5, 8, 40, 0.3);
+}
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(5, 8, 40, 0.3);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+  line-height: 1.7;
+}
+
+.submit {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background: #D95911;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  padding: 14px 48px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.button:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.desc {
+  padding: clamp(1rem, 3vw, 1.5rem) clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(12px, 1.4vw, 13px);
+  color: rgba(5, 8, 40, 0.45);
+  line-height: 1.9;
+  border-top: 1px solid #edeef1;
+}
+
+.success {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #d1fae5;
+  border-radius: 8px;
+  color: #065f46;
+  font-weight: 600;
+  text-align: center;
+}
+
+.error {
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #fee2e2;
+  border-radius: 8px;
+  color: #991b1b;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contactWrapper {
+  width: 100%;
+  background: #edeef1;
+}/*# sourceMappingURL=Contact.module.css.map */

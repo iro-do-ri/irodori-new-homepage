@@ -39,7 +39,7 @@ export default function ContactPage() {
   return (
     <section className="flex">
       <Header />
-      <div className={styles.pageWrapper}>
+      <div className={styles.contactWrapper}>
         <Breadcrumb items={[{ label: "お問い合わせ" }]} />
         <Contact />
       </div>

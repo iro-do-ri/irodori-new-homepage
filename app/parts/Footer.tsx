@@ -18,7 +18,7 @@ export default function Footer() {
         <div className={footer.top}>
           <div className={footer.brand}>
             <p className={footer.name}>IRODORI</p>
-            <p className={footer.tagline}>船橋で魅力を伝えるWEBデザイン・ホームページ制作会社</p>
+            <p className={footer.tagline}>千葉県船橋で魅力を伝えるWEBデザイン・ホームページ制作会社</p>
           </div>
           <nav className={footer.nav}>
             {navLinks.map((link) => (

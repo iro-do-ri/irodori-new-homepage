@@ -62,7 +62,7 @@ export default function Header() {
           <div className={headerStyles.sidebarTop}>
             <Link href={URL.Home} className={headerStyles.sidebarBrand}>
               <span className={headerStyles.brandName}>IRODORI</span>
-              <span className={headerStyles.brandTagline}>船橋のホームページ制作</span>
+              <span className={headerStyles.brandTagline}>千葉県船橋のホームページ制作</span>
             </Link>
           </div>
 

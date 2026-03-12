@@ -8,22 +8,23 @@ import styles from "./Blog.module.scss";
 import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "ブログ｜船橋のホームページ制作・WebデザインTips【イロドリ】",
+  title: "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
   description:
-    "船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
+    "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
+  keywords: ["船橋", "千葉県", "千葉県船橋市", "ブログ", "ホームページ制作", "Webデザイン", "SEO対策", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/blog" },
   openGraph: {
-    title: "ブログ｜船橋のホームページ制作・WebデザインTips【イロドリ】",
+    title: "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
     description:
-      "船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
+      "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
     url: "https://iro-do-ri.jp/blog",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ブログ｜船橋のホームページ制作・WebデザインTips【イロドリ】",
+    title: "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
     description:
-      "船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策の情報を発信。",
+      "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策の情報を発信。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },

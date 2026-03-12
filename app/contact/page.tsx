@@ -5,22 +5,23 @@ import Breadcrumb from "../parts/Breadcrumb";
 import styles from "../parts/Contact.module.scss";
 
 export const metadata: Metadata = {
-  title: "お問い合わせ｜船橋のホームページ制作はイロドリへ",
+  title: "お問い合わせ｜千葉県船橋のホームページ制作はイロドリへ",
   description:
-    "船橋のホームページ制作会社イロドリへのお問い合わせページ。初回相談・見積もり無料。千葉・船橋を中心に全国のホームページ制作に対応。まずはお気軽にご相談ください。",
+    "千葉県船橋のホームページ制作会社イロドリへのお問い合わせページ。初回相談・見積もり無料。千葉県船橋を中心に全国のホームページ制作に対応。まずはお気軽にご相談ください。",
+  keywords: ["船橋", "千葉県", "千葉県船橋市", "お問い合わせ", "ホームページ制作", "無料相談", "見積もり", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/contact" },
   openGraph: {
-    title: "お問い合わせ｜船橋のホームページ制作はイロドリへ",
+    title: "お問い合わせ｜千葉県船橋のホームページ制作はイロドリへ",
     description:
-      "船橋のホームページ制作会社イロドリへのお問い合わせページ。初回相談・見積もり無料。千葉・船橋を中心に全国のホームページ制作に対応。",
+      "千葉県船橋のホームページ制作会社イロドリへのお問い合わせページ。初回相談・見積もり無料。千葉県船橋を中心に全国のホームページ制作に対応。",
     url: "https://iro-do-ri.jp/contact",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "お問い合わせ｜船橋のホームページ制作はイロドリへ",
+    title: "お問い合わせ｜千葉県船橋のホームページ制作はイロドリへ",
     description:
-      "船橋のホームページ制作会社イロドリへのお問い合わせ。初回相談・見積もり無料。",
+      "千葉県船橋のホームページ制作会社イロドリへのお問い合わせ。初回相談・見積もり無料。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },

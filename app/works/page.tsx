@@ -7,22 +7,23 @@ import styles from "./Works.module.scss";
 import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "制作実績｜船橋のホームページ制作会社イロドリ",
+  title: "制作実績｜千葉県船橋のホームページ制作会社イロドリ",
   description:
-    "船橋のホームページ制作会社イロドリの制作実績。飲食店・士業・美容・医療・ECサイトなど多業種のホームページ制作実績多数。デザインから実装・SEO対策まで一気通貫でご対応します。",
+    "千葉県船橋のホームページ制作会社イロドリの制作実績。飲食店・士業・美容・医療・ECサイトなど多業種のホームページ制作実績多数。デザインから実装・SEO対策まで一気通貫でご対応します。",
+  keywords: ["船橋", "千葉県", "千葉県船橋市", "制作実績", "ホームページ制作", "Webデザイン", "WordPress", "SEO対策", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/works" },
   openGraph: {
-    title: "制作実績｜船橋のホームページ制作会社イロドリ",
+    title: "制作実績｜千葉県船橋のホームページ制作会社イロドリ",
     description:
-      "船橋のホームページ制作会社イロドリの制作実績。飲食店・士業・美容・医療・ECサイトなど多業種のホームページ制作実績多数。デザインから実装・SEO対策まで一気通貫。",
+      "千葉県船橋のホームページ制作会社イロドリの制作実績。飲食店・士業・美容・医療・ECサイトなど多業種のホームページ制作実績多数。デザインから実装・SEO対策まで一気通貫。",
     url: "https://iro-do-ri.jp/works",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "制作実績｜船橋のホームページ制作会社イロドリ",
+    title: "制作実績｜千葉県船橋のホームページ制作会社イロドリ",
     description:
-      "船橋のホームページ制作会社イロドリの制作実績。飲食店・士業・美容・医療など多業種のホームページ制作実績多数。",
+      "千葉県船橋のホームページ制作会社イロドリの制作実績。飲食店・士業・美容・医療など多業種のホームページ制作実績多数。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -53,7 +54,7 @@ export default async function WorksPage() {
           <span className={styles.label}>WORKS</span>
           <h1 className={styles.title}>ホームページの制作実績</h1>
           <p className={styles.description}>
-            船橋を拠点に、多彩な業種のホームページ・WEBサイトを制作しています。
+            千葉県船橋を拠点に、多彩な業種のホームページ・WEBサイトを制作しています。
           </p>
         </div>
 

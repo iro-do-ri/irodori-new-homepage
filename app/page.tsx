@@ -6,13 +6,14 @@ import {client} from "./lib/Micro";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
+    absolute: "千葉県船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
   },
   description:
     "千葉県船橋市のホームページ制作会社イロドリ。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。中小企業・個人事業主のホームページ制作はお気軽にご相談ください。",
+  keywords: ["船橋", "千葉県", "千葉県船橋市", "ホームページ制作", "Webデザイン", "WordPress", "SEO対策", "コーポレートサイト", "イロドリ", "格安"],
   alternates: { canonical: "https://iro-do-ri.jp" },
   openGraph: {
-    title: "船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
+    title: "千葉県船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
     description:
       "千葉県船橋市のホームページ制作会社イロドリ。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。中小企業・個人事業主のホームページ制作はお気軽にご相談ください。",
     url: "https://iro-do-ri.jp",
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
+    title: "千葉県船橋 ホームページ制作｜格安10万円〜のWebデザイン会社【イロドリ】",
     description:
       "千葉県船橋市のホームページ制作会社イロドリ。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。",
     images: ["/og-image.png"],

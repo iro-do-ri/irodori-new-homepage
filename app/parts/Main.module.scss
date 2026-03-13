@@ -26,7 +26,7 @@
         &.works {
             height: 48rem;
             @include sm {
-                height: 100dvh;
+                height: calc(100dvh + 5rem);
             }
         }
         @include sm {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Header from "../parts/Header";
 import Contact from "../parts/Contact";
 import Breadcrumb from "../parts/Breadcrumb";
@@ -42,7 +43,9 @@ export default function ContactPage() {
       <Header />
       <div className={styles.contactWrapper}>
         <Breadcrumb items={[{ label: "お問い合わせ" }]} />
-        <Contact />
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
       </div>
       <script
         type="application/ld+json"

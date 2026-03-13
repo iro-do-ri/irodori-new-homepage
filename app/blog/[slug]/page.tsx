@@ -119,17 +119,11 @@ export default async function BlogPostPage({ params }: Props) {
               {relatedPosts.map((related) => (
                 <li key={related.slug} className={styles.relatedItem}>
                   <Link href={`/blog/${related.slug}`} className={styles.relatedLink}>
-                    <span className={styles.relatedImg}>
-                      <img
-                        src={related.image ?? "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"}
-                        alt={related.title}
-                      />
-                    </span>
-                    <span className={styles.relatedCat}>{related.category}</span>
-                    <div className={styles.relatedMeta}>
+                    <div className={styles.relatedTop}>
+                      <span className={styles.relatedCat}>{related.category}</span>
                       <time className={styles.relatedDate}>{new Date(related.date).toLocaleDateString("ja-JP")}</time>
-                      <p className={styles.relatedCardTitle}>{related.title}</p>
                     </div>
+                    <p className={styles.relatedCardTitle}>{related.title}</p>
                   </Link>
                 </li>
               ))}

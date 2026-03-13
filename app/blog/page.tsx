@@ -130,41 +130,35 @@ export default async function BlogPage() {
         )}
 
         {/* ── CMS記事一覧 ── */}
-        <div className={styles.section}>
-          <div className={styles.sectionInner}>
-            <span className={styles.sectionLabel}>OTHER POSTS</span>
-            <h2 className={styles.sectionTitle}>他の記事</h2>
-            <div className={styles.grid}>
-              {cmsPosts.length > 0 ? (
-                cmsPosts.map((post) => (
-                  <div key={post.id} className={styles.card}>
-                    <Link href={`/news/${post.id}`} >
-                    <div className={styles.cardImage}>
-                      <img
-                        src={post.img?.url ?? "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"}
-                        alt={post.title}
-                      />
-                    </div>
-                    <div className={styles.cardBody}>
-                      <div className={styles.cardMeta}>
-                        <span className={styles.cardCategory}>{post.category}</span>
-                        <span className={styles.cardDate}>
-                          {new Date(post.publishedAt).toLocaleDateString("ja-JP", {
-                            year: "numeric",
-                            month: "2-digit",
-                            day: "2-digit",
-                          })}
-                        </span>
+        <div className={styles.newsSection}>
+          <div className={styles.newsSectionInner}>
+            <p className={styles.newsLabel}>OTHER POSTS</p>
+            <h2 className={styles.newsSectionTitle}>他の記事</h2>
+            {cmsPosts.length > 0 ? (
+              <ul className={styles.newsList}>
+                {cmsPosts.map((post) => (
+                  <li key={post.id} className={styles.newsItem}>
+                    <Link href={`/news/${post.id}`} className={styles.newsLink}>
+                      <span className={styles.newsImg}>
+                        <img
+                          src={post.img?.url ?? "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"}
+                          alt={post.title}
+                        />
+                      </span>
+                      <span className={styles.newsCat}>{post.category}</span>
+                      <div className={styles.newsMeta}>
+                        <time className={styles.newsDate}>
+                          {new Date(post.publishedAt).toLocaleDateString("ja-JP")}
+                        </time>
+                        <p className={styles.newsTitle}>{post.title}</p>
                       </div>
-                      <p className={styles.cardTitle}>{post.title}</p>
-                    </div>
                     </Link>
-                  </div>
-                ))
-              ) : (
-                <p className={styles.empty}>現在、更新情報を準備中です。</p>
-              )}
-            </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className={styles.empty}>現在、更新情報を準備中です。</p>
+            )}
           </div>
         </div>
 

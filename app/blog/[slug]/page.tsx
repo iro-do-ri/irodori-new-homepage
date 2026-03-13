@@ -111,18 +111,29 @@ export default async function BlogPostPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
 
-        {/* ── 関連記事 ── */}
+        {/* ── 他の記事 ── */}
         {relatedPosts.length > 0 && (
           <div className={styles.related}>
-            <p className={styles.relatedTitle}>関連記事</p>
-            <div className={styles.relatedGrid}>
+            <p className={styles.relatedLabel}>他の記事</p>
+            <ul className={styles.relatedList}>
               {relatedPosts.map((related) => (
-                <Link key={related.slug} href={`/blog/${related.slug}`} className={styles.relatedCard}>
-                  <span className={styles.relatedCategory}>{related.category}</span>
-                  <p className={styles.relatedCardTitle}>{related.title}</p>
-                </Link>
+                <li key={related.slug} className={styles.relatedItem}>
+                  <Link href={`/blog/${related.slug}`} className={styles.relatedLink}>
+                    <span className={styles.relatedImg}>
+                      <img
+                        src={related.image ?? "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"}
+                        alt={related.title}
+                      />
+                    </span>
+                    <span className={styles.relatedCat}>{related.category}</span>
+                    <div className={styles.relatedMeta}>
+                      <time className={styles.relatedDate}>{new Date(related.date).toLocaleDateString("ja-JP")}</time>
+                      <p className={styles.relatedCardTitle}>{related.title}</p>
+                    </div>
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         )}
 

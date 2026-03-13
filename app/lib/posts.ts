@@ -12,6 +12,7 @@ export type PostMeta = {
   description: string;
   date: string;
   category: string;
+  image?: string;
 };
 
 export type Post = PostMeta & {
@@ -41,6 +42,7 @@ export function getAllPosts(): PostMeta[] {
         description: data.description ?? "",
         date: data.date ?? "",
         category: data.category ?? "",
+        image: data.image ?? undefined,
       } satisfies PostMeta;
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));

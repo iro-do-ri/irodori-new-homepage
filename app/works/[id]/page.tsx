@@ -107,8 +107,8 @@ export default async function WorkDetailPage({
         <div className={styles.body}>
           <div className={styles.bodyInner}>
             {/* 説明文（MicroCMSにdescriptionフィールドを追加すると表示されます） */}
-            {work.description && (
-              <p className={styles.description}>{work.description}</p>
+            {work.description_1 && (
+              <p className={styles.description}>{work.description_1}</p>
             )}
 
             {/* サイトURL（MicroCMSにurlフィールドを追加すると表示されます） */}
@@ -146,7 +146,13 @@ export default async function WorkDetailPage({
             まずはお気軽にご相談ください。<br />
             要件整理から提案・見積まで、無料でご対応しています。
           </p>
-          <Link href={URL.Contact} className={`${styles.box_button} inline-block`} aria-label="無料相談ページへ移動します"><span className={`${styles.background_button} ${styles.contact_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料で相談してみる</span></Link>
+          <Link
+            href={URL.Contact}
+            className={`${styles.ctaButton} sm:px-12 px-8 sm:py-6 py-4`}
+            aria-label="お問い合わせページへ移動します"
+          >
+            無料で相談してみる
+          </Link>
         </div>
       </div>
     </section>

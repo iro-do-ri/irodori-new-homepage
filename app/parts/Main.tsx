@@ -322,6 +322,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
               ))}
             </div>
           </div>
+        </section>
         <section className={styles.seoText}>
           <div className={styles.seoTextInner}>
             <h2 className={styles.seoTextTitle}>千葉県船橋市のホームページ制作はイロドリへ</h2>

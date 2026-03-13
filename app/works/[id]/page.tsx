@@ -30,7 +30,7 @@ export async function generateMetadata({
     const work: Work = await client.get({ endpoint: "works", contentId: id });
     const title = `${work.title}｜制作実績｜千葉県船橋のホームページ制作 イロドリ`;
     const description =
-      work.description ??
+      work.description_1 ??
       `${work.title}の制作実績。千葉県船橋のホームページ制作会社イロドリが手がけた${work.category}のWebサイト制作事例です。`;
     return {
       title: { absolute: title },

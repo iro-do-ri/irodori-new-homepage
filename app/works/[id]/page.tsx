@@ -108,7 +108,10 @@ export default async function WorkDetailPage({
           <div className={styles.bodyInner}>
             {/* 説明文（MicroCMSにdescriptionフィールドを追加すると表示されます） */}
             {work.description_1 && (
-              <p className={styles.description}>{work.description_1}</p>
+              <div
+                className={styles.description}
+                dangerouslySetInnerHTML={{ __html: work.description_1 }}
+              />
             )}
 
             {/* サイトURL（MicroCMSにurlフィールドを追加すると表示されます） */}

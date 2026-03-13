@@ -741,3 +741,40 @@
       opacity: 0;
     }
   }
+
+// SEOテキストセクション
+.seoText {
+  background: #f7f7f7;
+  padding: 3rem 1.5rem;
+
+  @media (min-width: 640px) {
+    padding: 4rem 2rem;
+  }
+}
+
+.seoTextInner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.seoTextTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #050828;
+  margin-bottom: 1rem;
+
+  @media (min-width: 640px) {
+    font-size: 1.25rem;
+  }
+}
+
+.seoTextBody {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: rgba(5, 8, 40, 0.65);
+
+  @media (min-width: 640px) {
+    font-size: 0.95rem;
+  }
+}

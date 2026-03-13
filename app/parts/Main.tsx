@@ -322,6 +322,13 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
               ))}
             </div>
           </div>
+        <section className={styles.seoText}>
+          <div className={styles.seoTextInner}>
+            <h2 className={styles.seoTextTitle}>千葉県船橋市のホームページ制作はイロドリへ</h2>
+            <p className={styles.seoTextBody}>
+              船橋を拠点に、中小企業・個人事業主のホームページ制作を10万円〜承っています。WordPressによるCMS構築、SEOを意識したページ設計、公開後のサポートまで一貫して対応。まずはお気軽にご相談ください。
+            </p>
+          </div>
         </section>
     </main>
   )

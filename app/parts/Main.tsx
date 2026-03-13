@@ -131,7 +131,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                 <h1 ref={textRef} className={`${styles.mainText} absolute`}><span className="block mb-2">千葉県船橋で魅力を伝える<br className="sm:hidden block"/>ホームページ・WEBサイト制作会社</span>あなたの理想を<br/>デザインで形にします</h1>
                 <div ref={textRef_2} className={`${styles.subText} absolute`}>
                   <p className="mb-4 block">千葉県船橋を拠点に、<br/>ホームページ制作・チラシ・動画制作を行う<br/>Webデザイン会社のイロドリです。<br className="hidden sm:block"/>ホームページ制作を10万円からご対応します。</p>
-                  <Link href={URL.Contact} className={`${styles.contact} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="無料相談ページへ移動します">無料で相談してみる</Link>
+                  <Link href={URL.Contact} className={`${styles.box_button} inline-block`} aria-label="無料相談ページへ移動します"><span className={`${styles.background_button} ${styles.contact_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料で相談してみる</span></Link>
                 </div>
             </section>
             <section ref={textRef_3} className={`${styles.news} absolute w-full`}>
@@ -154,7 +154,9 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                             </article>
                           </li>
                          ))}
-                <Link href={URL.Blog} className="text-sm underline underline-offset-4 opacity-70" aria-label="ブログ一覧ページへ移動します">更新情報の一覧へ</Link>
+                <div className="flex justify-center">
+                <Link href={URL.Blog} className={`${styles.box_button} inline-block`} aria-label="ブログ一覧ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>更新情報の一覧へ</span></Link>
+                </div>
               </ul>
               </div>
               </div>
@@ -167,7 +169,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                 <p className="mb-2 sm:mb-3">イロドリでは、千葉県船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
                 <p className="mb-6 sm:mb-12">見た目の美しさだけでなく、<br className="hidden sm:block"/>使いやすさや更新のしやすさにもこだわり、<br className="hidden sm:block"/>CMS導入やSEO対策を通じて、<br className="hidden sm:block"/>成果につながるサイトづくりをサポートします。</p>
                 <div className="flex justify-center">
-                <Link href={URL.About} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="Aboutページへ移動します">会社概要を詳しく見る</Link>
+                <Link href={URL.About} className={`${styles.box_button} inline-block`} aria-label="Aboutページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>会社概要を詳しく見る</span></Link>
                 </div>
               </div>
             </section>
@@ -181,7 +183,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                 <p className="mb-2 sm:mb-3">一番お求めやすいプランでは、<br className="hidden sm:block"/>10万円から始められるシンプルで高品質なホームページ制作を致します。</p>
                 <p className="mb-6 sm:mb-12">初めてWEBサイトを導入する方や、<br className="hidden sm:block"/>コストを抑えつつ信頼感のあるデザインを求める方におすすめです。</p>
                 <div className="flex justify-center">
-                <Link href={URL.Price} className={`${styles.button} sm:px-12 px-6 sm:py-6 py-3 inline-block`} aria-label="料金ページへ移動します">料金体系を詳しく見る</Link>
+                <Link href={URL.Price} className={`${styles.box_button} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>料金体系を詳しく見る</span></Link>
                 </div>
               </div>
             </section>
@@ -221,7 +223,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                   ))}
                 </Splide>
                 <div className="flex justify-center">
-                <Link href={URL.Works} className={`${styles.button} sm:px-12 px-3 sm:py-6 py-4 inline-block`} aria-label="実績ページへ移動します">他の実績を詳しく見る</Link>
+                <Link href={URL.Works} className={`${styles.box_button} inline-block`} aria-label="実績ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>他の実績を詳しく見る</span></Link>
                 </div>
               </div>
             </section>

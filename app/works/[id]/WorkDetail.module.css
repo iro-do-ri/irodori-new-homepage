@@ -1,0 +1,194 @@
+.wrapper {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background: #edeef1;
+  padding-top: 56px;
+}
+@media (min-width: 640px) {
+  .wrapper {
+    left: 195px;
+    width: calc(100% - 195px);
+    padding-top: 0;
+  }
+}
+
+.hero {
+  position: relative;
+  aspect-ratio: 16/7;
+  overflow: hidden;
+  background: #050828;
+}
+@media (max-width: 639px) {
+  .hero {
+    aspect-ratio: 4/3;
+  }
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 8, 40, 0.75) 0%, rgba(5, 8, 40, 0.3) 50%, transparent 100%);
+}
+
+.heroContent {
+  position: absolute;
+  bottom: clamp(1.5rem, 4vw, 3rem);
+  left: clamp(1.5rem, 5vw, 4rem);
+  right: clamp(1.5rem, 5vw, 4rem);
+  color: #fffcff;
+}
+
+.heroCategory {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.2rem 0.75rem;
+  border-radius: 50rem;
+  margin-bottom: 0.75rem;
+  color: #fffcff;
+}
+
+.heroTitle {
+  font-size: clamp(20px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: #fffcff;
+}
+
+.body {
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+  background: #fffcff;
+}
+
+.bodyInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.description {
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.9;
+  color: rgba(5, 8, 40, 0.75);
+  margin-bottom: 2rem;
+}
+
+.siteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3364AE;
+  border: 2px solid #3364AE;
+  border-radius: 50rem;
+  padding: 0.65rem 1.75rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.siteLink::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #3364AE;
+  z-index: -1;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.siteLink:hover {
+  color: #fffcff;
+}
+.siteLink:hover::before {
+  clip-path: inset(0);
+}
+
+.backLink {
+  padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+  background: #edeef1;
+  border-top: 1px solid rgba(5, 8, 40, 0.06);
+}
+.backLink a {
+  font-size: 13px;
+  color: rgba(5, 8, 40, 0.55);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.backLink a:hover {
+  color: #050828;
+}
+
+.cta {
+  background: #050828;
+  color: #fffcff;
+  text-align: center;
+  padding: clamp(4rem, 8vw, 7rem) 2rem;
+}
+
+.ctaLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+  color: #fffcff;
+}
+
+.ctaTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #fffcff;
+}
+
+.ctaDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  opacity: 0.55;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  color: #fffcff;
+}
+
+.ctaButton {
+  color: #D95911;
+  border: solid 2px #D95911;
+  position: relative;
+  transition: color 0.4s cubic-bezier(1, 0, 0, 1);
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50rem;
+  display: inline-block;
+}
+.ctaButton::before {
+  content: "";
+  background-color: #D95911;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.4s cubic-bezier(1, 0, 0, 1);
+}
+.ctaButton:hover {
+  color: #fffcff;
+}
+.ctaButton:hover::before {
+  clip-path: inset(0);
+}/*# sourceMappingURL=WorkDetail.module.css.map */

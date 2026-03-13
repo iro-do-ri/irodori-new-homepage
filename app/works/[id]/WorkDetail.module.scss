@@ -12,6 +12,25 @@
     width: calc(100% - 195px);
     padding-top: 0;
   }
+
+  h2 {
+    font-size: clamp(18px, 2.5vw, 22px);
+    font-weight: 700;
+  }
+  h3 {
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 700;
+  }
+  p {
+    font-size: clamp(14px, 1.8vw, 15px);
+    line-height: 1.6;
+  }
+  ul, ol {
+    li {
+        font-size: clamp(14px, 1.8vw, 15px);
+        line-height: 1.6;
+    }
+  }
 }
 
 // ── ヒーロー ────────────────────────────────────

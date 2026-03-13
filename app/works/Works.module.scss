@@ -208,7 +208,7 @@
         border-radius: 50rem;
         position: absolute;
         inset: 0;
-        z-index: -1;
+        z-index: 0;
 
         &::before {
             content: "";
@@ -224,6 +224,8 @@
     }
 
     .contents_button {
+        position: relative;
+        z-index: 1;
         border-radius: 50rem;
         border: 5px solid transparent;
         color: var(--background);

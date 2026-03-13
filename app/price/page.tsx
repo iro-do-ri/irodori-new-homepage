@@ -229,13 +229,7 @@ export default function Price() {
             ご予算・ご要望に合わせて柔軟にご提案いたします。<br />
             見積もり・ご相談は無料です。お気軽にどうぞ。
           </p>
-          <Link
-            href={URL.Contact}
-            className={`${styles.ctaButton} sm:px-12 px-8 sm:py-6 py-4`}
-            aria-label="お問い合わせページへ移動します"
-          >
-            無料で相談してみる
-          </Link>
+          <Link href={URL.Contact} className={`${styles.box_button} inline-block`} aria-label="無料相談ページへ移動します"><span className={`${styles.background_button} ${styles.contact_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料で相談してみる</span></Link>
         </div>
 
       </div>

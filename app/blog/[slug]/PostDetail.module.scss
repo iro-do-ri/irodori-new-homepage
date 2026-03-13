@@ -122,6 +122,34 @@
             border-top: 1px solid rgba(5, 8, 40, 0.1);
             margin: 2.5rem 0;
         }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+            font-size: clamp(13px, 1.6vw, 15px);
+
+            th, td {
+                padding: 0.75rem 1rem;
+                text-align: left;
+                border: 1px solid rgba(5, 8, 40, 0.12);
+                line-height: 1.6;
+            }
+
+            th {
+                background: rgba(51, 100, 174, 0.08);
+                font-weight: 700;
+                color: $text-color;
+            }
+
+            td {
+                color: rgba(5, 8, 40, 0.75);
+            }
+
+            tr:nth-child(even) td {
+                background: rgba(5, 8, 40, 0.02);
+            }
+        }
     }
 }
 

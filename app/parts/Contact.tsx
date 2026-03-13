@@ -1,16 +1,26 @@
 "use client";
 
 import styles from "./Contact.module.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function Contact() {
+  const searchParams = useSearchParams();
   const [form, setForm] = useState({
     company: "",
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  useEffect(() => {
+    const plan = searchParams.get("plan");
+    if (plan) {
+      setForm((prev) => ({ ...prev, message: `【${plan}】について相談したいです。\n\n` }));
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,7 +35,7 @@ export default function Contact() {
     const data = await res.json();
 
     if (data.success) {
-      setForm({ company: "", name: "", email: "", message: "" });
+      setForm({ company: "", name: "", email: "", phone: "", message: "" });
       setStatus("success");
     } else {
       setStatus("error");
@@ -50,8 +60,8 @@ export default function Contact() {
           <form onSubmit={handleSubmit}>
             <div className={styles.row}>
               <div className={styles.labelGroup}>
-                <label htmlFor="company" className={styles.label}>会社名</label>
-                <span className={styles.badge}>必須</span>
+                <label htmlFor="company" className={styles.label}>会社名・屋号</label>
+                <span className={styles.badgeOptional}>任意</span>
               </div>
               <input
                 id="company"
@@ -59,9 +69,8 @@ export default function Contact() {
                 name="company"
                 value={form.company}
                 type="text"
-                placeholder="株式会社山田商事"
+                placeholder="株式会社山田商事 / 個人の方は空欄で可"
                 onChange={handleChange}
-                required
               />
             </div>
 
@@ -76,6 +85,22 @@ export default function Contact() {
                 value={form.name}
                 type="text"
                 placeholder="山田太郎"
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className={styles.row}>
+              <div className={styles.labelGroup}>
+                <label htmlFor="phone" className={styles.label}>電話番号</label>
+                <span className={styles.badgeOptional}>任意</span>
+              </div>
+              <input
+                id="phone"
+                className={styles.input}
+                name="phone"
+                value={form.phone}
+                type="tel"
+                placeholder="090-1234-5678"
                 onChange={handleChange}
               />
             </div>
@@ -112,6 +137,10 @@ export default function Contact() {
               />
             </div>
 
+            <div className={styles.replyNote}>
+              <p>通常2営業日以内にご返信いたします。初回相談・お見積りは完全無料です。</p>
+            </div>
+
             <div className={styles.submit}>
               <button
                 className={styles.button}
@@ -138,8 +167,7 @@ export default function Contact() {
 
         <p className={styles.desc}>
           ホームページ制作・リニューアル・SEO対策・チラシデザインなど、お気軽にご相談ください。<br className="sm:block hidden" />
-          初回のご相談・お見積りは完全無料です。千葉県船橋を拠点に、全国のお客様に対応しております。<br className="sm:block hidden" />
-          フォームよりご連絡いただければ、通常2営業日以内にご返信いたします。
+          千葉県船橋を拠点に、全国のお客様に対応しております。
         </p>
       </div>
     </section>

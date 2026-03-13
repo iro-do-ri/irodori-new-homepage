@@ -191,6 +191,16 @@ export default function Price() {
                         <li key={f} className={styles.featureItem}>{f}</li>
                       ))}
                     </ul>
+                    <div className="flex justify-center mt-6">
+                      <Link
+                        href={`${URL.Contact}?plan=${encodeURIComponent(plan.name)}`}
+                        className={`${styles.box_button} inline-block`}
+                        aria-label={`${plan.name}で無料相談する`}
+                      >
+                        <span className={`${styles.background_button} ${plan.featured ? styles.contact_button : styles.other_button}`}></span>
+                        <span className={`${styles.contents_button} px-8 py-3 inline-block`}>このプランで相談する</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}

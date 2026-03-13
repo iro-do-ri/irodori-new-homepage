@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Header from "./parts/Header";
 import Main from "./parts/Main";
 import Contact from "./parts/Contact";
@@ -38,7 +39,9 @@ export default async function Page() {
   <section className="relative">
       <Header />
       <Main news={newsData.contents} works={worksData.contents} />
-      <Contact />
+      <Suspense fallback={null}>
+        <Contact />
+      </Suspense>
   </section>
   );
 }

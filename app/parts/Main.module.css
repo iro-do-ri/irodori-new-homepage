@@ -916,17 +916,19 @@
 
 .workCard {
   background: #fff;
-  border-radius: 10px;
+  border-radius: var(--radius-md, 10px);
   overflow: hidden;
   box-shadow: 0 2px 12px rgba(5, 8, 40, 0.07);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: block;
+  text-decoration: none;
 }
 .workCard:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 28px rgba(5, 8, 40, 0.13);
 }
-.workCard:hover .workImage {
-  transform: scale(1.05);
+.workCard:hover .workImageWrap img {
+  transform: scale(1.06);
 }
 .workCard:hover .workImageWrap::after {
   opacity: 1;
@@ -934,7 +936,7 @@
 
 .workImageWrap {
   position: relative;
-  aspect-ratio: 16/9;
+  aspect-ratio: 4/3;
   overflow: hidden;
 }
 .workImageWrap::after {
@@ -965,28 +967,29 @@
   background: rgba(5, 8, 40, 0.55);
   padding: 0.2rem 0.6rem;
   border-radius: 50rem;
+  z-index: 1;
 }
 
 .workMeta {
-  padding: 0.875rem 1rem 1rem;
+  padding: 1.25rem 1.5rem 1.5rem;
 }
 
 .workCat {
   display: inline-block;
   font-size: 10px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   color: #3364AE;
   border: 1px solid rgba(51, 100, 174, 0.35);
   padding: 0.15rem 0.6rem;
   border-radius: 50rem;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
 }
 
 .workTitle {
-  font-size: clamp(12px, 1.4vw, 14px);
+  font-size: clamp(14px, 1.8vw, 16px);
   color: #050828;
-  font-weight: 500;
-  line-height: 1.4;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .showcaseCta {

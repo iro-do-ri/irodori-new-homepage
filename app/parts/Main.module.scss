@@ -459,7 +459,6 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(to top, rgba(5, 8, 40, 0.55) 0%, transparent 60%);
         opacity: 0;
         transition: opacity 0.4s ease;
     }
@@ -488,7 +487,6 @@
 
 .workMeta {
     padding: 1.25rem 1.5rem 1.5rem;
-}
 
 .workCat {
     display: inline-block;
@@ -506,6 +504,7 @@
     color: $text-color;
     font-weight: 700;
     line-height: 1.5;
+}
 }
 
 .showcaseCta {

@@ -201,17 +201,22 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                   }}
                   className="mb-12"
                 >
-                  {works.map((work) => (
+                  {works.map((work, index) => (
                     <SplideSlide key={work.id}>
-                      <div className="overflow-hidden">
-                        <div className="aspect-video overflow-hidden mb-3">
-                          <img src={work.image.url} alt={`${work.title}のホームページ制作実績｜イロドリ`} className="w-full h-full object-cover" />
+                      <Link href={`/works/${work.id}`} className={styles.workCard}>
+                        <div className={styles.workImageWrap}>
+                          <img
+                            src={work.image.url}
+                            alt={`${work.title}のホームページ制作実績｜イロドリ`}
+                            className={styles.workImage}
+                          />
+                          <span className={styles.workNum}>{String(index + 1).padStart(2, "0")}</span>
                         </div>
-                        <span className="inline-block text-xs px-2 py-1 mb-2 border border-white/40 rounded-full">
-                          {work.category}
-                        </span>
-                        <p className="text-sm">{work.title}</p>
-                      </div>
+                        <div className={styles.workMeta}>
+                          <span className={styles.workCat}>{work.category}</span>
+                          <p className={styles.workTitle}>{work.title}</p>
+                        </div>
+                      </Link>
                     </SplideSlide>
                   ))}
                 </Splide>

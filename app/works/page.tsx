@@ -88,19 +88,20 @@ export default async function WorksPage() {
             <h2 className={styles.sectionTitle}>すべての実績</h2>
             <div className={styles.grid}>
               {works.length > 0 ? (
-                works.map((work) => (
-                  <div key={work.id} className={styles.card}>
+                works.map((work, index) => (
+                  <Link key={work.id} href={`/works/${work.id}`} className={styles.card}>
                     <div className={styles.cardImage}>
                       <img
                         src={work.image.url}
                         alt={`${work.title}のホームページ制作実績｜イロドリ`}
                       />
+                      <span className={styles.cardNum}>{String(index + 1).padStart(2, "0")}</span>
                     </div>
                     <div className={styles.cardBody}>
                       <span className={styles.cardCategory}>{work.category}</span>
                       <p className={styles.cardTitle}>{work.title}</p>
                     </div>
-                  </div>
+                  </Link>
                 ))
               ) : (
                 <p className={styles.empty}>現在、実績を準備中です。</p>

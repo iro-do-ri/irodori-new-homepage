@@ -11,7 +11,7 @@ type Work = {
   title: string;
   category: string;
   image: { url: string; width: number; height: number };
-  description?: string;
+  description_1: string;
   url?: string;
 };
 

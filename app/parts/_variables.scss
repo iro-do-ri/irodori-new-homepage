@@ -13,3 +13,9 @@ $bg-color: #edeef1;
       @content;
     }
   }
+
+  @mixin xl {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }

@@ -4,7 +4,7 @@ import styles from "./Main.module.scss";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import { gsap } from "gsap";
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Three from "../components/Three";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
@@ -17,6 +17,7 @@ type Work = {
   title: string;
   category: string;
   image: { url: string; width: number; height: number };
+  url: string;
 };
 type News = {
   id: string;
@@ -123,6 +124,9 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
   }, []);
   // GSAPここまで
 
+  // Button
+  const [hover, setHover] = useState(false);
+
   return (
     <main className={`${styles.main}`}>
       <Three />
@@ -188,7 +192,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
               </div>
             </section>
             <section className={`${styles.works} ${styles.curtain} relative`}>
-              <div className={`${styles.contentsContainer} sm:max-w-[1200px] sm:w-full`}>
+              <div className={`${styles.contentsContainer} xl:max-w-[1200px] xl:w-full`}>
                 <span className={styles.curtainEyebrow}>OUR WORKS</span>
                 <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作 実績紹介</h2>
                 <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
@@ -199,13 +203,15 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                     perPage: 3,
                     perMove: 1,
                     gap: "1.5rem",
-                    breakpoints: { 640: { perPage: 1 } },
+                    breakpoints: { 1280: { perPage: 2 }, 640: { perPage: 1 } },
                   }}
                   className="mb-12"
                 >
                   {works.map((work, index) => (
                     <SplideSlide key={work.id}>
-                      <Link href={`/works/${work.id}`} className={styles.workCard}>
+                      <div
+                        className={styles.workCard}          
+                      >
                         <div className={styles.workImageWrap}>
                           <img
                             src={work.image.url}
@@ -218,7 +224,13 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                           <span className={styles.workCat}>{work.category}</span>
                           <p className={styles.workTitle}>{work.title}</p>
                         </div>
-                      </Link>
+                        <div className={`flex justify-center ${styles.anker}`}>
+                            <Link href={`/works/${work.id}`} className={`${styles.box_button} ${styles.up} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} py-2 inline-block`}>この実績の詳細を見る</span></Link>
+                            <Link href={`${work.url}`} target="_blank" className={`${styles.box_button} ${styles.down} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} py-2 inline-block`}>このホームページを見る</span></Link>
+                            {/* <Link href={`/works/${work.id}`} target="_blank" className={`${styles.pageLink} ${styles.up}`}>この実績の詳細を見る</Link>
+                            <Link href={`/works/${work.url}`} target="_blank" className={`${styles.pageLink} ${styles.down}`}>このホームページを見る</Link> */}
+                        </div>
+                      </div>
                     </SplideSlide>
                   ))}
                 </Splide>

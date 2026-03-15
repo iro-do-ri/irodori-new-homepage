@@ -45,6 +45,13 @@ export const metadata: Metadata = {
       "千葉県船橋のホームページ制作会社イロドリ。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。",
     images: ["/og-image.png"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: { url: "/icon.svg", type: "image/svg+xml" },
+  },
   robots: {
     index: true,
     follow: true,

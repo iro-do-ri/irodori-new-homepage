@@ -61,7 +61,7 @@ export default function Contact() {
             <div className={styles.row}>
               <div className={styles.labelGroup}>
                 <label htmlFor="company" className={styles.label}>会社名・屋号</label>
-                <span className={styles.badgeOptional}>任意</span>
+                <span className={styles.badge}>必須</span>
               </div>
               <input
                 id="company"
@@ -69,7 +69,7 @@ export default function Contact() {
                 name="company"
                 value={form.company}
                 type="text"
-                placeholder="株式会社山田商事 / 個人の方は空欄で可"
+                placeholder="株式会社山田商事 / 個人の方は個人で可"
                 onChange={handleChange}
               />
             </div>

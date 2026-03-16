@@ -81,9 +81,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
         opacity: 1,
         duration: 0.8,
         ease: "power2.out",
-      }), "+=0.2");
-
-  });
+      }), "+=0.2");;
   
       ScrollTrigger.create({
         trigger: wrapperRef.current,
@@ -112,6 +110,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
             if (!ol.reversed() && ol.progress() > 0) ol.reverse();
           }
         },
+      })
       });
       gsap.utils.toArray<HTMLElement>(`.${styles.curtain}`).forEach((el) => {
         ScrollTrigger.create({

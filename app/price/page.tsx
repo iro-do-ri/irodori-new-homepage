@@ -197,7 +197,7 @@ export default function Price() {
                         className={`${styles.box_button} inline-block`}
                         aria-label={`${plan.name}で無料相談する`}
                       >
-                        <span className={`${styles.background_button} ${plan.featured ? styles.contact_button : styles.other_button}`}></span>
+                        <span className={`${styles.background_button} ${styles.contact_button}`}></span>
                         <span className={`${styles.contents_button} px-8 py-3 inline-block`}>このプランで相談する</span>
                       </Link>
                     </div>

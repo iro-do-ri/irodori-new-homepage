@@ -227,8 +227,6 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                         <div className={`flex justify-center ${styles.anker}`}>
                             <Link href={`/works/${work.id}`} className={`${styles.box_button} ${styles.up} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} py-2 inline-block`}>この実績の詳細を見る</span></Link>
                             <Link href={`${work.url}`} target="_blank" className={`${styles.box_button} ${styles.down} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} py-2 inline-block`}>このホームページを見る</span></Link>
-                            {/* <Link href={`/works/${work.id}`} target="_blank" className={`${styles.pageLink} ${styles.up}`}>この実績の詳細を見る</Link>
-                            <Link href={`/works/${work.url}`} target="_blank" className={`${styles.pageLink} ${styles.down}`}>このホームページを見る</Link> */}
                         </div>
                       </div>
                     </SplideSlide>

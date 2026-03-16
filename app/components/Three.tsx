@@ -17,12 +17,12 @@ export default function Three() {
         <ambientLight intensity={2} />
         <directionalLight
           castShadow
-          position={isMobile ? [30, 4, 2] : [2, 4, 2]}
+          position={[2, 4, 2]}
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />
         <OrbitControls enableZoom={false} enableRotate={false} enablePan={false} />
-        <MyModel castShadow />
+        <MyModel castShadow position={isMobile ? [-4.5, -1, 0] : [0, 0, 0]}/>
       </Canvas>
     </div>
   );

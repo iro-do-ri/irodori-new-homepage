@@ -48,28 +48,24 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
         top: startTop,
       });
 
-      const mm = gsap.matchMedia();
-
-  // 640px以上だけ実行
-  mm.add("(min-width: 640px)", () => {
-
-    const tl = gsap.timeline({ paused: true })
+      const tl = gsap.timeline({ paused: true })
       .to(textRef.current, {
         clipPath: "inset(100% 0 0)",
         y: -100,
         duration: 0.6,
         ease: "power2.out",
       });
-
-    const sl = gsap.timeline({ paused: true })
+  
+      const sl = gsap.timeline({ paused: true })
       .to(textRef_2.current, {
         clipPath: "inset(0 0 100%)",
         y: 100,
         duration: 0.6,
         ease: "power2.out",
       });
-
-    const ol = gsap.timeline({ paused: true })
+  
+      // ニュースを「wrapper の上端（画面上）」までスライド
+      const ol = gsap.timeline({ paused: true })
       .to(el, {
         top: 0,
         duration: 0.1,
@@ -81,7 +77,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
         opacity: 1,
         duration: 0.8,
         ease: "power2.out",
-      }), "+=0.2");;
+      }), "+=0.2");
   
       ScrollTrigger.create({
         trigger: wrapperRef.current,
@@ -110,7 +106,6 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
             if (!ol.reversed() && ol.progress() > 0) ol.reverse();
           }
         },
-      })
       });
       gsap.utils.toArray<HTMLElement>(`.${styles.curtain}`).forEach((el) => {
         ScrollTrigger.create({

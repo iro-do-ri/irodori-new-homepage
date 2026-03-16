@@ -86,9 +86,9 @@
 
     // ── NEWS セクション ──
     .news {
-        opacity: 0;
+        opacity: 1;
         @include sm {
-            opacity: 1;
+            opacity: 0;
         }
         .newsContainer {
             position: absolute;

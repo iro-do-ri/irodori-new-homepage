@@ -1,11 +1,16 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import MyModel from "../../public/models/Mymodel";
 
 export default function Three() {
-  const isMobile = window.innerWidth < 640;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 640);
+  }, []);
   return (
     <div style={{ width: "100%", height: isMobile ? "37rem" : "100dvh", position: "fixed", zIndex: "-1", background: "#0d1b2a" }}>
       <Canvas shadows camera={{ position: [12.2,15,15], fov: 32 }}>

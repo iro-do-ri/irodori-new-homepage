@@ -24,7 +24,7 @@
     section {
         height: 37rem;
         &.works {
-            height: 100svh;
+            height: 52rem;
             @include sm {
                 height: calc(100dvh + 10rem);
             }

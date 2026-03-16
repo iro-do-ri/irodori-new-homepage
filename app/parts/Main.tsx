@@ -39,7 +39,11 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
     const ctx = gsap.context(() => {
       const el = textRef_3.current;
       if (!el) return;
-  
+
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 640px)", () => {
+
       // ニュースの初期位置（wrapper 内の Y）を取得
       const startTop = el.offsetTop;
   
@@ -47,10 +51,6 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
       gsap.set(el, {
         top: startTop,
       });
-
-      const mm = gsap.matchMedia();
-
-      mm.add("(min-width: 640px)", () => {
 
       const tl = gsap.timeline({ paused: true })
       .to(textRef.current, {
@@ -140,7 +140,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                   <Link href={URL.Contact} className={`${styles.box_button} inline-block`} aria-label="無料相談ページへ移動します"><span className={`${styles.background_button} ${styles.contact_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料で相談してみる</span></Link>
                 </div>
             </section>
-            <section ref={textRef_3} className={`${styles.news} absolute w-full`}>
+            <section ref={textRef_3} className={`${styles.news} sm:absolute relative w-full`}>
               <div className={styles.newsContainer}>
               <h2 className="mb-4 sm:mb-8">千葉県船橋でホームページ・WEBサイト制作を行う<br className="hidden sm:block"/>イロドリからのお知らせ</h2>
               <div className="flex flex-col justify-center">

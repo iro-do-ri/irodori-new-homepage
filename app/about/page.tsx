@@ -137,6 +137,36 @@ export default function About() {
           </div>
         </div>
 
+        {/* ── 代表者プロフィール ── */}
+        <div className={`${styles.section} ${styles.profileBg}`}>
+          <div className={styles.sectionInner}>
+            <span className={styles.sectionLabel}>PROFILE</span>
+            <h2 className={styles.sectionTitle}>代表者プロフィール</h2>
+            <div className={styles.founderCard}>
+              <div className={styles.founderImageWrap}>
+                <img
+                  src="/profile.png"
+                  alt="勝野 紘太の写真"
+                  className={styles.founderImage}
+                />
+              </div>
+              <div className={styles.founderBody}>
+                <p className={styles.founderName}>
+                  勝野 紘太<span className={styles.founderNameEn}> / Kota Katsuno</span>
+                </p>
+                <p className={styles.founderRole}>Webデザイナー・イロドリ代表</p>
+                <p className={styles.founderBio}>
+                  船橋商工会議所で5年間、地元の中小企業を支援する仕事をしてきました。<br />
+                  良い商品や技術を持っているのに、ホームページがなくて集客できていないお店が多いことに気づき、
+                  フリーランスとして独立しました。
+                  <br /><br />
+                  「依頼してよかった」と思ってもらえるよう、丁寧なヒアリングを大切にしています。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* ── 会社概要 ── */}
         <div className={styles.section}>
           <div className={styles.sectionInner}>

@@ -150,6 +150,14 @@ export default function About() {
                     <td>イロドリ</td>
                   </tr>
                   <tr>
+                    <th>代表者</th>
+                    <td>勝野 紘太</td>
+                  </tr>
+                  <tr>
+                    <th>電話番号</th>
+                    <td>080-5543-5943</td>
+                  </tr>
+                  <tr>
                     <th>所在地</th>
                     <td>千葉県船橋</td>
                   </tr>

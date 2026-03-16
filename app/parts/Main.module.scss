@@ -87,6 +87,9 @@
     // ── NEWS セクション ──
     .news {
         opacity: 0;
+        @include sm {
+            opacity: 1;
+        }
         .newsContainer {
             position: absolute;
             top: clamp(72px, 16vw, 120px);
@@ -133,9 +136,11 @@
     }
 
     .curtain {
+        @include sm {
         clip-path: inset(0 100% 0 0);
         transition: clip-path .8s ease;
         overflow: hidden;
+        }
 
         &.company {
             background-color: rgba(5, 8, 40, 0.93);

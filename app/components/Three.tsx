@@ -12,7 +12,7 @@ export default function Three() {
     setIsMobile(window.innerWidth < 640);
   }, []);
   return (
-    <div style={{ width: "100%", height: isMobile ? "100svh" : "100dvh", position: "fixed", zIndex: "-1", background: "#0d1b2a" }}>
+    <div style={{ width: "100%", height: isMobile ? "105svh" : "100dvh", position: "fixed", zIndex: "-1", background: "#0d1b2a" }}>
       <Canvas shadows camera={{ position: [12.2,15,15], fov: 32 }}>
         <ambientLight intensity={2} />
         <directionalLight
@@ -22,7 +22,7 @@ export default function Three() {
           shadow-mapSize-height={1024}
         />
         <OrbitControls enableZoom={false} enableRotate={false} enablePan={false} />
-        <MyModel castShadow position={isMobile ? [-4.5, -1, 0] : [0, 0, 0]}/>
+        <MyModel castShadow position={isMobile ? [-4, -1, 0] : [0, 0, 0]}/>
       </Canvas>
     </div>
   );

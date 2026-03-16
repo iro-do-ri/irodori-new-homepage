@@ -17,7 +17,7 @@ export default function Three() {
         <ambientLight intensity={2} />
         <directionalLight
           castShadow
-          position={isMobile ? [10, 4, 2] : [2, 4, 2]}
+          position={isMobile ? [30, 4, 2] : [2, 4, 2]}
           shadow-mapSize-width={1024}
           shadow-mapSize-height={1024}
         />

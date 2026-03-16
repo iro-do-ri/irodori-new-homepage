@@ -43,89 +43,92 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
       const mm = gsap.matchMedia();
 
       mm.add("(min-width: 640px)", () => {
+        // ニュースの初期位置（wrapper 内の Y）を取得
+        const startTop = el.offsetTop;
 
-      // ニュースの初期位置（wrapper 内の Y）を取得
-      const startTop = el.offsetTop;
-  
-      // まず absolute で「今の場所」に固定しておく
-      gsap.set(el, {
-        top: startTop,
-      });
+        // まず absolute で「今の場所」に固定しておく
+        gsap.set(el, {
+          top: startTop,
+        });
 
-      const tl = gsap.timeline({ paused: true })
-      .to(textRef.current, {
-        clipPath: "inset(100% 0 0)",
-        y: -100,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-  
-      const sl = gsap.timeline({ paused: true })
-      .to(textRef_2.current, {
-        clipPath: "inset(0 0 100%)",
-        y: 100,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-  
-      // ニュースを「wrapper の上端（画面上）」までスライド
-      const ol = gsap.timeline({ paused: true })
-      .to(el, {
-        top: 0,
-        duration: 0.1,
-        filter: "blur(10)",
-        ease: "power2.out",
-      })
-      .add(gsap.to(el, {
-        filter: "blur(0)",
-        opacity: 1,
-        duration: 0.8,
-        ease: "power2.out",
-      }), "+=0.2");
-  
-      ScrollTrigger.create({
-        trigger: wrapperRef.current,
-        start: "top top",
-        end: "+=100%",
-        pin: true,
-        anticipatePin: 1,
-        scrub: true,
-        snap: 1,
-  
-        onUpdate: (self) => {
-          const threshold = 50 / 100;
-          const hold = 1;
-  
-          if (self.progress >= threshold) {
-            if (tl.reversed() || tl.progress() === 0) tl.play();
-            if (sl.reversed() || sl.progress() === 0) sl.play();
-          } else {
-            if (!tl.reversed() && tl.progress() > 0) tl.reverse();
-            if (!sl.reversed() && sl.progress() > 0) sl.reverse();
-          }
-  
-          if (self.progress >= hold) {
-            if (ol.reversed() || ol.progress() === 0) ol.play();
-          } else {
-            if (!ol.reversed() && ol.progress() > 0) ol.reverse();
-          }
-        },
-      });
-      gsap.utils.toArray<HTMLElement>(`.${styles.curtain}`).forEach((el) => {
+        const tl = gsap.timeline({ paused: true })
+          .to(textRef.current, {
+            clipPath: "inset(100% 0 0)",
+            y: -100,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+
+        const sl = gsap.timeline({ paused: true })
+          .to(textRef_2.current, {
+            clipPath: "inset(0 0 100%)",
+            y: 100,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+
+        // ニュースを「wrapper の上端（画面上）」までスライド
+        const ol = gsap.timeline({ paused: true })
+          .to(el, {
+            top: 0,
+            duration: 0.1,
+            filter: "blur(10)",
+            ease: "power2.out",
+          })
+          .add(gsap.to(el, {
+            filter: "blur(0)",
+            opacity: 1,
+            duration: 0.8,
+            ease: "power2.out",
+          }), "+=0.2");
+
         ScrollTrigger.create({
-          trigger: el,
-          start: "top -20%",
+          trigger: wrapperRef.current,
+          start: "top top",
+          end: "+=100%",
+          pin: true,
+          anticipatePin: 1,
           scrub: true,
-          onEnter: () => {
-            el.classList.add(styles.clipPathAnimation);
+          snap: 1,
+
+          onUpdate: (self) => {
+            const threshold = 50 / 100;
+            const hold = 1;
+
+            if (self.progress >= threshold) {
+              if (tl.reversed() || tl.progress() === 0) tl.play();
+              if (sl.reversed() || sl.progress() === 0) sl.play();
+            } else {
+              if (!tl.reversed() && tl.progress() > 0) tl.reverse();
+              if (!sl.reversed() && sl.progress() > 0) sl.reverse();
+            }
+
+            if (self.progress >= hold) {
+              if (ol.reversed() || ol.progress() === 0) ol.play();
+            } else {
+              if (!ol.reversed() && ol.progress() > 0) ol.reverse();
+            }
           },
         });
-      });      
 
+        gsap.utils.toArray<HTMLElement>(`.${styles.curtain}`).forEach((el) => {
+          ScrollTrigger.create({
+            trigger: el,
+            start: "top 80%",
+            end: "top 20%",
+            toggleActions: "play none none reverse",
+            onEnter: () => {
+              el.classList.add(styles.clipPathAnimation);
+            },
+          });
+        });
+      });
     }, wrapperRef);
-  
-    return () => ctx.revert();
-  });
+
+    return () => {
+      ctx.revert();
+      ScrollTrigger.killAll();
+    };
   }, []);
   // GSAPここまで
 

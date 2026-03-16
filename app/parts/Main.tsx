@@ -36,6 +36,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
   const wrapperRef = useRef(null);
 
   useLayoutEffect(() => {
+    // スコープを wrapperRef に絞らない（curtain が外に出たため）
     const ctx = gsap.context(() => {
       const el = textRef_3.current;
       if (!el) return;
@@ -111,19 +112,22 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
           },
         });
 
-        gsap.utils.toArray<HTMLElement>(`.${styles.curtain}`).forEach((el) => {
+        gsap.utils.toArray<HTMLElement>(`.${styles.curtain}`).forEach((curtainEl) => {
           ScrollTrigger.create({
-            trigger: el,
+            trigger: curtainEl,
             start: "top 80%",
             end: "top 20%",
             toggleActions: "play none none reverse",
             onEnter: () => {
-              el.classList.add(styles.clipPathAnimation);
+              curtainEl.classList.add(styles.clipPathAnimation);
             },
           });
         });
+
+        // pin + curtain の位置を正確に再計算
+        ScrollTrigger.refresh();
       });
-    }, wrapperRef);
+    });
 
     return () => {
       ctx.revert();
@@ -170,78 +174,79 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
               </div>
               </div>
             </section>
-            <section className={`${styles.company} ${styles.curtain} relative`}>
-              <div className={styles.contentsContainer} ref={companyRef}>
-                <span className={styles.curtainEyebrow}>ABOUT IRODORI</span>
-                <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作｜<br/>伝わるデザインと使いやすさを両立</h2>
-                <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせた千葉県船橋のホームページ制作をします。</h3>
-                <p className="mb-2 sm:mb-3">イロドリでは、千葉県船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
-                <p className="mb-6 sm:mb-12">見た目の美しさだけでなく、<br className="hidden sm:block"/>使いやすさや更新のしやすさにもこだわり、<br className="hidden sm:block"/>CMS導入やSEO対策を通じて、<br className="hidden sm:block"/>成果につながるサイトづくりをサポートします。</p>
-                <div className="flex justify-center">
-                <Link href={URL.About} className={`${styles.box_button} inline-block`} aria-label="Aboutページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>会社概要を詳しく見る</span></Link>
-                </div>
-              </div>
-            </section>
-            <section className={`${styles.price} ${styles.curtain} relative`}>
-              <div className={styles.contentsContainer}>
-                <span className={styles.curtainEyebrow}>PRICE &amp; PLAN</span>
-                <h2 className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の料金について</h2>
-                <h3 className="mb-2 sm:mb-3">スモールビジネス向け｜コストを抑えた高品質ホームページ・WEBサイト制作</h3>
-                <p className="mb-4 sm:mb-12">イロドリでは、コストパフォーマンスを重視する<br className="hidden sm:block"/>スモールビジネスオーナー様のニーズに応えるためのプランがございます。</p>
-                <h3 className="mb-2 sm:mb-3">10万円からホームページを作成します</h3>
-                <p className="mb-2 sm:mb-3">一番お求めやすいプランでは、<br className="hidden sm:block"/>10万円から始められるシンプルで高品質なホームページ制作を致します。</p>
-                <p className="mb-6 sm:mb-12">初めてWEBサイトを導入する方や、<br className="hidden sm:block"/>コストを抑えつつ信頼感のあるデザインを求める方におすすめです。</p>
-                <div className="flex justify-center">
-                <Link href={URL.Price} className={`${styles.box_button} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>料金体系を詳しく見る</span></Link>
-                </div>
-              </div>
-            </section>
-            <section className={`${styles.works} ${styles.curtain} relative`}>
-              <div className={`${styles.contentsContainer} xl:max-w-[1200px] xl:w-full`}>
-                <span className={styles.curtainEyebrow}>OUR WORKS</span>
-                <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作 実績紹介</h2>
-                <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
-                <p className="mb-6 sm:mb-12">千葉県船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
-                <Splide
-                  options={{
-                    type: works.length > 3 ? "loop" : "slide",
-                    perPage: 3,
-                    perMove: 1,
-                    gap: "1.5rem",
-                    breakpoints: { 1280: { perPage: 2 }, 640: { perPage: 1 } },
-                  }}
-                  className="mb-12"
-                >
-                  {works.map((work, index) => (
-                    <SplideSlide key={work.id}>
-                      <div
-                        className={styles.workCard}          
-                      >
-                        <div className={styles.workImageWrap}>
-                          <img
-                            src={work.image.url}
-                            alt={`${work.title}のホームページ制作実績｜イロドリ`}
-                            className={styles.workImage}
-                          />
-                          <span className={styles.workNum}>{String(index + 1).padStart(2, "0")}</span>
-                        </div>
-                        <div className={styles.workMeta}>
-                          <span className={styles.workCat}>{work.category}</span>
-                          <p className={styles.workTitle}>{work.title}</p>
-                        </div>
-                        <div className={`flex justify-center ${styles.anker}`}>
-                            <Link href={`/works/${work.id}`} className={`${styles.box_button} ${styles.up} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} py-2 inline-block`}>この実績の詳細を見る</span></Link>
-                            <Link href={`${work.url}`} target="_blank" className={`${styles.box_button} ${styles.down} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} py-2 inline-block`}>このホームページを見る</span></Link>
-                        </div>
-                      </div>
-                    </SplideSlide>
-                  ))}
-                </Splide>
-                <div className="flex justify-center">
-                <Link href={URL.Works} className={`${styles.box_button} inline-block`} aria-label="実績ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>他の実績を詳しく見る</span></Link>
-                </div>
-              </div>
-            </section>
+        </section>
+        {/* ↑ pinされるのはここまで（top + news のみ） */}
+
+        {/* curtain セクションは pin の外に出すことで ScrollTrigger が正しく発火する */}
+        <section className={`${styles.company} ${styles.curtain} relative`}>
+          <div className={styles.contentsContainer} ref={companyRef}>
+            <span className={styles.curtainEyebrow}>ABOUT IRODORI</span>
+            <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作｜<br/>伝わるデザインと使いやすさを両立</h2>
+            <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせた千葉県船橋のホームページ制作をします。</h3>
+            <p className="mb-2 sm:mb-3">イロドリでは、千葉県船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block"/>ホームページ・WEBサイトを制作しています。</p>
+            <p className="mb-6 sm:mb-12">見た目の美しさだけでなく、<br className="hidden sm:block"/>使いやすさや更新のしやすさにもこだわり、<br className="hidden sm:block"/>CMS導入やSEO対策を通じて、<br className="hidden sm:block"/>成果につながるサイトづくりをサポートします。</p>
+            <div className="flex justify-center">
+            <Link href={URL.About} className={`${styles.box_button} inline-block`} aria-label="Aboutページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>会社概要を詳しく見る</span></Link>
+            </div>
+          </div>
+        </section>
+        <section className={`${styles.price} ${styles.curtain} relative`}>
+          <div className={styles.contentsContainer}>
+            <span className={styles.curtainEyebrow}>PRICE &amp; PLAN</span>
+            <h2 className="mb-6 sm:mb-12">ホームページ・WEBサイト制作の料金について</h2>
+            <h3 className="mb-2 sm:mb-3">スモールビジネス向け｜コストを抑えた高品質ホームページ・WEBサイト制作</h3>
+            <p className="mb-4 sm:mb-12">イロドリでは、コストパフォーマンスを重視する<br className="hidden sm:block"/>スモールビジネスオーナー様のニーズに応えるためのプランがございます。</p>
+            <h3 className="mb-2 sm:mb-3">10万円からホームページを作成します</h3>
+            <p className="mb-2 sm:mb-3">一番お求めやすいプランでは、<br className="hidden sm:block"/>10万円から始められるシンプルで高品質なホームページ制作を致します。</p>
+            <p className="mb-6 sm:mb-12">初めてWEBサイトを導入する方や、<br className="hidden sm:block"/>コストを抑えつつ信頼感のあるデザインを求める方におすすめです。</p>
+            <div className="flex justify-center">
+            <Link href={URL.Price} className={`${styles.box_button} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>料金体系を詳しく見る</span></Link>
+            </div>
+          </div>
+        </section>
+        <section className={`${styles.works} ${styles.curtain} relative`}>
+          <div className={`${styles.contentsContainer} xl:max-w-[1200px] xl:w-full`}>
+            <span className={styles.curtainEyebrow}>OUR WORKS</span>
+            <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作 実績紹介</h2>
+            <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
+            <p className="mb-6 sm:mb-12">千葉県船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
+            <Splide
+              options={{
+                type: works.length > 3 ? "loop" : "slide",
+                perPage: 3,
+                perMove: 1,
+                gap: "1.5rem",
+                breakpoints: { 1280: { perPage: 2 }, 640: { perPage: 1 } },
+              }}
+              className="mb-12"
+            >
+              {works.map((work, index) => (
+                <SplideSlide key={work.id}>
+                  <div className={styles.workCard}>
+                    <div className={styles.workImageWrap}>
+                      <img
+                        src={work.image.url}
+                        alt={`${work.title}のホームページ制作実績｜イロドリ`}
+                        className={styles.workImage}
+                      />
+                      <span className={styles.workNum}>{String(index + 1).padStart(2, "0")}</span>
+                    </div>
+                    <div className={styles.workMeta}>
+                      <span className={styles.workCat}>{work.category}</span>
+                      <p className={styles.workTitle}>{work.title}</p>
+                    </div>
+                    <div className={`flex justify-center ${styles.anker}`}>
+                      <Link href={`/works/${work.id}`} className={`${styles.box_button} ${styles.up} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} py-2 inline-block`}>この実績の詳細を見る</span></Link>
+                      <Link href={`${work.url}`} target="_blank" className={`${styles.box_button} ${styles.down} inline-block`} aria-label="料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} py-2 inline-block`}>このホームページを見る</span></Link>
+                    </div>
+                  </div>
+                </SplideSlide>
+              ))}
+            </Splide>
+            <div className="flex justify-center">
+            <Link href={URL.Works} className={`${styles.box_button} inline-block`} aria-label="実績ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>他の実績を詳しく見る</span></Link>
+            </div>
+          </div>
         </section>
 
         {/* ── 選ばれる理由 ── */}

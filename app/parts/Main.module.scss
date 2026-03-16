@@ -23,6 +23,12 @@
     }
     section {
         height: 37rem;
+        &.top {
+            height: 30rem;
+            @include sm {
+                height: 100dvh;
+            }
+        }
         &.works {
             height: 52rem;
             @include sm {

@@ -48,6 +48,10 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
         top: startTop,
       });
 
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 640px)", () => {
+
       const tl = gsap.timeline({ paused: true })
       .to(textRef.current, {
         clipPath: "inset(100% 0 0)",
@@ -69,7 +73,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
       .to(el, {
         top: 0,
         duration: 0.1,
-        filter: "blur(100)",
+        filter: "blur(10)",
         ease: "power2.out",
       })
       .add(gsap.to(el, {
@@ -121,11 +125,9 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
     }, wrapperRef);
   
     return () => ctx.revert();
+  });
   }, []);
   // GSAPここまで
-
-  // Button
-  const [hover, setHover] = useState(false);
 
   return (
     <main className={`${styles.main}`}>

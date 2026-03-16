@@ -12,7 +12,7 @@ export default function Three() {
     setIsMobile(window.innerWidth < 640);
   }, []);
   return (
-    <div style={{ width: "100%", height: isMobile ? "37rem" : "100dvh", position: "fixed", zIndex: "-1", background: "#0d1b2a" }}>
+    <div style={{ width: "100%", height: isMobile ? "50rem" : "100dvh", position: "fixed", zIndex: "-1", background: "#0d1b2a" }}>
       <Canvas shadows camera={{ position: [12.2,15,15], fov: 32 }}>
         <ambientLight intensity={2} />
         <directionalLight

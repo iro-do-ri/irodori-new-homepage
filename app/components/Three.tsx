@@ -22,7 +22,7 @@ export default function Three() {
           shadow-mapSize-height={1024}
         />
         <OrbitControls enableZoom={false} enableRotate={false} enablePan={false} />
-        <MyModel castShadow position={isMobile ? [-4, -1, 0] : [0, 0, 0]}/>
+        <MyModel castShadow position={isMobile ? [-3, -1, 0] : [0, 0, 0]}/>
       </Canvas>
     </div>
   );

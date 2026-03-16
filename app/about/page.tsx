@@ -159,7 +159,7 @@ export default function About() {
                   </tr>
                   <tr>
                     <th>所在地</th>
-                    <td>千葉県船橋</td>
+                    <td>千葉県船橋市</td>
                   </tr>
                   <tr>
                     <th>事業内容</th>

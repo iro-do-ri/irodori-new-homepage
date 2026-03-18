@@ -3,34 +3,33 @@ import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import { client } from "../lib/Micro";
-import { getAllPosts } from "../lib/posts";
 import styles from "./News.module.scss";
 import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "新着情報｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
+  title: "更新情報｜千葉県船橋のホームページ制作会社イロドリ",
   description:
-    "千葉県船橋のホームページ制作会社イロドリが運営する新着情報。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
-  keywords: ["船橋", "千葉県", "千葉県船橋", "新着情報", "ホームページ制作", "Webデザイン", "SEO対策", "イロドリ"],
+    "千葉県船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
+  keywords: ["船橋", "千葉県", "千葉県船橋", "更新情報", "お知らせ", "ホームページ制作", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/news" },
   openGraph: {
-    title: "新着情報｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
+    title: "更新情報｜千葉県船橋のホームページ制作会社イロドリ",
     description:
-      "千葉県船橋のホームページ制作会社イロドリが運営する新着情報。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
+      "千葉県船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
     url: "https://iro-do-ri.jp/news",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "新着情報｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
+    title: "更新情報｜千葉県船橋のホームページ制作会社イロドリ",
     description:
-      "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策の情報を発信。",
+      "千葉県船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
 };
 
-type BlogPost = {
+type NewsPost = {
   id: string;
   title: string;
   category: string;
@@ -38,21 +37,17 @@ type BlogPost = {
   publishedAt: string;
 };
 
-export default async function BlogPage() {
-  // CMS記事
-  let cmsPosts: BlogPost[] = [];
+export default async function NewsPage() {
+  let posts: NewsPost[] = [];
   try {
     const data = await client.get({
       endpoint: "news",
-      queries: { limit: 20 },
+      queries: { limit: 100 },
     });
-    cmsPosts = data.contents;
+    posts = data.contents;
   } catch {
-    cmsPosts = [];
+    posts = [];
   }
-
-  // ローカルMarkdown記事
-  const localPosts = getAllPosts();
 
   return (
     <section className="flex">
@@ -62,81 +57,31 @@ export default async function BlogPage() {
 
         {/* ── ヒーロー ── */}
         <div className={styles.hero}>
-          <span className={styles.label}>BLOG</span>
-          <h1 className={styles.title}>ブログ</h1>
+          <span className={styles.label}>NEWS</span>
+          <h1 className={styles.title}>更新情報</h1>
           <p className={styles.description}>
-            WEBデザインや制作の現場から、役立つ情報をお届けします。
+            イロドリからの最新情報・お知らせをお届けします。
           </p>
         </div>
 
-        <Breadcrumb items={[{ label: "新着情報" }]} />
+        <Breadcrumb items={[{ label: "更新情報" }]} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "ホーム", item: "https://iro-do-ri.jp/" },
-            { "@type": "ListItem", position: 2, name: "新着情報", item: "https://iro-do-ri.jp/news" },
+            { "@type": "ListItem", position: 2, name: "更新情報", item: "https://iro-do-ri.jp/news" },
           ],
         }) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "News",
-          name: "千葉県船橋のホームページ制作 イロドリ 新着情報",
-          description: "千葉県船橋のホームページ制作会社イロドリが運営する新着情報。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
-          url: "https://iro-do-ri.jp/news",
-          publisher: {
-            "@type": "Organization",
-            name: "イロドリ",
-            url: "https://iro-do-ri.jp",
-            logo: { "@type": "ImageObject", url: "https://iro-do-ri.jp/og-image.png" },
-          },
-          newsPost: localPosts.map((post) => ({
-            "@type": "newsPosting",
-            headline: post.title,
-            url: `https://iro-do-ri.jp/blog/${post.slug}`,
-            datePublished: post.date ?? new Date().toISOString(),
-          })),
-        }) }} />
 
-        {/* ── ローカル記事一覧 ── */}
-        {localPosts.length > 0 && (
-          <div className={styles.section}>
-            <div className={styles.sectionInner}>
-              <span className={styles.sectionLabel}>ARTICLES</span>
-              <h2 className={styles.sectionTitle}>ホームページ制作コラム</h2>
-              <div className={styles.grid}>
-                {localPosts.map((post) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
-                    <div className={styles.cardBody}>
-                      <div className={styles.cardMeta}>
-                        <span className={styles.cardCategory}>{post.category}</span>
-                        {post.date && (
-                          <span className={styles.cardDate}>
-                            {new Date(post.date).toLocaleDateString("ja-JP", {
-                              year: "numeric",
-                              month: "2-digit",
-                              day: "2-digit",
-                            })}
-                          </span>
-                        )}
-                      </div>
-                      <p className={styles.cardTitle}>{post.title}</p>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* ── CMS記事一覧 ── */}
-        <div className={styles.newsSection}>
-          <div className={styles.newsSectionInner}>
-            <p className={styles.newsLabel}>OTHER POSTS</p>
-            <h2 className={styles.newsSectionTitle}>他の記事</h2>
-            {cmsPosts.length > 0 ? (
+        {/* ── 更新情報一覧 ── */}
+        <div className={styles.section}>
+          <div className={styles.sectionInner}>
+            <span className={styles.sectionLabel}>UPDATES</span>
+            <h2 className={styles.sectionTitle}>最新の更新情報</h2>
+            {posts.length > 0 ? (
               <ul className={styles.newsList}>
-                {cmsPosts.map((post) => (
+                {posts.map((post) => (
                   <li key={post.id} className={styles.newsItem}>
                     <Link href={`/news/${post.id}`} className={styles.newsLink}>
                       <span className={styles.newsImg}>

@@ -123,11 +123,13 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
       });      
 
     }, wrapperRef);
-  
-    return () => {
-      ctx.revert();
-      ScrollTrigger.killAll();
-    };
+
+  });
+
+  return () => {
+    ctx.revert();
+    ScrollTrigger.killAll();
+  };
   }, []);
   // GSAPここまで
 

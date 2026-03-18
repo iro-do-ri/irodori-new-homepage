@@ -2,57 +2,65 @@ import type { Metadata } from "next";
 import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
-import { client } from "../lib/Micro";
 import { getAllPosts } from "../lib/posts";
 import styles from "./Blog.module.scss";
 import Breadcrumb from "../parts/Breadcrumb";
 
-export const metadata: Metadata = {
-  title: "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
-  description:
-    "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
-  keywords: ["船橋", "千葉県", "千葉県船橋", "ブログ", "ホームページ制作", "Webデザイン", "SEO対策", "イロドリ"],
-  alternates: { canonical: "https://iro-do-ri.jp/blog" },
-  openGraph: {
-    title: "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
+const PER_PAGE = 15;
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}): Promise<Metadata> {
+  const { page: pageParam } = await searchParams;
+  const page = Number(pageParam) || 1;
+  const canonical =
+    page === 1
+      ? "https://iro-do-ri.jp/blog"
+      : `https://iro-do-ri.jp/blog?page=${page}`;
+
+  return {
+    title:
+      page === 1
+        ? "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】"
+        : `ブログ（${page}ページ目）｜千葉県船橋のホームページ制作【イロドリ】`,
     description:
       "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
-    url: "https://iro-do-ri.jp/blog",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
-    description:
-      "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策の情報を発信。",
-    images: ["/og-image.png"],
-  },
-  robots: { index: true, follow: true },
-};
+    keywords: ["船橋", "千葉県", "千葉県船橋", "ブログ", "ホームページ制作", "Webデザイン", "SEO対策", "イロドリ"],
+    alternates: { canonical },
+    openGraph: {
+      title: "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
+      description:
+        "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策など、中小企業の集客に役立つ情報を発信しています。",
+      url: canonical,
+      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "ブログ｜千葉県船橋のホームページ制作・WebデザインTips【イロドリ】",
+      description:
+        "千葉県船橋のホームページ制作会社イロドリが運営するブログ。Webデザイン・ホームページ制作・SEO対策の情報を発信。",
+      images: ["/og-image.png"],
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
-type BlogPost = {
-  id: string;
-  title: string;
-  category: string;
-  img: { url: string; width: number; height: number };
-  publishedAt: string;
-};
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>;
+}) {
+  const { page: pageParam } = await searchParams;
+  const currentPage = Math.max(1, Number(pageParam) || 1);
 
-export default async function BlogPage() {
-  // CMS記事
-  let cmsPosts: BlogPost[] = [];
-  try {
-    const data = await client.get({
-      endpoint: "news",
-      queries: { limit: 20 },
-    });
-    cmsPosts = data.contents;
-  } catch {
-    cmsPosts = [];
-  }
-
-  // ローカルMarkdown記事
-  const localPosts = getAllPosts();
+  const allPosts = getAllPosts();
+  const totalPages = Math.ceil(allPosts.length / PER_PAGE);
+  const posts = allPosts.slice(
+    (currentPage - 1) * PER_PAGE,
+    currentPage * PER_PAGE
+  );
 
   return (
     <section className="flex">
@@ -90,7 +98,7 @@ export default async function BlogPage() {
             url: "https://iro-do-ri.jp",
             logo: { "@type": "ImageObject", url: "https://iro-do-ri.jp/og-image.png" },
           },
-          blogPost: localPosts.map((post) => ({
+          blogPost: allPosts.map((post) => ({
             "@type": "BlogPosting",
             headline: post.title,
             url: `https://iro-do-ri.jp/blog/${post.slug}`,
@@ -98,14 +106,14 @@ export default async function BlogPage() {
           })),
         }) }} />
 
-        {/* ── ローカル記事一覧 ── */}
-        {localPosts.length > 0 && (
+        {/* ── 記事一覧 ── */}
+        {posts.length > 0 && (
           <div className={styles.section}>
             <div className={styles.sectionInner}>
               <span className={styles.sectionLabel}>ARTICLES</span>
               <h2 className={styles.sectionTitle}>ホームページ制作コラム</h2>
               <div className={styles.grid}>
-                {localPosts.map((post) => (
+                {posts.map((post) => (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
                     <div className={styles.cardBody}>
                       <div className={styles.cardMeta}>
@@ -125,42 +133,43 @@ export default async function BlogPage() {
                   </Link>
                 ))}
               </div>
+
+              {/* ── ページネーション ── */}
+              {totalPages > 1 && (
+                <nav className={styles.pagination} aria-label="ページナビゲーション">
+                  {currentPage > 1 && (
+                    <Link
+                      href={currentPage === 2 ? "/blog" : `/blog?page=${currentPage - 1}`}
+                      className={styles.pageBtn}
+                    >
+                      ← 前のページ
+                    </Link>
+                  )}
+                  <div className={styles.pageNumbers}>
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
+                      <Link
+                        key={p}
+                        href={p === 1 ? "/blog" : `/blog?page=${p}`}
+                        className={`${styles.pageNumber} ${p === currentPage ? styles.pageNumberActive : ""}`}
+                        aria-current={p === currentPage ? "page" : undefined}
+                      >
+                        {p}
+                      </Link>
+                    ))}
+                  </div>
+                  {currentPage < totalPages && (
+                    <Link
+                      href={`/blog?page=${currentPage + 1}`}
+                      className={styles.pageBtn}
+                    >
+                      次のページ →
+                    </Link>
+                  )}
+                </nav>
+              )}
             </div>
           </div>
         )}
-
-        {/* ── CMS記事一覧 ── */}
-        <div className={styles.newsSection}>
-          <div className={styles.newsSectionInner}>
-            <p className={styles.newsLabel}>OTHER POSTS</p>
-            <h2 className={styles.newsSectionTitle}>他の記事</h2>
-            {cmsPosts.length > 0 ? (
-              <ul className={styles.newsList}>
-                {cmsPosts.map((post) => (
-                  <li key={post.id} className={styles.newsItem}>
-                    <Link href={`/news/${post.id}`} className={styles.newsLink}>
-                      <span className={styles.newsImg}>
-                        <img
-                          src={post.img?.url ?? "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eaa762c22949424c87cd0aadf582116e/no-image.png"}
-                          alt={post.title}
-                        />
-                      </span>
-                      <span className={styles.newsCat}>{post.category}</span>
-                      <div className={styles.newsMeta}>
-                        <time className={styles.newsDate}>
-                          {new Date(post.publishedAt).toLocaleDateString("ja-JP")}
-                        </time>
-                        <p className={styles.newsTitle}>{post.title}</p>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className={styles.empty}>現在、更新情報を準備中です。</p>
-            )}
-          </div>
-        </div>
 
         {/* ── CTA ── */}
         <div className={styles.cta}>

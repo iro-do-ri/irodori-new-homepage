@@ -345,3 +345,59 @@
     color: rgba(5, 8, 40, 0.4);
     font-size: 14px;
 }
+
+// ── ページネーション ─────────────────────────────
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.pageBtn {
+    font-size: 13px;
+    color: $button-color;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(51, 100, 174, 0.3);
+    border-radius: 50rem;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+        background: $button-color;
+        color: white;
+    }
+}
+
+.pageNumbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.pageNumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 14px;
+    color: $text-color;
+    text-decoration: none;
+    border: 1px solid rgba(5, 8, 40, 0.15);
+    border-radius: 50%;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+
+    &:hover {
+        border-color: $button-color;
+        color: $button-color;
+    }
+}
+
+.pageNumberActive {
+    background: $button-color;
+    border-color: $button-color;
+    color: white !important;
+    pointer-events: none;
+}

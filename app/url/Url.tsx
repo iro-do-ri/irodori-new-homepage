@@ -5,4 +5,5 @@ export const URL = {
     Blog: "/blog",
     Price: "/price",
     Contact: "/contact",
+    News: "/news",
 }

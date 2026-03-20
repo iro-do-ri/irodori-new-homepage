@@ -1,17 +1,19 @@
 "use client";
 
 import styles from "./Contact.module.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function Contact() {
   const searchParams = useSearchParams();
+  const loadedAt = useRef<number>(Date.now());
   const [form, setForm] = useState({
     company: "",
     name: "",
     email: "",
     phone: "",
     message: "",
+    _hp: "", // ハニーポット
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -29,13 +31,13 @@ export default function Contact() {
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify({ ...form, _t: loadedAt.current }),
     });
 
     const data = await res.json();
 
     if (data.success) {
-      setForm({ company: "", name: "", email: "", phone: "", message: "" });
+      setForm({ company: "", name: "", email: "", phone: "", message: "", _hp: "" });
       setStatus("success");
     } else {
       setStatus("error");
@@ -58,6 +60,18 @@ export default function Contact() {
 
         <div className={styles.form}>
           <form onSubmit={handleSubmit}>
+            {/* ハニーポット: ボット対策（人間には見えない） */}
+            <div style={{ position: "absolute", left: "-9999px", opacity: 0, height: 0, overflow: "hidden" }} aria-hidden="true">
+              <input
+                type="text"
+                name="_hp"
+                value={form._hp}
+                tabIndex={-1}
+                autoComplete="off"
+                onChange={handleChange}
+              />
+            </div>
+
             <div className={styles.row}>
               <div className={styles.labelGroup}>
                 <label htmlFor="company" className={styles.label}>会社名・屋号</label>

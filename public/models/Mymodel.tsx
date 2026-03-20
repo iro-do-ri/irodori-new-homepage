@@ -45,3 +45,4 @@ export default function MyModel(
   return <primitive castShadow object={scene} {...props} />;
 }
 
+useGLTF.preload("/models/my-model-draco.glb");

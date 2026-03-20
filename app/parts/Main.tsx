@@ -139,9 +139,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
 
   return (
     <main className={`${styles.main}`}>
-      <div id="three-container">
-        <Three />
-      </div>
+      <Three />
         <section className={styles.container} ref={wrapperRef}>
             <section className={`relative ${styles.top}`}>
                 <h1 ref={textRef} className={`${styles.mainText} absolute`}><span className="block mb-2">千葉県船橋で魅力を伝える<br className="sm:hidden block"/>ホームページ・WEBサイト制作会社</span>あなたの理想を<br/>デザインで形にします</h1>

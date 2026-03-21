@@ -127,6 +127,26 @@ export default async function BlogPostPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
 
+        {/* ── 他の記事 ── */}
+        {relatedPosts.length > 0 && (
+          <div className={styles.related}>
+            <p className={styles.relatedLabel}>他の記事</p>
+            <ul className={styles.relatedList}>
+              {relatedPosts.map((related) => (
+                <li key={related.slug} className={styles.relatedItem}>
+                  <Link href={`/blog/${related.slug}`} className={styles.relatedLink}>
+                    <div className={styles.relatedTop}>
+                      <span className={styles.relatedCat}>{related.category}</span>
+                      <time className={styles.relatedDate}>{new Date(related.date).toLocaleDateString("ja-JP")}</time>
+                    </div>
+                    <p className={styles.relatedCardTitle}>{related.title}</p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {/* ── プロフィール ── */}
         <div className={styles.profileWrap}>
           <div className={styles.profile}>
@@ -152,26 +172,6 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
           </div>
         </div>
-
-        {/* ── 他の記事 ── */}
-        {relatedPosts.length > 0 && (
-          <div className={styles.related}>
-            <p className={styles.relatedLabel}>他の記事</p>
-            <ul className={styles.relatedList}>
-              {relatedPosts.map((related) => (
-                <li key={related.slug} className={styles.relatedItem}>
-                  <Link href={`/blog/${related.slug}`} className={styles.relatedLink}>
-                    <div className={styles.relatedTop}>
-                      <span className={styles.relatedCat}>{related.category}</span>
-                      <time className={styles.relatedDate}>{new Date(related.date).toLocaleDateString("ja-JP")}</time>
-                    </div>
-                    <p className={styles.relatedCardTitle}>{related.title}</p>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
 
         {/* ── CTA ── */}
         <div className={styles.cta}>

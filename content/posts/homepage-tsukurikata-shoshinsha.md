@@ -161,22 +161,34 @@ SEO（Search Engine Optimization）とは、Googleなどの検索エンジンで
 
 ## SEO対策の優先度マップ
 
-```
-【すぐにできる（1〜2時間）】
-・ページタイトルにキーワードを入れる
-・メタディスクリプションを設定する
-・Google Search Consoleに登録する
-
-【1週間以内にやること】
-・GA4（Googleアナリティクス）を設定する
-・画像を圧縮してページ速度を改善する
-・スマホ表示を確認・最適化する
-
-【継続的に行うこと（月1回以上）】
-・ブログ記事・実績を更新する
-・Search Consoleで検索キーワードを確認する
-・アクセス解析で改善点を探す
-```
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;gap:1rem">
+    <div style="background:#3364AE;border-radius:8px;padding:1rem">
+      <div style="color:#fffcff;font-weight:bold;margin-bottom:.5rem">⚡ すぐにできる（1〜2時間）</div>
+      <div style="display:flex;flex-direction:column;gap:.35rem">
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・ページタイトルにキーワードを入れる</div>
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・メタディスクリプションを設定する</div>
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・Google Search Consoleに登録する</div>
+      </div>
+    </div>
+    <div style="background:#4a7cc9;border-radius:8px;padding:1rem">
+      <div style="color:#fffcff;font-weight:bold;margin-bottom:.5rem">📅 1週間以内にやること</div>
+      <div style="display:flex;flex-direction:column;gap:.35rem">
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・GA4（Googleアナリティクス）を設定する</div>
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・画像を圧縮してページ速度を改善する</div>
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・スマホ表示を確認・最適化する</div>
+      </div>
+    </div>
+    <div style="background:#6b8fcf;border-radius:8px;padding:1rem">
+      <div style="color:#fffcff;font-weight:bold;margin-bottom:.5rem">🔄 継続的に行うこと（月1回以上）</div>
+      <div style="display:flex;flex-direction:column;gap:.35rem">
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・ブログ記事・実績を更新する</div>
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・Search Consoleで検索キーワードを確認する</div>
+        <div style="background:rgba(255,255,255,0.15);color:#fffcff;padding:.3rem .75rem;border-radius:5px;font-size:13px">・アクセス解析で改善点を探す</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 

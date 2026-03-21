@@ -40,16 +40,33 @@ slug: "funabashi-homepage-seisaku-ryokin-yasui-riyuu"
 
 ## 料金差が生まれる仕組み（図解）
 
-```
-【都心の大手制作会社】
-クライアント → 大手制作会社 → 外注デザイナー
-                            → 外注エンジニア
-※中間マージンが発生 → 料金が高くなる
-
-【船橋の地域密着型制作会社】
-クライアント → 制作会社（デザイン・コーディングを自社完結）
-※マージンなし → コストを直接還元
-```
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;gap:1.25rem">
+    <div>
+      <div style="font-weight:bold;color:#888;margin-bottom:.75rem;border-bottom:2px solid #ccc;padding-bottom:.4rem">【都心の大手制作会社】</div>
+      <div style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap">
+        <div style="background:#e8e8e8;color:#444;padding:.4rem .75rem;border-radius:6px;text-align:center;font-weight:bold">クライアント</div>
+        <div style="color:#888;font-size:1.1rem">→</div>
+        <div style="background:#e8e8e8;color:#444;padding:.4rem .75rem;border-radius:6px;text-align:center;font-weight:bold">大手制作会社</div>
+        <div style="color:#888;font-size:1.1rem">→</div>
+        <div style="display:flex;flex-direction:column;gap:.35rem">
+          <div style="background:#f5f5f7;border:1px solid #ccc;color:#555;padding:.3rem .65rem;border-radius:6px;font-size:13px">外注デザイナー</div>
+          <div style="background:#f5f5f7;border:1px solid #ccc;color:#555;padding:.3rem .65rem;border-radius:6px;font-size:13px">外注エンジニア</div>
+        </div>
+      </div>
+      <div style="margin-top:.5rem;color:#c0392b;font-size:13px;font-weight:bold">⚠️ 中間マージンが発生 → 料金が高くなる</div>
+    </div>
+    <div style="border-top:1px solid #d0d8f0;padding-top:1rem">
+      <div style="font-weight:bold;color:#3364AE;margin-bottom:.75rem;border-bottom:2px solid #3364AE;padding-bottom:.4rem">【船橋の地域密着型制作会社】</div>
+      <div style="display:flex;align-items:center;gap:.5rem;flex-wrap:wrap">
+        <div style="background:#3364AE;color:#fffcff;padding:.4rem .75rem;border-radius:6px;text-align:center;font-weight:bold">クライアント</div>
+        <div style="color:#3364AE;font-size:1.1rem">→</div>
+        <div style="background:#3364AE;color:#fffcff;padding:.4rem .75rem;border-radius:6px;text-align:center;font-weight:bold">制作会社（デザイン・コーディングを自社完結）</div>
+      </div>
+      <div style="margin-top:.5rem;color:#27ae60;font-size:13px;font-weight:bold">✅ マージンなし → コストを直接還元</div>
+    </div>
+  </div>
+</div>
 
 ## 地域密着型の制作会社に依頼するメリット
 

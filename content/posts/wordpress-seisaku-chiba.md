@@ -70,15 +70,17 @@ EC機能・会員機能・独自のデータベース連携などを含む複雑
 
 ## 制作会社選び チェックリスト
 
-```
-□ WordPressの制作実績が豊富にある
-□ SEO基本設定（メタタグ・サイトマップ等）が標準で含まれる
-□ 公開後のサポート・保守プランがある
-□ 見積もりが明確で追加費用の条件がわかる
-□ ドメインはお客様名義で取得してもらえる
-□ レスポンシブ対応（スマホ表示）が標準で含まれる
-□ CMSの操作説明・引き継ぎがある
-```
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;gap:.5rem">
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span style="font-size:1rem">☑</span><span>WordPressの制作実績が豊富にある</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span style="font-size:1rem">☑</span><span>SEO基本設定（メタタグ・サイトマップ等）が標準で含まれる</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span style="font-size:1rem">☑</span><span>公開後のサポート・保守プランがある</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span style="font-size:1rem">☑</span><span>見積もりが明確で追加費用の条件がわかる</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span style="font-size:1rem">☑</span><span>ドメインはお客様名義で取得してもらえる</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span style="font-size:1rem">☑</span><span>レスポンシブ対応（スマホ表示）が標準で含まれる</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span style="font-size:1rem">☑</span><span>CMSの操作説明・引き継ぎがある</span></div>
+  </div>
+</div>
 
 ## WordPressを使わない選択肢も
 

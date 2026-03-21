@@ -100,20 +100,45 @@ App StoreまたはGoogle Playで目的のアプリをインストールし、メ
 
 ## ツール選び フローチャート
 
-```
-目的は？
-    ↓
-[ブログ・情報発信] → はてなブログ・note
-    ↓
-[ビジネス・集客]
-    ↓
-1ページで十分か？
-    ↓ YES → ペライチ・Jimdo
-    ↓ NO（複数ページ）
-デザイン品質を重視するか？
-    ↓ YES → STUDIO
-    ↓ どちらでも → Wix
-```
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px;line-height:1.8">
+  <div style="text-align:center;margin-bottom:.5rem"><span style="background:#3364AE;color:#fffcff;padding:.4rem 1rem;border-radius:6px;font-weight:bold">目的は？</span></div>
+  <div style="display:flex;justify-content:center;gap:2rem;margin-top:.75rem;flex-wrap:wrap">
+    <div style="text-align:center">
+      <div style="color:#888;font-weight:bold">ブログ・情報発信</div>
+      <div style="color:#888;font-size:1.1rem">↓</div>
+      <div style="background:#f5f5f7;border:1px solid #ccc;border-radius:6px;padding:.4rem .75rem">はてなブログ・note</div>
+    </div>
+    <div style="text-align:center">
+      <div style="color:#3364AE;font-weight:bold">ビジネス・集客</div>
+      <div style="color:#3364AE;font-size:1.1rem">↓</div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0">
+        <div style="background:#3364AE;color:#fffcff;padding:.4rem 1rem;border-radius:6px;font-weight:bold">1ページで十分か？</div>
+        <div style="display:flex;justify-content:center;gap:1.5rem;margin:.5rem 0">
+          <div style="text-align:center">
+            <div style="color:#3364AE;font-weight:bold">✅ YES</div>
+            <div style="color:#3364AE;font-size:1.1rem">↓</div>
+            <div style="background:#e8f0fe;border:1px solid #3364AE;border-radius:6px;padding:.4rem .75rem;font-size:13px">ペライチ・Jimdo</div>
+          </div>
+          <div style="text-align:center">
+            <div style="color:#888;font-weight:bold">❌ NO（複数ページ）</div>
+            <div style="color:#888;font-size:1.1rem">↓</div>
+            <div style="background:#3364AE;color:#fffcff;padding:.4rem 1rem;border-radius:6px;font-weight:bold">デザイン品質を重視するか？</div>
+            <div style="display:flex;justify-content:center;gap:1rem;margin:.5rem 0">
+              <div style="text-align:center">
+                <div style="color:#3364AE;font-size:.85rem">YES ↓</div>
+                <div style="background:#e8f0fe;border:1px solid #3364AE;border-radius:6px;padding:.3rem .65rem;font-size:13px">STUDIO</div>
+              </div>
+              <div style="text-align:center">
+                <div style="color:#888;font-size:.85rem">どちらでも ↓</div>
+                <div style="background:#f5f5f7;border:1px solid #ccc;border-radius:6px;padding:.3rem .65rem;font-size:13px">Wix</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## 無料プランの落とし穴と有料プランの判断基準
 

@@ -94,23 +94,33 @@ slug: "funabashi-homepage-seisaku-ryokin-checklist"
 
 ## 制作会社選び フローチャート
 
-```
-依頼先を選ぶ
-    ↓
-制作実績・ポートフォリオを確認
-    ↓ NG → 候補から除外
-    ↓ OK
-SEO対策が標準で含まれるか確認
-    ↓ NG（オプション扱い） → 要注意・確認
-    ↓ OK
-公開後のサポート範囲と費用を確認
-    ↓ NG（すべて有料） → 候補から除外
-    ↓ OK
-ドメイン・サーバーの名義を確認
-    ↓ NG（制作会社名義） → 要交渉
-    ↓ OK
-→ 信頼できる制作会社として判断
-```
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:0;text-align:center">
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">依頼先を選ぶ</div>
+    <div style="color:#3364AE;font-size:1.25rem;line-height:1">↓</div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">制作実績・ポートフォリオを確認</div>
+    <div style="display:flex;gap:1.5rem;margin:.25rem 0">
+      <div style="text-align:center"><div style="color:#888;font-size:.85rem">NG →</div><div style="background:#f5f5f7;border:1px solid #ccc;border-radius:6px;padding:.3rem .75rem;font-size:13px">候補から除外</div></div>
+      <div style="text-align:center"><div style="color:#3364AE;font-size:.85rem">OK ↓</div></div>
+    </div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">SEO対策が標準で含まれるか確認</div>
+    <div style="display:flex;gap:1.5rem;margin:.25rem 0">
+      <div style="text-align:center"><div style="color:#888;font-size:.85rem">NG →</div><div style="background:#f5f5f7;border:1px solid #ccc;border-radius:6px;padding:.3rem .75rem;font-size:13px">要注意・確認</div></div>
+      <div style="text-align:center"><div style="color:#3364AE;font-size:.85rem">OK ↓</div></div>
+    </div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">公開後のサポート範囲と費用を確認</div>
+    <div style="display:flex;gap:1.5rem;margin:.25rem 0">
+      <div style="text-align:center"><div style="color:#888;font-size:.85rem">NG →</div><div style="background:#f5f5f7;border:1px solid #ccc;border-radius:6px;padding:.3rem .75rem;font-size:13px">候補から除外</div></div>
+      <div style="text-align:center"><div style="color:#3364AE;font-size:.85rem">OK ↓</div></div>
+    </div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">ドメイン・サーバーの名義を確認</div>
+    <div style="display:flex;gap:1.5rem;margin:.25rem 0">
+      <div style="text-align:center"><div style="color:#888;font-size:.85rem">NG →</div><div style="background:#f5f5f7;border:1px solid #ccc;border-radius:6px;padding:.3rem .75rem;font-size:13px">要交渉</div></div>
+      <div style="text-align:center"><div style="color:#3364AE;font-size:.85rem">OK ↓</div></div>
+    </div>
+    <div style="background:#1a4a8a;color:#fffcff;padding:.5rem 1.5rem;border-radius:6px;font-weight:bold">✅ 信頼できる制作会社として判断</div>
+  </div>
+</div>
 
 ## イロドリが選ばれる理由
 

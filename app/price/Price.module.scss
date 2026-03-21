@@ -84,7 +84,7 @@
 
 // ── コンセプトカード ─────────────────────────────
 .conceptCard {
-    background: white;
+    background: #fffcff;
     border-radius: var(--radius-md);
     box-shadow: var(--box-shadow-sm);
     padding: 2.5rem;
@@ -106,7 +106,7 @@
 
 // ── 料金プランカード ─────────────────────────────
 .plansBg {
-    background: white;
+    background: #fffcff;
 }
 
 .planGrid {
@@ -414,7 +414,7 @@
 }
 
 .faqItem {
-    background: white;
+    background: #fffcff;
     border-radius: var(--radius-md);
     box-shadow: var(--box-shadow-sm);
     overflow: hidden;

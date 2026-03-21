@@ -135,7 +135,7 @@
     padding: 3px 8px;
     border-radius: 3px;
     background: $contact-color;
-    color: white;
+    color: #fffcff;
     flex-shrink: 0;
 }
 
@@ -175,7 +175,7 @@
     outline: none;
 
     &:focus {
-        background: white;
+        background: #fffcff;
         border-color: $button-color;
     }
 
@@ -199,7 +199,7 @@
 
 .button {
     background: $contact-color;
-    color: white;
+    color: #fffcff;
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 0.05em;

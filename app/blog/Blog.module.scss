@@ -89,7 +89,7 @@
 }
 
 .card {
-    background: white;
+    background: #fffcff;
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--box-shadow-sm);
@@ -367,7 +367,7 @@
 
     &:hover {
         background: $button-color;
-        color: white;
+        color: #fffcff;
     }
 }
 
@@ -398,6 +398,6 @@
 .pageNumberActive {
     background: $button-color;
     border-color: $button-color;
-    color: white !important;
+    color: #fffcff !important;
     pointer-events: none;
 }

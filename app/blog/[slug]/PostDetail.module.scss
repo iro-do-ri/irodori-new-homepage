@@ -4,7 +4,7 @@
     position: relative;
     left: 0;
     width: 100%;
-    background: $bg-color;
+    background: #fffcff;
     padding-top: 56px;
     @include sm {
         left: 195px;
@@ -361,51 +361,56 @@
 
 // ── 他の記事 ──────────────────────────────────────
 .related {
-    background: $text-color;
-    color: $main-color;
-    padding: clamp(3rem, 6vw, 5rem) clamp(2rem, 5vw, 4rem);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 clamp(2rem, 5vw, 5rem) 2rem;
 
     @include sm {
-        padding-left: max(2rem, calc((100% - 900px) / 2));
-        padding-right: max(2rem, calc((100% - 900px) / 2));
+        max-width: 1200px;
+        padding-left: clamp(3rem, 5vw, 4rem);
+        padding-right: clamp(3rem, 5vw, 4rem);
     }
 
     .relatedLabel {
         font-size: 11px;
-        letter-spacing: 0.25em;
-        opacity: 0.45;
-        margin-bottom: 1.25rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        color: rgba(5, 8, 40, 0.35);
         text-transform: uppercase;
+        margin-bottom: 0.75rem;
     }
 
     .relatedList {
         list-style: none;
         padding: 0;
         margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     .relatedItem {
-        border-top: 1px solid rgba(255, 252, 255, 0.1);
-
-        &:last-child {
-            border-bottom: 1px solid rgba(255, 252, 255, 0.1);
-        }
+        // no styles needed, gap handles spacing
     }
 
     .relatedLink {
-        display: block;
-        width: 100%;
-        padding: 1.25rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.65rem 0.9rem;
+        border-radius: 8px;
         text-decoration: none;
-        color: inherit;
-        transition: opacity 0.2s ease;
+        color: $text-color;
+        background: rgba(5, 8, 40, 0.03);
+        border: 1px solid rgba(5, 8, 40, 0.07);
+        transition: background 0.15s ease, border-color 0.15s ease;
 
         &:hover {
-            opacity: 0.7;
+            background: rgba(51, 100, 174, 0.06);
+            border-color: rgba(51, 100, 174, 0.2);
 
             .relatedCardTitle {
-                text-decoration: underline;
-                text-underline-offset: 3px;
+                color: #3364AE;
             }
         }
     }
@@ -413,27 +418,37 @@
     .relatedTop {
         display: flex;
         align-items: center;
-        gap: 0.75rem;
-        margin-bottom: 0.5rem;
+        gap: 0.5rem;
+        flex-shrink: 0;
     }
 
     .relatedCat {
         font-size: 10px;
-        letter-spacing: 0.12em;
-        padding: 0.2rem 0.7rem;
-        border: 1px solid rgba(255, 252, 255, 0.35);
+        letter-spacing: 0.08em;
+        padding: 0.15rem 0.55rem;
+        background: rgba(51, 100, 174, 0.08);
+        color: #3364AE;
         border-radius: 50rem;
         flex-shrink: 0;
+        white-space: nowrap;
     }
 
     .relatedDate {
         font-size: 11px;
-        opacity: 0.5;
+        color: rgba(5, 8, 40, 0.4);
+        white-space: nowrap;
     }
 
     .relatedCardTitle {
-        font-size: clamp(14px, 1.8vw, 16px);
+        font-size: 13px;
         font-weight: 500;
-        line-height: 1.65;
+        line-height: 1.5;
+        color: $text-color;
+        transition: color 0.15s ease;
+
+        // clamp to 1 line with ellipsis
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }

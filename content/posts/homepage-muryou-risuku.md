@@ -79,21 +79,29 @@ WixやJimdoなど、無料でサイトが作れるサービスは増えていま
 
 ## 無料 vs 有料ホームページ 判断フロー
 
-```
-目的は？
-    ↓
-[趣味・テスト用] → 無料サービスで十分
-    ↓
-[ビジネス・集客目的]
-    ↓
-集客・問い合わせを増やしたい？
-    ↓ YES
-独自ドメインは必要？
-    ↓ YES
-SEO対策が必要？
-    ↓ YES
-→ 有料プラン or 制作会社への依頼を検討
-```
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px;line-height:1.8">
+  <div style="text-align:center;margin-bottom:.5rem"><span style="background:#3364AE;color:#fffcff;padding:.4rem 1rem;border-radius:6px;font-weight:bold">目的は？</span></div>
+  <div style="display:flex;justify-content:center;gap:2rem;margin-top:.75rem">
+    <div style="text-align:center">
+      <div style="color:#888;font-weight:bold">趣味・テスト用</div>
+      <div style="color:#888;font-size:1.1rem">↓</div>
+      <div style="background:#f5f5f7;border:1px solid #ccc;border-radius:6px;padding:.4rem .75rem">無料サービスで十分</div>
+    </div>
+    <div style="text-align:center">
+      <div style="color:#3364AE;font-weight:bold">ビジネス・集客目的</div>
+      <div style="color:#3364AE;font-size:1.1rem">↓</div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0">
+        <div style="background:#3364AE;color:#fffcff;padding:.4rem 1rem;border-radius:6px;font-weight:bold">集客・問い合わせを増やしたい？</div>
+        <div style="color:#3364AE;font-size:1.1rem">↓ YES</div>
+        <div style="background:#3364AE;color:#fffcff;padding:.4rem 1rem;border-radius:6px;font-weight:bold">独自ドメインは必要？</div>
+        <div style="color:#3364AE;font-size:1.1rem">↓ YES</div>
+        <div style="background:#3364AE;color:#fffcff;padding:.4rem 1rem;border-radius:6px;font-weight:bold">SEO対策が必要？</div>
+        <div style="color:#3364AE;font-size:1.1rem">↓ YES</div>
+        <div style="background:#1a4a8a;color:#fffcff;padding:.4rem 1rem;border-radius:6px;font-weight:bold">✅ 有料プラン or 制作会社への依頼を検討</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ## 無料ホームページ vs 有料ホームページ 比較まとめ
 

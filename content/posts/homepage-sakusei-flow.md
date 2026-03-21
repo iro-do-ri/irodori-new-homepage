@@ -24,21 +24,24 @@ slug: "homepage-sakusei-flow"
 
 ## ホームページ制作 全体フロー
 
-```
-STEP1: 目的・ターゲットの明確化（1〜2週間）
-    ↓
-STEP2: サイト構成・ページ設計（1週間）
-    ↓
-STEP3: ドメイン・サーバー準備（数日）
-    ↓
-STEP4: デザイン・コーディング（2〜4週間）← お客様によるコンテンツ準備と並行
-    ↓
-STEP5: コンテンツ入稿・最終調整
-    ↓
-STEP6: テスト・公開（1週間）
-    ↓
-公開後：アナリティクス設定・継続運用
-```
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:0;text-align:center">
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">STEP1: 目的・ターゲットの明確化（1〜2週間）</div>
+    <div style="color:#3364AE;font-size:1.25rem;line-height:1">↓</div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">STEP2: サイト構成・ページ設計（1週間）</div>
+    <div style="color:#3364AE;font-size:1.25rem;line-height:1">↓</div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">STEP3: ドメイン・サーバー準備（数日）</div>
+    <div style="color:#3364AE;font-size:1.25rem;line-height:1">↓</div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">STEP4: デザイン・コーディング（2〜4週間）</div>
+    <div style="color:#888;font-size:12px;margin:.1rem 0">← お客様によるコンテンツ準備と並行</div>
+    <div style="color:#3364AE;font-size:1.25rem;line-height:1">↓</div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">STEP5: コンテンツ入稿・最終調整</div>
+    <div style="color:#3364AE;font-size:1.25rem;line-height:1">↓</div>
+    <div style="background:#3364AE;color:#fffcff;padding:.5rem 1.25rem;border-radius:6px;font-weight:bold">STEP6: テスト・公開（1週間）</div>
+    <div style="color:#3364AE;font-size:1.25rem;line-height:1">↓</div>
+    <div style="background:#1a4a8a;color:#fffcff;padding:.5rem 1.5rem;border-radius:6px;font-weight:bold">✅ 公開後：アナリティクス設定・継続運用</div>
+  </div>
+</div>
 
 ### ステップ1：目的とターゲットの明確化
 

@@ -33,17 +33,41 @@ slug: "funabashi-homepage-seisaku-ryokin"
 
 ## 依頼先別 費用・品質比較チャート
 
-```
-費用（高）
-  ↑
-  │              ● 大手制作会社
-  │         ● 中堅制作会社
-  │    ● イロドリ（地域密着型）
-  │ ● フリーランス
-  │● テンプレートサービス（業者依頼）
-  │● テンプレートサービス（自分で）
-  └──────────────────→ 品質・サポート（高）
-```
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;gap:.5rem">
+    <div style="text-align:center;font-size:13px;color:#888;margin-bottom:.25rem">費用（高） ↑　　品質・サポート（高） →</div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <div style="background:#1a4a8a;color:#fffcff;padding:.35rem .75rem;border-radius:6px;font-weight:bold;font-size:13px;min-width:80px;text-align:center">大手制作会社</div>
+      <div style="flex:1;height:3px;background:linear-gradient(to right,#d0d8f0,#3364AE)"></div>
+      <div style="color:#3364AE;font-size:12px;white-space:nowrap">💎 最高品質</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <div style="background:#3364AE;color:#fffcff;padding:.35rem .75rem;border-radius:6px;font-weight:bold;font-size:13px;min-width:80px;text-align:center">中堅制作会社</div>
+      <div style="flex:1;height:3px;background:linear-gradient(to right,#d0d8f0,#6b8fcf)"></div>
+      <div style="color:#3364AE;font-size:12px;white-space:nowrap">高品質</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem;position:relative">
+      <div style="background:#4a7cc9;color:#fffcff;padding:.35rem .75rem;border-radius:6px;font-weight:bold;font-size:13px;min-width:80px;text-align:center;border:2px solid #f0c040">イロドリ</div>
+      <div style="flex:1;height:3px;background:linear-gradient(to right,#d0d8f0,#6b8fcf)"></div>
+      <div style="color:#e67e22;font-size:12px;white-space:nowrap">⭐ コスパ最高</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <div style="background:#8fa8d0;color:#fffcff;padding:.35rem .75rem;border-radius:6px;font-size:13px;min-width:80px;text-align:center">フリーランス</div>
+      <div style="flex:1;height:3px;background:#d0d8f0"></div>
+      <div style="color:#888;font-size:12px;white-space:nowrap">中程度</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <div style="background:#c8d8f0;color:#555;padding:.35rem .75rem;border-radius:6px;font-size:13px;min-width:80px;text-align:center">テンプレート<br>（業者依頼）</div>
+      <div style="flex:1;height:3px;background:#e8ecf5"></div>
+      <div style="color:#aaa;font-size:12px;white-space:nowrap">低め</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:.75rem">
+      <div style="background:#e8ecf5;color:#888;padding:.35rem .75rem;border-radius:6px;font-size:13px;min-width:80px;text-align:center">テンプレート<br>（自分で）</div>
+      <div style="flex:1;height:3px;background:#f0f0f0"></div>
+      <div style="color:#bbb;font-size:12px;white-space:nowrap">最低限</div>
+    </div>
+  </div>
+</div>
 
 ## 船橋エリアで制作会社に依頼する場合の費用感
 

@@ -146,13 +146,14 @@ export default async function BlogPostPage({ params }: Props) {
         {/* ── プロフィール ── */}
         <div className={styles.profileWrap}>
           <div className={styles.profile}>
-            <Image
-              src="/profile.png"
-              alt="勝野 紘太"
-              width={160}
-              height={200}
-              className={styles.profileImg}
-            />
+            <div className={styles.profileImgWrap}>
+              <Image
+                src="/profile.png"
+                alt="勝野 紘太"
+                fill
+                className={styles.profileImg}
+              />
+            </div>
             <div className={styles.profileBody}>
               <p className={styles.profileName}>
                 勝野 紘太 <span className={styles.profileNameEn}>/ Kota Katsuno</span>

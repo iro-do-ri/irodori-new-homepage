@@ -252,6 +252,113 @@
     100% { width: 1rem; left: 120%; opacity: 0; }
 }
 
+// ── 投稿日バー ──────────────────────────────────────
+.metaBar {
+    padding: 1.25rem clamp(2rem, 5vw, 5rem) 0;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @include sm {
+        max-width: 1200px;
+        padding-left: clamp(3rem, 5vw, 4rem);
+        padding-right: clamp(3rem, 5vw, 4rem);
+    }
+
+    .metaDate {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 13px;
+        color: rgba(5, 8, 40, 0.5);
+
+        svg {
+            flex-shrink: 0;
+            color: #3364AE;
+            opacity: 0.7;
+        }
+    }
+}
+
+// ── プロフィール ──────────────────────────────────────
+.profileWrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem clamp(2rem, 5vw, 5rem);
+
+    @include sm {
+        max-width: 1200px;
+        padding-left: clamp(3rem, 5vw, 4rem);
+        padding-right: clamp(3rem, 5vw, 4rem);
+    }
+}
+
+.profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 2rem;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .profileImg {
+        width: 140px;
+        height: 175px;
+        border-radius: 8px;
+        object-fit: cover;
+        flex-shrink: 0;
+
+        @media (max-width: 600px) {
+            width: 120px;
+            height: 150px;
+        }
+    }
+
+    .profileBody {
+        flex: 1;
+        padding-top: 0.25rem;
+
+        .profileName {
+            font-size: 18px;
+            font-weight: 700;
+            color: $text-color;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .profileNameEn {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(5, 8, 40, 0.45);
+        }
+
+        .profileBadge {
+            display: inline-block;
+            font-size: 11px;
+            color: rgba(5, 8, 40, 0.6);
+            border: 1px solid rgba(5, 8, 40, 0.2);
+            border-radius: 50rem;
+            padding: 0.2rem 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .profileBio {
+            font-size: 14px;
+            line-height: 1.9;
+            color: rgba(5, 8, 40, 0.7);
+            margin: 0 0 0.75rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
 // ── 他の記事 ──────────────────────────────────────
 .related {
     background: $text-color;

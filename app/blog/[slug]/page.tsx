@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/app/parts/Header";
 import { getAllPostSlugs, getPostBySlug, getAllPosts } from "@/app/lib/posts";
 import styles from "./PostDetail.module.scss";
@@ -105,11 +106,52 @@ export default async function BlogPostPage({ params }: Props) {
           <Link href="/blog">← ブログ一覧に戻る</Link>
         </div>
 
+        {/* ── 投稿日 ── */}
+        {dateFormatted && (
+          <div className={styles.metaBar}>
+            <span className={styles.metaDate}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <time dateTime={post.date ?? ""}>{dateFormatted}</time>
+            </span>
+          </div>
+        )}
+
         {/* ── 記事本文 ── */}
         <article
           className={styles.article}
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
+
+        {/* ── プロフィール ── */}
+        <div className={styles.profileWrap}>
+          <div className={styles.profile}>
+            <Image
+              src="/profile.png"
+              alt="勝野 紘太"
+              width={160}
+              height={200}
+              className={styles.profileImg}
+            />
+            <div className={styles.profileBody}>
+              <p className={styles.profileName}>
+                勝野 紘太 <span className={styles.profileNameEn}>/ Kota Katsuno</span>
+              </p>
+              <span className={styles.profileBadge}>Webデザイナー・イロドリ代表</span>
+              <p className={styles.profileBio}>
+                船橋商工会議所で5年間、地元の中小企業を支援する仕事をしてきました。<br />
+                良い商品や技術を持っているのに、ホームページがなくて集客できていないお店が多いことに気づき、フリーランスとして独立しました。
+              </p>
+              <p className={styles.profileBio}>
+                「依頼してよかった」と思ってもらえるよう、丁寧なヒアリングを大切にしています。
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* ── 他の記事 ── */}
         {relatedPosts.length > 0 && (

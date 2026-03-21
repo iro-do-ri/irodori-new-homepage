@@ -156,11 +156,9 @@ export default function About() {
                 </p>
                 <p className={styles.founderRole}>Webデザイナー・イロドリ代表</p>
                 <p className={styles.founderBio}>
-                  船橋商工会議所で5年間、地元の中小企業を支援する仕事をしてきました。<br className="sm:block hidden"/>
-                  良い商品や技術を持っているのに、ホームページがなくて集客できていないお店が多いことに気づき、<br className="sm:block hidden"/>
-                  フリーランスとして独立しました。
-                  <br /><br />
-                  「依頼してよかった」と思ってもらえるよう、丁寧なヒアリングを大切にしています。
+                  船橋商工会議所で5年間、中小企業支援に従事。<br />
+                  現在は船橋・千葉を中心に、ホームページ制作とSEO対策を行うフリーランスWebデザイナーです。<br />
+                  丁寧なヒアリングを大切にし、集客につながるサイト制作を提供しています。
                 </p>
               </div>
             </div>

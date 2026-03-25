@@ -25,67 +25,76 @@ $soluna-text-sub:  #8a7b73;
 
 // ── ヒーロー ────────────────────────────────────
 .hero {
-  position: relative;
-  aspect-ratio: 16 / 7;
-  overflow: hidden;
   background: $soluna-greige;
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+  flex-direction: column;
 
-  @media (max-width: 639px) {
-    aspect-ratio: 4 / 3;
+  @include sm {
+    flex-direction: row;
+    min-height: 320px;
+  }
+}
+
+.heroContent {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include sm {
+    max-width: 280px;
+  }
+}
+
+.heroImageWrap {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 560px;
+  width: 100%;
+
+  @include sm {
+    max-width: none;
   }
 }
 
 .heroImage {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
   display: block;
-}
-
-.heroOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(74, 63, 56, 0.72) 0%,
-    rgba(74, 63, 56, 0.25) 50%,
-    transparent 100%
-  );
-}
-
-.heroContent {
-  position: absolute;
-  bottom: clamp(1.5rem, 4vw, 3rem);
-  left: clamp(1.5rem, 5vw, 4rem);
-  right: clamp(1.5rem, 5vw, 4rem);
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(74, 63, 56, 0.18);
 }
 
 .heroCategory {
   display: inline-block;
   font-size: 11px;
   letter-spacing: 0.18em;
-  border: 1px solid rgba(245, 239, 232, 0.6);
+  border: 1px solid $soluna-beige;
   padding: 0.2rem 0.85rem;
   border-radius: 50rem;
-  margin-bottom: 0.75rem;
-  color: $soluna-greige;
+  margin-bottom: 1rem;
+  color: $soluna-text-sub;
+  align-self: flex-start;
 }
 
 .heroTitle {
-  font-size: clamp(28px, 5vw, 56px);
+  font-size: clamp(32px, 5vw, 52px);
   font-weight: 300;
   letter-spacing: 0.18em;
   line-height: 1.2;
-  color: $soluna-greige;
+  color: $soluna-text;
   font-family: "Cormorant Garamond", "Georgia", serif;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 }
 
 .heroSub {
-  font-size: clamp(12px, 1.4vw, 14px);
+  font-size: clamp(12px, 1.4vw, 13px);
   letter-spacing: 0.15em;
-  color: rgba(245, 239, 232, 0.7);
+  color: $soluna-text-sub;
   margin: 0;
 }
 

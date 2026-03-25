@@ -1,0 +1,480 @@
+@use "../../parts/variables" as *;
+
+// ── SOLUNA カラーパレット ────────────────────────
+$soluna-greige:    #F5EFE8;
+$soluna-beige:     #C8BAA8;
+$soluna-mocha:     #E6D8C8;
+$soluna-pink:      #C7A998;
+$soluna-text:      #4a3f38;
+$soluna-text-sub:  #8a7b73;
+
+// ── ラッパー ────────────────────────────────────
+.wrapper {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background: $bg-color;
+  padding-top: 56px;
+
+  @include sm {
+    left: 195px;
+    width: calc(100% - 195px);
+    padding-top: 0;
+  }
+}
+
+// ── ヒーロー ────────────────────────────────────
+.hero {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  background: $soluna-greige;
+
+  @media (max-width: 639px) {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(74, 63, 56, 0.72) 0%,
+    rgba(74, 63, 56, 0.25) 50%,
+    transparent 100%
+  );
+}
+
+.heroContent {
+  position: absolute;
+  bottom: clamp(1.5rem, 4vw, 3rem);
+  left: clamp(1.5rem, 5vw, 4rem);
+  right: clamp(1.5rem, 5vw, 4rem);
+}
+
+.heroCategory {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  border: 1px solid rgba(245, 239, 232, 0.6);
+  padding: 0.2rem 0.85rem;
+  border-radius: 50rem;
+  margin-bottom: 0.75rem;
+  color: $soluna-greige;
+}
+
+.heroTitle {
+  font-size: clamp(28px, 5vw, 56px);
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  color: $soluna-greige;
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  margin-bottom: 0.4rem;
+}
+
+.heroSub {
+  font-size: clamp(12px, 1.4vw, 14px);
+  letter-spacing: 0.15em;
+  color: rgba(245, 239, 232, 0.7);
+  margin: 0;
+}
+
+// ── プロジェクト概要 ────────────────────────────
+.overview {
+  background: $soluna-greige;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.overviewInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.metaList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid rgba(199, 169, 152, 0.35);
+  border-left: 1px solid rgba(199, 169, 152, 0.35);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 180px;
+  padding: 1.1rem 1.25rem;
+  border-right: 1px solid rgba(199, 169, 152, 0.35);
+  border-bottom: 1px solid rgba(199, 169, 152, 0.35);
+
+  dt {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: $soluna-text-sub;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  dd {
+    font-size: clamp(13px, 1.5vw, 14px);
+    color: $soluna-text;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.metaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: $soluna-pink;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover { opacity: 0.7; }
+}
+
+// ── 共通セクション ─────────────────────────────
+.section {
+  background: #fffcff;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.sectionInner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: $soluna-pink;
+  margin-bottom: 1rem;
+  font-family: "Cormorant Garamond", "Georgia", serif;
+}
+
+.sectionTitle {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: $soluna-text;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.sectionDesc {
+  font-size: clamp(14px, 1.6vw, 15px);
+  line-height: 2;
+  color: rgba(74, 63, 56, 0.72);
+  margin-bottom: 2.5rem;
+}
+
+// ── ターゲット ──────────────────────────────────
+.targetGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.targetCard {
+  background: $soluna-greige;
+  border-radius: 12px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.targetNumber {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: $soluna-pink;
+  font-family: "Cormorant Garamond", "Georgia", serif;
+}
+
+.targetLabel {
+  font-size: clamp(14px, 1.6vw, 15px);
+  font-weight: 600;
+  color: $soluna-text;
+  margin: 0;
+  line-height: 1.5;
+}
+
+// ── 制作のポイント ──────────────────────────────
+.pointSection {
+  background: $soluna-greige;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.pointGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.pointCard {
+  background: #fffcff;
+  border-radius: 12px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+
+  h3 {
+    font-size: clamp(14px, 1.7vw, 16px);
+    font-weight: 700;
+    color: $soluna-text;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  p {
+    font-size: clamp(13px, 1.5vw, 14px);
+    line-height: 1.85;
+    color: rgba(74, 63, 56, 0.72);
+    margin: 0;
+  }
+}
+
+.pointIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $soluna-greige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $soluna-pink;
+  flex-shrink: 0;
+}
+
+// ── デザインポリシー ────────────────────────────
+.designSection {
+  background: #fffcff;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.designGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 0.5rem;
+
+  @include sm {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.designBlock {
+  // container
+}
+
+.designBlockTitle {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: $soluna-text-sub;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+// カラーパレット
+.colorRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.colorItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.colorSwatch {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid rgba(199, 169, 152, 0.3);
+
+  @include sm {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.colorCode {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: $soluna-text-sub;
+  font-family: "Courier New", monospace;
+}
+
+.colorName {
+  font-size: 10px;
+  color: rgba(74, 63, 56, 0.55);
+}
+
+// タイポグラフィ
+.fontRow {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.fontItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fontSampleJa {
+  font-size: 32px;
+  font-weight: 400;
+  color: $soluna-text;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  font-family: "Noto Serif JP", "游明朝", serif;
+  letter-spacing: 0.12em;
+}
+
+.fontSampleEn {
+  font-size: 32px;
+  font-weight: 300;
+  color: $soluna-text;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  letter-spacing: 0.06em;
+}
+
+.fontName {
+  font-size: 11px;
+  font-weight: 600;
+  color: $soluna-text;
+  letter-spacing: 0.05em;
+}
+
+.fontDesc {
+  font-size: 11px;
+  color: $soluna-text-sub;
+}
+
+// ── 公開サイトリンク ────────────────────────────
+.siteLinkSection {
+  background: $soluna-greige;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+  display: flex;
+  justify-content: center;
+}
+
+.siteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: $soluna-text;
+  border: 1.5px solid $soluna-beige;
+  border-radius: 50rem;
+  padding: 0.8rem 2.25rem;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s $cubic-bezier;
+  background: #fffcff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: $soluna-beige;
+    z-index: -1;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.4s $cubic-bezier;
+  }
+
+  &:hover {
+    color: #fffcff;
+    &::before { clip-path: inset(0); }
+  }
+}
+
+// ── 戻るリンク ──────────────────────────────────
+.backLink {
+  padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+  background: $bg-color;
+  border-top: 1px solid rgba(5, 8, 40, 0.06);
+
+  a {
+    font-size: 13px;
+    color: rgba(5, 8, 40, 0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover { color: $text-color; }
+  }
+}
+
+// ── CTA ─────────────────────────────────────────
+.cta {
+  background: $text-color;
+  color: $main-color;
+  text-align: center;
+  padding: clamp(4rem, 8vw, 7rem) 2rem;
+}
+
+.ctaLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+  color: $main-color;
+}
+
+.ctaTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: $main-color;
+}
+
+.ctaDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  opacity: 0.55;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  color: $main-color;
+}
+
+.ctaButton {
+  display: inline-block;
+  background: $button-color;
+  color: $main-color;
+  border-radius: 50rem;
+  font-weight: 700;
+  font-size: clamp(14px, 1.6vw, 16px);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+
+  &:hover { opacity: 0.82; }
+}

@@ -49,16 +49,11 @@ $soluna-text-sub:  #8a7b73;
 }
 
 .heroImageWrap {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 560px;
-  width: 100%;
-
-  @include sm {
-    max-width: none;
-  }
+  width: clamp(220px, 38%, 380px);
 }
 
 .heroImage {

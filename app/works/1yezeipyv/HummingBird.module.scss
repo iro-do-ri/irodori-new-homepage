@@ -28,6 +28,7 @@ $hb-text-sub: #6a705a;
   background: $hb-cream;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: clamp(2rem, 5vw, 4rem);
   padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
   flex-direction: column;
@@ -39,8 +40,9 @@ $hb-text-sub: #6a705a;
 }
 
 .heroContent {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-width: 0;
+  max-width: 360px;
   display: flex;
   flex-direction: column;
 }

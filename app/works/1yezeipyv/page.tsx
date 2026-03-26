@@ -45,17 +45,19 @@ export default function HummingBirdPage() {
       <div className={styles.wrapper}>
         {/* ── ヒーロー ── */}
         <div className={styles.hero}>
-          <div className={styles.heroContent}>
-            <span className={styles.heroCategory}>動画制作会社</span>
-            <h1 className={styles.heroTitle}>HummingBird</h1>
-            <p className={styles.heroSub}>コーポレートサイト制作</p>
-          </div>
-          <div className={styles.heroImageWrap}>
-            <img
-              src="https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/e9cf7601dc204497acf7033ba83b648f/hummig-bird.png"
-              alt="ハミングバードのホームページ制作実績｜イロドリ"
-              className={styles.heroImage}
-            />
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <span className={styles.heroCategory}>動画制作会社</span>
+              <h1 className={styles.heroTitle}>HummingBird</h1>
+              <p className={styles.heroSub}>コーポレートサイト制作</p>
+            </div>
+            <div className={styles.heroImageWrap}>
+              <img
+                src="https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/e9cf7601dc204497acf7033ba83b648f/hummig-bird.png"
+                alt="ハミングバードのホームページ制作実績｜イロドリ"
+                className={styles.heroImage}
+              />
+            </div>
           </div>
         </div>
 

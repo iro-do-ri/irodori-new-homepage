@@ -1,0 +1,513 @@
+@use "../../parts/variables" as *;
+
+// ── HummingBird カラーパレット ───────────────────
+$hb-cream:    #EFE8D8;
+$hb-green:    #2B7030;
+$hb-brown:    #705728;
+$hb-accent:   #DD5162;
+$hb-text:     #2a2e1e;
+$hb-text-sub: #6a705a;
+
+// ── ラッパー ────────────────────────────────────
+.wrapper {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background: $bg-color;
+  padding-top: 56px;
+
+  @include sm {
+    left: 195px;
+    width: calc(100% - 195px);
+    padding-top: 0;
+  }
+}
+
+// ── ヒーロー ────────────────────────────────────
+.hero {
+  background: $hb-cream;
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+  flex-direction: column;
+
+  @include sm {
+    flex-direction: row;
+    min-height: 320px;
+  }
+}
+
+.heroContent {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroImageWrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(220px, 38%, 380px);
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(42, 46, 30, 0.15);
+}
+
+.heroCategory {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  border: 1px solid rgba($hb-green, 0.35);
+  padding: 0.2rem 0.85rem;
+  border-radius: 50rem;
+  margin-bottom: 1rem;
+  color: $hb-green;
+  align-self: flex-start;
+}
+
+.heroTitle {
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  color: $hb-text;
+  font-family: "EB Garamond", "Georgia", serif;
+  margin-bottom: 0.6rem;
+}
+
+.heroSub {
+  font-size: clamp(12px, 1.4vw, 13px);
+  letter-spacing: 0.15em;
+  color: $hb-text-sub;
+  margin: 0;
+}
+
+// ── プロジェクト概要 ────────────────────────────
+.overview {
+  background: $hb-cream;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.overviewInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.metaList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-top: 1px solid rgba($hb-green, 0.2);
+  border-left: 1px solid rgba($hb-green, 0.2);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 180px;
+  padding: 1.1rem 1.25rem;
+  border-right: 1px solid rgba($hb-green, 0.2);
+  border-bottom: 1px solid rgba($hb-green, 0.2);
+
+  dt {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: $hb-text-sub;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  dd {
+    font-size: clamp(13px, 1.5vw, 14px);
+    color: $hb-text;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.metaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: $hb-green;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover { opacity: 0.7; }
+}
+
+// ── 共通セクション ─────────────────────────────
+.section {
+  background: #fffcff;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.sectionInner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  color: $hb-green;
+  margin-bottom: 1rem;
+  font-family: "EB Garamond", "Georgia", serif;
+}
+
+.sectionTitle {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 400;
+  line-height: 1.65;
+  color: $hb-text;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+.sectionDesc {
+  font-size: clamp(14px, 1.6vw, 15px);
+  line-height: 2;
+  color: rgba(42, 46, 30, 0.72);
+  margin-bottom: 2.5rem;
+}
+
+// ── ターゲット ──────────────────────────────────
+.targetGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.targetCard {
+  background: $hb-cream;
+  border-radius: 12px;
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.targetNumber {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: $hb-green;
+  font-family: "EB Garamond", "Georgia", serif;
+}
+
+.targetLabel {
+  font-size: clamp(14px, 1.6vw, 15px);
+  font-weight: 600;
+  color: $hb-text;
+  margin: 0;
+  line-height: 1.6;
+}
+
+// ── 制作のポイント ──────────────────────────────
+.pointSection {
+  background: $hb-cream;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.pointGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.pointCard {
+  background: #fffcff;
+  border-radius: 12px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+
+  h3 {
+    font-size: clamp(14px, 1.7vw, 16px);
+    font-weight: 700;
+    color: $hb-text;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  p {
+    font-size: clamp(13px, 1.5vw, 14px);
+    line-height: 1.85;
+    color: rgba(42, 46, 30, 0.72);
+    margin: 0;
+  }
+}
+
+.pointIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: $hb-cream;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $hb-green;
+  flex-shrink: 0;
+}
+
+// ── デザインポリシー ────────────────────────────
+.designSection {
+  background: #fffcff;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+}
+
+.designGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 0.5rem;
+
+  @include sm {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.designBlock {}
+
+.designBlockTitle {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: $hb-text-sub;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+.colorRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.colorItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.colorSwatch {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  border: 1px solid rgba($hb-green, 0.15);
+
+  @include sm {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.colorCode {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: $hb-text-sub;
+  font-family: "Courier New", monospace;
+}
+
+.colorName {
+  font-size: 10px;
+  color: rgba(42, 46, 30, 0.55);
+}
+
+.fontRow {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.fontItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fontSampleJa {
+  font-size: 32px;
+  font-weight: 400;
+  color: $hb-text;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  font-family: "Noto Serif JP", "游明朝", serif;
+  letter-spacing: 0.12em;
+}
+
+.fontSampleEn {
+  font-size: 32px;
+  font-weight: 400;
+  color: $hb-text;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  font-family: "EB Garamond", "Georgia", serif;
+  letter-spacing: 0.06em;
+}
+
+.fontName {
+  font-size: 11px;
+  font-weight: 600;
+  color: $hb-text;
+  letter-spacing: 0.05em;
+}
+
+.fontDesc {
+  font-size: 11px;
+  color: $hb-text-sub;
+}
+
+// ── 公開サイトリンク ────────────────────────────
+.siteLinkSection {
+  background: $hb-cream;
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 5vw, 4rem);
+  display: flex;
+  justify-content: center;
+}
+
+.siteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: $hb-text;
+  border: 1.5px solid rgba($hb-green, 0.4);
+  border-radius: 50rem;
+  padding: 0.8rem 2.25rem;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.4s $cubic-bezier;
+  background: #fffcff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: $hb-green;
+    z-index: -1;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.4s $cubic-bezier;
+  }
+
+  &:hover {
+    color: #fffcff;
+    &::before { clip-path: inset(0); }
+  }
+}
+
+// ── 戻るリンク ──────────────────────────────────
+.backLink {
+  padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+  background: $bg-color;
+  border-top: 1px solid rgba(5, 8, 40, 0.06);
+
+  a {
+    font-size: 13px;
+    color: rgba(5, 8, 40, 0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover { color: $text-color; }
+  }
+}
+
+// ── CTA ─────────────────────────────────────────
+.cta {
+  background: $text-color;
+  color: $main-color;
+  text-align: center;
+  padding: clamp(4rem, 8vw, 7rem) 2rem;
+}
+
+.ctaLabel {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+  color: $main-color;
+}
+
+.ctaTitle {
+  font-size: clamp(22px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: $main-color;
+}
+
+.ctaDesc {
+  font-size: clamp(13px, 1.6vw, 15px);
+  opacity: 0.55;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+  color: $main-color;
+}
+
+.contact_button {
+  background-color: var(--contactcolor);
+}
+
+.box_button {
+  position: relative;
+  border-radius: 50rem;
+  overflow: hidden;
+
+  .background_button {
+    border-radius: 50rem;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 0.3rem;
+      height: 200%;
+      transform: rotate(25deg);
+      background-color: #fffcff;
+      opacity: 0;
+    }
+  }
+
+  .contents_button {
+    position: relative;
+    z-index: 1;
+    border-radius: 50rem;
+    border: 5px solid transparent;
+    color: var(--background);
+  }
+
+  &:hover {
+    .background_button::before {
+      animation: trail-path 1.2s linear forwards;
+    }
+  }
+}
+
+@keyframes trail-path {
+  0%   { left: -20%; opacity: 0; width: 1rem; }
+  30%  { opacity: 0.5; width: 4rem; }
+  60%  { opacity: 0.8; }
+  100% { width: 1rem; left: 120%; opacity: 0; }
+}

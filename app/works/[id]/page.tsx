@@ -15,9 +15,14 @@ type Work = {
   url?: string;
 };
 
+// 静的ページとして個別実装済みのIDは除外
+const STATIC_OVERRIDE_IDS = ["r3u3ktges", "1yezeipyv"];
+
 export async function generateStaticParams() {
   const data = await client.get({ endpoint: "works", queries: { limit: 100 } });
-  return data.contents.map((work: { id: string }) => ({ id: work.id }));
+  return data.contents
+    .filter((work: { id: string }) => !STATIC_OVERRIDE_IDS.includes(work.id))
+    .map((work: { id: string }) => ({ id: work.id }));
 }
 
 export async function generateMetadata({

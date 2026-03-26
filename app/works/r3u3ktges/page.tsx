@@ -45,17 +45,19 @@ export default function SolunaPage() {
       <div className={styles.wrapper}>
         {/* ── ヒーロー ── */}
         <div className={styles.hero}>
-          <div className={styles.heroContent}>
-            <span className={styles.heroCategory}>エステサロン</span>
-            <h1 className={styles.heroTitle}>SOLUNA</h1>
-            <p className={styles.heroSub}>コーポレートサイト制作</p>
-          </div>
-          <div className={styles.heroImageWrap}>
-            <img
-              src="https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/8d66df2f8b724dfc8db4ba1b74d1841d/soluna.png"
-              alt="SOLUNAのホームページ制作実績｜イロドリ"
-              className={styles.heroImage}
-            />
+          <div className={styles.heroInner}>
+            <div className={styles.heroContent}>
+              <span className={styles.heroCategory}>エステサロン</span>
+              <h1 className={styles.heroTitle}>SOLUNA</h1>
+              <p className={styles.heroSub}>コーポレートサイト制作</p>
+            </div>
+            <div className={styles.heroImageWrap}>
+              <img
+                src="https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/8d66df2f8b724dfc8db4ba1b74d1841d/soluna.png"
+                alt="SOLUNAのホームページ制作実績｜イロドリ"
+                className={styles.heroImage}
+              />
+            </div>
           </div>
         </div>
 

@@ -39,13 +39,10 @@ $soluna-text-sub:  #8a7b73;
 }
 
 .heroContent {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-
-  @include sm {
-    max-width: 280px;
-  }
 }
 
 .heroImageWrap {

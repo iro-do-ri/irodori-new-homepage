@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat, Murecho } from "next/font/google";
 import "./globals.css";
 import Footer from "./parts/Footer";
-import Script from "next/script";
 
 const MontserratSans = Montserrat({
   variable: "--font-Montserrat",
@@ -128,33 +127,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${MontserratSans.variable} ${MurechoSans.variable}`}>
+    <html lang="ja" className={`${MontserratSans.variable} ${MurechoSans.variable}`} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var r=(window.innerHeight/window.innerWidth*100).toFixed(4);document.documentElement.style.setProperty('--full-h',r+'cqw');})();`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T9ZN2XDC');`,
+          }}
+        />
       </head>
-      <Script
-        id="set-full-h"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `(function(){var r=(window.innerHeight/window.innerWidth*100).toFixed(4);document.documentElement.style.setProperty('--full-h',r+'cqw');})();`,
-        }}
-      />
-      <Script
-        id="gtm"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-T9ZN2XDC');
-          `,
-        }}
-      />
       <body>
       <noscript>
         <iframe

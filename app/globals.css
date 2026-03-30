@@ -23,6 +23,7 @@
 }
 
 html {
+  container-type: inline-size;
   background: var(--background);
   color: var(--color);
   font-family: var(--font-en), var(--font-ja), sans-serif;

@@ -136,6 +136,13 @@ export default function RootLayout({
         />
       </head>
       <Script
+        id="set-full-h"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `(function(){var r=(window.innerHeight/window.innerWidth*100).toFixed(4);document.documentElement.style.setProperty('--full-h',r+'cqw');})();`,
+        }}
+      />
+      <Script
         id="gtm"
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{

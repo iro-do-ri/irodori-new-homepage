@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Murecho } from "next/font/google";
 import "./globals.css";
 import Footer from "./parts/Footer";
+import FloatingButtons from "./parts/FloatingButtons";
 
 const MontserratSans = Montserrat({
   variable: "--font-Montserrat",
@@ -155,6 +156,7 @@ export default function RootLayout({
       </noscript>
         {children}
         <Footer />
+        <FloatingButtons />
       </body>
     </html>
   );

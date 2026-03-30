@@ -24,7 +24,7 @@
     section {
         height: 34rem;
         &.top {
-            height: var(--full-h, 100svh);
+            height: calc(var(--full-h, 100svh) - 40px);
             @include sm {
                 height: 100dvh;
             }

@@ -41,7 +41,7 @@ slug: "chirashi-design"
 重要な情報を目立たせるために、サイズ・色・太さなどでメリハリをつけます。すべての文字が同じサイズ・同じ色では、何が大事か伝わりません。
 
 <div style="background: #f0f7ff; border-left: 4px solid #3364AE; padding: 1.2rem 1.5rem; border-radius: 4px; margin: 2rem 0;">
-<strong>✅ デザインの基本4原則まとめ</strong><br>
+<strong style="display:block;margin-bottom:0.5rem;">✅ デザインの基本4原則まとめ</strong>
 近接・整列・反復・コントラスト。この4つを意識するだけで、チラシのクオリティは大きく変わります。
 </div>
 
@@ -98,17 +98,17 @@ slug: "chirashi-design"
 
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
   <div style="flex: 1; min-width: 200px; background: #fff; border: 1px solid #dde3f0; border-radius: 8px; padding: 1.2rem;">
-    <strong>📄 A4片面</strong><br>
+    <strong style="display:block;margin-bottom:0.5rem;">📄 A4片面</strong>
     <span style="font-size: 1.3rem; color: #3364AE; font-weight: bold;">10,000〜25,000円</span><br>
     最もスタンダードなサイズ
   </div>
   <div style="flex: 1; min-width: 200px; background: #fff; border: 1px solid #dde3f0; border-radius: 8px; padding: 1.2rem;">
-    <strong>📄 A4両面</strong><br>
+    <strong style="display:block;margin-bottom:0.5rem;">📄 A4両面</strong>
     <span style="font-size: 1.3rem; color: #3364AE; font-weight: bold;">15,000〜40,000円</span><br>
     情報量が多い場合に有効
   </div>
   <div style="flex: 1; min-width: 200px; background: #fff; border: 1px solid #dde3f0; border-radius: 8px; padding: 1.2rem;">
-    <strong>📄 B4・B5</strong><br>
+    <strong style="display:block;margin-bottom:0.5rem;">📄 B4・B5</strong>
     <span style="font-size: 1.3rem; color: #3364AE; font-weight: bold;">8,000〜20,000円</span><br>
     ポスティングに最適
   </div>

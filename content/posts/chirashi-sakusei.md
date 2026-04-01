@@ -106,17 +106,17 @@ slug: "chirashi-sakusei"
 
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
   <div style="flex: 1; min-width: 200px; background: #fff; border: 1px solid #dde3f0; border-radius: 8px; padding: 1.2rem;">
-    <strong>🧑‍💻 フリーランス</strong><br>
+    <strong style="display:block;margin-bottom:0.5rem;">🧑‍💻 フリーランス</strong>
     <span style="font-size: 1.2rem; color: #3364AE; font-weight: bold;">5,000〜30,000円</span><br>
     <span style="font-size: 0.9rem; color: #666;">クラウドソーシング経由が一般的。品質にばらつきあり。</span>
   </div>
   <div style="flex: 1; min-width: 200px; background: #fff; border: 1px solid #dde3f0; border-radius: 8px; padding: 1.2rem;">
-    <strong>🏢 地域の制作会社</strong><br>
+    <strong style="display:block;margin-bottom:0.5rem;">🏢 地域の制作会社</strong>
     <span style="font-size: 1.2rem; color: #3364AE; font-weight: bold;">10,000〜50,000円</span><br>
     <span style="font-size: 0.9rem; color: #666;">ヒアリング重視・修正対応しやすい。地域密着型。</span>
   </div>
   <div style="flex: 1; min-width: 200px; background: #fff; border: 1px solid #dde3f0; border-radius: 8px; padding: 1.2rem;">
-    <strong>🏙️ 広告代理店</strong><br>
+    <strong style="display:block;margin-bottom:0.5rem;">🏙️ 広告代理店</strong>
     <span style="font-size: 1.2rem; color: #3364AE; font-weight: bold;">50,000円〜</span><br>
     <span style="font-size: 0.9rem; color: #666;">戦略設計込み・大量発注・継続案件向け。</span>
   </div>

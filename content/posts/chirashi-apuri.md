@@ -54,7 +54,7 @@ slug: "chirashi-apuri"
 - 独自フォントのアップロードはPro以上
 
 <div style="background: #f0f7ff; border-left: 4px solid #3364AE; padding: 1.2rem 1.5rem; border-radius: 4px; margin: 2rem 0;">
-<strong>✅ こんな人におすすめ</strong><br>
+<strong style="display:block;margin-bottom:0.5rem;">✅ こんな人におすすめ</strong>
 初めてチラシを作る方・デザイン経験ゼロの方・低コストで見栄えのいいチラシを作りたい方
 </div>
 
@@ -86,7 +86,7 @@ Adobeが提供するデザインツールで、**Photoshop・Illustratorとの�
 - Adobe IDが必要
 
 <div style="background: #f0f7ff; border-left: 4px solid #3364AE; padding: 1.2rem 1.5rem; border-radius: 4px; margin: 2rem 0;">
-<strong>✅ こんな人におすすめ</strong><br>
+<strong style="display:block;margin-bottom:0.5rem;">✅ こんな人におすすめ</strong>
 すでにAdobeを使っている方・ブランドイメージを統一したい方・動画チラシも作りたい方
 </div>
 
@@ -119,7 +119,7 @@ Adobeが提供するデザインツールで、**Photoshop・Illustratorとの�
 - テンプレート数はCanvaより少ない
 
 <div style="background: #f0f7ff; border-left: 4px solid #3364AE; padding: 1.2rem 1.5rem; border-radius: 4px; margin: 2rem 0;">
-<strong>✅ こんな人におすすめ</strong><br>
+<strong style="display:block;margin-bottom:0.5rem;">✅ こんな人におすすめ</strong>
 印刷まで一括でやりたい方・コストを抑えて大量印刷したい方・ポスティング用チラシを作りたい方
 </div>
 
@@ -162,7 +162,7 @@ Canvaに似たUIで、**アニメーション素材**が豊富なのが特徴で
 数枚の試し刷りや内部用途なら、家庭用インクジェットプリンターでも対応できます。ただし、発色・耐久性は印刷会社のほうが優れています。
 
 <div style="background: #fff3e0; border-left: 4px solid #f57c00; padding: 1.2rem 1.5rem; border-radius: 4px; margin: 2rem 0;">
-⚠️ <strong>入稿データについて注意</strong><br>
+⚠️ <strong style="display:block;margin-bottom:0.5rem;">入稿データについて注意</strong>
 印刷通販に入稿する場合、「塗り足し（3mm）」の設定が必要なことがあります。Canvaなどで作ったデータをそのまま入稿すると、端が切れてしまうことがあるため、印刷会社の入稿ガイドラインを確認しましょう。
 </div>
 
@@ -205,13 +205,13 @@ Canvaに似たUIで、**アニメーション素材**が豊富なのが特徴で
 
 <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
   <div style="flex: 1; min-width: 200px; background: #f5f8ff; border: 1px solid #dde3f0; border-radius: 8px; padding: 1.2rem;">
-    <strong>📱 アプリ自作が向く場面</strong><br>
+    <strong style="display:block;margin-bottom:0.5rem;">📱 アプリ自作が向く場面</strong>
     ・内部告知・イベント案内<br>
     ・スピード重視の販促<br>
     ・デジタル配信のみ
   </div>
   <div style="flex: 1; min-width: 200px; background: #fff; border: 2px solid #3364AE; border-radius: 8px; padding: 1.2rem;">
-    <strong>🏢 プロ依頼が向く場面</strong><br>
+    <strong style="display:block;margin-bottom:0.5rem;">🏢 プロ依頼が向く場面</strong>
     ・集客・新規顧客獲得<br>
     ・開業・リニューアル<br>
     ・ブランドイメージ統一

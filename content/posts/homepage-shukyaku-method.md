@@ -17,15 +17,15 @@ slug: "homepage-shukyaku-method"
   <div style="display:flex;flex-direction:column;gap:1rem">
     <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
       <div style="background:#c0392b;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">原因①</div>
-      <div style="color:#333"><strong>そもそも見られていない（集客できていない）</strong><br>検索順位が低く、Googleから流入がない。アクセス数が月100以下。</div>
+      <div style="color:#333"><strong style="display:block;margin-bottom:0.5rem;">そもそも見られていない（集客できていない）</strong>検索順位が低く、Googleから流入がない。アクセス数が月100以下。</div>
     </div>
     <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
       <div style="background:#e67e22;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">原因②</div>
-      <div style="color:#333"><strong>見られているが離脱されている（サイトの問題）</strong><br>アクセスはあるが直帰率が高く、問い合わせページまで到達しない。</div>
+      <div style="color:#333"><strong style="display:block;margin-bottom:0.5rem;">見られているが離脱されている（サイトの問題）</strong>アクセスはあるが直帰率が高く、問い合わせページまで到達しない。</div>
     </div>
     <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">原因③</div>
-      <div style="color:#333"><strong>問い合わせページまで来たが行動されない（CTA・信頼の問題）</strong><br>お問い合わせフォームに到達しても送信されない。</div>
+      <div style="color:#333"><strong style="display:block;margin-bottom:0.5rem;">問い合わせページまで来たが行動されない（CTA・信頼の問題）</strong>お問い合わせフォームに到達しても送信されない。</div>
     </div>
   </div>
 </div>

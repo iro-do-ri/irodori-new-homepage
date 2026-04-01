@@ -197,6 +197,20 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
                 </div>
               </div>
             </section>
+            <section className={`${styles.flyer} ${styles.curtain} relative`}>
+              <div className={styles.contentsContainer}>
+                <span className={styles.curtainEyebrow}>PRINT DESIGN</span>
+                <h2 className="mb-6 sm:mb-12">チラシ・フライヤーデザイン制作</h2>
+                <h3 className="mb-2 sm:mb-3">集客に直結するチラシデザインを千葉県船橋で制作</h3>
+                <p className="mb-4 sm:mb-12">ホームページ制作と合わせてご依頼いただくことで、<br className="hidden sm:block"/>WEBとチラシの統一感あるブランドイメージを実現。<br className="hidden sm:block"/>店舗・教室・開業・イベントなど、地域集客に直結するデザインをご提案します。</p>
+                <h3 className="mb-2 sm:mb-3">片面3万円〜。印刷入稿データまで完全対応</h3>
+                <p className="mb-2 sm:mb-3">チラシ片面デザイン 30,000円〜、両面デザイン 50,000円〜でご対応。<br className="hidden sm:block"/>プロのデザイナーが目を引くレイアウトと訴求力あるコピーで制作します。</p>
+                <p className="mb-6 sm:mb-12">印刷会社への入稿データ（PDF・AI形式）の作成もお任せください。</p>
+                <div className="flex justify-center">
+                <Link href={URL.Price} className={`${styles.box_button} inline-block`} aria-label="チラシデザイン料金ページへ移動します"><span className={`${styles.background_button} ${styles.other_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>チラシ料金を詳しく見る</span></Link>
+                </div>
+              </div>
+            </section>
             <section className={`${styles.works} ${styles.curtain} relative`}>
               <div className={`${styles.contentsContainer} xl:max-w-[1200px] xl:w-full`}>
                 <span className={styles.curtainEyebrow}>OUR WORKS</span>

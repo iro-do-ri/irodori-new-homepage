@@ -6,23 +6,23 @@ import styles from "./Price.module.scss";
 import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "料金プラン｜千葉県船橋のホームページ制作 10万円〜【イロドリ】",
+  title: "料金プラン｜千葉県船橋のホームページ制作・チラシデザイン【イロドリ】",
   description:
-    "千葉県船橋のホームページ制作会社イロドリの料金プラン。ライトプラン10万円〜、スタンダード30万円〜、フルカスタム50万円〜。WordPress・SEO設計込み。見積もり無料でご相談ください。",
-  keywords: ["船橋", "千葉県", "千葉県船橋", "料金プラン", "ホームページ制作", "格安", "WordPress", "SEO対策", "イロドリ"],
+    "千葉県船橋のホームページ制作会社イロドリの料金プラン。ホームページ制作10万円〜、チラシ片面デザイン3万円〜・両面5万円〜。WordPress・SEO設計込み。見積もり無料でご相談ください。",
+  keywords: ["船橋", "千葉県", "千葉県船橋", "料金プラン", "ホームページ制作", "チラシデザイン", "フライヤーデザイン", "格安", "WordPress", "SEO対策", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/price" },
   openGraph: {
-    title: "料金プラン｜千葉県船橋のホームページ制作 10万円〜【イロドリ】",
+    title: "料金プラン｜千葉県船橋のホームページ制作・チラシデザイン【イロドリ】",
     description:
-      "千葉県船橋のホームページ制作会社イロドリの料金プラン。ライトプラン10万円〜、スタンダード30万円〜、フルカスタム50万円〜。WordPress・SEO設計込み。見積もり無料。",
+      "千葉県船橋のホームページ制作会社イロドリの料金プラン。ホームページ制作10万円〜、チラシ片面3万円〜・両面5万円〜。WordPress・SEO設計込み。見積もり無料。",
     url: "https://iro-do-ri.jp/price",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "料金プラン｜千葉県船橋のホームページ制作 10万円〜【イロドリ】",
+    title: "料金プラン｜千葉県船橋のホームページ制作・チラシデザイン【イロドリ】",
     description:
-      "千葉県船橋のホームページ制作 ライトプラン10万円〜、スタンダード30万円〜、フルカスタム50万円〜。WordPress・SEO設計込み。見積もり無料。",
+      "千葉県船橋のホームページ制作・チラシデザイン料金プラン。ホームページ10万円〜、チラシ片面3万円〜・両面5万円〜。WordPress・SEO設計込み。見積もり無料。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -74,6 +74,37 @@ const plans = [
       "公開後、保守サポート（6ヶ月）",
     ],
     featured: false,
+  },
+];
+
+const flyerPlans = [
+  {
+    type: "SINGLE SIDE",
+    name: "片面チラシデザイン",
+    price: "30,000",
+    desc: "A4・B5など各種サイズに対応。店舗・教室・開業・イベントの集客チラシに最適です。",
+    features: [
+      "A4・B5・A3など各サイズ対応",
+      "オリジナルデザイン",
+      "印刷入稿データ（PDF）作成",
+      "2回まで修正対応",
+      "テキスト・素材はご支給ください",
+    ],
+    featured: false,
+  },
+  {
+    type: "BOTH SIDES",
+    name: "両面チラシデザイン",
+    price: "50,000",
+    desc: "表面・裏面ともにデザイン。会社案内・サービス紹介など、より多くの情報を届けたい方におすすめです。",
+    features: [
+      "A4・B5・A3など各サイズ対応",
+      "表面・裏面オリジナルデザイン",
+      "印刷入稿データ（PDF）作成",
+      "3回まで修正対応",
+      "テキスト・素材はご支給ください",
+    ],
+    featured: true,
   },
 ];
 
@@ -169,6 +200,59 @@ export default function Price() {
             </p>
             <div className={styles.planGrid}>
               {plans.map((plan) => (
+                <div
+                  key={plan.type}
+                  className={`${styles.planCard} ${plan.featured ? styles.featured : ""}`}
+                >
+                  {plan.featured && (
+                    <span className={styles.featuredBadge}>おすすめ</span>
+                  )}
+                  <div className={styles.planHeader}>
+                    <span className={styles.planType}>{plan.type}</span>
+                    <p className={styles.planName}>{plan.name}</p>
+                    <div className={styles.planPriceRow}>
+                      <span className={styles.planPrice}>¥{plan.price}</span>
+                    </div>
+                  </div>
+                  <div className={styles.planBody}>
+                    <p className={styles.planDesc}>{plan.desc}</p>
+                    <hr className={styles.planDivider} />
+                    <ul className={styles.featureList}>
+                      {plan.features.map((f) => (
+                        <li key={f} className={styles.featureItem}>{f}</li>
+                      ))}
+                    </ul>
+                    <div className="flex justify-center mt-6">
+                      <Link
+                        href={`${URL.Contact}?plan=${encodeURIComponent(plan.name)}`}
+                        className={`${styles.box_button} inline-block`}
+                        aria-label={`${plan.name}で無料相談する`}
+                      >
+                        <span className={`${styles.background_button} ${styles.contact_button}`}></span>
+                        <span className={`${styles.contents_button} px-8 py-3 inline-block`}>このプランで相談する</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ── チラシデザイン料金 ── */}
+        <div className={styles.section}>
+          <div className={styles.sectionInner}>
+            <span className={styles.sectionLabel}>PRINT DESIGN</span>
+            <h2 className={styles.sectionTitle}>
+              チラシ・フライヤーデザイン料金
+            </h2>
+            <p className={styles.sectionDesc}>
+              集客力を高めるチラシデザインを千葉県船橋でご提供。<br />
+              ホームページと合わせてご依頼いただくことで、WEBと印刷物のブランドイメージを統一できます。<br />
+              ※表示価格は税抜きの目安です。詳細はお見積りにてご確認ください。
+            </p>
+            <div className={styles.flyerGrid}>
+              {flyerPlans.map((plan) => (
                 <div
                   key={plan.type}
                   className={`${styles.planCard} ${plan.featured ? styles.featured : ""}`}

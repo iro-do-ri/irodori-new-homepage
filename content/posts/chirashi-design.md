@@ -182,10 +182,10 @@ slug: "chirashi-design"
 
 チラシのデザインはもちろん、「どんなキャッチコピーにすればいいか」「どんな内容を入れると反響が出るか」といったご相談にも対応しています。
 
-<div style="background: #3364AE; color: #fff; padding: 2rem; border-radius: 8px; text-align: center; margin: 2.5rem 0;">
-  <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0.5rem;">チラシデザインのご相談はお気軽に</p>
-  <p style="margin-bottom: 1.2rem; font-size: 0.95rem; opacity: 0.9;">船橋・千葉エリアの制作会社イロドリが対応します</p>
-  <a href="/contact" style="display: inline-block; background: #fff; color: #3364AE; font-weight: bold; padding: 0.8rem 2rem; border-radius: 4px; text-decoration: none;">無料相談する →</a>
+<div style="background: #050828; color: #fff; padding: 2.5rem 2rem; border-radius: 12px; text-align: center; margin: 2.5rem 0; border: 1px solid rgba(255,255,255,0.08);">
+  <p style="font-size: 1.1rem; font-weight: bold; margin-bottom: 0.75rem; letter-spacing: 0.05em; color: #fff;">チラシデザインのご相談はお気軽に</p>
+  <p style="margin-bottom: 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.7); letter-spacing: 0.05em;">船橋・千葉エリアの制作会社イロドリが対応します</p>
+  <a href="/contact" style="display: inline-block; background: #fff; color: #050828; font-weight: bold; padding: 0.9rem 2.5rem; border-radius: 50rem; text-decoration: none; letter-spacing: 0.05em; font-size: 0.95rem;">無料相談する →</a>
 </div>
 
 ---

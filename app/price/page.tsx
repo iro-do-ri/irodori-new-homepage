@@ -84,11 +84,9 @@ const flyerPlans = [
     price: "30,000",
     desc: "A4・B5など各種サイズに対応。店舗・教室・開業・イベントの集客チラシに最適です。",
     features: [
-      "A4・B5・A3など各サイズ対応",
+      "A4・B5",
       "オリジナルデザイン",
       "印刷入稿データ（PDF）作成",
-      "2回まで修正対応",
-      "テキスト・素材はご支給ください",
     ],
     featured: false,
   },
@@ -98,11 +96,9 @@ const flyerPlans = [
     price: "50,000",
     desc: "表面・裏面ともにデザイン。会社案内・サービス紹介など、より多くの情報を届けたい方におすすめです。",
     features: [
-      "A4・B5・A3など各サイズ対応",
+      "A4・B5",
       "表面・裏面オリジナルデザイン",
       "印刷入稿データ（PDF）作成",
-      "3回まで修正対応",
-      "テキスト・素材はご支給ください",
     ],
     featured: true,
   },
@@ -240,7 +236,7 @@ export default function Price() {
         </div>
 
         {/* ── チラシデザイン料金 ── */}
-        <div className={styles.section}>
+        <div className={styles.section} style={{background: "#fffcff"}}>
           <div className={styles.sectionInner}>
             <span className={styles.sectionLabel}>PRINT DESIGN</span>
             <h2 className={styles.sectionTitle}>

@@ -29,12 +29,13 @@ html {
   font-family: var(--font-en), var(--font-ja), sans-serif;
 }
 
-p,span,h1,h2,h3 {
+p,span,li,h1,h2,h3 {
   letter-spacing: .05em;
 }
 
 p {
   font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
 }
 
 span {

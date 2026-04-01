@@ -76,7 +76,7 @@
 
 .sectionDesc {
     font-size: clamp(13px, 1.6vw, 15px);
-    line-height: 2;
+    line-height: 1.6;
     color: rgba(5, 8, 40, 0.6);
     margin-bottom: 3rem;
     max-width: 620px;
@@ -124,7 +124,7 @@
 
     .valueDesc {
         font-size: 13px;
-        line-height: 1.9;
+        line-height: 1.6;
         color: rgba(5, 8, 40, 0.6);
     }
 }
@@ -188,7 +188,7 @@
 
     .serviceDesc {
         font-size: 13px;
-        line-height: 1.9;
+        line-height: 1.6;
         color: rgba(5, 8, 40, 0.6);
     }
 }
@@ -264,7 +264,7 @@
 
 .founderBio {
     font-size: clamp(13px, 1.6vw, 15px);
-    line-height: 2;
+    line-height: 1.6;
     color: rgba(5, 8, 40, 0.65);
 
     @media (max-width: 639px) {
@@ -314,7 +314,7 @@
         padding: 1.25rem 1.75rem;
         font-size: 14px;
         color: $text-color;
-        line-height: 1.9;
+        line-height: 1.6;
 
         @media (max-width: 639px) {
             padding: 1rem;

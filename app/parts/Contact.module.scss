@@ -68,14 +68,14 @@
     .desc {
         font-size: clamp(13px, 1.4vw, 14px);
         color: rgba(255, 252, 255, 0.5);
-        line-height: 1.9;
+        line-height: 1.6;
         margin-top: 1rem;
     }
 
     .subtitle {
         font-size: clamp(13px, 1.6vw, 15px);
         color: rgba(255, 252, 255, 0.6);
-        line-height: 1.8;
+        line-height: 1.6;
     }
 }
 
@@ -157,7 +157,7 @@
     text-align: center;
     font-size: clamp(12px, 1.4vw, 13px);
     color: rgba(5, 8, 40, 0.55);
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 // ── 入力フィールド ─────────────────────────────────
@@ -187,7 +187,7 @@
 .textarea {
     resize: vertical;
     min-height: 150px;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 // ── 送信ボタン ─────────────────────────────────────
@@ -226,7 +226,7 @@
     padding: clamp(1rem, 3vw, 1.5rem) clamp(1.5rem, 5vw, 3rem);
     font-size: clamp(12px, 1.4vw, 13px);
     color: rgba(5, 8, 40, 0.45);
-    line-height: 1.9;
+    line-height: 1.6;
     border-top: 1px solid $bg-color;
 }
 

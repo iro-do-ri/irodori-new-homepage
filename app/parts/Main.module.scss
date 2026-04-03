@@ -187,8 +187,7 @@
     }
 
     &.company {
-        background-color: #64aaaa1f;
-        backdrop-filter: blur(8px);
+        background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
         &::after {
             content: "COMPANY";
             position: absolute;
@@ -205,8 +204,7 @@
         }
     }
     &.price {
-        background-color: #64aaaa1f;
-        backdrop-filter: blur(8px);
+        background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
         &::after {
             content: "PRICE";
             position: absolute;
@@ -223,8 +221,7 @@
         }
     }
     &.flyer {
-        background-color: #64aaaa1f;
-        backdrop-filter: blur(8px);
+        background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
         &::after {
             content: "PRINT";
             position: absolute;
@@ -241,8 +238,7 @@
         }
     }
     &.works {
-        background-color: #64aaaa1f;
-        backdrop-filter: blur(8px);
+        background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
         &::after {
             content: "WORKS";
             position: absolute;
@@ -321,8 +317,7 @@
 // 選ばれる理由 — features
 // ═══════════════════════════════════════════════
 .features {
-    background-color: #64aaaa1f;
-    backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
     padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
 }
 
@@ -554,8 +549,7 @@
 // 制作の流れ — process
 // ═══════════════════════════════════════════════
 .process {
-    background-color: #64aaaa1f;
-    backdrop-filter: blur(8px);
+    background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
     padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
 }
 
@@ -795,8 +789,7 @@
 
 // SEOテキストセクション
 .seoText {
-  background-color: #64aaaa1f;
-  backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
   padding: 3rem 1.5rem;
 
   @media (min-width: 640px) {

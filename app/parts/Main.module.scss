@@ -253,7 +253,7 @@
         }
     }
     &.works {
-        background-color: rgba(18, 29, 145, 0.93);
+        background-color: #050828;
         background-image: repeating-linear-gradient(
             -45deg,
             transparent,
@@ -444,7 +444,7 @@
 }
 
 .workCard {
-    background: #050828;
+    background: #fffcff;
     border-radius: var(--radius-md, 10px);
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(5, 8, 40, 0.07);
@@ -469,6 +469,10 @@
     &:hover::before {
       transform: scale(1);
       opacity: 1;
+    }
+
+    &:hover {
+      background: #050828;
     }
   }
 

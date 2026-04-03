@@ -171,7 +171,7 @@ export default function Main({ news, works }: { news: News[]; works: Work[] }) {
               </div>
               </div>
             </section>
-            <section className={`${styles.company} relative`}>
+            <section className={`${styles.company} ${styles.curtain} relative`}>
               <div className={styles.contentsContainer} ref={companyRef}>
                 <span className={styles.curtainEyebrow}>ABOUT IRODORI</span>
                 <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作｜<br/>伝わるデザインと使いやすさを両立</h2>

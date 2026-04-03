@@ -187,7 +187,9 @@
     }
 
     &.company {
-        background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+        background-color: rgba(5, 8, 40, 0.93);
+        background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+        background-size: 28px 28px;
         &::after {
             content: "COMPANY";
             position: absolute;
@@ -204,7 +206,11 @@
         }
     }
     &.price {
-        background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+        background-color: rgba(12, 18, 92, 0.93);
+        background-image:
+            linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-size: 48px 48px;
         &::after {
             content: "PRICE";
             position: absolute;
@@ -221,7 +227,16 @@
         }
     }
     &.flyer {
-        background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+        background-color: rgba(30, 10, 55, 0.95);
+        background-image:
+            radial-gradient(ellipse at 20% 50%, rgba(120, 60, 200, 0.12) 0%, transparent 60%),
+            repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 30px,
+                rgba(255,255,255,0.025) 30px,
+                rgba(255,255,255,0.025) 31px
+            );
         &::after {
             content: "PRINT";
             position: absolute;
@@ -238,7 +253,14 @@
         }
     }
     &.works {
-        background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+        background-color: #050828;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 22px,
+            rgba(255,255,255,0.03) 22px,
+            rgba(255,255,255,0.03) 23px
+        );
         &::after {
             content: "WORKS";
             position: absolute;
@@ -317,7 +339,7 @@
 // 選ばれる理由 — features
 // ═══════════════════════════════════════════════
 .features {
-    background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+    background: linear-gradient(135deg, #050828 0%, #0c1260 60%, #050828 100%);
     padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
 }
 
@@ -549,7 +571,7 @@
 // 制作の流れ — process
 // ═══════════════════════════════════════════════
 .process {
-    background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+    background: linear-gradient(180deg, #f8f9ff 0%, #fffcff 60%);
     padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
 }
 
@@ -789,7 +811,7 @@
 
 // SEOテキストセクション
 .seoText {
-  background: linear-gradient(135deg, #050828, #0c1260 60%, #050828);
+  background: #f7f7f7;
   padding: 3rem 1.5rem;
 
   @media (min-width: 640px) {

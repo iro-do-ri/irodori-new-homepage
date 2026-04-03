@@ -470,6 +470,10 @@
       transform: scale(1);
       opacity: 1;
     }
+
+    &:hover {
+      background: #050828;
+    }
   }
 
 .workImageWrap {

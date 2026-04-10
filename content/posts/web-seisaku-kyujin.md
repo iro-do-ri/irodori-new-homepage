@@ -1,0 +1,143 @@
+---
+title: "web制作の求人を探す前に知っておきたい！職種・スキル・年収の全体像"
+description: "web制作の求人を探している方へ。職種の種類・必要スキル・平均年収・転職成功のポイントをまとめました。未経験からのキャリアパスや、フリーランスとの比較も解説します。"
+date: "2026-04-10"
+category: "web制作"
+slug: "web-seisaku-kyujin"
+---
+
+「web制作の仕事に就きたい」「今のスキルでどんな求人に応募できる？」という方は多いと思います。  
+web制作の世界は職種が多岐にわたり、必要なスキルや年収も職種によって大きく異なります。  
+この記事では、web制作関連の求人を探す前に把握しておくべき基本情報を整理します。
+
+## 🗂️ web制作の主な職種一覧
+
+web制作に関わる職種は大きく以下のカテゴリに分かれます。
+
+| 職種 | 主な業務 | 必要スキル例 |
+|---|---|---|
+| Webデザイナー | UI・ビジュアルデザイン、バナー制作 | Figma・Photoshop・Illustrator・HTML/CSS |
+| フロントエンドエンジニア | HTML/CSS/JSによるコーディング実装 | JavaScript・React・Vue・TypeScript |
+| バックエンドエンジニア | サーバー・DB・API開発 | PHP・Python・Ruby・MySQL・Node.js |
+| Webディレクター | 制作進行管理・クライアント折衝 | コミュニケーション力・スケジュール管理 |
+| Webマーケター | SEO・広告・SNS運用・分析 | GA4・SEMrush・広告運用知識 |
+| コーダー | デザイン通りのHTML/CSS実装 | HTML・CSS・WordPress |
+| UI/UXデザイナー | 情報設計・ユーザー体験設計 | ワイヤーフレーム・ユーザーリサーチ |
+
+未経験からの入門として多いのは**コーダー・Webデザイナー**のポジションです。  
+経験を積みながらフロントエンドエンジニアやディレクターへキャリアアップするケースが多く見られます。
+
+## 💴 web制作職種別の年収目安
+
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;gap:1rem">
+    <div>
+      <div style="font-weight:bold;color:#3364AE;margin-bottom:.4rem">Webデザイナー</div>
+      <div style="display:flex;align-items:center;gap:.5rem">
+        <div style="background:#3364AE;height:18px;border-radius:3px;width:55%"></div>
+        <span style="color:#444;font-size:13px">300〜500万円（中央値：380万円）</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-weight:bold;color:#3364AE;margin-bottom:.4rem">フロントエンドエンジニア</div>
+      <div style="display:flex;align-items:center;gap:.5rem">
+        <div style="background:#3364AE;height:18px;border-radius:3px;width:70%"></div>
+        <span style="color:#444;font-size:13px">400〜700万円（中央値：520万円）</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-weight:bold;color:#3364AE;margin-bottom:.4rem">バックエンドエンジニア</div>
+      <div style="display:flex;align-items:center;gap:.5rem">
+        <div style="background:#3364AE;height:18px;border-radius:3px;width:75%"></div>
+        <span style="color:#444;font-size:13px">450〜800万円（中央値：580万円）</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-weight:bold;color:#3364AE;margin-bottom:.4rem">Webディレクター</div>
+      <div style="display:flex;align-items:center;gap:.5rem">
+        <div style="background:#3364AE;height:18px;border-radius:3px;width:65%"></div>
+        <span style="color:#444;font-size:13px">350〜600万円（中央値：450万円）</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-weight:bold;color:#3364AE;margin-bottom:.4rem">Webマーケター</div>
+      <div style="display:flex;align-items:center;gap:.5rem">
+        <div style="background:#3364AE;height:18px;border-radius:3px;width:68%"></div>
+        <span style="color:#444;font-size:13px">380〜650万円（中央値：480万円）</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+※上記は正社員・会社員の目安です。フリーランスの場合はスキルと稼働量によって大きく異なります。
+
+## 📋 求人票を見るときのチェックポイント
+
+web制作の求人を比較する際に確認すべき項目をまとめました。
+
+**① 使用技術・ツールの確認**  
+求人票に記載されている使用言語・フレームワーク・ツールが自分のスキルセットと合致しているか確認しましょう。  
+「必須スキル」と「歓迎スキル」を分けて読むことが重要です。
+
+**② 制作環境（受託 vs 自社サービス vs 制作会社）**
+
+| 環境 | 特徴 | 向いている人 |
+|---|---|---|
+| Web制作会社（受託） | 多様な案件を経験できる。スキルアップしやすい | 経験を幅広く積みたい人 |
+| 自社サービス（インハウス） | 1つのサービスを深く理解できる。安定しやすい | 1つのプロダクトに集中したい人 |
+| フリーランス | 自由度が高い。収入に差が出やすい | 自己管理できる・人脈がある人 |
+
+**③ 残業・リモート環境**  
+web制作はプロジェクト納期に左右されやすく、繁忙期は残業が増える場合があります。  
+リモートワーク可否・フレックス制度の有無も重要な判断基準です。
+
+**④ ポートフォリオの提出有無**  
+デザイナー・コーダー・エンジニア職では、ほぼ必ずポートフォリオの提出が求められます。  
+応募前に自分の制作実績をまとめておきましょう。
+
+## 🚀 未経験からweb制作の求人に応募するには
+
+未経験からweb制作業界へ転職するための一般的なステップは以下の通りです。
+
+**STEP 1：スキル習得**  
+HTML/CSS → JavaScript → Figma（デザイン）またはWordPressの順で学ぶのが定番です。  
+Udemyや独学プログラマーなどのオンライン教材を活用すると効率的です。
+
+**STEP 2：ポートフォリオ作成**  
+架空でもよいので、実際にサイトやバナーを制作してポートフォリオにまとめます。  
+GitHubにコードを公開しておくと評価されやすいです。
+
+**STEP 3：クラウドソーシングで実績を積む**  
+CrowdWorksやランサーズで小さな案件をこなし、「実務経験」として語れる実績を積みます。
+
+**STEP 4：求人への応募**  
+実績とポートフォリオが揃ったら、転職サイト（Green・Wantedly・レバテックキャリア等）で求人を探します。
+
+## 🏢 フリーランスと正社員、どちらを選ぶべきか
+
+| 比較項目 | 正社員 | フリーランス |
+|---|---|---|
+| 収入の安定性 | 安定 | 不安定（実力次第） |
+| スキルアップ環境 | 社内研修・チームで学べる | 自己責任で学ぶ必要あり |
+| 自由度 | 低め | 高い |
+| 社会保険 | 会社が負担 | 自分で手配（国民健康保険等） |
+| 向いている人 | 未経験・基礎を固めたい人 | 実績豊富・自己管理できる人 |
+
+まずは正社員として経験を積み、スキルと実績が揃ったタイミングでフリーランスに転向するというキャリアパスが多く見られます。
+
+## ✨ web制作を依頼したい企業の方へ
+
+求人を探しているのではなく、**web制作を外注したい企業担当者の方**もいらっしゃるかと思います。  
+イロドリでは、船橋を拠点に中小企業・スタートアップ向けのWeb制作を行っています。  
+SEO設計・デザイン・コーディングをワンストップで対応し、採用サイト・コーポレートサイト・LP制作など幅広く承っています。
+
+[制作実績を見る](/works)
+
+## 📝 まとめ
+
+- web制作の求人は職種によってスキル・年収・業務内容が大きく異なる
+- 未経験からの場合はコーダー・デザイナー職からのスタートが一般的
+- 求人票では使用技術・制作環境・リモート可否を必ず確認する
+- まずは正社員で経験を積み、実績を作ってからフリーランスを検討するのがおすすめ
+
+[無料相談はこちら](/contact) | [料金プランを見る](/price)

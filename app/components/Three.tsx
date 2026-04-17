@@ -25,7 +25,7 @@ export default function Three() {
         />
         <directionalLight position={[-5, 3, -5]} intensity={0.3} />
         <OrbitControls enableZoom={false} enableRotate={false} enablePan={false} />
-        <MyModel castShadow position={isMobile ? [7 - 3, -2 - 1, 1.2] : [7, -2, 1.2]} />
+        <MyModel castShadow position={isMobile ? [7 - 6, -2 - 1, 1.2] : [7, -2, 1.2]} />
         <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[7, -2, 1.2]}>
           <planeGeometry args={[30, 30]} />
           <shadowMaterial transparent opacity={0.4} />

@@ -171,6 +171,8 @@ export default function RootLayout({
         <SmoothScroller>
           {children}
           <Footer />
+          {/* フッター下の隙間をふさぐ最小スペーサー */}
+          <div aria-hidden="true" style={{ background: "#050828", height: "2px" }} />
         </SmoothScroller>
       </body>
     </html>

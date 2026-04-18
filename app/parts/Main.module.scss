@@ -61,13 +61,20 @@
     }
 }
 
-// ── 鏡面共通ミックスイン ──
+// ── 鏡面共通ミックスイン（透明ガラス鏡面） ──
 @mixin mirrorSection($label: "") {
+    position: relative;
     background:
-        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.025) 0%, transparent 55%),
-        radial-gradient(ellipse at 0% 50%, rgba(255,255,255,0.015) 0%, transparent 45%),
-        radial-gradient(ellipse at 100% 100%, rgba(255,255,255,0.01) 0%, transparent 40%),
-        #030207;
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.04) 0%,
+            transparent 50%,
+            rgba(255,255,255,0.02) 100%
+        ),
+        rgba(6, 12, 30, 0.55);
+    backdrop-filter: blur(60px) saturate(1.6);
+    -webkit-backdrop-filter: blur(60px) saturate(1.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
     padding: clamp(4rem, 8vw, 7rem) 0;
 
     h2, h3, p, span, a, li { color: $main-color; }
@@ -91,7 +98,7 @@
             bottom: clamp(0.75rem, 3vw, 2rem);
             font-size: clamp(2.5rem, 6vw, 5.5rem);
             font-weight: 900;
-            color: rgba(255, 255, 255, 0.03);
+            color: rgba(255, 255, 255, 0.04);
             letter-spacing: 0.12em;
             text-transform: uppercase;
             pointer-events: none;
@@ -238,12 +245,14 @@
 // 選ばれる理由 — features
 // ═══════════════════════════════════════════════
 .features {
+    position: relative;
     background:
-        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.025) 0%, transparent 55%),
-        radial-gradient(ellipse at 100% 50%, rgba(255,255,255,0.015) 0%, transparent 45%),
-        #030207;
+        linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%, rgba(255,255,255,0.02) 100%),
+        rgba(6, 12, 30, 0.55);
+    backdrop-filter: blur(60px) saturate(1.6);
+    -webkit-backdrop-filter: blur(60px) saturate(1.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
     padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .featuresInner {
@@ -474,12 +483,14 @@
 // 制作の流れ — process
 // ═══════════════════════════════════════════════
 .process {
+    position: relative;
     background:
-        radial-gradient(ellipse at 0% 0%, rgba(255,255,255,0.025) 0%, transparent 55%),
-        radial-gradient(ellipse at 100% 100%, rgba(255,255,255,0.015) 0%, transparent 45%),
-        #030207;
+        linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%, rgba(255,255,255,0.02) 100%),
+        rgba(6, 12, 30, 0.55);
+    backdrop-filter: blur(60px) saturate(1.6);
+    -webkit-backdrop-filter: blur(60px) saturate(1.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
     padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .processInner {
@@ -718,8 +729,13 @@
 
 // SEOテキストセクション
 .seoText {
-  background: #030207;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.04) 0%, transparent 50%, rgba(255,255,255,0.02) 100%),
+    rgba(6, 12, 30, 0.55);
+  backdrop-filter: blur(60px) saturate(1.6);
+  -webkit-backdrop-filter: blur(60px) saturate(1.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
   padding: 3rem 1.5rem;
 
   @media (min-width: 640px) {

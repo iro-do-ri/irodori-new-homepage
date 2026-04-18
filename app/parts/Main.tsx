@@ -3,7 +3,6 @@
 import styles from "./Main.module.scss";
 import Link from "next/link";
 import { URL } from "../url/Url";
-import Three from "../components/Three";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Image from "next/image";
@@ -19,7 +18,6 @@ type Work = {
 export default function Main({ works }: { works: Work[] }) {
   return (
     <main className={styles.main}>
-      <Three />
 
       {/* ── キャッチフレーズ ── */}
       <section className={styles.hero}>

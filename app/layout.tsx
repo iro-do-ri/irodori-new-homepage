@@ -6,6 +6,7 @@ import FloatingButtons from "./parts/FloatingButtons";
 import Loader from "./parts/Loader";
 import Header from "./parts/Header";
 import SmoothScroller from "./parts/SmoothScroller";
+import Three from "./components/Three";
 
 const MontserratSans = Montserrat({
   variable: "--font-Montserrat",
@@ -162,6 +163,7 @@ export default function RootLayout({
         />
       </noscript>
         <Loader />
+        <Three />
         <Header />
         <FloatingButtons />
         <SmoothScroller>

@@ -3,6 +3,7 @@ import { Montserrat, Murecho } from "next/font/google";
 import "./globals.css";
 import Footer from "./parts/Footer";
 import FloatingButtons from "./parts/FloatingButtons";
+import Loader from "./parts/Loader";
 
 const MontserratSans = Montserrat({
   variable: "--font-Montserrat",
@@ -158,6 +159,7 @@ export default function RootLayout({
           style={{ display: "none", visibility: "hidden" }}
         />
       </noscript>
+        <Loader />
         {children}
         <Footer />
         <FloatingButtons />

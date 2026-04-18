@@ -138,6 +138,8 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${MontserratSans.variable} ${MurechoSans.variable}`} suppressHydrationWarning>
       <head>
+        {/* リロード時のスクロール復元を最速で無効化 */}
+        <script dangerouslySetInnerHTML={{ __html: `history.scrollRestoration='manual';` }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

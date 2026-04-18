@@ -15,23 +15,19 @@ export default function SmoothScroller({ children }: { children: React.ReactNode
     const isMobile = window.matchMedia("(max-width: 639px)").matches;
     if (isMobile) return;
 
-    // リロード時にブラウザのスクロール復元を無効化
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-
+    // smooth: 0 で初期化してアニメなしでトップに確定させる
     const smoother = ScrollSmoother.create({
       wrapper: wrapperRef.current!,
       content: contentRef.current!,
-      smooth: 1.2,
+      smooth: 0,
       effects: true,
     });
 
-    // 初期ロード時のスムーズアニメーションを抑制（即座にトップへ）
-    smoother.paused(true);
+    // 2フレーム後にスムーズスクロールを有効化
     requestAnimationFrame(() => {
-      smoother.scrollTo(0, false);
-      smoother.paused(false);
+      requestAnimationFrame(() => {
+        smoother.smooth(1.2);
+      });
     });
 
     return () => {

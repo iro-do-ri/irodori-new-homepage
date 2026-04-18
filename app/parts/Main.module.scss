@@ -17,126 +17,60 @@
     }
 }
 
-.container {
-    h1,h2,h3,p,span,button,a,li {
-        color: $main-color;
-    }
-    section {
-        height: 34rem;
-        &.top {
-            height: calc(var(--full-h, 100svh) - 40px);
-            @include sm {
-                height: 100dvh;
-            }
-        }
-        @include sm {
-            height: 100dvh;
-        }
-    }
-
-    // ── H1 ──
-    h1 {
-        top: 8vw;
-        left: 5vw;
-        right: 5vw;
-        line-height: 1.25;
-        font-size: clamp(22px, 5.5vw, 80px);
-        font-weight: bold;
-        @include sm {
-            top: 5vw;
-            left: max(2rem, calc((100% - 1200px) / 2));
-            right: auto;
-            font-size: clamp(28px, 5.5vw, 80px);
-        }
-    }
-
-    h2 {
-        line-height: 1.4;
-        font-size: clamp(18px, 4.2vw, 48px);
-        font-weight: bold;
-    }
-    h3 {
-        line-height: 1.4;
-        font-size: clamp(14px, 3.2vw, 24px);
-        font-weight: bold;
-    }
-
-    p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
-
-    // ── TOP セクション ──
-    .top {
-        span {
-            font-size: clamp(13px, 2vw, 16px);
-            line-height: 1.6;
-        }
-        .subText {
-            bottom: clamp(24px, 10vw, 80px);
-            left: 5vw;
-            right: 5vw;
-            @include sm {
-                bottom: 5vw;
-                left: max(2rem, calc((100% - 1200px) / 2));
-                right: auto;
-            }
-        }
-    }
-
-    // ── NEWS セクション ──
-    .news {
-        opacity: 1;
-        @include sm {
-            opacity: 0;
-        }
-        .newsContainer {
-            position: absolute;
-            top: 8vw;
-            left: 5vw;
-            right: 5vw;
-            @include sm {
-                top: 5vw;
-                left: max(2rem, calc((100% - 1200px) / 2));
-                right: max(2rem, calc((100% - 1200px) / 2));
-            }
-        }
-    }
-
-    .button {
-        color: $button-color;
-        border: solid 2px $button-color;
-        position: relative;
-        transition: color 0.4s $cubic-bezier;
-        z-index: 1;
-        overflow: hidden;
-        border-radius: 50rem;
-        &::before {
-            content: "";
-            background-color: $button-color;
-            background-size: contain;
-            display: block;
-            position: absolute;
-            z-index: -1;
-            height: 100%;
-            width: 100%;
-            left: 0;
-            top: 0;
-            clip-path: inset(0 100% 0 0);
-            transition: clip-path 0.4s $cubic-bezier;
-        }
-        &:hover {
-            color: $main-color;
-            transition: color 0.4s $cubic-bezier;
-            &::before {
-                clip-path: inset(0);
-                transition: clip-path 0.4s $cubic-bezier;
-            }
-        }
+// ── キャッチフレーズ ──
+.hero {
+    position: relative;
+    min-height: calc(var(--full-h, 100svh) - 56px);
+    display: flex;
+    align-items: center;
+    @include sm {
+        min-height: 100dvh;
     }
 }
 
-// ── COMPANY / PRICE / WORKS セクション（.container外に独立） ──
-// curtain セクションは pin コンテナ外に配置するため、スタイルもトップレベルに
-.curtain {
-    h2,h3,p,span,button,a,li {
+.heroInner {
+    position: relative;
+    z-index: 1;
+    padding: 8vw 5vw clamp(24px, 10vw, 80px);
+    @include sm {
+        padding: 5vw max(2rem, calc((100% - 1200px) / 2));
+    }
+}
+
+.heroTitle {
+    color: $main-color;
+    line-height: 1.25;
+    font-size: clamp(22px, 5.5vw, 80px);
+    font-weight: bold;
+    margin-bottom: 2rem;
+    @include sm {
+        font-size: clamp(28px, 5.5vw, 80px);
+    }
+}
+
+.heroSub {
+    color: $main-color;
+    span {
+        font-size: clamp(13px, 2vw, 16px);
+        line-height: 1.6;
+    }
+    p {
+        color: $main-color;
+        line-height: 1.6;
+        font-size: clamp(13px, 2vw, 16px);
+    }
+}
+
+// ── 料金説明 ──
+.priceSection {
+    background-color: rgba(12, 18, 92, 0.93);
+    background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    padding: clamp(4rem, 8vw, 7rem) 0;
+
+    h2, h3, p, span, a, li {
         color: $main-color;
     }
     h2 {
@@ -151,134 +85,222 @@
     }
     p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
 
-    height: 34rem;
-    @include sm {
-        height: 100dvh;
-        clip-path: inset(0 100% 0 0);
-        transition: clip-path .8s ease;
-        overflow: hidden;
-    }
-
-    &.works {
-        height: 52rem;
-        @include sm {
-            height: calc(100dvh + 10rem);
-        }
-        @include xl {
-            height: calc(100dvh + 5rem);
-        }
-    }
-
-    .contentsContainer {
+    &::after {
+        content: "PRICE";
         position: absolute;
-        top: 8vw;
-        left: 5vw;
-        right: 5vw;
-        z-index: 1;
-        @include sm {
-            top: 5vw;
-            left: max(2rem, calc((100% - 1200px) / 2));
-            right: max(2rem, calc((100% - 1200px) / 2));
-        }
-        h2 {
-            padding-bottom: 1.25rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        }
+        right: clamp(1rem, 3vw, 2.5rem);
+        bottom: clamp(0.75rem, 3vw, 2rem);
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.035);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        pointer-events: none;
+        line-height: 1;
+        white-space: nowrap;
     }
+}
 
-    &.company {
-        background-color: rgba(5, 8, 40, 0.93);
-        background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
-        background-size: 28px 28px;
-        &::after {
-            content: "COMPANY";
-            position: absolute;
-            right: clamp(1rem, 3vw, 2.5rem);
-            bottom: clamp(0.75rem, 3vw, 2rem);
-            font-size: clamp(2.5rem, 6vw, 5.5rem);
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.035);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            pointer-events: none;
-            line-height: 1;
-            white-space: nowrap;
-        }
+.priceSectionInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 3rem);
+
+    h2 {
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 1.5rem;
     }
-    &.price {
-        background-color: rgba(12, 18, 92, 0.93);
-        background-image:
-            linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-        background-size: 48px 48px;
-        &::after {
-            content: "PRICE";
-            position: absolute;
-            right: clamp(1rem, 3vw, 2.5rem);
-            bottom: clamp(0.75rem, 3vw, 2rem);
-            font-size: clamp(2.5rem, 6vw, 5.5rem);
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.035);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            pointer-events: none;
-            line-height: 1;
-            white-space: nowrap;
-        }
+}
+
+.planGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    @include sm {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
-    &.flyer {
-        background-color: rgba(30, 10, 55, 0.95);
-        background-image:
-            radial-gradient(ellipse at 20% 50%, rgba(120, 60, 200, 0.12) 0%, transparent 60%),
-            repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 30px,
-                rgba(255,255,255,0.025) 30px,
-                rgba(255,255,255,0.025) 31px
-            );
-        &::after {
-            content: "PRINT";
-            position: absolute;
-            right: clamp(1rem, 3vw, 2.5rem);
-            bottom: clamp(0.75rem, 3vw, 2rem);
-            font-size: clamp(2.5rem, 6vw, 5.5rem);
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.035);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            pointer-events: none;
-            line-height: 1;
-            white-space: nowrap;
-        }
+}
+
+.planCard {
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 252, 255, 0.03);
+    border: 1px solid rgba(255, 252, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(51, 100, 174, 0.2);
     }
-    &.works {
-        background-color: #050828;
-        background-image: repeating-linear-gradient(
-            -45deg,
+}
+
+.planImg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+// ── WEBデザイン制作 ──
+.webSection {
+    background-color: rgba(5, 8, 40, 0.93);
+    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    padding: clamp(4rem, 8vw, 7rem) 0;
+
+    h2, h3, p, span, a, li {
+        color: $main-color;
+    }
+    h2 {
+        line-height: 1.4;
+        font-size: clamp(18px, 4.2vw, 48px);
+        font-weight: bold;
+    }
+    h3 {
+        line-height: 1.4;
+        font-size: clamp(14px, 3.2vw, 24px);
+        font-weight: bold;
+    }
+    p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
+
+    &::after {
+        content: "WEB DESIGN";
+        position: absolute;
+        right: clamp(1rem, 3vw, 2.5rem);
+        bottom: clamp(0.75rem, 3vw, 2rem);
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.035);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        pointer-events: none;
+        line-height: 1;
+        white-space: nowrap;
+    }
+}
+
+.webSectionInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 3rem);
+
+    h2 {
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 1.5rem;
+    }
+}
+
+// ── チラシ制作 ──
+.flyerSection {
+    background-color: rgba(30, 10, 55, 0.95);
+    background-image:
+        radial-gradient(ellipse at 20% 50%, rgba(120, 60, 200, 0.12) 0%, transparent 60%),
+        repeating-linear-gradient(
+            0deg,
             transparent,
-            transparent 22px,
-            rgba(255,255,255,0.03) 22px,
-            rgba(255,255,255,0.03) 23px
+            transparent 30px,
+            rgba(255,255,255,0.025) 30px,
+            rgba(255,255,255,0.025) 31px
         );
-        &::after {
-            content: "WORKS";
-            position: absolute;
-            right: clamp(1rem, 3vw, 2.5rem);
-            bottom: clamp(0.75rem, 3vw, 2rem);
-            font-size: clamp(2.5rem, 6vw, 5.5rem);
-            font-weight: 900;
-            color: rgba(255, 255, 255, 0.035);
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            pointer-events: none;
-            line-height: 1;
-            white-space: nowrap;
-        }
+    padding: clamp(4rem, 8vw, 7rem) 0;
+
+    h2, h3, p, span, a, li {
+        color: $main-color;
     }
-    &.clipPathAnimation {
-        clip-path: inset(0 0 0 0);
-        transition: clip-path .8s ease;
+    h2 {
+        line-height: 1.4;
+        font-size: clamp(18px, 4.2vw, 48px);
+        font-weight: bold;
+    }
+    h3 {
+        line-height: 1.4;
+        font-size: clamp(14px, 3.2vw, 24px);
+        font-weight: bold;
+    }
+    p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
+
+    &::after {
+        content: "PRINT";
+        position: absolute;
+        right: clamp(1rem, 3vw, 2.5rem);
+        bottom: clamp(0.75rem, 3vw, 2rem);
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.035);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        pointer-events: none;
+        line-height: 1;
+        white-space: nowrap;
+    }
+}
+
+.flyerSectionInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 3rem);
+
+    h2 {
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 1.5rem;
+    }
+}
+
+// ── 実績 ──
+.worksSection {
+    background-color: #050828;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 22px,
+        rgba(255,255,255,0.03) 22px,
+        rgba(255,255,255,0.03) 23px
+    );
+    padding: clamp(4rem, 8vw, 7rem) 0;
+
+    h2, h3, p, span, a, li {
+        color: $main-color;
+    }
+    h2 {
+        line-height: 1.4;
+        font-size: clamp(18px, 4.2vw, 48px);
+        font-weight: bold;
+    }
+    h3 {
+        line-height: 1.4;
+        font-size: clamp(14px, 3.2vw, 24px);
+        font-weight: bold;
+    }
+    p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
+
+    &::after {
+        content: "WORKS";
+        position: absolute;
+        right: clamp(1rem, 3vw, 2.5rem);
+        bottom: clamp(0.75rem, 3vw, 2rem);
+        font-size: clamp(2.5rem, 6vw, 5.5rem);
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.035);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        pointer-events: none;
+        line-height: 1;
+        white-space: nowrap;
+    }
+}
+
+.worksSectionInner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 5vw, 3rem);
+
+    h2 {
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        margin-bottom: 1.5rem;
     }
 }
 

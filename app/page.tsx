@@ -31,14 +31,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-    const [newsData, worksData] = await Promise.all([
-        client.get({ endpoint: "news", queries: { limit: 5 } }),
-        client.get({ endpoint: "works", queries: { limit: 10 } }).catch(() => ({ contents: [] })),
-    ]);
+    const worksData = await client.get({ endpoint: "works", queries: { limit: 10 } }).catch(() => ({ contents: [] }));
   return (
   <section className="relative">
       <Header />
-      <Main news={newsData.contents} works={worksData.contents} />
+      <Main works={worksData.contents} />
       <Suspense fallback={null}>
         <Contact />
       </Suspense>

@@ -72,6 +72,7 @@ time {
     top: 0;
     left: 0;
     z-index: 0;
+    background: #030207; /* フッター下にThree.jsが透けないよう */
   }
 }
 

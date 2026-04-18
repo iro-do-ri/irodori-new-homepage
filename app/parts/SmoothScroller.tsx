@@ -15,7 +15,9 @@ export default function SmoothScroller({ children }: { children: React.ReactNode
     const isMobile = window.matchMedia("(max-width: 639px)").matches;
     if (isMobile) return;
 
-    // smooth: 0 で初期化してアニメなしでトップに確定させる
+    // ScrollSmoother 初期化前に強制トップへ（アニメなし）
+    window.scrollTo(0, 0);
+
     const smoother = ScrollSmoother.create({
       wrapper: wrapperRef.current!,
       content: contentRef.current!,

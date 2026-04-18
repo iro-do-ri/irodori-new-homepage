@@ -53,10 +53,10 @@ export default function Main({ works }: { works: Work[] }) {
           </p>
           <div className={styles.planGrid}>
             <div className={styles.planCard}>
-              <Image src="/svg/standard-plan.svg" alt="スタンダードプラン｜ホームページ制作10万円〜" width={400} height={500} className={styles.planImg} />
+              <Image src="/svg/right-plan.svg" alt="ライトプラン｜ホームページ制作10万円〜" width={400} height={500} className={styles.planImg} />
             </div>
             <div className={styles.planCard}>
-              <Image src="/svg/right-plan.svg" alt="ライトプラン｜ホームページ制作" width={400} height={500} className={styles.planImg} />
+              <Image src="/svg/standard-plan.svg" alt="スタンダードプラン｜ホームページ制作30万円〜" width={400} height={500} className={styles.planImg} />
             </div>
             <div className={styles.planCard}>
               <Image src="/svg/fullcustom-plan.svg" alt="フルカスタムプラン｜完全オーダーメイドホームページ制作" width={400} height={500} className={styles.planImg} />

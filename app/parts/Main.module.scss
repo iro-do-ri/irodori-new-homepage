@@ -61,18 +61,16 @@
     }
 }
 
-// ── 料金説明 ──
-.priceSection {
-    background-color: rgba(12, 18, 92, 0.93);
-    background-image:
-        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 48px 48px;
+// ── 鏡面共通ミックスイン ──
+@mixin mirrorSection($label: "") {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.025) 0%, transparent 55%),
+        radial-gradient(ellipse at 0% 50%, rgba(255,255,255,0.015) 0%, transparent 45%),
+        radial-gradient(ellipse at 100% 100%, rgba(255,255,255,0.01) 0%, transparent 40%),
+        #030207;
     padding: clamp(4rem, 8vw, 7rem) 0;
 
-    h2, h3, p, span, a, li {
-        color: $main-color;
-    }
+    h2, h3, p, span, a, li { color: $main-color; }
     h2 {
         line-height: 1.4;
         font-size: clamp(18px, 4.2vw, 48px);
@@ -85,32 +83,43 @@
     }
     p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
 
-    &::after {
-        content: "PRICE";
-        position: absolute;
-        right: clamp(1rem, 3vw, 2.5rem);
-        bottom: clamp(0.75rem, 3vw, 2rem);
-        font-size: clamp(2.5rem, 6vw, 5.5rem);
-        font-weight: 900;
-        color: rgba(255, 255, 255, 0.035);
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        pointer-events: none;
-        line-height: 1;
-        white-space: nowrap;
+    @if $label != "" {
+        &::after {
+            content: $label;
+            position: absolute;
+            right: clamp(1rem, 3vw, 2.5rem);
+            bottom: clamp(0.75rem, 3vw, 2rem);
+            font-size: clamp(2.5rem, 6vw, 5.5rem);
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            pointer-events: none;
+            line-height: 1;
+            white-space: nowrap;
+        }
     }
 }
 
-.priceSectionInner {
+@mixin mirrorSectionInner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 clamp(1.5rem, 5vw, 3rem);
 
     h2 {
         padding-bottom: 1.25rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         margin-bottom: 1.5rem;
     }
+}
+
+// ── 料金説明 ──
+.priceSection {
+    @include mirrorSection("PRICE");
+}
+
+.priceSectionInner {
+    @include mirrorSectionInner;
 }
 
 .planGrid {
@@ -127,12 +136,12 @@
     border-radius: 12px;
     overflow: hidden;
     background: rgba(255, 252, 255, 0.03);
-    border: 1px solid rgba(255, 252, 255, 0.08);
+    border: 1px solid rgba(255, 252, 255, 0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 12px 40px rgba(51, 100, 174, 0.2);
+        box-shadow: 0 12px 40px rgba(255, 255, 255, 0.06);
     }
 }
 
@@ -144,164 +153,32 @@
 
 // ── WEBデザイン制作 ──
 .webSection {
-    background-color: rgba(5, 8, 40, 0.93);
-    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
-    background-size: 28px 28px;
-    padding: clamp(4rem, 8vw, 7rem) 0;
-
-    h2, h3, p, span, a, li {
-        color: $main-color;
-    }
-    h2 {
-        line-height: 1.4;
-        font-size: clamp(18px, 4.2vw, 48px);
-        font-weight: bold;
-    }
-    h3 {
-        line-height: 1.4;
-        font-size: clamp(14px, 3.2vw, 24px);
-        font-weight: bold;
-    }
-    p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
-
-    &::after {
-        content: "WEB DESIGN";
-        position: absolute;
-        right: clamp(1rem, 3vw, 2.5rem);
-        bottom: clamp(0.75rem, 3vw, 2rem);
-        font-size: clamp(2.5rem, 6vw, 5.5rem);
-        font-weight: 900;
-        color: rgba(255, 255, 255, 0.035);
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        pointer-events: none;
-        line-height: 1;
-        white-space: nowrap;
-    }
+    @include mirrorSection("WEB DESIGN");
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .webSectionInner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 clamp(1.5rem, 5vw, 3rem);
-
-    h2 {
-        padding-bottom: 1.25rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        margin-bottom: 1.5rem;
-    }
+    @include mirrorSectionInner;
 }
 
 // ── チラシ制作 ──
 .flyerSection {
-    background-color: rgba(30, 10, 55, 0.95);
-    background-image:
-        radial-gradient(ellipse at 20% 50%, rgba(120, 60, 200, 0.12) 0%, transparent 60%),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 30px,
-            rgba(255,255,255,0.025) 30px,
-            rgba(255,255,255,0.025) 31px
-        );
-    padding: clamp(4rem, 8vw, 7rem) 0;
-
-    h2, h3, p, span, a, li {
-        color: $main-color;
-    }
-    h2 {
-        line-height: 1.4;
-        font-size: clamp(18px, 4.2vw, 48px);
-        font-weight: bold;
-    }
-    h3 {
-        line-height: 1.4;
-        font-size: clamp(14px, 3.2vw, 24px);
-        font-weight: bold;
-    }
-    p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
-
-    &::after {
-        content: "PRINT";
-        position: absolute;
-        right: clamp(1rem, 3vw, 2.5rem);
-        bottom: clamp(0.75rem, 3vw, 2rem);
-        font-size: clamp(2.5rem, 6vw, 5.5rem);
-        font-weight: 900;
-        color: rgba(255, 255, 255, 0.035);
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        pointer-events: none;
-        line-height: 1;
-        white-space: nowrap;
-    }
+    @include mirrorSection("PRINT");
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .flyerSectionInner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 clamp(1.5rem, 5vw, 3rem);
-
-    h2 {
-        padding-bottom: 1.25rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        margin-bottom: 1.5rem;
-    }
+    @include mirrorSectionInner;
 }
 
 // ── 実績 ──
 .worksSection {
-    background-color: #050828;
-    background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 22px,
-        rgba(255,255,255,0.03) 22px,
-        rgba(255,255,255,0.03) 23px
-    );
-    padding: clamp(4rem, 8vw, 7rem) 0;
-
-    h2, h3, p, span, a, li {
-        color: $main-color;
-    }
-    h2 {
-        line-height: 1.4;
-        font-size: clamp(18px, 4.2vw, 48px);
-        font-weight: bold;
-    }
-    h3 {
-        line-height: 1.4;
-        font-size: clamp(14px, 3.2vw, 24px);
-        font-weight: bold;
-    }
-    p { line-height: 1.6; font-size: clamp(13px, 2vw, 16px); }
-
-    &::after {
-        content: "WORKS";
-        position: absolute;
-        right: clamp(1rem, 3vw, 2.5rem);
-        bottom: clamp(0.75rem, 3vw, 2rem);
-        font-size: clamp(2.5rem, 6vw, 5.5rem);
-        font-weight: 900;
-        color: rgba(255, 255, 255, 0.035);
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        pointer-events: none;
-        line-height: 1;
-        white-space: nowrap;
-    }
+    @include mirrorSection("WORKS");
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .worksSectionInner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 clamp(1.5rem, 5vw, 3rem);
-
-    h2 {
-        padding-bottom: 1.25rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        margin-bottom: 1.5rem;
-    }
+    @include mirrorSectionInner;
 }
 
 // ═══════════════════════════════════════════════
@@ -361,8 +238,12 @@
 // 選ばれる理由 — features
 // ═══════════════════════════════════════════════
 .features {
-    background: linear-gradient(135deg, #050828 0%, #0c1260 60%, #050828 100%);
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.025) 0%, transparent 55%),
+        radial-gradient(ellipse at 100% 50%, rgba(255,255,255,0.015) 0%, transparent 45%),
+        #030207;
     padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .featuresInner {
@@ -593,17 +474,21 @@
 // 制作の流れ — process
 // ═══════════════════════════════════════════════
 .process {
-    background: linear-gradient(180deg, #f8f9ff 0%, #fffcff 60%);
+    background:
+        radial-gradient(ellipse at 0% 0%, rgba(255,255,255,0.025) 0%, transparent 55%),
+        radial-gradient(ellipse at 100% 100%, rgba(255,255,255,0.015) 0%, transparent 45%),
+        #030207;
     padding: clamp(4rem, 8vw, 7rem) clamp(2rem, 5vw, 5rem);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .processInner {
     max-width: 1200px;
     margin: 0 auto;
 
-    .secLabel { color: rgba(5, 8, 40, 0.35); }
-    .secTitle  { color: $text-color; }
-    .secDesc   { color: rgba(5, 8, 40, 0.55); }
+    .secLabel { color: rgba(255, 252, 255, 0.35); }
+    .secTitle  { color: $main-color; }
+    .secDesc   { color: rgba(255, 252, 255, 0.5); }
 }
 
 .processSteps {
@@ -622,7 +507,7 @@
             left: 12.5%;
             right: 12.5%;
             height: 1px;
-            background: linear-gradient(to right, transparent, rgba(5, 8, 40, 0.12) 20%, rgba(5, 8, 40, 0.12) 80%, transparent);
+            background: linear-gradient(to right, transparent, rgba(255, 252, 255, 0.12) 20%, rgba(255, 252, 255, 0.12) 80%, transparent);
         }
     }
 }
@@ -668,7 +553,7 @@
 .processStepTitle {
     font-size: clamp(14px, 1.6vw, 16px);
     font-weight: 700;
-    color: $text-color;
+    color: $main-color;
     margin-bottom: 0.5rem;
     line-height: 1.4;
 }
@@ -676,7 +561,7 @@
 .processStepDesc {
     font-size: clamp(12px, 1.3vw, 13px);
     line-height: 1.6;
-    color: rgba(5, 8, 40, 0.55);
+    color: rgba(255, 252, 255, 0.5);
 }
 
 .processCta {
@@ -833,7 +718,8 @@
 
 // SEOテキストセクション
 .seoText {
-  background: #f7f7f7;
+  background: #030207;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding: 3rem 1.5rem;
 
   @media (min-width: 640px) {
@@ -850,7 +736,7 @@
 .seoTextTitle {
   font-size: 1.1rem;
   font-weight: 700;
-  color: #050828;
+  color: $main-color;
   margin-bottom: 1rem;
 
   @media (min-width: 640px) {
@@ -861,7 +747,7 @@
 .seoTextBody {
   font-size: 0.9rem;
   line-height: 1.6;
-  color: rgba(5, 8, 40, 0.65);
+  color: rgba(255, 252, 255, 0.5);
 
   @media (min-width: 640px) {
     font-size: 0.95rem;

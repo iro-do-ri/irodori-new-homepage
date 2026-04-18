@@ -4,7 +4,8 @@
     position: relative;
     left: 195px;
     width: calc(100% - 195px);
-    background: $text-color;
+    background: #030207;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
     color: $main-color;
 
     @media (max-width: 639px) {

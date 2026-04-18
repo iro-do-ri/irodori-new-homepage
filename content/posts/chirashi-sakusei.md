@@ -1,6 +1,6 @@
 ---
-title: "チラシ作成の方法と費用を徹底比較｜自作vsプロ依頼どちらがお得？"
-description: "チラシ作成の方法（自作・アプリ・プロ依頼）を費用・品質・手間の3軸で徹底比較。目的別のおすすめ作成方法と、プロへの依頼相場・注意点まで解説します。"
+title: "チラシ作成の方法と費用を徹底比較｜スマホ・アプリ自作vsプロ依頼どちらがお得？"
+description: "チラシ作成の方法（スマホアプリ・Canva・オフィスソフト自作・プロ依頼）を費用・品質・手間で徹底比較。スマホでのチラシ作り方から、プロへの依頼相場・注意点まで解説します。"
 date: "2026-04-01"
 category: "チラシ制作"
 slug: "chirashi-sakusei"
@@ -59,6 +59,26 @@ slug: "chirashi-sakusei"
 
 <div style="background: #fff3e0; border-left: 4px solid #f57c00; padding: 1.2rem 1.5rem; border-radius: 4px; margin: 2rem 0;">
 ⚠️ <strong>注意</strong>：WordやPowerPointで作ったチラシは、そのまま印刷会社に入稿できないことがあります。PDF変換の手順やデータ仕様を事前に確認しましょう。
+</div>
+
+---
+
+## 📱 スマホでチラシを作る方法
+
+「パソコンがなくてもスマホだけでチラシを作りたい」という方が増えています。結論、**スマホだけで十分なクオリティのチラシが作れます**。
+
+### スマホでチラシ作成する手順（Canva の場合）
+
+1. App Store / Google Play から **Canvaアプリ**をインストール
+2. 「チラシ」または「A4」テンプレートを選択
+3. テキスト・写真・色を自分の内容に書き換える
+4. PNG または PDF でダウンロード・印刷
+
+スマホで作る場合のポイントは、**テンプレートを活用すること**。白紙からデザインするのは難しいですが、テンプレートを選んで文字を入れ替えるだけであれば30分〜1時間で完成します。
+
+<div style="background: #f0f7ff; border-left: 4px solid #3364AE; padding: 1.2rem 1.5rem; border-radius: 4px; margin: 2rem 0;">
+<strong style="display:block;margin-bottom:0.5rem;">✅ スマホ作成に向く用途</strong>
+SNS投稿・イベント告知・内部回覧など、デジタル配信がメインの場合はスマホ作成で十分です。印刷して配布する場合は解像度・余白設定に注意しましょう。
 </div>
 
 ---

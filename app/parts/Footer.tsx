@@ -1,6 +1,7 @@
 import Link from "next/link";
 import footer from "./Footer.module.scss";
 import { URL } from "../url/Url";
+import LogoMark from "./LogoMark";
 
 const navLinks = [
   { en: "HOME", ja: "ホーム", href: URL.Home },
@@ -17,7 +18,10 @@ export default function Footer() {
       <div className={footer.inner}>
         <div className={footer.top}>
           <div className={footer.brand}>
-            <p className={footer.name}>IRODORI</p>
+            <p className={footer.name}>
+              <LogoMark size={32} />
+              <span>イロドリ</span>
+            </p>
             <p className={footer.tagline}>千葉県船橋で魅力を伝えるWEBデザイン・ホームページ制作会社</p>
           </div>
           <nav className={footer.nav}>

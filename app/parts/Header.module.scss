@@ -39,6 +39,12 @@
     }
 }
 
+.brandNameRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .brandName {
     font-size: 20px;
     font-weight: 700;
@@ -150,6 +156,9 @@
 }
 
 .mobileLogo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
     font-size: 18px;
     font-weight: 700;
     color: $text-color;

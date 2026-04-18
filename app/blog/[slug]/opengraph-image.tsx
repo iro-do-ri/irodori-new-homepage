@@ -94,7 +94,7 @@ export default async function Image({ params }: Props) {
               display: "flex",
             }}
           >
-            IRODORI
+            イロドリ
           </div>
           <div
             style={{

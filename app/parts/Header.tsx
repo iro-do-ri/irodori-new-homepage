@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import headerStyles from "./Header.module.scss";
 import { URL } from "../url/Url";
+import LogoMark from "./LogoMark";
 
 const HomeIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -68,7 +69,10 @@ export default function Header() {
         <div className={headerStyles.sidebar}>
           <div className={headerStyles.sidebarTop}>
             <Link href={URL.Home} className={headerStyles.sidebarBrand}>
-              <span className={headerStyles.brandName}>IRODORI</span>
+              <span className={headerStyles.brandNameRow}>
+                <LogoMark size={30} />
+                <span className={headerStyles.brandName}>イロドリ</span>
+              </span>
               <span className={headerStyles.brandTagline}>千葉県船橋のホームページ制作</span>
             </Link>
           </div>
@@ -95,7 +99,10 @@ export default function Header() {
 
       {/* ── モバイル トップバー ── */}
       <div className={`${headerStyles.mobileBar} flex sm:hidden`}>
-        <Link href={URL.Home} className={headerStyles.mobileLogo}>IRODORI</Link>
+        <Link href={URL.Home} className={headerStyles.mobileLogo}>
+          <LogoMark size={26} />
+          <span>イロドリ</span>
+        </Link>
         <button
           onClick={() => setIsOpen(o => !o)}
           className={headerStyles.hamburger}

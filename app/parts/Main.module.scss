@@ -22,17 +22,27 @@
     position: relative;
     min-height: calc(var(--full-h, 100svh) - 56px);
     display: flex;
-    align-items: center;
+    align-items: stretch;
     @include sm {
         min-height: 100dvh;
+        align-items: center;
     }
 }
 
 .heroInner {
     position: relative;
     z-index: 1;
-    padding: 8vw 5vw clamp(24px, 10vw, 80px);
+    width: 100%;
+    // モバイル: h1を上部・subを下部に分離してキャラとの被りを回避
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(var(--full-h, 100svh) - 56px);
+    padding: 10vw 5vw 12vw;
+
     @include sm {
+        display: block;
+        min-height: auto;
         padding: 5vw max(2rem, calc((100% - 1200px) / 2));
     }
 }
@@ -42,9 +52,10 @@
     line-height: 1.25;
     font-size: clamp(22px, 5.5vw, 80px);
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     @include sm {
         font-size: clamp(28px, 5.5vw, 80px);
+        margin-bottom: 2rem;
     }
 }
 

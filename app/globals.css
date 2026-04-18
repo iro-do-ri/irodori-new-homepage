@@ -62,15 +62,26 @@ time {
 .splide__pagination__page.is-active {
   background: #fffcff;
 }
-/* ScrollSmoother */
-#smooth-wrapper {
-  overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
+/* ScrollSmoother — デスクトップのみ有効 */
+@media (min-width: 640px) {
+  #smooth-wrapper {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  #smooth-wrapper {
+    position: static;
+    overflow: visible;
+    height: auto;
+    width: 100%;
+  }
 }
 
 #smooth-content {

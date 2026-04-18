@@ -1,5 +1,4 @@
 import { client } from "../../lib/Micro";
-import Header from "@/app/parts/Header";
 import { URL } from "../../url/Url";
 import Link from "next/link";
 import styles from "./NewsDetail.module.scss";
@@ -69,7 +68,6 @@ export default async function NewsDetail({
 
   return (
     <section className="flex">
-      <Header />
 
       <div className={styles.wrapper}>
         {/* ── ヒーロー ── */}

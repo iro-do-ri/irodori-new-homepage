@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "../../parts/Header";
 import Link from "next/link";
 import { URL } from "../../url/Url";
 import Breadcrumb from "../../parts/Breadcrumb";
@@ -40,7 +39,6 @@ export const metadata: Metadata = {
 export default function HummingBirdPage() {
   return (
     <section className="flex">
-      <Header />
 
       <div className={styles.wrapper}>
         {/* ── ヒーロー ── */}

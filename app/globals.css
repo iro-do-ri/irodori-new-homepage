@@ -62,3 +62,17 @@ time {
 .splide__pagination__page.is-active {
   background: #fffcff;
 }
+/* ScrollSmoother */
+#smooth-wrapper {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+}

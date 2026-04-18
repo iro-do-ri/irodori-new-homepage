@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "@/app/parts/Header";
 import { getAllPostSlugs, getPostBySlug, getAllPosts } from "@/app/lib/posts";
 import styles from "./PostDetail.module.scss";
 import Breadcrumb from "@/app/parts/Breadcrumb";
@@ -60,7 +59,6 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <section className="flex">
-      <Header />
 
       <div className={styles.wrapper}>
         {/* ── ヒーロー ── */}

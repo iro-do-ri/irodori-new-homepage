@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import styles from "./Price.module.scss";
@@ -126,7 +125,6 @@ const faqs = [
 export default function Price() {
   return (
     <section className="flex">
-      <Header />
 
       <div className={styles.wrapper}>
 

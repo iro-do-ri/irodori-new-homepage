@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import Header from "../parts/Header";
 import Contact from "../parts/Contact";
 import Breadcrumb from "../parts/Breadcrumb";
 import styles from "../parts/Contact.module.scss";
@@ -40,7 +39,6 @@ const breadcrumbLd = {
 export default function ContactPage() {
   return (
     <section className="flex">
-      <Header />
       <div className={styles.contactWrapper}>
         <Breadcrumb items={[{ label: "お問い合わせ" }]} />
         <Suspense fallback={null}>

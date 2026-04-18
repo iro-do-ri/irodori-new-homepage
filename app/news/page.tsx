@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import { client } from "../lib/Micro";
@@ -51,7 +50,6 @@ export default async function NewsPage() {
 
   return (
     <section className="flex">
-      <Header />
 
       <div className={styles.wrapper}>
 

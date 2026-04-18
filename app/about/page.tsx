@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import styles from "./About.module.scss";
@@ -31,7 +30,6 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <section className="flex">
-      <Header />
 
       <div className={styles.wrapper}>
 

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Header from "../parts/Header";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import { getAllPosts } from "../lib/posts";
@@ -64,7 +63,6 @@ export default async function BlogPage({
 
   return (
     <section className="flex">
-      <Header />
 
       <div className={styles.wrapper}>
 

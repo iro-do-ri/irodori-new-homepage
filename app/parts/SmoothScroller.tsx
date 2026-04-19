@@ -1,6 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
@@ -12,6 +13,8 @@ export default function SmoothScroller({ children }: { children: React.ReactNode
   const wrapperRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const smootherRef = useRef<ReturnType<typeof ScrollSmoother.create> | null>(null);
+  const pathname = usePathname();
+  const isFirstNav = useRef(true);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -42,6 +45,21 @@ export default function SmoothScroller({ children }: { children: React.ReactNode
 
     return () => clearTimeout(timer);
   }, []);
+
+  // ページ遷移時: smoothを一時的に0にして即座にトップへ移動
+  useEffect(() => {
+    if (isFirstNav.current) {
+      isFirstNav.current = false;
+      return;
+    }
+    smootherRef.current?.smooth(0);
+    smootherRef.current?.scrollTop(0);
+
+    const timer = setTimeout(() => {
+      smootherRef.current?.smooth(1.2);
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [pathname]);
 
   return (
     <div ref={wrapperRef} id="smooth-wrapper">

@@ -231,14 +231,14 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 252, 255, 0.1);
-  color: $main-color;
+  background: #d95911;
+  color: #fff;
   font-size: clamp(13px, 1.6vw, 15px);
   font-weight: 700;
   letter-spacing: 0.06em;
   padding: 0.9rem 2.25rem;
   border-radius: 50rem;
-  border: 1.5px solid rgba(255, 252, 255, 0.35);
+  border: none;
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -249,7 +249,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(255, 252, 255, 0.15);
+    background: #bf4e0f;
     z-index: -1;
     clip-path: inset(0 100% 0 0);
     transition: clip-path 0.4s $cubic-bezier;

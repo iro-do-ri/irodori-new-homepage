@@ -64,9 +64,9 @@ export default function Main({ works }: { works: Work[] }) {
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>WordPress CMSで自社更新できる</li>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>公開後のサポートあり</li>
           </ul>
-          <Link href={URL.Contact} className={styles.campaignBtn} aria-label="期間限定プランの無料相談へ">
-            無料で相談してみる
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <Link href={URL.Contact} className={`${styles.box_button} inline-block`} aria-label="期間限定プランの無料相談へ">
+            <span className={`${styles.background_button} ${styles.campaign_button}`}></span>
+            <span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料で相談してみる</span>
           </Link>
         </div>
       </section>

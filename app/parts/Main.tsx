@@ -41,6 +41,36 @@ export default function Main({ works }: { works: Work[] }) {
         </div>
       </section>
 
+      {/* ── 期間限定キャンペーン ── */}
+      <section className={styles.campaign}>
+        <div className={styles.campaignInner}>
+          <div className={styles.campaignBadgeWrap}>
+            <span className={styles.campaignBadge}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+              今だけの特別サービス
+            </span>
+          </div>
+          <p className={styles.campaignTarget}>開業したての個人事業主の方へ</p>
+          <h2 className={styles.campaignTitle}>
+            <em className={styles.campaignPrice}>10万円</em>で<br />
+            &ldquo;集客できる&rdquo;ホームページ
+          </h2>
+          <p className={styles.campaignDesc}>
+            開業直後の集客は時間との勝負。SEO設計済みの本格ホームページを、<br className="hidden sm:block" />
+            今だけの特別価格でご提供します。まずはお気軽にご相談ください。
+          </p>
+          <ul className={styles.campaignPoints}>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>SEO設計・キーワード構成込み</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>WordPress CMSで自社更新できる</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>公開後のサポートあり</li>
+          </ul>
+          <Link href={URL.Contact} className={styles.campaignBtn} aria-label="期間限定プランの無料相談へ">
+            無料で相談してみる
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </Link>
+        </div>
+      </section>
+
       {/* ── 料金説明 ── */}
       <section className={`${styles.priceSection} relative`}>
         <div className={styles.priceSectionInner}>

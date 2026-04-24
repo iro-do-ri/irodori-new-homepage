@@ -181,7 +181,7 @@ export default function Contact() {
 
         <p className={styles.desc}>
           ホームページ制作・リニューアル・SEO対策・チラシデザインなど、お気軽にご相談ください。<br className="sm:block hidden" />
-          千葉県船橋を拠点に、全国のお客様に対応しております。
+          千葉・船橋を拠点に、全国のお客様に対応しております。
         </p>
       </div>
     </section>

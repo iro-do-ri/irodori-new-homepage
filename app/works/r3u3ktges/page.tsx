@@ -5,14 +5,14 @@ import Breadcrumb from "../../parts/Breadcrumb";
 import styles from "./Soluna.module.scss";
 
 export const metadata: Metadata = {
-  title: { absolute: "SOLUNA｜制作実績｜千葉県船橋のホームページ制作 イロドリ" },
+  title: { absolute: "SOLUNA｜制作実績｜千葉・船橋のホームページ制作 イロドリ" },
   description:
     "エステサロン「SOLUNA」のコーポレートサイト制作実績。妊活・マタニティ・産後の女性に寄り添う温もりある設計と、柔らかいベージュ系カラーで上質な雰囲気を表現した事例です。",
   keywords: ["船橋", "千葉県", "エステサロン", "制作実績", "ホームページ制作", "イロドリ", "SOLUNA"],
   alternates: { canonical: "https://iro-do-ri.jp/works/r3u3ktges" },
   openGraph: {
     type: "article",
-    title: "SOLUNA｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
+    title: "SOLUNA｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
     description:
       "エステサロン「SOLUNA」のコーポレートサイト制作実績。妊活・マタニティ・産後の女性に寄り添う温もりある設計と、柔らかいベージュ系カラーで上質な雰囲気を表現した事例です。",
     url: "https://iro-do-ri.jp/works/r3u3ktges",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SOLUNA｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
+    title: "SOLUNA｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
     description:
       "エステサロン「SOLUNA」のコーポレートサイト制作実績。妊活・マタニティ・産後の女性に寄り添う温もりある設計と上質なデザインの事例。",
     images: [

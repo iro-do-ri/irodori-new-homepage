@@ -104,7 +104,7 @@ export default async function Image({ params }: Props) {
               display: "flex",
             }}
           >
-            千葉県船橋
+            千葉・船橋
           </div>
         </div>
       </div>

@@ -5,14 +5,14 @@ import Breadcrumb from "../../parts/Breadcrumb";
 import styles from "./Chintai.module.scss";
 
 export const metadata: Metadata = {
-  title: { absolute: "賃貸オフィス東京.com｜制作実績｜千葉県船橋のホームページ制作 イロドリ" },
+  title: { absolute: "賃貸オフィス東京.com｜制作実績｜千葉・船橋のホームページ制作 イロドリ" },
   description:
     "「賃貸オフィス東京.com」のブログサイト制作実績。オフィス移転・賃貸事務所探しをサポートする情報メディアとして、SEOを意識した記事設計と更新しやすいCMS構築で制作した事例です。",
-  keywords: ["船橋", "千葉県", "不動産", "ブログサイト", "制作実績", "ホームページ制作", "イロドリ", "賃貸オフィス"],
+  keywords: ["船橋", "千葉", "不動産", "ブログサイト", "制作実績", "ホームページ制作", "イロドリ", "賃貸オフィス"],
   alternates: { canonical: "https://iro-do-ri.jp/works/1r782nokn" },
   openGraph: {
     type: "article",
-    title: "賃貸オフィス東京.com｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
+    title: "賃貸オフィス東京.com｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
     description:
       "「賃貸オフィス東京.com」のブログサイト制作実績。SEO設計とWordPress CMS構築で情報メディアを制作した事例。",
     url: "https://iro-do-ri.jp/works/1r782nokn",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "賃貸オフィス東京.com｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
+    title: "賃貸オフィス東京.com｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
     description:
       "「賃貸オフィス東京.com」のブログサイト制作実績。SEO設計とCMS構築による情報メディアの事例。",
     images: [

@@ -22,7 +22,7 @@ export default function Footer() {
               <LogoMark size={32} />
               <span>イロドリ</span>
             </p>
-            <p className={footer.tagline}>千葉県船橋で魅力を伝えるWEBデザイン・ホームページ制作会社</p>
+            <p className={footer.tagline}>千葉・船橋で魅力を伝えるWEBデザイン・ホームページ制作会社</p>
           </div>
           <nav className={footer.nav}>
             {navLinks.map((link) => (

@@ -13,16 +13,16 @@ export async function generateMetadata({
   const { id } = await params;
   try {
     const data = await client.get({ endpoint: "news", contentId: id });
-    const title = `${data.title}｜千葉県船橋のホームページ制作 イロドリ`;
+    const title = `${data.title}｜千葉・船橋のホームページ制作 イロドリ`;
     const url = `https://iro-do-ri.jp/news/${id}`;
     const description = data.description
       || (data.contents
         ? data.contents.replace(/<[^>]*>/g, "").substring(0, 120) + "…"
-        : `${data.title}｜千葉県船橋のホームページ制作会社イロドリからのお知らせです。`);
+        : `${data.title}｜千葉・船橋のホームページ制作会社イロドリからのお知らせです。`);
     return {
       title: { absolute: title },
       description,
-      keywords: ["船橋", "千葉県", "千葉県船橋", "ホームページ制作", "Webデザイン", "イロドリ"],
+      keywords: ["船橋", "千葉", "千葉・船橋", "千葉 ホームページ制作", "ホームページ制作", "Webデザイン", "イロドリ"],
       alternates: { canonical: url },
       openGraph: {
         title,

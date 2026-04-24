@@ -7,6 +7,19 @@ import { useSearchParams } from "next/navigation";
 export default function Contact() {
   const searchParams = useSearchParams();
   const loadedAt = useRef<number>(Date.now());
+  const hasHovered = useRef(false);
+
+  const handleFormHover = () => {
+    if (hasHovered.current) return; // 1回だけ発火
+    hasHovered.current = true;
+    if (typeof window !== "undefined") {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push({
+        event: "contact_form_hover",
+        form_name: "contact_form",
+      });
+    }
+  };
   const [form, setForm] = useState({
     company: "",
     name: "",
@@ -50,7 +63,7 @@ export default function Contact() {
   };
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} onMouseEnter={handleFormHover}>
       <div className={styles.card}>
         <div className={styles.cardHeader}>
           <span className={styles.en}>Contact</span>

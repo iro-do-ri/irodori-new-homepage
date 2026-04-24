@@ -90,6 +90,12 @@ export default function Header() {
           </nav>
 
           <div className={headerStyles.sidebarBottom}>
+            <a href="tel:08055435943" className={headerStyles.sidebarPhone}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true">
+                <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.47 11.47 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.19z"/>
+              </svg>
+              080-5543-5943
+            </a>
             <Link href={URL.Contact} className={headerStyles.sidebarCta}>
               お問い合わせ
             </Link>

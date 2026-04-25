@@ -46,7 +46,7 @@ export async function generateMetadata({
   };
 }
 
-const CATEGORIES = ["全て", "ホームページ制作", "SEO対策", "チラシ制作", "WEBデザイン"] as const;
+const CATEGORIES = ["全て", "ホームページ制作", "SEO対策", "AI", "チラシ制作", "WEBデザイン"] as const;
 
 export default async function BlogPage({
   searchParams,

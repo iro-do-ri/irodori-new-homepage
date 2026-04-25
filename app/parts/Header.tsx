@@ -100,7 +100,7 @@ export default function Header() {
               </a>
             </div>
             <Link href={URL.Contact} className={headerStyles.sidebarCta}>
-              お問い合わせ
+              無料で相談する
             </Link>
           </div>
         </div>

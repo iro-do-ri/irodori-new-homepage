@@ -32,15 +32,15 @@ Googleビジネスプロフィールとは、Googleマップや検索結果に�
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:1rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">費用</div>
       <div style="color:#333">完全無料</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">効果</div>
       <div style="color:#333">「〇〇 地域名」で検索した際にマップに表示される。地域集客に直結</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">優先度</div>
       <div style="color:#333">★★★★★（実店舗・地域ビジネスには最重要）</div>
     </div>
@@ -84,23 +84,23 @@ SEOで「どの検索キーワードで上位表示を狙うか」は非常に�
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:1rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">タイトルタグ</div>
       <div style="color:#333">各ページのタイトルにキーワードを含める（例：「船橋のホームページ制作｜イロドリ」）</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">メタディスクリプション</div>
       <div style="color:#333">検索結果に表示される説明文。サービスの強みを120文字以内で書く</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">見出し構造</div>
       <div style="color:#333">ページの内容をH1・H2・H3で整理。キーワードを見出しに含める</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">表示速度</div>
       <div style="color:#333">ページの読み込みが遅いとSEOに悪影響。画像の最適化は必須</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">スマホ対応</div>
       <div style="color:#333">Googleはモバイルファーストインデックスを採用。スマホでの表示最適化は必須</div>
     </div>

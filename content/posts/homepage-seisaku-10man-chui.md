@@ -19,15 +19,15 @@ slug: "homepage-seisaku-10man-chui"
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:1rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">作れるもの</div>
       <div style="color:#333">1〜5ページ程度のシンプルなコーポレートサイト・ランディングページ</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">難しいもの</div>
       <div style="color:#333">10ページ以上の大規模サイト・ECサイト・高度なアニメーション・予約システム連携</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">条件次第</div>
       <div style="color:#333">WordPress導入・CMS構築・SEO対策（制作会社によって含む範囲が大きく異なる）</div>
     </div>
@@ -90,15 +90,15 @@ slug: "homepage-seisaku-10man-chui"
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:1rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">サーバー費</div>
       <div style="color:#333">月額1,000〜3,000円程度が継続的にかかる</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">保守費</div>
       <div style="color:#333">WordPress等のアップデート・セキュリティ対策（月額5,000〜3万円程度）</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">SEO費</div>
       <div style="color:#333">ブログ記事制作・キーワード対策（月額〜数万円）</div>
     </div>

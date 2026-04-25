@@ -46,23 +46,23 @@ slug: "web-seisaku-kaisha-oote-hiyo"
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:.8rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">プロジェクトマネージャー</div>
       <div style="color:#333">全体進行・スケジュール管理・クライアント折衝を担当。専任1〜2名。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">UIデザイナー</div>
       <div style="color:#333">ビジュアルデザイン・ブランドガイドライン策定を担当。専任1〜3名。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">フロントエンドエンジニア</div>
       <div style="color:#333">HTML/CSS/JSの実装・パフォーマンス最適化を担当。専任1〜3名。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">バックエンドエンジニア</div>
       <div style="color:#333">CMS・API・データベース・セキュリティを担当。専任1〜2名。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">SEO・コンテンツ担当</div>
       <div style="color:#333">キーワード設計・ライティング・構造最適化を担当。</div>
     </div>

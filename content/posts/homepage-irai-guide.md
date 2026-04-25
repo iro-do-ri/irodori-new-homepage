@@ -32,19 +32,19 @@ slug: "homepage-irai-guide"
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:1rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">大手制作会社</div>
       <div style="color:#333">実績・品質は高いが費用も高額（50万〜）。大規模サイトや上場企業向け。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">中小制作会社</div>
       <div style="color:#333">コストと品質のバランスが良い（10〜50万）。中小企業・個人事業主に最適。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">フリーランス</div>
       <div style="color:#333">低コスト（5〜20万）だが担当者1人のため、対応スピードや品質にばらつきあり。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">無料ツール自作</div>
       <div style="color:#333">費用は最安だが、SEO・デザイン品質・機能に限界あり。時間コストも大きい。</div>
     </div>

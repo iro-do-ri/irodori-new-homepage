@@ -23,11 +23,11 @@ Web・アプリのデザインに世界中のプロが使う定番ツールで�
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:1rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">こんな人に</div>
       <div style="color:#333">ホームページのレイアウトを依頼前に自分でイメージしたい方・制作会社との認識合わせに使いたい方</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">無料範囲</div>
       <div style="color:#333">ドラフトファイル3件まで・共同編集・プロトタイプ作成すべて無料</div>
     </div>
@@ -210,15 +210,15 @@ HTMLに直接クラスを書くだけでデザインを組めるため、カス�
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:1rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">まず①</div>
       <div style="color:#333"><strong>Canva</strong>：直感的に使えて、バナーや画像をすぐ作れる</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">まず②</div>
       <div style="color:#333"><strong>Google Search Console</strong>：公開済みサイトがあるなら今すぐ登録</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">まず③</div>
       <div style="color:#333"><strong>PageSpeed Insights</strong>：自社サイトのURLを入れて現状を把握する</div>
     </div>

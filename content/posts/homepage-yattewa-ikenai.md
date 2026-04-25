@@ -79,15 +79,15 @@ Googleはスマートフォン対応のサイトを優先して検索上位に�
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:1rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">✅ 推奨</div>
       <div style="color:#333">実際のスタッフ・店舗・施工事例など「リアルな写真」を使う。信頼感と親近感が増す。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">⚠️ 注意</div>
       <div style="color:#333">フリー素材のみで構成されたサイトは「どこにでもある感」が出やすい。適切に補完として使う。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">❌ NG</div>
       <div style="color:#333">ぼやけた・暗い・解像度の低い写真は使わない。プロの写真撮影を検討する価値あり。</div>
     </div>

@@ -15,19 +15,19 @@ web制作が副業として人気を集めているのには、明確な理由�
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:.8rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">場所を選ばない</div>
       <div style="color:#333">パソコン1台とインターネット環境があれば、自宅・カフェ・どこでも仕事ができる。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">時間の自由度が高い</div>
       <div style="color:#333">クライアントとの納期さえ守れば、作業時間は深夜・早朝・休日など自分で決められる。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">需要が安定している</div>
       <div style="color:#333">中小企業・個人事業主のデジタル化が進むなか、ホームページ制作の需要は継続的に存在する。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">スキルが資産になる</div>
       <div style="color:#333">習得したスキルは副業にとどまらず、転職・独立・フリーランスへのキャリアチェンジにも活かせる。</div>
     </div>
@@ -126,15 +126,15 @@ X（旧Twitter）やInstagramで学習の過程や制作物を発信すること
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
   <div style="display:flex;flex-direction:column;gap:.8rem">
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">案件を詰め込みすぎない</div>
       <div style="color:#333">本業に影響が出るほどの受注は本末転倒。最初は月1〜2件からペースをつかむ。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">納期は余裕をもって設定する</div>
       <div style="color:#333">本業の繁忙期・連休・体調不良を想定し、納期は余裕のあるスケジュールを提示する。</div>
     </div>
-    <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+    <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
       <div style="background:#3364AE;color:#fffcff;padding:.4rem .9rem;border-radius:6px;font-weight:bold;white-space:nowrap">テンプレートを整備する</div>
       <div style="color:#333">よく使うコーディングパターン・見積書・契約書テンプレートを用意することで作業効率を上げる。</div>
     </div>

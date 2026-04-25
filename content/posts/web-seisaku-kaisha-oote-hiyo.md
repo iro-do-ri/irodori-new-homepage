@@ -2,7 +2,7 @@
 title: "大手web制作会社の費用相場｜見積もり内訳と依頼時の注意点"
 description: "大手web制作会社に依頼する際の費用相場・見積もりの内訳・高額になりやすい理由・依頼前に確認すべき注意点を詳しく解説します。"
 date: "2026-04-17"
-category: "web制作"
+category: "ホームページ制作"
 slug: "web-seisaku-kaisha-oote-hiyo"
 ---
 

@@ -46,17 +46,23 @@ export async function generateMetadata({
   };
 }
 
+const CATEGORIES = ["全て", "ホームページ制作", "SEO対策", "チラシ制作", "WEBデザイン"] as const;
+
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams: Promise<{ page?: string }>;
+  searchParams: Promise<{ page?: string; category?: string }>;
 }) {
-  const { page: pageParam } = await searchParams;
+  const { page: pageParam, category: categoryParam } = await searchParams;
   const currentPage = Math.max(1, Number(pageParam) || 1);
+  const activeCategory = categoryParam && CATEGORIES.includes(categoryParam as typeof CATEGORIES[number]) ? categoryParam : "全て";
 
   const allPosts = getAllPosts();
-  const totalPages = Math.ceil(allPosts.length / PER_PAGE);
-  const posts = allPosts.slice(
+  const filteredPosts = activeCategory === "全て"
+    ? allPosts
+    : allPosts.filter((p) => p.category === activeCategory);
+  const totalPages = Math.ceil(filteredPosts.length / PER_PAGE);
+  const posts = filteredPosts.slice(
     (currentPage - 1) * PER_PAGE,
     currentPage * PER_PAGE
   );
@@ -109,7 +115,25 @@ export default async function BlogPage({
           <div className={styles.section}>
             <div className={styles.sectionInner}>
               <span className={styles.sectionLabel}>ARTICLES</span>
-              <h2 className={styles.sectionTitle}>ホームページ制作コラム</h2>
+              <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>ホームページ制作コラム</h2>
+                <div className={styles.filterGroup}>
+                  {CATEGORIES.map((cat) => {
+                    const href = cat === "全て" ? "/blog" : `/blog?category=${encodeURIComponent(cat)}`;
+                    const isActive = cat === activeCategory;
+                    return (
+                      <Link
+                        key={cat}
+                        href={href}
+                        className={`${styles.filterBtn} ${isActive ? styles.filterBtnActive : ""}`}
+                        aria-current={isActive ? "true" : undefined}
+                      >
+                        {cat}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
               <div className={styles.grid}>
                 {posts.map((post) => (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
@@ -137,7 +161,9 @@ export default async function BlogPage({
                 <nav className={styles.pagination} aria-label="ページナビゲーション">
                   {currentPage > 1 && (
                     <Link
-                      href={currentPage === 2 ? "/blog" : `/blog?page=${currentPage - 1}`}
+                      href={currentPage === 2
+                        ? (activeCategory === "全て" ? "/blog" : `/blog?category=${encodeURIComponent(activeCategory)}`)
+                        : (activeCategory === "全て" ? `/blog?page=${currentPage - 1}` : `/blog?category=${encodeURIComponent(activeCategory)}&page=${currentPage - 1}`)}
                       className={styles.pageBtn}
                     >
                       ← 前のページ
@@ -147,7 +173,9 @@ export default async function BlogPage({
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
                       <Link
                         key={p}
-                        href={p === 1 ? "/blog" : `/blog?page=${p}`}
+                        href={p === 1
+                          ? (activeCategory === "全て" ? "/blog" : `/blog?category=${encodeURIComponent(activeCategory)}`)
+                          : (activeCategory === "全て" ? `/blog?page=${p}` : `/blog?category=${encodeURIComponent(activeCategory)}&page=${p}`)}
                         className={`${styles.pageNumber} ${p === currentPage ? styles.pageNumberActive : ""}`}
                         aria-current={p === currentPage ? "page" : undefined}
                       >
@@ -157,7 +185,7 @@ export default async function BlogPage({
                   </div>
                   {currentPage < totalPages && (
                     <Link
-                      href={`/blog?page=${currentPage + 1}`}
+                      href={activeCategory === "全て" ? `/blog?page=${currentPage + 1}` : `/blog?category=${encodeURIComponent(activeCategory)}&page=${currentPage + 1}`}
                       className={styles.pageBtn}
                     >
                       次のページ →

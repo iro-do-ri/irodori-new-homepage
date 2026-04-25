@@ -2,7 +2,7 @@
 title: "web制作を副業で始める方法｜必要なスキル・収入・注意点を解説"
 description: "web制作を副業として始めたい方に向けて、必要なスキル・学習の進め方・収入の目安・仕事の取り方・注意点をわかりやすく解説します。"
 date: "2026-04-17"
-category: "web制作"
+category: "ホームページ制作"
 slug: "web-seisaku-fukugyou"
 ---
 

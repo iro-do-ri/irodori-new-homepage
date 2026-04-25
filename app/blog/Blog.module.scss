@@ -70,7 +70,50 @@
     font-weight: 700;
     line-height: 1.35;
     color: $text-color;
+    margin-bottom: 0;
+}
+
+// ── セクションヘッダー（タイトル＋フィルター） ──
+.sectionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
     margin-bottom: 2.5rem;
+}
+
+// ── カテゴリフィルター ───────────────────────────
+.filterGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filterBtn {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: rgba(5, 8, 40, 0.55);
+    padding: 0.35rem 0.9rem;
+    border: 1px solid rgba(5, 8, 40, 0.18);
+    border-radius: 50rem;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    white-space: nowrap;
+
+    &:hover {
+        border-color: $button-color;
+        color: $button-color;
+    }
+}
+
+.filterBtnActive {
+    background: $button-color;
+    border-color: $button-color;
+    color: #fffcff !important;
+    pointer-events: none;
 }
 
 // ── カードグリッド ───────────────────────────────

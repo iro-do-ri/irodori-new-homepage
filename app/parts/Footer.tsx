@@ -34,6 +34,9 @@ export default function Footer() {
           </nav>
         </div>
         <div className={footer.bottom}>
+          <div className={footer.legalLinks}>
+            <Link href={URL.Privacy}>プライバシーポリシー</Link>
+          </div>
           <p className={footer.copy}>© {new Date().getFullYear()} イロドリ All rights reserved.</p>
         </div>
       </div>

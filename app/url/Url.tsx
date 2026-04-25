@@ -6,4 +6,5 @@ export const URL = {
     Price: "/price",
     Contact: "/contact",
     News: "/news",
+    Privacy: "/privacy",
 }

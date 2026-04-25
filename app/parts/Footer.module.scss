@@ -102,8 +102,28 @@
         border-top: 1px solid rgba(255, 252, 255, 0.12);
         padding-top: 1.5rem;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .legalLinks {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+            font-size: 12px;
+            font-weight: 300;
+            color: $main-color;
+            opacity: 0.4;
+            text-decoration: none;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
     }
 
     .copy {

@@ -86,7 +86,30 @@
             margin-bottom: 1.5rem;
         }
 
-        ul, ol {
+        ul {
+            padding-left: 0;
+            margin-bottom: 1.5rem;
+            list-style: none;
+
+            li {
+                font-size: clamp(14px, 1.8vw, 16px);
+                line-height: 1.6;
+                color: rgba(5, 8, 40, 0.75);
+                margin-bottom: 0.4rem;
+                padding-left: 1.4em;
+                position: relative;
+
+                &::before {
+                    content: "・";
+                    position: absolute;
+                    left: 0;
+                    color: #3364AE;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        ol {
             padding-left: 1.5rem;
             margin-bottom: 1.5rem;
 

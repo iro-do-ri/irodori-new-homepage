@@ -67,10 +67,10 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 
   const processed = await remark().use(remarkGfm).use(remarkRehype, { allowDangerousHtml: true }).use(rehypeRaw).use(rehypeStringify).process(content);
 
-  // <p>タグ内の「。」の後に改行を追加（見出し・テーブル・コードは除外）
+  // <p>タグ内の「。」の後に改行を追加（段落末尾の。は除外）
   const contentHtml = processed.toString().replace(
     /<p>([\s\S]*?)<\/p>/g,
-    (_, inner) => `<p>${inner.replace(/。(?=[^\s<])/g, "。<br>")}</p>`
+    (_, inner) => `<p>${inner.replace(/。(?!\s*<\/p>)(?!\s*$)/g, "。<br>")}</p>`
   );
 
   return {

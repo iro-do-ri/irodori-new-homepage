@@ -7,6 +7,55 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import Image from "next/image";
 
+const homePlans = [
+  {
+    type: "LIGHT",
+    name: "ライトプラン",
+    price: "100,000",
+    desc: "はじめてWebサイトを作る方や、シンプルで信頼感のあるサイトをお求めの方におすすめです。",
+    features: [
+      "1ページ以内",
+      "WordPress CMS導入（自社更新可）",
+      "デザインは固定デザイン",
+      "レスポンシブ対応",
+      "お問い合わせフォーム",
+    ],
+    featured: false,
+  },
+  {
+    type: "STANDARD",
+    name: "スタンダードプラン",
+    price: "300,000",
+    desc: "CMS導入で自社更新が可能。SEO対策も行いたいスモールビジネス向けの定番プランです。",
+    features: [
+      "5ページ以内",
+      "WordPress CMS導入（自社更新可）",
+      "デザインはオリジナル",
+      "レスポンシブ対応",
+      "簡易的なSEO対策",
+      "お問い合わせフォーム",
+      "公開後、保守サポート（3ヶ月）",
+    ],
+    featured: true,
+  },
+  {
+    type: "FULL CUSTOM",
+    name: "フルカスタムプラン",
+    price: "500,000",
+    desc: "ブランドの世界観を最大限に表現したいお客様向け。Micro CMS導入でセキュリティも万全、SEO対策も対応。",
+    features: [
+      "10ページ以内",
+      "Micro CMS導入（自社更新可）",
+      "デザインはオリジナル",
+      "レスポンシブ対応",
+      "3ヶ月間のSEO対策・分析",
+      "お問い合わせフォーム",
+      "公開後、保守サポート（6ヶ月）",
+    ],
+    featured: false,
+  },
+];
+
 type Work = {
   id: string;
   title: string;
@@ -82,15 +131,37 @@ export default function Main({ works }: { works: Work[] }) {
             スモールビジネスオーナー様のニーズに応えるためのプランがございます。
           </p>
           <div className={styles.planGrid}>
-            <div className={styles.planCard}>
-              <Image src="/svg/right-plan.svg" alt="ライトプラン｜ホームページ制作10万円〜" width={400} height={500} className={styles.planImg} />
-            </div>
-            <div className={styles.planCard}>
-              <Image src="/svg/standard-plan.svg" alt="スタンダードプラン｜ホームページ制作30万円〜" width={400} height={500} className={styles.planImg} />
-            </div>
-            <div className={styles.planCard}>
-              <Image src="/svg/fullcustom-plan.svg" alt="フルカスタムプラン｜完全オーダーメイドホームページ制作" width={400} height={500} className={styles.planImg} />
-            </div>
+            {homePlans.map((plan) => (
+              <div
+                key={plan.type}
+                className={`${styles.planCard} ${plan.featured ? styles.planCardFeatured : ""}`}
+              >
+                {plan.featured && (
+                  <span className={styles.planBadge}>おすすめ</span>
+                )}
+                <div className={styles.planCardInner}>
+                  <div className={styles.planHeader}>
+                    <span className={styles.planType}>{plan.type}</span>
+                    <p className={styles.planName}>{plan.name}</p>
+                    <p className={styles.planPrice}>
+                      <span className={styles.planPriceUnit}>¥</span>
+                      {plan.price}
+                      <span className={styles.planPriceSuffix}>〜（税抜）</span>
+                    </p>
+                  </div>
+                  <p className={styles.planDesc}>{plan.desc}</p>
+                  <hr className={styles.planDivider} />
+                  <ul className={styles.planFeatures}>
+                    {plan.features.map((f) => (
+                      <li key={f} className={styles.planFeatureItem}>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="flex justify-center mt-8 sm:mt-12">
             <Link href={URL.Price} className={`${styles.box_button} inline-block`} aria-label="料金ページへ移動します">

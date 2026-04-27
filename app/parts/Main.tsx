@@ -146,7 +146,7 @@ export default function Main({ works }: { works: Work[] }) {
                     <p className={styles.planPrice}>
                       <span className={styles.planPriceUnit}>¥</span>
                       {plan.price}
-                      <span className={styles.planPriceSuffix}>〜（税抜）</span>
+                      <span className={styles.planPriceSuffix}>〜（税込）</span>
                     </p>
                   </div>
                   <p className={styles.planDesc}>{plan.desc}</p>

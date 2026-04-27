@@ -51,6 +51,27 @@
             opacity: 0.5;
             line-height: 1.6;
             max-width: 380px;
+            margin-bottom: 0.6rem;
+        }
+
+        .address {
+            font-style: normal;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+
+            span, a {
+                font-size: 12px;
+                font-weight: 300;
+                color: $main-color;
+                opacity: 0.5;
+            }
+
+            a {
+                text-decoration: none;
+                transition: opacity 0.2s;
+                &:hover { opacity: 0.8; }
+            }
         }
     }
 

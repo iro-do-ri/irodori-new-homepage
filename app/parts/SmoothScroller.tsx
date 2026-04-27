@@ -46,7 +46,7 @@ export default function SmoothScroller({ children }: { children: React.ReactNode
     return () => clearTimeout(timer);
   }, []);
 
-  // ページ遷移時: 描画前にスクロール位置をリセット（useLayoutEffect = paint前に実行）
+  // ページ遷移時: Smoother を kill してスクロール位置を完全リセット
   useLayoutEffect(() => {
     if (isFirstNav.current) {
       isFirstNav.current = false;
@@ -55,23 +55,29 @@ export default function SmoothScroller({ children }: { children: React.ReactNode
 
     const isMobile = window.matchMedia("(max-width: 639px)").matches;
 
-    if (isMobile) {
-      window.scrollTo({ top: 0, behavior: "instant" });
-      return;
-    }
-
-    if (smootherRef.current) {
-      smootherRef.current.smooth(0);
-      smootherRef.current.scrollTop(0);
-    }
     window.scrollTo({ top: 0, behavior: "instant" });
 
+    if (isMobile) return;
+
+    // kill して内部 transform も含めて完全リセット
+    smootherRef.current?.kill();
+    smootherRef.current = null;
+
+    if (contentRef.current) {
+      contentRef.current.style.transform = "translateY(0px)";
+    }
+
     const timer = setTimeout(() => {
-      if (smootherRef.current) {
-        smootherRef.current.smooth(1.2);
-        ScrollTrigger.refresh();
-      }
-    }, 300);
+      if (!wrapperRef.current || !contentRef.current) return;
+      contentRef.current.style.transform = "";
+      smootherRef.current = ScrollSmoother.create({
+        wrapper: wrapperRef.current,
+        content: contentRef.current,
+        smooth: 1.2,
+        effects: true,
+      });
+    }, 100);
+
     return () => clearTimeout(timer);
   }, [pathname]);
 

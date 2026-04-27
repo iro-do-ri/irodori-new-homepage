@@ -46,19 +46,27 @@ export default function SmoothScroller({ children }: { children: React.ReactNode
     return () => clearTimeout(timer);
   }, []);
 
-  // ページ遷移時: smoothを一時的に0にして即座にトップへ移動
+  // ページ遷移時: スムーズスクロールを無効にして即座にトップへ移動
   useEffect(() => {
     if (isFirstNav.current) {
       isFirstNav.current = false;
       return;
     }
-    smootherRef.current?.smooth(0);
-    smootherRef.current?.scrollTop(0);
 
-    const timer = setTimeout(() => {
-      smootherRef.current?.smooth(1.2);
-    }, 50);
-    return () => clearTimeout(timer);
+    const isMobile = window.matchMedia("(max-width: 639px)").matches;
+
+    if (isMobile) {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    } else {
+      smootherRef.current?.smooth(0);
+      smootherRef.current?.scrollTop(0);
+      window.scrollTo({ top: 0, behavior: "instant" });
+
+      const timer = setTimeout(() => {
+        smootherRef.current?.smooth(1.2);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
   }, [pathname]);
 
   return (

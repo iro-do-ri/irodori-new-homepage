@@ -77,8 +77,11 @@ const jsonLd = [
     name: "イロドリ",
     url: "https://iro-do-ri.jp",
     description: "千葉・船橋を拠点とするホームページ制作・Webデザイン会社。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。",
+    telephone: "080-5543-5943",
     address: {
       "@type": "PostalAddress",
+      postalCode: "274-0065",
+      streetAddress: "高根台",
       addressLocality: "船橋市",
       addressRegion: "千葉県",
       addressCountry: "JP",

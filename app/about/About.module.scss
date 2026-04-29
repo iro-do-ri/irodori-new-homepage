@@ -266,10 +266,31 @@
     font-size: clamp(13px, 1.6vw, 15px);
     line-height: 1.6;
     color: rgba(5, 8, 40, 0.65);
+    margin-bottom: 1.2rem;
 
     @media (max-width: 639px) {
         text-align: left;
     }
+}
+
+.founderSkills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.founderSkillTag {
+    font-size: 12px;
+    font-weight: 500;
+    color: $button-color;
+    background: rgba(51, 100, 174, 0.08);
+    border: 1px solid rgba(51, 100, 174, 0.2);
+    border-radius: 50rem;
+    padding: 0.3rem 0.9rem;
+    letter-spacing: 0.05em;
 }
 
 // ── 会社概要テーブル ─────────────────────────────

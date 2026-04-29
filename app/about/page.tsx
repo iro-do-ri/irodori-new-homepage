@@ -154,10 +154,15 @@ export default function About() {
                 </p>
                 <p className={styles.founderRole}>Webデザイナー・イロドリ代表</p>
                 <p className={styles.founderBio}>
-                  船橋商工会議所で5年間、中小企業支援に従事。<br />
-                  現在は船橋・千葉を中心に、ホームページ制作とSEO対策を行うフリーランスWebデザイナーです。<br />
-                  丁寧なヒアリングを大切にし、集客につながるサイト制作を提供しています。
+                  Webデザイナー歴5年。ホームページ制作会社に1年半勤務後、独立。<br />
+                  船橋商工会議所での中小企業支援の経験を活かし、現在は千葉・船橋を中心に、集客につながるホームページ制作とSEO対策を提供しています。<br /><br />
+                  「見た目のきれいさ」だけでなく、「成果につながるデザイン」にこだわり、丁寧なヒアリングを大切にしています。
                 </p>
+                <ul className={styles.founderSkills}>
+                  {["WordPress", "Figma", "Next.js", "SEO対策", "レスポンシブデザイン"].map((skill) => (
+                    <li key={skill} className={styles.founderSkillTag}>{skill}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>

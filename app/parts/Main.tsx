@@ -72,7 +72,7 @@ export default function Main({ works }: { works: Work[] }) {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <h1 className={styles.heroTitle}>
-            <span className="block mb-2">千葉・船橋で魅力を伝える<br className="sm:hidden block" />ホームページ・WEBサイト制作会社</span>
+            <span className="block mb-2">千葉・船橋を拠点にデザインの魅力を伝える<br className="sm:hidden block" />ホームページ・WEBサイト制作会社</span>
             あなたの理想を<br />デザインで形にします
           </h1>
           <div className={styles.heroSub}>
@@ -99,10 +99,10 @@ export default function Main({ works }: { works: Work[] }) {
               今だけの特別サービス
             </span>
           </div>
-          <p className={styles.campaignTarget}>開業したての個人事業主の方へ</p>
+          <p className={styles.campaignTarget}>千葉または船橋で開業したての個人事業主の方へ</p>
           <h2 className={styles.campaignTitle}>
             <em className={styles.campaignPrice}>10万円</em>で<br />
-            &ldquo;集客できる&rdquo;ホームページ
+            &ldquo;集客できる&rdquo;ホームページを作ります。
           </h2>
           <p className={styles.campaignDesc}>
             開業直後の集客は時間との勝負。SEO設計済みの本格ホームページを、<br className="hidden sm:block" />
@@ -125,10 +125,10 @@ export default function Main({ works }: { works: Work[] }) {
         <div className={styles.priceSectionInner}>
           <span className={styles.curtainEyebrow}>PRICE &amp; PLAN</span>
           <h2 className="mb-4 sm:mb-6">ホームページ・WEBサイト制作の料金について</h2>
-          <h3 className="mb-2 sm:mb-3">スモールビジネス向け｜コストを抑えた高品質ホームページ制作</h3>
+          <h3 className="mb-2 sm:mb-3">中小企業・個人事業主向け｜コストを抑えた高品質ホームページ制作</h3>
           <p className="mb-8 sm:mb-12">
             イロドリでは、コストパフォーマンスを重視する<br className="hidden sm:block" />
-            スモールビジネスオーナー様のニーズに応えるためのプランがございます。
+            中小企業・個人事業主の経営者様のニーズに応えるためのプランがございます。
           </p>
           <div className={styles.planGrid}>
             {homePlans.map((plan) => (
@@ -177,7 +177,7 @@ export default function Main({ works }: { works: Work[] }) {
         <div className={styles.webSectionInner}>
           <span className={styles.curtainEyebrow}>WEB DESIGN</span>
           <h2 className="mb-6 sm:mb-12">千葉・船橋のホームページ制作｜<br />伝わるデザインと使いやすさを両立</h2>
-          <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせた千葉・船橋のホームページ制作をします。</h3>
+          <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせたホームページを制作をします。</h3>
           <p className="mb-2 sm:mb-3">
             イロドリでは、千葉・船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block" />
             ホームページ・WEBサイトを制作しています。
@@ -202,7 +202,7 @@ export default function Main({ works }: { works: Work[] }) {
         <div className={styles.flyerSectionInner}>
           <span className={styles.curtainEyebrow}>PRINT DESIGN</span>
           <h2 className="mb-6 sm:mb-12">チラシ・フライヤーデザイン制作</h2>
-          <h3 className="mb-2 sm:mb-3">集客に直結するチラシデザインを千葉・船橋で制作</h3>
+          <h3 className="mb-2 sm:mb-3">集客に直結するチラシデザインを制作</h3>
           <p className="mb-4 sm:mb-12">
             ホームページ制作と合わせてご依頼いただくことで、<br className="hidden sm:block" />
             WEBとチラシの統一感あるブランドイメージを実現。<br className="hidden sm:block" />
@@ -289,7 +289,7 @@ export default function Main({ works }: { works: Work[] }) {
             {[
               { num: "01", title: "SEO設計 × デザイン品質", body: "見た目の美しさだけでなく、キーワード設計・サイト構造・表示速度を考慮したSEO対策済みのホームページを制作します。" },
               { num: "02", title: "WordPress・CMSで更新しやすい", body: "専門知識がなくても更新できるCMSを導入。ブログや実績の更新を自社で簡単に継続できる環境を構築します。" },
-              { num: "03", title: "10万円〜の明瞭価格", body: "千葉・船橋の中小企業・個人事業主向けに、10万円から高品質なホームページ制作を明瞭価格でご提供します。" },
+              { num: "03", title: "10万円で高品質なサイト", body: "千葉・船橋の中小企業・個人事業主向けに、10万円から高品質なホームページ制作をご提供します。" },
               { num: "04", title: "公開後も安心サポート", body: "制作後の修正対応・操作説明・SEO分析など、長期的なサポートで安心してお任せいただけます。" },
             ].map((f) => (
               <div key={f.num} className={styles.featureCard} data-num={f.num}>
@@ -345,7 +345,7 @@ export default function Main({ works }: { works: Work[] }) {
         <div className={styles.seoTextInner}>
           <h2 className={styles.seoTextTitle}>千葉・船橋のホームページ制作はイロドリへ</h2>
           <p className={styles.seoTextBody}>
-            千葉・船橋を拠点に、中小企業・個人事業主のホームページ制作を10万円〜承っています。千葉のホームページ制作・船橋のホームページ制作のご依頼を随時受付中。WordPressによるCMS構築、SEOを意識したキーワード設計、公開後のサポートまで一貫して対応。まずはお気軽にご相談ください。
+            千葉・船橋を拠点に、中小企業・個人事業主のホームページ制作を10万円から承っています。<br />千葉のホームページ制作・船橋のホームページ制作のご依頼を随時受付中。WordPressによるCMS構築、SEOを意識したキーワード設計、公開後のサポートまで一貫して対応。<br />まずはお気軽にご相談ください。
           </p>
         </div>
       </section>

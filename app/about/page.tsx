@@ -159,7 +159,7 @@ export default function About() {
                   「見た目のきれいさ」だけでなく、「成果につながるデザイン」にこだわり、丁寧なヒアリングを大切にしています。
                 </p>
                 <ul className={styles.founderSkills}>
-                  {["WordPress", "Figma", "Next.js", "SEO対策", "レスポンシブデザイン", "Micro CMS", "Adobe Illustrator", "Photoshop"].map((skill) => (
+                  {["WordPress", "Figma", "Next.js", "SEO対策", "レスポンシブデザイン", "Micro CMS", "Adobe Illustrator", "Photoshop", "After Effects"].map((skill) => (
                     <li key={skill} className={styles.founderSkillTag}>{skill}</li>
                   ))}
                 </ul>

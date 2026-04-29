@@ -50,16 +50,12 @@ slug: "chiba-web-seisaku-kaisha-local-merit"
 
 メリットばかりではなく、注意すべき点もあります。
 
-<div style="background:#fff8e1;border-left:4px solid #f9a825;padding:1.2rem 1.5rem;border-radius:4px;margin:1.5rem 0;font-size:14px">
-
 | デメリット | 対策 |
 |---|---|
 | 大手に比べてデザイナーの専門性が偏ることがある | ポートフォリオで多様な実績を確認する |
 | 会社規模が小さく、繁忙期は対応が遅れることも | 制作スケジュールを事前に確認する |
 | 最新トレンドへの対応が遅い場合がある | 最近の制作事例を複数確認する |
 | 担当者が1人のケースは退職・廃業リスクがある | 会社の継続性・実績年数を確認する |
-
-</div>
 
 ---
 

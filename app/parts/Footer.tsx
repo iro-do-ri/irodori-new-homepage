@@ -22,7 +22,7 @@ export default function Footer() {
               <LogoMark size={32} />
               <span>イロドリ</span>
             </p>
-            <p className={footer.tagline}>千葉・船橋で魅力を伝えるWEBデザイン・ホームページ制作会社</p>
+            <p className={footer.tagline}>千葉県船橋で魅力を伝えるWEBデザイン・ホームページ制作会社</p>
             <address className={footer.address}>
               <span>〒274-0065 千葉県船橋市高根台</span>
               <a href="tel:08055435943">080-5543-5943</a>

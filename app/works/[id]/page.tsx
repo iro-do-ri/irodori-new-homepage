@@ -39,7 +39,7 @@ export async function generateMetadata({
     return {
       title: { absolute: title },
       description,
-      keywords: ["船橋", "千葉", "千葉・船橋", "制作実績", work.category, "ホームページ制作", "イロドリ"],
+      keywords: ["船橋", "千葉", "千葉県船橋", "制作実績", work.category, "ホームページ制作", "イロドリ"],
       alternates: { canonical: `https://iro-do-ri.jp/works/${id}` },
       openGraph: {
         type: "article",

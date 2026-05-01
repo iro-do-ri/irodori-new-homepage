@@ -22,7 +22,7 @@ export async function generateMetadata({
     return {
       title: { absolute: title },
       description,
-      keywords: ["船橋", "千葉", "千葉・船橋", "千葉 ホームページ制作", "ホームページ制作", "Webデザイン", "イロドリ"],
+      keywords: ["船橋", "千葉", "千葉県船橋", "千葉 ホームページ制作", "ホームページ制作", "Webデザイン", "イロドリ"],
       alternates: { canonical: url },
       openGraph: {
         title,

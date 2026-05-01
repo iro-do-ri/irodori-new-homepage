@@ -7,13 +7,13 @@ import Breadcrumb from "../parts/Breadcrumb";
 export const metadata: Metadata = {
   title: "会社概要｜千葉県船橋のホームページ制作会社イロドリ",
   description:
-    "千葉・船橋を拠点とするホームページ制作会社イロドリ。制作会社・事業会社での実務経験10年以上のWebデザイナーが、WordPress・SEO・UI設計を一気通貫でご対応します。",
-  keywords: ["船橋", "千葉", "千葉・船橋", "会社概要", "ホームページ制作", "Webデザイン", "イロドリ"],
+    "千葉県船橋を拠点とするホームページ制作会社イロドリ。制作会社・事業会社での実務経験10年以上のWebデザイナーが、WordPress・SEO・UI設計を一気通貫でご対応します。",
+  keywords: ["船橋", "千葉", "千葉県船橋", "会社概要", "ホームページ制作", "Webデザイン", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/about" },
   openGraph: {
     title: "会社概要｜千葉県船橋のホームページ制作会社イロドリ",
     description:
-      "千葉・船橋を拠点とするホームページ制作会社イロドリ。制作会社・事業会社での実務経験10年以上のWebデザイナーが、WordPress・SEO・UI設計を一気通貫でご対応します。",
+      "千葉県船橋を拠点とするホームページ制作会社イロドリ。制作会社・事業会社での実務経験10年以上のWebデザイナーが、WordPress・SEO・UI設計を一気通貫でご対応します。",
     url: "https://iro-do-ri.jp/about",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "会社概要｜千葉県船橋のホームページ制作会社イロドリ",
     description:
-      "千葉・船橋を拠点とするホームページ制作会社イロドリ。WordPress・SEO・UI設計を一気通貫でご対応。",
+      "千葉県船橋を拠点とするホームページ制作会社イロドリ。WordPress・SEO・UI設計を一気通貫でご対応。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -41,7 +41,7 @@ export default function About() {
             ホームページを作成します
           </h1>
           <p className={styles.description}>
-            千葉・船橋を拠点に、ホームページ・チラシ・動画制作を行う<br className="sm:block hidden" />
+            千葉県船橋を拠点に、ホームページ・チラシ・動画制作を行う<br className="sm:block hidden" />
             WEBデザイン会社のイロドリです。<br className="sm:block hidden" />
             お客様の想いを、デザインで形にします。
           </p>
@@ -155,7 +155,7 @@ export default function About() {
                 <p className={styles.founderRole}>Webデザイナー・イロドリ代表</p>
                 <p className={styles.founderBio}>
                   Webデザイナー歴5年。ホームページ制作会社に1年半勤務後、独立。<br />
-                  船橋商工会議所での中小企業支援の経験を活かし、現在は千葉・船橋を中心に、集客につながるホームページ制作とSEO対策を提供しています。<br /><br />
+                  船橋商工会議所での中小企業支援の経験を活かし、現在は千葉県船橋を中心に、集客につながるホームページ制作とSEO対策を提供しています。<br /><br />
                   「見た目のきれいさ」だけでなく、「成果につながるデザイン」にこだわり、丁寧なヒアリングを大切にしています。
                 </p>
                 <ul className={styles.founderSkills}>

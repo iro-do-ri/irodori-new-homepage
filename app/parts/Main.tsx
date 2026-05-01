@@ -72,12 +72,12 @@ export default function Main({ works }: { works: Work[] }) {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <h1 className={styles.heroTitle}>
-            <span className="block mb-2">千葉・船橋を拠点にデザインの魅力を伝える<br className="sm:hidden block" />ホームページ・WEBサイト制作会社</span>
+            <span className="block mb-2">千葉県船橋を拠点にデザインの魅力を伝える<br className="sm:hidden block" />ホームページ・WEBサイト制作会社</span>
             あなたの理想を<br />デザインで形にします
           </h1>
           <div className={styles.heroSub}>
             <p className="mb-4 block">
-              千葉・船橋を拠点に、<br />
+              千葉県船橋を拠点に、<br />
               ホームページ制作・チラシ・動画制作を行う<br />
               Webデザイン会社のイロドリです。<br className="hidden sm:block" />
               ホームページ制作を10万円からご対応します。
@@ -176,10 +176,10 @@ export default function Main({ works }: { works: Work[] }) {
       <section className={`${styles.webSection} relative`}>
         <div className={styles.webSectionInner}>
           <span className={styles.curtainEyebrow}>WEB DESIGN</span>
-          <h2 className="mb-6 sm:mb-12">千葉・船橋のホームページ制作｜<br />伝わるデザインと使いやすさを両立</h2>
+          <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作｜<br />伝わるデザインと使いやすさを両立</h2>
           <h3 className="mb-2 sm:mb-3">お客様のご要望に合わせたホームページを制作をします。</h3>
           <p className="mb-2 sm:mb-3">
-            イロドリでは、千葉・船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block" />
+            イロドリでは、千葉県船橋を拠点にお客様の目的に合わせた<br className="hidden sm:block" />
             ホームページ・WEBサイトを制作しています。
           </p>
           <p className="mb-6 sm:mb-12">
@@ -227,9 +227,9 @@ export default function Main({ works }: { works: Work[] }) {
       <section className={`${styles.worksSection} relative`}>
         <div className={`${styles.worksSectionInner} xl:max-w-[1200px] xl:w-full`}>
           <span className={styles.curtainEyebrow}>OUR WORKS</span>
-          <h2 className="mb-6 sm:mb-12">千葉・船橋のホームページ制作 実績紹介</h2>
+          <h2 className="mb-6 sm:mb-12">千葉県船橋のホームページ制作 実績紹介</h2>
           <h3 className="mb-2 sm:mb-3">飲食・士業・美容・医療など、多彩な業種のホームページを制作しています。</h3>
-          <p className="mb-6 sm:mb-12">千葉・船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
+          <p className="mb-6 sm:mb-12">千葉県船橋を中心にホームページ制作の実績の一部をご紹介いたします。</p>
           <Splide
             options={{
               type: works.length > 3 ? "loop" : "slide",
@@ -282,14 +282,14 @@ export default function Main({ works }: { works: Work[] }) {
       <section className={styles.features}>
         <div className={styles.featuresInner}>
           <h2 className={styles.secTitle}>
-            千葉・船橋のホームページ制作なら<br />
+            千葉県船橋のホームページ制作なら<br />
             イロドリが選ばれる理由
           </h2>
           <div className={styles.featuresGrid}>
             {[
               { num: "01", title: "SEO設計 × デザイン品質", body: "見た目の美しさだけでなく、キーワード設計・サイト構造・表示速度を考慮したSEO対策済みのホームページを制作します。" },
               { num: "02", title: "WordPress・CMSで更新しやすい", body: "専門知識がなくても更新できるCMSを導入。ブログや実績の更新を自社で簡単に継続できる環境を構築します。" },
-              { num: "03", title: "10万円で高品質なサイト", body: "千葉・船橋の中小企業・個人事業主向けに、10万円から高品質なホームページ制作をご提供します。" },
+              { num: "03", title: "10万円で高品質なサイト", body: "千葉県船橋の中小企業・個人事業主向けに、10万円から高品質なホームページ制作をご提供します。" },
               { num: "04", title: "公開後も安心サポート", body: "制作後の修正対応・操作説明・SEO分析など、長期的なサポートで安心してお任せいただけます。" },
             ].map((f) => (
               <div key={f.num} className={styles.featureCard} data-num={f.num}>
@@ -306,7 +306,7 @@ export default function Main({ works }: { works: Work[] }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "HowTo",
-        name: "千葉・船橋のホームページ制作の流れ",
+        name: "千葉県船橋のホームページ制作の流れ",
         description: "イロドリのホームページ制作は無料相談から公開後のサポートまで4ステップでご対応します。",
         step: [
           { "@type": "HowToStep", position: 1, name: "無料相談・ヒアリング", text: "目的・予算・スケジュールなどを丁寧にヒアリングします。まずはお気軽にご連絡ください。" },
@@ -320,7 +320,7 @@ export default function Main({ works }: { works: Work[] }) {
           <h2 className={styles.secTitle}>ホームページ制作の流れ</h2>
           <p className={styles.secDesc}>
             無料相談から公開後のサポートまで、<br className="hidden sm:block" />
-            千葉・船橋のホームページ制作会社イロドリが丁寧にサポートします。
+            千葉県船橋のホームページ制作会社イロドリが丁寧にサポートします。
           </p>
           <div className={styles.processSteps}>
             {[
@@ -343,9 +343,9 @@ export default function Main({ works }: { works: Work[] }) {
 
       <section className={styles.seoText}>
         <div className={styles.seoTextInner}>
-          <h2 className={styles.seoTextTitle}>千葉・船橋のホームページ制作はイロドリへ</h2>
+          <h2 className={styles.seoTextTitle}>千葉県船橋のホームページ制作はイロドリへ</h2>
           <p className={styles.seoTextBody}>
-            千葉・船橋を拠点に、中小企業・個人事業主のホームページ制作を10万円から承っています。<br />千葉のホームページ制作・船橋のホームページ制作のご依頼を随時受付中。WordPressによるCMS構築、SEOを意識したキーワード設計、公開後のサポートまで一貫して対応。<br />まずはお気軽にご相談ください。
+            千葉県船橋を拠点に、中小企業・個人事業主のホームページ制作を10万円から承っています。<br />千葉のホームページ制作・船橋のホームページ制作のご依頼を随時受付中。WordPressによるCMS構築、SEOを意識したキーワード設計、公開後のサポートまで一貫して対応。<br />まずはお気軽にご相談ください。
           </p>
         </div>
       </section>

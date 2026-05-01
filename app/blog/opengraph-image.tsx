@@ -96,7 +96,7 @@ export default async function Image() {
               display: "flex",
             }}
           >
-            千葉・船橋
+            千葉県船橋
           </div>
         </div>
       </div>

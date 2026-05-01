@@ -73,7 +73,7 @@ export default function Header() {
                 <LogoMark size={30} />
                 <span className={headerStyles.brandName}>イロドリ</span>
               </span>
-              <span className={headerStyles.brandTagline}>千葉・船橋のホームページ制作</span>
+              <span className={headerStyles.brandTagline}>千葉県船橋のホームページ制作</span>
             </Link>
           </div>
 

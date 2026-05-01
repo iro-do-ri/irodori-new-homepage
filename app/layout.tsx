@@ -30,15 +30,15 @@ export const metadata: Metadata = {
     template: "%s｜千葉県船橋のホームページ制作 イロドリ",
   },
   description:
-    "千葉・船橋のホームページ制作会社イロドリ。千葉のホームページ制作を10万円〜でご提供。WordPress・SEO設計・コーポレートサイト制作まで一気通貫で対応。中小企業・個人事業主のホームページ制作はお気軽にご相談ください。",
-  keywords: ["千葉", "船橋", "千葉・船橋", "ホームページ制作", "千葉 ホームページ制作", "Webデザイン", "WordPress", "SEO対策", "コーポレートサイト", "イロドリ"],
+    "千葉県船橋のホームページ制作会社イロドリ。千葉のホームページ制作を10万円〜でご提供。WordPress・SEO設計・コーポレートサイト制作まで一気通貫で対応。中小企業・個人事業主のホームページ制作はお気軽にご相談ください。",
+  keywords: ["千葉", "船橋", "千葉県船橋", "ホームページ制作", "千葉 ホームページ制作", "Webデザイン", "WordPress", "SEO対策", "コーポレートサイト", "イロドリ"],
   openGraph: {
     siteName: "イロドリ｜千葉県船橋のホームページ制作会社",
     locale: "ja_JP",
     type: "website",
     title: "千葉県船橋のホームページ制作｜SEO設計・WordPress・コーポレートサイト【イロドリ】",
     description:
-      "千葉・船橋のホームページ制作会社イロドリ。千葉のホームページ制作を10万円〜でご提供。WordPress・SEO設計・コーポレートサイト制作まで一気通貫で対応。中小企業・個人事業主のホームページ制作はお気軽にご相談ください。",
+      "千葉県船橋のホームページ制作会社イロドリ。千葉のホームページ制作を10万円〜でご提供。WordPress・SEO設計・コーポレートサイト制作まで一気通貫で対応。中小企業・個人事業主のホームページ制作はお気軽にご相談ください。",
     url: "https://iro-do-ri.jp",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "千葉県船橋のホームページ制作｜SEO設計・WordPress・コーポレートサイト【イロドリ】",
     description:
-      "千葉・船橋のホームページ制作会社イロドリ。千葉のホームページ制作を10万円〜でご提供。WordPress・SEO設計・コーポレートサイト制作まで対応。",
+      "千葉県船橋のホームページ制作会社イロドリ。千葉のホームページ制作を10万円〜でご提供。WordPress・SEO設計・コーポレートサイト制作まで対応。",
     images: ["/og-image.png"],
   },
   icons: {
@@ -76,7 +76,7 @@ const jsonLd = [
     "@id": "https://iro-do-ri.jp/#organization",
     name: "イロドリ",
     url: "https://iro-do-ri.jp",
-    description: "千葉・船橋を拠点とするホームページ制作・Webデザイン会社。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。",
+    description: "千葉県船橋を拠点とするホームページ制作・Webデザイン会社。WordPress・SEO設計・コーポレートサイト制作を10万円〜でご提供。",
     telephone: "080-5543-5943",
     address: {
       "@type": "PostalAddress",

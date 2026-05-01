@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "更新情報｜千葉県船橋のホームページ制作会社イロドリ",
   description:
     "千葉県船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
-  keywords: ["船橋", "千葉", "千葉・船橋", "更新情報", "お知らせ", "ホームページ制作", "イロドリ"],
+  keywords: ["船橋", "千葉", "千葉県船橋", "更新情報", "お知らせ", "ホームページ制作", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/news" },
   openGraph: {
     title: "更新情報｜千葉県船橋のホームページ制作会社イロドリ",

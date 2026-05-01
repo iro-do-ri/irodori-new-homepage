@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
-  const title = `${post.title}｜千葉・船橋のホームページ制作 イロドリ`;
+  const title = `${post.title}｜千葉県船橋のホームページ制作 イロドリ`;
   const url = `https://iro-do-ri.jp/blog/${slug}`;
   return {
     title: { absolute: title },

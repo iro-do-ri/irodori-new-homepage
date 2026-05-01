@@ -5,14 +5,14 @@ import Breadcrumb from "../../parts/Breadcrumb";
 import styles from "./HummingBird.module.scss";
 
 export const metadata: Metadata = {
-  title: { absolute: "ハミングバード｜制作実績｜千葉・船橋のホームページ制作 イロドリ" },
+  title: { absolute: "ハミングバード｜制作実績｜千葉県船橋のホームページ制作 イロドリ" },
   description:
     "動画制作会社「有限会社ハミングバード」のコーポレートサイト制作実績。地域密着・人と人をつなぐ映像をテーマに、映像が主役のシンプルなビジュアル重視設計で制作した事例です。",
   keywords: ["船橋", "千葉", "動画制作", "制作実績", "ホームページ制作", "イロドリ", "ハミングバード"],
   alternates: { canonical: "https://iro-do-ri.jp/works/1yezeipyv" },
   openGraph: {
     type: "article",
-    title: "ハミングバード｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
+    title: "ハミングバード｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
     description:
       "動画制作会社「有限会社ハミングバード」のコーポレートサイト制作実績。映像が主役のシンプルなビジュアル重視設計で制作した事例です。",
     url: "https://iro-do-ri.jp/works/1yezeipyv",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ハミングバード｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
+    title: "ハミングバード｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
     description:
       "動画制作会社「有限会社ハミングバード」のコーポレートサイト制作実績。映像が主役のシンプル設計。",
     images: [

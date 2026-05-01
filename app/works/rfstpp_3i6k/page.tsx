@@ -5,14 +5,14 @@ import Breadcrumb from "../../parts/Breadcrumb";
 import styles from "./Mite.module.scss";
 
 export const metadata: Metadata = {
-  title: { absolute: "ヒーリングサロン mite｜制作実績｜千葉・船橋のホームページ制作 イロドリ" },
+  title: { absolute: "ヒーリングサロン mite｜制作実績｜千葉県船橋のホームページ制作 イロドリ" },
   description:
     "ヒーリングサロン「mite」のホームページ制作実績。癒しの世界観を伝えるビジュアルと、メニューを目的別に整理した来店しやすい導線設計で制作した事例です。",
   keywords: ["船橋", "千葉", "エステサロン", "制作実績", "ホームページ制作", "イロドリ", "ヒーリングサロン"],
   alternates: { canonical: "https://iro-do-ri.jp/works/rfstpp_3i6k" },
   openGraph: {
     type: "article",
-    title: "ヒーリングサロン mite｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
+    title: "ヒーリングサロン mite｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
     description:
       "ヒーリングサロン「mite」のホームページ制作実績。癒しの世界観を伝えるビジュアルと来店しやすい導線設計で制作した事例です。",
     url: "https://iro-do-ri.jp/works/rfstpp_3i6k",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ヒーリングサロン mite｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
+    title: "ヒーリングサロン mite｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
     description:
       "ヒーリングサロン「mite」のホームページ制作実績。癒しの世界観と来店しやすい設計の事例。",
     images: [

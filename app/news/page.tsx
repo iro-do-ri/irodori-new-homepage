@@ -6,23 +6,23 @@ import styles from "./News.module.scss";
 import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "更新情報｜千葉・船橋のホームページ制作会社イロドリ",
+  title: "更新情報｜千葉県船橋のホームページ制作会社イロドリ",
   description:
-    "千葉・船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
+    "千葉県船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
   keywords: ["船橋", "千葉", "千葉・船橋", "更新情報", "お知らせ", "ホームページ制作", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/news" },
   openGraph: {
-    title: "更新情報｜千葉・船橋のホームページ制作会社イロドリ",
+    title: "更新情報｜千葉県船橋のホームページ制作会社イロドリ",
     description:
-      "千葉・船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
+      "千葉県船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
     url: "https://iro-do-ri.jp/news",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "更新情報｜千葉・船橋のホームページ制作会社イロドリ",
+    title: "更新情報｜千葉県船橋のホームページ制作会社イロドリ",
     description:
-      "千葉・船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
+      "千葉県船橋のホームページ制作会社イロドリからの最新情報・お知らせをご覧いただけます。",
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },

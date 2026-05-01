@@ -5,12 +5,12 @@ import styles from "./Privacy.module.scss";
 import Breadcrumb from "../parts/Breadcrumb";
 
 export const metadata: Metadata = {
-  title: "プライバシーポリシー｜千葉・船橋のホームページ制作会社イロドリ",
+  title: "プライバシーポリシー｜千葉県船橋のホームページ制作会社イロドリ",
   description:
     "イロドリのプライバシーポリシーページです。個人情報の取り扱い・Cookieの利用・Googleアドセンスおよびアクセス解析ツールの使用について説明しています。",
   alternates: { canonical: "https://iro-do-ri.jp/privacy" },
   openGraph: {
-    title: "プライバシーポリシー｜千葉・船橋のホームページ制作会社イロドリ",
+    title: "プライバシーポリシー｜千葉県船橋のホームページ制作会社イロドリ",
     description:
       "イロドリの個人情報の取り扱い・Cookie・Googleアドセンス・アクセス解析についての方針です。",
     url: "https://iro-do-ri.jp/privacy",

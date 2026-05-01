@@ -5,14 +5,14 @@ import Breadcrumb from "../../parts/Breadcrumb";
 import styles from "./Triangle.module.scss";
 
 export const metadata: Metadata = {
-  title: { absolute: "Triangle Products｜制作実績｜千葉・船橋のホームページ制作 イロドリ" },
+  title: { absolute: "Triangle Products｜制作実績｜千葉県船橋のホームページ制作 イロドリ" },
   description:
     "医療ソフトメーカー「株式会社トライアングルプロダクツ」のコーポレートサイト制作実績。高品質な製品を信頼感とともに伝えるブルー基調の設計で制作した事例です。",
   keywords: ["船橋", "千葉", "医療", "コーポレートサイト", "制作実績", "ホームページ制作", "イロドリ", "トライアングルプロダクツ"],
   alternates: { canonical: "https://iro-do-ri.jp/works/mffnbqr_84x1" },
   openGraph: {
     type: "article",
-    title: "Triangle Products｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
+    title: "Triangle Products｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
     description:
       "医療ソフトメーカー「株式会社トライアングルプロダクツ」のコーポレートサイト制作実績。高品質な製品を信頼感とともに伝えるブルー基調の設計。",
     url: "https://iro-do-ri.jp/works/mffnbqr_84x1",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Triangle Products｜制作実績｜千葉・船橋のホームページ制作 イロドリ",
+    title: "Triangle Products｜制作実績｜千葉県船橋のホームページ制作 イロドリ",
     description:
       "医療ソフトメーカー「株式会社トライアングルプロダクツ」のコーポレートサイト制作実績。信頼感と専門性を伝える設計。",
     images: [

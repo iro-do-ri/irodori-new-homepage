@@ -1,9 +1,13 @@
 import { ImageResponse } from "next/og";
-import { getPostBySlug } from "@/app/lib/posts";
+import { getPostBySlug, getAllPostSlugs } from "@/app/lib/posts";
 
 export const runtime = "nodejs";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+export function generateStaticParams() {
+  return getAllPostSlugs().map((slug) => ({ slug }));
+}
 
 type Props = { params: Promise<{ slug: string }> };
 

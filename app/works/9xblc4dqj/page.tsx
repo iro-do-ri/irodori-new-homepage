@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://iro-do-ri.jp/works/9xblc4dqj",
     images: [
       {
-        url: "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/YOUR_ASSET_ID/athena.png",
+        url: "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/4b67ef68fa1f4024999b943e0e890770/athena.png",
         width: 384,
         height: 288,
       },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       "千葉県船橋市のエステサロン「アテーナ-オアシス」のコーポレートサイト制作実績。上品なパープル×ゴールドで高品質を表現。",
     images: [
-      "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/YOUR_ASSET_ID/athena.png",
+      "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/4b67ef68fa1f4024999b943e0e890770/athena.png",
     ],
   },
   robots: { index: true, follow: true },
@@ -51,7 +51,7 @@ export default function AthenaPage() {
             </div>
             <div className={styles.heroImageWrap}>
               <img
-                src="https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/YOUR_ASSET_ID/athena.png"
+                src="https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/4b67ef68fa1f4024999b943e0e890770/athena.png"
                 alt="エステアテーナのホームページ制作実績｜イロドリ"
                 className={styles.heroImage}
               />

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://iro-do-ri.jp/works/qhh48gr4a_jd",
     images: [
       {
-        url: "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/YOUR_ASSET_ID/mayunosato.png",
+        url: "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eda3fbe199434c66ad5930bd4b1a0d56/mayunosato.png",
         width: 384,
         height: 288,
       },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       "山梨県甲府市のリトリート施設「まゆの里山」のコーポレートサイト制作実績。自然の世界観をアースグリーン基調で表現した事例。",
     images: [
-      "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/YOUR_ASSET_ID/mayunosato.png",
+      "https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eda3fbe199434c66ad5930bd4b1a0d56/mayunosato.png",
     ],
   },
   robots: { index: true, follow: true },
@@ -51,7 +51,7 @@ export default function MayunoSatoPage() {
             </div>
             <div className={styles.heroImageWrap}>
               <img
-                src="https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/YOUR_ASSET_ID/mayunosato.png"
+                src="https://images.microcms-assets.io/assets/1c47cf40b1b24139aa6e76b7efe668bc/eda3fbe199434c66ad5930bd4b1a0d56/mayunosato.png"
                 alt="まゆの里山のホームページ制作実績｜イロドリ"
                 className={styles.heroImage}
               />

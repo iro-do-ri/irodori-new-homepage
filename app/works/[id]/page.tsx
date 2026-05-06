@@ -15,7 +15,7 @@ type Work = {
 };
 
 // 静的ページとして個別実装済みのIDは除外
-const STATIC_OVERRIDE_IDS = ["r3u3ktges", "1yezeipyv", "rfstpp_3i6k", "mffnbqr_84x1", "1r782nokn", "j6js1gf4xt8"];
+const STATIC_OVERRIDE_IDS = ["r3u3ktges", "1yezeipyv", "rfstpp_3i6k", "mffnbqr_84x1", "1r782nokn", "j6js1gf4xt8", "qhh48gr4a_jd", "9xblc4dqj"];
 
 export async function generateStaticParams() {
   const data = await client.get({ endpoint: "works", queries: { limit: 100 } });

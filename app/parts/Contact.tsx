@@ -41,18 +41,22 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...form, _t: loadedAt.current }),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, _t: loadedAt.current }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (data.success) {
-      setForm({ company: "", name: "", email: "", phone: "", message: "", _hp: "" });
-      setStatus("success");
-    } else {
+      if (data.success) {
+        setForm({ company: "", name: "", email: "", phone: "", message: "", _hp: "" });
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
       setStatus("error");
     }
   };

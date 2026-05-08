@@ -141,7 +141,7 @@
 }
 .article p {
   font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 2;
+  line-height: 1.6;
   color: rgba(5, 8, 40, 0.75);
   margin-bottom: 1.5rem;
 }
@@ -151,7 +151,7 @@
 }
 .article ul li, .article ol li {
   font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.9;
+  line-height: 1.6;
   color: rgba(5, 8, 40, 0.75);
   margin-bottom: 0.4rem;
 }

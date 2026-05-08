@@ -1,0 +1,44 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  z-index: 100;
+}
+@media (min-width: 640px) {
+  .wrap {
+    display: none;
+  }
+}
+
+.phone,
+.mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.2s;
+}
+.phone:hover,
+.mail:hover {
+  opacity: 0.85;
+}
+.phone svg,
+.mail svg {
+  width: 24px;
+  height: 24px;
+}
+
+.phone {
+  background: #3364ae;
+}
+
+.mail {
+  background: #d95911;
+}/*# sourceMappingURL=FloatingButtons.module.css.map */

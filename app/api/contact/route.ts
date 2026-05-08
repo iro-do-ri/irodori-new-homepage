@@ -31,8 +31,8 @@ function isSpam(body: Record<string, string>): boolean {
 }
 
 export async function POST(req: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const body = await req.json();
 
     if (!body.company || !body.email) {
@@ -45,28 +45,27 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true });
     }
 
-    // ① 管理者に通知
-    await resend.emails.send({
-      from: FROM,
-      to: ADMIN,
-      replyTo: body.email,
-      subject: "【イロドリ】お問い合わせが届きました",
-      text: `
+    // 管理者通知とユーザー自動返信を並列送信
+    await Promise.all([
+      resend.emails.send({
+        from: FROM,
+        to: ADMIN,
+        replyTo: body.email,
+        subject: "【イロドリ】お問い合わせが届きました",
+        text: `
 会社名: ${body.company}
 担当者名: ${body.name || "（未入力）"}
 メール: ${body.email}
 
 ■ ご相談内容
 ${body.message || "（未入力）"}
-      `.trim(),
-    });
-
-    // ② ユーザーに自動返信
-    await resend.emails.send({
-      from: FROM,
-      to: body.email,
-      subject: "お問い合わせありがとうございます｜イロドリ",
-      text: `
+        `.trim(),
+      }),
+      resend.emails.send({
+        from: FROM,
+        to: body.email,
+        subject: "お問い合わせありがとうございます｜イロドリ",
+        text: `
 ${body.name || ""}様
 
 この度は、お問い合わせいただきありがとうございます。
@@ -79,8 +78,9 @@ ${body.name || ""}様
 TEL: 080-5543-5943
 Email: k-katsuno@iro-do-ri.jp
 ───────────────────
-      `.trim(),
-    });
+        `.trim(),
+      }),
+    ]);
 
     return NextResponse.json({ success: true });
   } catch (error) {

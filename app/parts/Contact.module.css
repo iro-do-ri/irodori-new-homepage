@@ -62,13 +62,13 @@
 .cardHeader .desc {
   font-size: clamp(13px, 1.4vw, 14px);
   color: rgba(255, 252, 255, 0.5);
-  line-height: 1.9;
+  line-height: 1.6;
   margin-top: 1rem;
 }
 .cardHeader .subtitle {
   font-size: clamp(13px, 1.6vw, 15px);
   color: rgba(255, 252, 255, 0.6);
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .form {
@@ -124,7 +124,7 @@
   padding: 3px 8px;
   border-radius: 3px;
   background: #D95911;
-  color: white;
+  color: #fffcff;
   flex-shrink: 0;
 }
 
@@ -144,7 +144,7 @@
   text-align: center;
   font-size: clamp(12px, 1.4vw, 13px);
   color: rgba(5, 8, 40, 0.55);
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .input,
@@ -162,7 +162,7 @@
 }
 .input:focus,
 .textarea:focus {
-  background: white;
+  background: #fffcff;
   border-color: #3364AE;
 }
 .input::-moz-placeholder, .textarea::-moz-placeholder {
@@ -176,7 +176,7 @@
 .textarea {
   resize: vertical;
   min-height: 150px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 .submit {
@@ -187,7 +187,7 @@
 
 .button {
   background: #D95911;
-  color: white;
+  color: #fffcff;
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.05em;
@@ -211,7 +211,7 @@
   padding: clamp(1rem, 3vw, 1.5rem) clamp(1.5rem, 5vw, 3rem);
   font-size: clamp(12px, 1.4vw, 13px);
   color: rgba(5, 8, 40, 0.45);
-  line-height: 1.9;
+  line-height: 1.6;
   border-top: 1px solid #edeef1;
 }
 

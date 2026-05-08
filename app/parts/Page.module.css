@@ -46,7 +46,7 @@
 }
 .page .container .document p {
   font-size: clamp(14px, 1.8vw, 15px);
-  line-height: 1.9;
+  line-height: 1.6;
   color: rgba(5, 8, 40, 0.8);
   margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-md);
@@ -60,7 +60,7 @@
 }
 .page .container .document ul li, .page .container .document ol li {
   font-size: clamp(14px, 1.8vw, 15px);
-  line-height: 1.9;
+  line-height: 1.6;
   color: rgba(5, 8, 40, 0.8);
   margin-bottom: 0.3rem;
 }

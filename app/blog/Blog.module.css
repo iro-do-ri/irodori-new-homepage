@@ -66,7 +66,47 @@
   font-weight: 700;
   line-height: 1.35;
   color: #050828;
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
   margin-bottom: 2.5rem;
+}
+
+.filterGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filterBtn {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(5, 8, 40, 0.55);
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(5, 8, 40, 0.18);
+  border-radius: 50rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+.filterBtn:hover {
+  border-color: #3364AE;
+  color: #3364AE;
+}
+
+.filterBtnActive {
+  background: #3364AE;
+  border-color: #3364AE;
+  color: #fffcff !important;
+  pointer-events: none;
 }
 
 .grid {
@@ -86,7 +126,7 @@
 }
 
 .card {
-  background: white;
+  background: #fffcff;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--box-shadow-sm);
@@ -333,4 +373,57 @@
   padding: 4rem 2rem;
   color: rgba(5, 8, 40, 0.4);
   font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.pageBtn {
+  font-size: 13px;
+  color: #3364AE;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(51, 100, 174, 0.3);
+  border-radius: 50rem;
+  transition: background 0.2s, color 0.2s;
+}
+.pageBtn:hover {
+  background: #3364AE;
+  color: #fffcff;
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pageNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 14px;
+  color: #050828;
+  text-decoration: none;
+  border: 1px solid rgba(5, 8, 40, 0.15);
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.pageNumber:hover {
+  border-color: #3364AE;
+  color: #3364AE;
+}
+
+.pageNumberActive {
+  background: #3364AE;
+  border-color: #3364AE;
+  color: #fffcff !important;
+  pointer-events: none;
 }/*# sourceMappingURL=Blog.module.css.map */

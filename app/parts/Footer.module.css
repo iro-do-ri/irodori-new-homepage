@@ -3,6 +3,7 @@
   left: 195px;
   width: calc(100% - 195px);
   background: #050828;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: #fffcff;
 }
 @media (max-width: 639px) {
@@ -33,6 +34,9 @@
   gap: 2rem;
 }
 .footer .brand .name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: clamp(22px, 3vw, 30px);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -42,8 +46,28 @@
   font-size: 12px;
   font-weight: 300;
   opacity: 0.5;
-  line-height: 1.7;
+  line-height: 1.6;
   max-width: 380px;
+  margin-bottom: 0.6rem;
+}
+.footer .brand .address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.footer .brand .address span, .footer .brand .address a {
+  font-size: 12px;
+  font-weight: 300;
+  color: #fffcff;
+  opacity: 0.5;
+}
+.footer .brand .address a {
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.footer .brand .address a:hover {
+  opacity: 0.8;
 }
 .footer .nav {
   display: flex;
@@ -90,8 +114,25 @@
   border-top: 1px solid rgba(255, 252, 255, 0.12);
   padding-top: 1.5rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer .legalLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer .legalLinks a {
+  font-size: 12px;
+  font-weight: 300;
+  color: #fffcff;
+  opacity: 0.4;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.footer .legalLinks a:hover {
+  opacity: 0.7;
 }
 .footer .copy {
   font-size: 12px;

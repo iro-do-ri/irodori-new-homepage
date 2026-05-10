@@ -56,7 +56,7 @@
 
 .article {
     padding: clamp(2.5rem, 5vw, 4rem) 2rem;
-    max-width: 1000px;
+    max-width: 768px;
     margin: 0 auto;
     letter-spacing: 0.05em;
 
@@ -184,7 +184,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1000px;
+    max-width: 768px;
     margin: 0 auto;
     padding: 1.25rem 2rem;
     border-bottom: 1px solid rgba(5, 8, 40, 0.07);
@@ -299,7 +299,7 @@
 
 // ── プロフィール ──────────────────────────────────────
 .profileWrap {
-    max-width: 1000px;
+    max-width: 768px;
     margin: 0 auto;
     padding: 0 2rem 2.5rem;
 }
@@ -380,7 +380,7 @@
 
 // ── 他の記事 ──────────────────────────────────────
 .related {
-    max-width: 1000px;
+    max-width: 768px;
     margin: 0 auto;
     padding: 0 2rem 2rem;
 

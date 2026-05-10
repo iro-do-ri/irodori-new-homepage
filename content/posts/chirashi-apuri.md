@@ -6,7 +6,7 @@ category: "チラシ制作"
 slug: "chirashi-apuri"
 ---
 
-<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/chirashi-sakusei-apuri-smartphone-design.jpg" alt="スマートフォンでチラシ作成アプリを操作する様子。ベーカリーのチラシをデザインしている画面と、春のフェアや家づくり相談会などの完成チラシサンプルが周囲に並ぶ" width="480" height="270" /></div>
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/chirashi-sakusei-apuri-smartphone-design.jpg" alt="スマートフォンでチラシ作成アプリを操作する様子。ベーカリーのチラシをデザインしている画面と、春のフェアや家づくり相談会などの完成チラシサンプルが周囲に並ぶ" width="768" height="384" /></div>
 
 ## チラシ作成アプリを選ぶ前に知っておきたいこと
 

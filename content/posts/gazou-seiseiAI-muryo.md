@@ -6,7 +6,7 @@ category: "AI"
 slug: "gazou-seiseiAI-muryo"
 ---
 
-<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/gazou-seisei-ai-muryo-laptop-illustration.jpg" alt="女性がノートパソコンでAI画像生成ツールを使っている水彩イラスト。AIが風景・動物・花・城など多様な画像を生成している様子" width="480" height="270" /></div>
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/gazou-seisei-ai-muryo-laptop-illustration.jpg" alt="女性がノートパソコンでAI画像生成ツールを使っている水彩イラスト。AIが風景・動物・花・城など多様な画像を生成している様子" width="768" height="384" /></div>
 
 「画像生成AIを使ってみたいけど、お金がかかるのでは？」と思っていませんか？
 実は、高品質な画像を無料で生成できるツールが複数あります。

@@ -6,6 +6,8 @@ category: "AI"
 slug: "ai-claude-toha"
 ---
 
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/ai-claude-toha-illustration.jpg" alt="女性がノートパソコンでClaude（クロード）AIを使っている水彩イラスト。ClaudeのロゴとAIロボットが画面上に表示されている" width="768" height="384" /></div>
+
 「ChatGPTは知っているけど、クロード（Claude）って何？」という方も多いのではないでしょうか。
 
 ClaudeはChatGPTと並ぶ高性能AI。特に**長い文章の処理・正確な情報の取り扱い・安全性の高さ**で多くのユーザーから支持されています。

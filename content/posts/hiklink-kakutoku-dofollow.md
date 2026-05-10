@@ -6,6 +6,8 @@ category: "SEO対策"
 slug: "hiklink-kakutoku-dofollow"
 ---
 
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/hiklink-dofollow-backlink-seo.jpg" alt="HikLinkを通じて外部サイトからdofollowリンクを獲得しSEO評価が向上する仕組みを示した図解イラスト" width="768" height="384" /></div>
+
 SEO対策を調べていると必ず出てくる「被リンク（バックリンク）」という言葉。
 「被リンクが多いと検索順位が上がる」と聞いたことがある方も多いでしょう。
 

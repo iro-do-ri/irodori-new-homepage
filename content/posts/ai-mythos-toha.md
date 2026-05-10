@@ -6,6 +6,8 @@ category: "AI"
 slug: "ai-mythos-toha"
 ---
 
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/ai-mythos-toha-robot-woman-laptop.jpg" alt="AIロボットと女性がノートパソコンを前にアイデアを共有するイラスト。AIと人間の協働イメージ" width="480" height="270" /></div>
+
 2026年4月、AIの世界に大きな話題をもたらした新しいモデルが登場しました。
 Anthropicが開発した「**Claude Mythos（クロード・ミュトス）**」です。
 

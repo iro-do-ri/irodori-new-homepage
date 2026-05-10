@@ -2,7 +2,7 @@
 title: "Claude Codeの脆弱性とセキュリティリスク｜安全に使うための注意点まとめ"
 description: "Claude Codeを業務や開発で使う前に知っておきたい脆弱性・セキュリティリスクを解説。プロンプトインジェクション、機密情報の漏洩、MCP経由の攻撃など、リスクと対策をわかりやすくまとめました。"
 date: "2026-05-01"
-category: "AI・ツール"
+category: "AI"
 slug: "claude-code-security-risk"
 ---
 

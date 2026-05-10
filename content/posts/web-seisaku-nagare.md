@@ -6,6 +6,8 @@ category: "ホームページ制作"
 slug: "web-seisaku-nagare"
 ---
 
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/web-seisaku-nagare-flow-steps.jpg" alt="Web制作の流れを示す6ステップのフロー図。ヒアリング・要件定義・デザイン・コーディング・テスト・公開の工程をアイコンと矢印で表したイラスト" width="480" height="270" /></div>
+
 「制作会社に依頼してから公開まで、実際にどんな作業が行われているのか？」——依頼する側はなかなか見えにくいweb制作の現場。  
 この記事では、web制作プロジェクトの全工程をプロの視点で解説します。各フェーズで制作側が実際に何を考え・何を判断しているかを知ることで、スムーズなプロジェクト進行と高品質な成果物につながります。
 

@@ -6,6 +6,8 @@ category: "ホームページ制作"
 slug: "wordpress-vs-microcms"
 ---
 
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/wordpress-vs-microcms-comparison.jpg" alt="WordPressとmicroCMSを比較する女性のイラスト。左にWordPressロゴ、右にmicroCMSロゴが表示されVSで対比されている" width="480" height="270" /></div>
+
 ホームページ制作の打ち合わせでよく聞かれる質問のひとつが、「WordPressとmicroCMSって、どちらが良いんですか？」というものです。
 
 どちらも「CMS（コンテンツ管理システム）」と呼ばれる、ホームページの内容を自分で更新できる仕組みです。

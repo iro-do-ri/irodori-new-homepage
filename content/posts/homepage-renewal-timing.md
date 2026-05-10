@@ -97,6 +97,58 @@ Googleも「モバイルファースト」で評価しており、スマホ非�
 
 [制作実績を見る](/works)
 
+---
+
+## 🔢 リニューアルのタイミング別 費用と期間の目安
+
+リニューアルを決断した際、費用と期間の見通しをつかんでおくことで、予算計画がしやすくなります。
+
+| リニューアルの種類 | 費用目安 | 制作期間 | 主な対象 |
+|---|---|---|---|
+| 部分リニューアル（TOPページのみ等） | 10〜20万円 | 2〜4週間 | 見た目だけ更新したい |
+| 全面リニューアル（CMS導入込み） | 30〜80万円 | 1〜3ヶ月 | 構造・機能も見直したい |
+| スマホ対応のみ追加 | 5〜15万円 | 1〜2週間 | 既存デザインはそのまま |
+| SEO設計見直し＋コンテンツ追加 | 15〜30万円 | 1〜2ヶ月 | 集客力を根本から改善 |
+
+費用は制作会社・ページ数・機能要件によって大きく変わります。まずはヒアリングを通じて自社サイトの課題を整理してから見積もりを取るとスムーズです。
+
+---
+
+## 📋 リニューアル準備チェックリスト
+
+リニューアルを制作会社に依頼する前に、以下を整理しておくと打ち合わせがスムーズになります。
+
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;gap:.5rem">
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>リニューアルの目的が明確になっている（集客・信頼感・更新しやすさ など）</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>現状サイトで特に気になる点をリストアップしている</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>参考にしたい競合・理想のサイトのURLを3〜5件用意している</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>現在のドメイン・サーバーの契約情報を把握している</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>おおよその予算・公開希望時期を決めている</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>ロゴデータ（aiまたはsvg）・会社写真素材を準備できる</span></div>
+  </div>
+</div>
+
+---
+
+## 🔄 リニューアル後に必ずすべきこと
+
+リニューアル後の対応を怠ると、せっかくの成果が台無しになるケースがあります。
+
+### URLが変わる場合はリダイレクト設定を必ず行う
+
+旧URLから新URLへの301リダイレクトを設定しないと、これまでGoogleが評価してきた検索順位がゼロにリセットされてしまいます。これは最も多いリニューアル後のトラブルの一つです。
+
+### Google Search Consoleに新サイトを登録する
+
+新しいサイトマップをSearch Consoleに送信し、Googleにリニューアルを知らせましょう。インデックスの反映が早まります。
+
+### 公開後1〜2ヶ月はアクセス解析を注視する
+
+リニューアル直後はアクセス数や問い合わせ率が変動することがあります。GA4（Googleアナリティクス）でユーザーの行動を確認し、予期せぬ離脱があれば早めに修正しましょう。
+
+---
+
 ## 📝 まとめ
 
 ホームページリニューアルを検討すべき5つのタイミングをまとめます。

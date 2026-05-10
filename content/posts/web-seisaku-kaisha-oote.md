@@ -158,6 +158,26 @@ web制作会社へ依頼を検討する際、「大手の会社なら安心？�
 
 [制作実績を見る](/works)
 
+---
+
+## 📋 大手Web制作会社への依頼で失敗しないチェックリスト
+
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="display:flex;flex-direction:column;gap:.5rem">
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>担当者が一貫して対応してくれるか確認した</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>自社業種・規模の実績が3件以上ある</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>見積もりの内訳が明細で提示されている</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>修正回数・対応範囲が書面で明示されている</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>公開後のサポート・保守プランが提示されている</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>SEO設計・アナリティクス設定が含まれている</span></div>
+    <div style="background:#3364AE;color:#fffcff;padding:.45rem 1rem;border-radius:6px;display:flex;align-items:center;gap:.5rem"><span>☑</span><span>ドメインは自社名義で取得できる</span></div>
+  </div>
+</div>
+
+大手制作会社の場合、プロジェクト完了後に担当者が変わり、引き継ぎがうまくいかないケースがあります。契約書に「担当者変更の際の通知義務」を盛り込むと安心です。
+
+---
+
 ## 📝 まとめ
 
 - 大手は安心感・ブランド力がある反面、費用が高く対応が遅い傾向がある

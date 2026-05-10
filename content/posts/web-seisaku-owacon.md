@@ -91,6 +91,59 @@ SEO戦略・デザイン・コーディング・公開後の改善提案まで�
 
 [制作実績を見る](/works)
 
+---
+
+## 💼 web制作で今後も稼ぎ続けるための具体的スキルセット
+
+### 必須スキル①：Webマーケティングの基礎知識
+
+Google Analytics・Search Console・広告運用（Meta広告・Google広告）の基礎を理解できると、「サイトを作るだけ」ではなく「集客まで提案できる制作者」になれます。これだけで単価が1.5〜2倍になるケースも珍しくありません。
+
+### 必須スキル②：LPO・CRO（コンバージョン最適化）
+
+ランディングページのデザインを改善して問い合わせ率を上げる「LPO（ランディングページ最適化）」の知識は、クライアントから継続的に求められる価値です。ヒートマップツール（Microsoft Clarityなど）やA/Bテストの基礎を身につけましょう。
+
+### 必須スキル③：Next.js などモダンフレームワーク
+
+WordPressだけに依存するのではなく、Next.js・Nuxt.js・Astroなどのモダンフレームワークに対応できると、表示速度重視・ヘッドレスCMS構成などの案件に対応できます。
+
+### 注目スキル④：AIツールの活用力
+
+ChatGPT・Claude・Cursor（AI搭載コードエディタ）などのAIツールを業務に組み込む能力そのものが、他の制作者との差別化要因になっています。AIを使いこなせる制作者は、同じ時間でより多くの成果を出せます。
+
+---
+
+## 📈 web制作の収入相場と将来性データ
+
+フリーランスのweb制作者の収入は、スキルセットと営業力によって大きく異なります。
+
+| ポジション | 月収目安 | 必要スキル |
+|---|---|---|
+| コーディングのみ（クラウドソーシング中心） | 5〜15万円 | HTML/CSS/JS |
+| WordPress制作（直接受注） | 15〜30万円 | WordPress + 基本SEO |
+| フルスタック制作者 | 30〜60万円 | デザイン + コーディング + マーケ提案 |
+| Webディレクター（複数案件管理） | 50〜100万円以上 | ディレクション + 外注管理 |
+
+「オワコン化」しているのは最下位の「コーディングのみ」層です。上位のポジションは慢性的な人材不足が続いています。
+
+---
+
+## 🔄 今の自分のポジションを把握するチェックリスト
+
+<div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">
+  <div style="font-weight:bold;color:#3364AE;margin-bottom:.75rem">現在の自分が「低価格競争に巻き込まれやすいポジション」かどうかチェック</div>
+  <div style="display:flex;flex-direction:column;gap:.5rem">
+    <div style="background:#e8f4ff;padding:.45rem 1rem;border-radius:6px;color:#333">□ 案件の大半がクラウドソーシング経由</div>
+    <div style="background:#e8f4ff;padding:.45rem 1rem;border-radius:6px;color:#333">□ コーディング（実装）だけを担当している</div>
+    <div style="background:#e8f4ff;padding:.45rem 1rem;border-radius:6px;color:#333">□ SEOや集客の提案をしたことがない</div>
+    <div style="background:#e8f4ff;padding:.45rem 1rem;border-radius:6px;color:#333">□ デザインはせず、指示通りに組むだけ</div>
+    <div style="background:#e8f4ff;padding:.45rem 1rem;border-radius:6px;color:#333">□ WordPressのみで、他の技術スタックを使わない</div>
+  </div>
+  <div style="margin-top:1rem;color:#555;font-size:13px">3つ以上当てはまる場合は、スキルの幅を広げることを優先しましょう。</div>
+</div>
+
+---
+
 ## 📝 まとめ
 
 - web制作が「オワコン」なのではなく、「単純作業としてのweb制作」がオワコン化しつつある

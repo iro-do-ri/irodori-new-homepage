@@ -6,6 +6,8 @@ category: "AI"
 slug: "claude-code-security-risk"
 ---
 
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/claude-code-security-risk-illustration.jpg" alt="ノートパソコンを前に不安そうな男性と、周囲のハッカー・パスワード漏洩・バグ・データ警告などのセキュリティリスクを示したイラスト" width="768" height="384" /></div>
+
 AIを使ったコーディング支援ツール「Claude Code」は、開発効率を大幅に上げてくれる便利なツールです。  
 しかし、強力な機能を持つ分、**使い方を誤ると深刻なセキュリティリスク**につながる可能性があります。
 

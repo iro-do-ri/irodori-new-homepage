@@ -1,7 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./Loader.module.scss";
+
+const SESSION_KEY = "irodori_entered";
 
 const LogoSVG = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="100%" height="100%">
@@ -24,35 +26,31 @@ export default function Loader() {
   const overlayRef = useRef<HTMLDivElement>(null);
   const logoWrapRef = useRef<HTMLDivElement>(null);
   const coloredRef = useRef<HTMLDivElement>(null);
-  const [shouldShow, setShouldShow] = useState(false);
 
-  // 初回ハードナビゲーション（直接アクセス・Google検索）のみ表示
-  useEffect(() => {
-    const key = "irodori_entered";
-    const alreadyEntered = sessionStorage.getItem(key);
-    if (!alreadyEntered) {
-      sessionStorage.setItem(key, "1");
-      setShouldShow(true);
+  // ペイント前に同期的に判定 → サイト内遷移なら即非表示
+  useLayoutEffect(() => {
+    const alreadyEntered = sessionStorage.getItem(SESSION_KEY);
+    if (alreadyEntered && overlayRef.current) {
+      overlayRef.current.style.display = "none";
     }
   }, []);
 
-  // shouldShow が true になったらアニメーション実行
+  // 初回アクセス時のみアニメーション実行
   useEffect(() => {
-    if (!shouldShow) return;
+    const alreadyEntered = sessionStorage.getItem(SESSION_KEY);
+    if (alreadyEntered) return;
+
+    sessionStorage.setItem(SESSION_KEY, "1");
 
     const tl = gsap.timeline();
-
-    // ロゴに色が下から上へ染まる
     tl.to(coloredRef.current, {
       clipPath: "inset(0% 0 0 0)",
       duration: 2.0,
       ease: "power2.inOut",
       delay: 0.6,
     })
-    // 小さくバウンス
     .to(logoWrapRef.current, { scale: 1.07, duration: 0.3, ease: "power1.in" })
     .to(logoWrapRef.current, { scale: 1,    duration: 0.3, ease: "power1.out" })
-    // オーバーレイが上にスライドアウト
     .to(overlayRef.current, {
       yPercent: -100,
       duration: 1.0,
@@ -62,9 +60,7 @@ export default function Loader() {
         if (overlayRef.current) overlayRef.current.style.display = "none";
       },
     });
-  }, [shouldShow]);
-
-  if (!shouldShow) return null;
+  }, []);
 
   return (
     <div ref={overlayRef} className={styles.overlay}>

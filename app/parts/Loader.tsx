@@ -3,7 +3,8 @@ import { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./Loader.module.scss";
 
-const SESSION_KEY = "irodori_entered";
+// モジュールレベル変数: ハードナビゲーション(直接/Google)でリセット、ソフトナビゲーションでは維持
+let hasShownLoader = false;
 
 const LogoSVG = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="100%" height="100%">
@@ -29,18 +30,15 @@ export default function Loader() {
 
   // ペイント前に同期的に判定 → サイト内遷移なら即非表示
   useLayoutEffect(() => {
-    const alreadyEntered = sessionStorage.getItem(SESSION_KEY);
-    if (alreadyEntered && overlayRef.current) {
+    if (hasShownLoader && overlayRef.current) {
       overlayRef.current.style.display = "none";
     }
   }, []);
 
-  // 初回アクセス時のみアニメーション実行
+  // 初回ハードナビゲーション時のみアニメーション実行
   useEffect(() => {
-    const alreadyEntered = sessionStorage.getItem(SESSION_KEY);
-    if (alreadyEntered) return;
-
-    sessionStorage.setItem(SESSION_KEY, "1");
+    if (hasShownLoader) return;
+    hasShownLoader = true;
 
     const tl = gsap.timeline();
     tl.to(coloredRef.current, {

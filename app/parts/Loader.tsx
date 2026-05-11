@@ -63,7 +63,7 @@ export default function Loader() {
   }, []);
 
   return (
-    <div ref={overlayRef} className={styles.overlay}>
+    <div ref={overlayRef} id="loader-overlay" className={styles.overlay}>
       <div ref={logoWrapRef} className={styles.logoWrap}>
         <div className={styles.gray}>
           <LogoSVG />

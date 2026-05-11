@@ -174,6 +174,7 @@ export default function RootLayout({
         />
       </noscript>
         <Loader />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){if(location.pathname!=='/'){var e=document.getElementById('loader-overlay');if(e)e.style.display='none';}})();` }} />
         <Three />
         <Header />
         <FloatingButtons />

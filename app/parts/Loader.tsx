@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import styles from "./Loader.module.scss";
 
@@ -24,31 +24,47 @@ export default function Loader() {
   const overlayRef = useRef<HTMLDivElement>(null);
   const logoWrapRef = useRef<HTMLDivElement>(null);
   const coloredRef = useRef<HTMLDivElement>(null);
+  const [shouldShow, setShouldShow] = useState(false);
 
+  // 初回ハードナビゲーション（直接アクセス・Google検索）のみ表示
   useEffect(() => {
+    const key = "irodori_entered";
+    const alreadyEntered = sessionStorage.getItem(key);
+    if (!alreadyEntered) {
+      sessionStorage.setItem(key, "1");
+      setShouldShow(true);
+    }
+  }, []);
+
+  // shouldShow が true になったらアニメーション実行
+  useEffect(() => {
+    if (!shouldShow) return;
+
     const tl = gsap.timeline();
 
     // ロゴに色が下から上へ染まる
     tl.to(coloredRef.current, {
       clipPath: "inset(0% 0 0 0)",
-      duration: 2.6,
+      duration: 2.0,
       ease: "power2.inOut",
-      delay: 0.8,
+      delay: 0.6,
     })
     // 小さくバウンス
-    .to(logoWrapRef.current, { scale: 1.07, duration: 0.35, ease: "power1.in" })
-    .to(logoWrapRef.current, { scale: 1,    duration: 0.35, ease: "power1.out" })
+    .to(logoWrapRef.current, { scale: 1.07, duration: 0.3, ease: "power1.in" })
+    .to(logoWrapRef.current, { scale: 1,    duration: 0.3, ease: "power1.out" })
     // オーバーレイが上にスライドアウト
     .to(overlayRef.current, {
       yPercent: -100,
-      duration: 1.2,
+      duration: 1.0,
       ease: "power3.inOut",
-      delay: 0.6,
+      delay: 0.4,
       onComplete: () => {
         if (overlayRef.current) overlayRef.current.style.display = "none";
       },
     });
-  }, []);
+  }, [shouldShow]);
+
+  if (!shouldShow) return null;
 
   return (
     <div ref={overlayRef} className={styles.overlay}>

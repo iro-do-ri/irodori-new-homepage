@@ -61,16 +61,6 @@ export default async function BlogPostPage({ params }: Props) {
     <section className="flex">
 
       <div className={styles.wrapper}>
-        {/* ── ヒーロー ── */}
-        <div className={styles.hero}>
-          <span className={styles.label}>BLOG</span>
-          {post.category && (
-            <span className={styles.category}>{post.category}</span>
-          )}
-          <h1 className={styles.title}>{post.title}</h1>
-          {dateFormatted && <time className={styles.date}>{dateFormatted}</time>}
-        </div>
-
         <Breadcrumb items={[{ label: "ブログ", href: "/blog" }, { label: post.title }]} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
@@ -99,27 +89,47 @@ export default async function BlogPostPage({ params }: Props) {
           mainEntityOfPage: { "@type": "WebPage", "@id": `https://iro-do-ri.jp/blog/${slug}` },
         }) }} />
 
-        {/* ── ナビバー（戻る＋日付） ── */}
+        {/* ── ナビバー（戻るのみ） ── */}
         <div className={styles.metaNav}>
           <Link href="/blog" className={styles.backLink}>← ブログ一覧に戻る</Link>
-          {dateFormatted && (
-            <span className={styles.metaDate}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/>
-                <line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-              <time dateTime={post.date ?? ""}>{dateFormatted}</time>
-            </span>
-          )}
         </div>
 
         {/* ── 記事本文 ── */}
-        <article
-          className={styles.article}
-          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
-        />
+        <article className={styles.article}>
+          {(() => {
+            const html = post.contentHtml;
+            const meta = (
+              <div className={styles.articleMeta}>
+                {post.category && (
+                  <span className={styles.articleCategory}>{post.category}</span>
+                )}
+                {dateFormatted && (
+                  <time className={styles.articleDate} dateTime={post.date ?? ""}>{dateFormatted}</time>
+                )}
+              </div>
+            );
+            if (html.startsWith('<div style="display:flex')) {
+              const closingIndex = html.indexOf('</div>') + '</div>'.length;
+              const eyecatchHtml = html.slice(0, closingIndex);
+              const restHtml = html.slice(closingIndex);
+              return (
+                <>
+                  <div dangerouslySetInnerHTML={{ __html: eyecatchHtml }} />
+                  {meta}
+                  <h1 className={styles.articleTitle}>{post.title}</h1>
+                  <div dangerouslySetInnerHTML={{ __html: restHtml }} />
+                </>
+              );
+            }
+            return (
+              <>
+                {meta}
+                <h1 className={styles.articleTitle}>{post.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: html }} />
+              </>
+            );
+          })()}
+        </article>
 
         {/* ── 他の記事 ── */}
         {relatedPosts.length > 0 && (

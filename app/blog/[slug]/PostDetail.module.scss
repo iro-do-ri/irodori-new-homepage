@@ -54,8 +54,39 @@
     }
 }
 
+.articleMeta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1.25rem 0 0.75rem;
+}
+
+.articleCategory {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: #3364AE;
+    border: 1px solid rgba(51,100,174,0.5);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50rem;
+}
+
+.articleDate {
+    font-size: 12px;
+    color: rgba(5, 8, 40, 0.45);
+}
+
+.articleTitle {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    line-height: 1.4;
+    color: $text-color;
+    margin: 0.5rem 0 1.75rem;
+    letter-spacing: 0.03em;
+}
+
 .article {
-    padding: clamp(2.5rem, 5vw, 4rem) 2rem;
+    padding: 0 2rem clamp(2.5rem, 5vw, 4rem);
     max-width: 768px;
     margin: 0 auto;
     letter-spacing: 0.05em;

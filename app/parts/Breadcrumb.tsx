@@ -6,11 +6,11 @@ export type BreadcrumbItem = {
   href?: string;
 };
 
-export default function Breadcrumb({ items }: { items: BreadcrumbItem[] }) {
+export default function Breadcrumb({ items, className }: { items: BreadcrumbItem[]; className?: string }) {
   const all: BreadcrumbItem[] = [{ label: "ホーム", href: "/" }, ...items];
 
   return (
-    <nav aria-label="パンくずリスト" className={styles.nav}>
+    <nav aria-label="パンくずリスト" className={`${styles.nav}${className ? ` ${className}` : ""}`}>
       <ol className={styles.list}>
         {all.map((item, i) => {
           const isLast = i === all.length - 1;

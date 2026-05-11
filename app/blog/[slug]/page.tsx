@@ -61,7 +61,7 @@ export default async function BlogPostPage({ params }: Props) {
     <section className="flex">
 
       <div className={styles.wrapper}>
-        <Breadcrumb items={[{ label: "ブログ", href: "/blog" }, { label: post.title }]} />
+        <Breadcrumb items={[{ label: "ブログ", href: "/blog" }, { label: post.title }]} className={styles.breadcrumbNarrow} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",

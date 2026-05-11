@@ -211,6 +211,16 @@
     }
 }
 
+.breadcrumbNarrow {
+    padding-left: clamp(1.5rem, 5vw, 2rem);
+    padding-right: clamp(1.5rem, 5vw, 2rem);
+
+    @include sm {
+        padding-left: max(2rem, calc((100% - 768px) / 2));
+        padding-right: max(2rem, calc((100% - 768px) / 2));
+    }
+}
+
 .metaNav {
     display: flex;
     align-items: center;

@@ -26,7 +26,7 @@
     position: relative;
 
     @include sm {
-        padding: calc($space_sm * 10) clamp(2rem, 5vw, 4rem);
+        padding: calc($space_sm * 5) clamp(2rem, 5vw, 4rem);
         left: 195px;
         width: calc(100% - 195px);
     }
@@ -47,7 +47,7 @@
 .cardHeader {
     background: $gradient-color;
     color: $main-color;
-    padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 5vw, 3rem);
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(1.5rem, 5vw, 3rem);
 
     .en {
         display: block;
@@ -81,7 +81,7 @@
 
 // ── フォームエリア ────────────────────────────────
 .form {
-    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(1.5rem, 5vw, 3rem);
 }
 
 // ── フォーム行 ─────────────────────────────────────
@@ -89,7 +89,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 1.25rem 0;
+    padding: 0.65rem 0;
     border-bottom: 1px solid $bg-color;
 
     @include sm {
@@ -192,7 +192,7 @@
 
 // ── 送信ボタン ─────────────────────────────────────
 .submit {
-    margin-top: 2rem;
+    margin-top: 1.25rem;
     display: flex;
     justify-content: center;
 }

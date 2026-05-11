@@ -108,6 +108,7 @@ export default function Contact() {
             <div className={styles.row}>
               <div className={styles.labelGroup}>
                 <label htmlFor="name" className={styles.label}>ご担当者名</label>
+                <span className={styles.badgeOptional}>任意</span>
               </div>
               <input
                 id="name"
@@ -156,6 +157,7 @@ export default function Contact() {
             <div className={`${styles.row} ${styles.rowTop}`}>
               <div className={styles.labelGroup}>
                 <label htmlFor="message" className={styles.label}>ご相談内容</label>
+                <span className={styles.badgeOptional}>任意</span>
               </div>
               <textarea
                 id="message"

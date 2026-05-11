@@ -31,19 +31,19 @@ export default function Loader() {
     // ロゴに色が下から上へ染まる
     tl.to(coloredRef.current, {
       clipPath: "inset(0% 0 0 0)",
-      duration: 2.0,
+      duration: 2.6,
       ease: "power2.inOut",
-      delay: 0.6,
+      delay: 0.8,
     })
     // 小さくバウンス
-    .to(logoWrapRef.current, { scale: 1.07, duration: 0.3, ease: "power1.in" })
-    .to(logoWrapRef.current, { scale: 1,    duration: 0.3, ease: "power1.out" })
+    .to(logoWrapRef.current, { scale: 1.07, duration: 0.35, ease: "power1.in" })
+    .to(logoWrapRef.current, { scale: 1,    duration: 0.35, ease: "power1.out" })
     // オーバーレイが上にスライドアウト
     .to(overlayRef.current, {
       yPercent: -100,
-      duration: 1.0,
+      duration: 1.2,
       ease: "power3.inOut",
-      delay: 0.4,
+      delay: 0.6,
       onComplete: () => {
         if (overlayRef.current) overlayRef.current.style.display = "none";
       },

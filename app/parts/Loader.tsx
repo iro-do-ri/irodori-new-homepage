@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import styles from "./Loader.module.scss";
 
@@ -22,13 +21,11 @@ const LogoSVG = () => (
 );
 
 export default function Loader() {
-  const pathname = usePathname();
   const overlayRef = useRef<HTMLDivElement>(null);
   const logoWrapRef = useRef<HTMLDivElement>(null);
   const coloredRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (pathname !== "/") return;
     const tl = gsap.timeline();
 
     // ロゴに色が下から上へ染まる
@@ -52,8 +49,6 @@ export default function Loader() {
       },
     });
   }, []);
-
-  if (pathname !== "/") return null;
 
   return (
     <div ref={overlayRef} className={styles.overlay}>

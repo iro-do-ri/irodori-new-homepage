@@ -28,16 +28,18 @@ export default function Loader() {
   const logoWrapRef = useRef<HTMLDivElement>(null);
   const coloredRef = useRef<HTMLDivElement>(null);
 
-  // ペイント前に同期的に判定 → サイト内遷移なら即非表示
+  // ペイント前に同期的に判定 → TOP以外 or サイト内遷移なら即非表示
   useLayoutEffect(() => {
-    if (hasShownLoader && overlayRef.current) {
-      overlayRef.current.style.display = "none";
+    const isTop = window.location.pathname === "/";
+    if (!isTop || hasShownLoader) {
+      if (overlayRef.current) overlayRef.current.style.display = "none";
     }
   }, []);
 
-  // 初回ハードナビゲーション時のみアニメーション実行
+  // TOPへの初回ハードナビゲーション時のみアニメーション実行
   useEffect(() => {
-    if (hasShownLoader) return;
+    const isTop = window.location.pathname === "/";
+    if (!isTop || hasShownLoader) return;
     hasShownLoader = true;
 
     const tl = gsap.timeline();

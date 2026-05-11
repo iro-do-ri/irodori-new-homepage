@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Main from "./parts/Main";
 import Contact from "./parts/Contact";
-import Loader from "./parts/Loader";
 import {client} from "./lib/Micro";
 
 export const metadata: Metadata = {
@@ -34,7 +33,6 @@ export default async function Page() {
     const worksData = await client.get({ endpoint: "works", queries: { limit: 10 } }).catch(() => ({ contents: [] }));
   return (
   <section className="relative">
-      <Loader />
       <Main works={worksData.contents} />
       <Suspense fallback={null}>
         <Contact />

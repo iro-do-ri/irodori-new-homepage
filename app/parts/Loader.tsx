@@ -45,17 +45,17 @@ export default function Loader() {
     const tl = gsap.timeline();
     tl.to(coloredRef.current, {
       clipPath: "inset(0% 0 0 0)",
-      duration: 2.0,
+      duration: 1.4,
       ease: "power2.inOut",
-      delay: 0.6,
+      delay: 0.4,
     })
-    .to(logoWrapRef.current, { scale: 1.07, duration: 0.3, ease: "power1.in" })
-    .to(logoWrapRef.current, { scale: 1,    duration: 0.3, ease: "power1.out" })
+    .to(logoWrapRef.current, { scale: 1.07, duration: 0.22, ease: "power1.in" })
+    .to(logoWrapRef.current, { scale: 1,    duration: 0.22, ease: "power1.out" })
     .to(overlayRef.current, {
       yPercent: -100,
-      duration: 1.0,
+      duration: 0.8,
       ease: "power3.inOut",
-      delay: 0.4,
+      delay: 0.2,
       onComplete: () => {
         if (overlayRef.current) overlayRef.current.style.display = "none";
       },

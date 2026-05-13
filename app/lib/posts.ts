@@ -9,6 +9,8 @@ import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
+export type FaqItem = { q: string; a: string };
+
 export type PostMeta = {
   slug: string;
   title: string;
@@ -16,6 +18,7 @@ export type PostMeta = {
   date: string;
   category: string;
   image?: string;
+  faq?: FaqItem[];
 };
 
 export type Post = PostMeta & {
@@ -46,6 +49,7 @@ export function getAllPosts(): PostMeta[] {
         date: data.date ?? "",
         category: data.category ?? "",
         image: data.image ?? undefined,
+        faq: data.faq ?? undefined,
       } satisfies PostMeta;
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -79,6 +83,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     description: data.description ?? "",
     date: data.date ?? "",
     category: data.category ?? "",
+    faq: data.faq ?? undefined,
     contentHtml,
   };
 }

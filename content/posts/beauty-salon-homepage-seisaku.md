@@ -6,6 +6,8 @@ category: "ホームページ制作"
 slug: "beauty-salon-homepage-seisaku"
 ---
 
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/beauty-salon-homepage-seisaku-illustration.jpg" alt="美容室・ヘアサロンのホームページ制作イメージ。PC・スマホ対応のサロンサイトを見るWebデザイナーのイラスト。予約導線・スタイルギャラリー・集客SEO対策を表した水彩イラスト｜千葉県船橋のホームページ制作イロドリ" width="768" height="384" /></div>
+
 「ホームページを作ったけど予約が入らない」「Instagramはやっているけどサイトはない」——美容室・サロン経営者の方からこのようなお悩みをよく伺います。
 サロンのホームページは、ただ作るだけでは集客につながりません。この記事では、**新規のお客様に見つけてもらい、予約・来店につなげるホームページ**に必要なことを解説します。
 

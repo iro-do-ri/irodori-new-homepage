@@ -15,6 +15,8 @@ faq:
     a: "千葉のWEB制作会社にWordPressサイトを依頼する場合、シンプルな構成で10〜30万円、SEO対策・複数ページ込みで30〜50万円が目安です。"
 ---
 
+<div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/chiba-homepage-seisaku-illustration.jpg" alt="千葉・船橋のホームページ制作イメージ。地域密着型のWeb制作会社に依頼して集客できるサイトを作るWebデザイナーのイラスト｜千葉県船橋のホームページ制作イロドリ" width="768" height="384" /></div>
+
 「千葉でホームページを作りたいけど、どの会社に頼めばいいかわからない」「費用はどのくらいかかる？」——そんな疑問をお持ちの方向けに、千葉でホームページ制作を依頼する際に知っておくべきことをすべてまとめました。
 
 <div style="background:#f0f4ff;border-radius:10px;padding:1.5rem;margin:1.5rem 0;font-size:14px">

@@ -82,6 +82,7 @@ export default function Main({ works }: { works: Work[] }) {
               Webデザイン会社のイロドリです。<br className="hidden sm:block" />
               ホームページ制作を10万円からご対応します。
             </p>
+            <p className="text-sm mb-3 opacity-70">まだ依頼が決まっていなくてもOK。見積もりだけでも歓迎です。</p>
             <Link href={URL.Contact} className={`${styles.box_button} inline-block`} aria-label="無料相談ページへ移動します">
               <span className={`${styles.background_button} ${styles.contact_button}`}></span>
               <span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料で相談してみる</span>

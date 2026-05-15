@@ -72,7 +72,7 @@ export default function Contact() {
         <div className={styles.cardHeader}>
           <span className={styles.en}>Contact</span>
           <h1>お問い合わせ</h1>
-          <p className={styles.subtitle}>Webデザインのご相談・お見積りはこちらからどうぞ</p>
+          <p className={styles.subtitle}>まだ依頼が決まっていなくても大丈夫。相談・見積りだけでもお気軽にどうぞ。</p>
         </div>
 
         <div className={styles.form}>

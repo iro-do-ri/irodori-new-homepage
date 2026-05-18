@@ -147,6 +147,7 @@ const seventh_box = ()=>{
     return (
     <button onClick={()=>{
       setBack(2);
+      setNumber(1);
       setCount({
         company: "",
         service_years: "",

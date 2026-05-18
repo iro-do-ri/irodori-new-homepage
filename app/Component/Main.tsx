@@ -162,7 +162,7 @@ const seventh_box = ()=>{
   }
 
   return (
-    <section className={`${style.section} h-full px-12 bg-white min-h-screen`}>
+    <section className={`${style.section} h-full px-12`}>
     <h1 className="text-center block pt-12">簡単見積もり作成シミュレーション</h1>
     <div className='flex flex-col justify-center h-[calc(100%-96px)]'>
       <p className="text-center pb-4">

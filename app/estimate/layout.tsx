@@ -3,5 +3,9 @@ export default function EstimateLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <div className="container">
+      {children}
+    </div>
+  );
 }

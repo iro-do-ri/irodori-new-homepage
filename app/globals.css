@@ -93,7 +93,7 @@ time {
 
 .container {
   max-width: 800px;
-  background: var(---estimate-background);
+  background: var(--estimate-background);
   margin: 0 auto;
   height: 100vh;
   display: flex;

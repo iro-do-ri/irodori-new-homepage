@@ -63,7 +63,7 @@ const navItems = [
   { href: URL.Blog,    en: "BLOG",    ja: "ブログ",           icon: <BlogIcon /> },
   { href: URL.News,    en: "NEWS",    ja: "更新情報",         icon: <NewsIcon /> },
   { href: URL.Price,    en: "PRICE",    ja: "料金",            icon: <PriceIcon /> },
-  { href: URL.Estimate, en: "ESTIMATE", ja: "見積もり作成",    icon: <EstimateIcon /> },
+  { href: URL.Estimate, en: "ESTIMATE", ja: "見積もり作成",    icon: <EstimateIcon />, target: "_blank" },
 ];
 
 export default function Header() {
@@ -86,7 +86,7 @@ export default function Header() {
 
           <nav className={headerStyles.sidebarNav}>
             {navItems.map(item => (
-              <Link key={item.en} href={item.href} className={headerStyles.sidebarLink}>
+              <Link key={item.en} href={item.href} className={headerStyles.sidebarLink} target={item.target} rel={item.target === "_blank" ? "noopener noreferrer" : undefined}>
                 <span className={headerStyles.navIcon}>{item.icon}</span>
                 <span className={headerStyles.navText}>
                   <span className={headerStyles.navEn}>{item.en}</span>
@@ -145,6 +145,8 @@ export default function Header() {
                 key={item.en}
                 href={item.href}
                 className={headerStyles.drawerLink}
+                target={item.target}
+                rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
                 onClick={() => setIsOpen(false)}
               >
                 <span className={headerStyles.navIcon}>{item.icon}</span>

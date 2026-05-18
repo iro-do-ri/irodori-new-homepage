@@ -194,7 +194,8 @@ const seventh_box = ()=>{
         <p className='text-xs'>※サーバー代とドメイン代は別途費用発生</p>
         </div>
       </div>
-      <div className='flex justify-center'>
+      <div className='flex justify-center items-center gap-6'>
+        <a href="https://iro-do-ri.jp/" className='text-sm underline underink-offset-2 text-zinc-600 hover:text-zinc-900 transition-colors'>ホームページに戻る</a>
         {backButton()}
       </div>
     </div>

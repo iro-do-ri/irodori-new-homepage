@@ -2,9 +2,9 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { getAllPostSlugs, getPostBySlug, getAllPosts } from "@/app/lib/posts";
+import { getAllPostSlugs, getPostBySlug, getAllPosts } from "../../lib/posts";
 import styles from "./PostDetail.module.scss";
-import Breadcrumb from "@/app/parts/Breadcrumb";
+import Breadcrumb from "../../parts/Breadcrumb";
 
 type Props = { params: Promise<{ slug: string }> };
 

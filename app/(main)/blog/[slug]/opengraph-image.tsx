@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getPostBySlug, getAllPostSlugs } from "@/app/lib/posts";
+import { getPostBySlug, getAllPostSlugs } from "../../lib/posts";
 
 export const runtime = "nodejs";
 export const size = { width: 1200, height: 630 };

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import MyModel from "../../public/models/Mymodel";
+import MyModel from "../../../public/models/Mymodel";
 
 export default function Three() {
   const [isMobile, setIsMobile] = useState(false);

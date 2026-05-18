@@ -2,7 +2,7 @@ import { client } from "../../lib/Micro";
 import { URL } from "../../url/Url";
 import Link from "next/link";
 import styles from "./NewsDetail.module.scss";
-import Breadcrumb from "@/app/parts/Breadcrumb";
+import Breadcrumb from "../../parts/Breadcrumb";
 import type { Metadata } from "next";
 
 export async function generateMetadata({

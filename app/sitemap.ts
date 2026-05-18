@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
-import { getAllPostSlugs } from "./lib/posts";
-import { client } from "./lib/Micro";
+import { getAllPostSlugs } from "./(main)/lib/posts";
+import { client } from "./(main)/lib/Micro";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const slugs = getAllPostSlugs();

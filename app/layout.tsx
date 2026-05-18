@@ -1,23 +1,17 @@
 import type { Metadata } from "next";
 import { Montserrat, Murecho } from "next/font/google";
 import "./globals.css";
-import Footer from "./parts/Footer";
-import FloatingButtons from "./parts/FloatingButtons";
-import Loader from "./parts/Loader";
-import Header from "./parts/Header";
-import SmoothScroller from "./parts/SmoothScroller";
-import Three from "./components/Three";
 
 const MontserratSans = Montserrat({
   variable: "--font-Montserrat",
   subsets: ["latin"],
-  weight: ["300","400", "500", "700"],
+  weight: ["300", "400", "500", "700"],
 });
 
 const MurechoSans = Murecho({
   variable: "--font-Murecho",
   subsets: ["latin"],
-  weight: ["300","400", "500", "700"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export const metadata: Metadata = {
@@ -141,7 +135,6 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${MontserratSans.variable} ${MurechoSans.variable}`} suppressHydrationWarning>
       <head>
-        {/* リロード時のスクロール復元を最速で無効化 */}
         <script dangerouslySetInnerHTML={{ __html: `history.scrollRestoration='manual';` }} />
         <script
           type="application/ld+json"
@@ -157,7 +150,6 @@ export default function RootLayout({
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T9ZN2XDC');`,
           }}
         />
-        {/* Google AdSense */}
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1431244424236118"
@@ -165,23 +157,15 @@ export default function RootLayout({
         />
       </head>
       <body>
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-T9ZN2XDC"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        />
-      </noscript>
-        <Loader />
-        <script dangerouslySetInnerHTML={{ __html: `(function(){if(location.pathname!=='/'){var e=document.getElementById('loader-overlay');if(e)e.style.display='none';}})();` }} />
-        <Three />
-        <Header />
-        <FloatingButtons />
-        <SmoothScroller>
-          {children}
-          <Footer />
-        </SmoothScroller>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-T9ZN2XDC"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {children}
       </body>
     </html>
   );

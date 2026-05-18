@@ -49,6 +49,12 @@ const ContactIcon = () => (
     <polyline points="22,6 12,13 2,6"/>
   </svg>
 );
+const EstimateIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="3" width="18" height="18" rx="2"/>
+    <path d="M8 12h8M8 8h5M8 16h6"/>
+  </svg>
+);
 
 const navItems = [
   { href: URL.Home,    en: "HOME",    ja: "ホーム",          icon: <HomeIcon /> },
@@ -56,7 +62,8 @@ const navItems = [
   { href: URL.Works,   en: "WORKS",   ja: "実績",            icon: <WorksIcon /> },
   { href: URL.Blog,    en: "BLOG",    ja: "ブログ",           icon: <BlogIcon /> },
   { href: URL.News,    en: "NEWS",    ja: "更新情報",         icon: <NewsIcon /> },
-  { href: URL.Price,   en: "PRICE",   ja: "料金",            icon: <PriceIcon /> },
+  { href: URL.Price,    en: "PRICE",    ja: "料金",            icon: <PriceIcon /> },
+  { href: URL.Estimate, en: "ESTIMATE", ja: "見積もり作成",    icon: <EstimateIcon /> },
 ];
 
 export default function Header() {

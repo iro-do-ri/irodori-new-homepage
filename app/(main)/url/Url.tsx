@@ -7,4 +7,5 @@ export const URL = {
     Contact: "/contact",
     News: "/news",
     Privacy: "/privacy",
+    Estimate: "/estimate",
 }

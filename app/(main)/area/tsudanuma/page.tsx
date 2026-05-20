@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { URL } from "../../url/Url";
 import Breadcrumb from "../../parts/Breadcrumb";
@@ -157,9 +158,7 @@ export default function TsudanumaPage() {
             個人事業主・中小企業向け
           </h1>
           <p className={styles.description}>
-            津田沼・習志野で開業した方のホームページ制作をサポートします。<br />
-            美容室・整骨院・学習塾・士業など、地域密着型のお仕事をされている方から<br className="hidden sm:block" />
-            多くのご相談をいただいています。相談無料・対面打ち合わせOK。
+            津田沼・習志野で開業した方のホームページ制作をサポートします。美容室・整骨院・学習塾・士業など、地域密着型のお仕事をされている方から多くのご相談をいただいています。相談無料・対面打ち合わせOK。
           </p>
           <Link
             href={URL.Contact}
@@ -176,23 +175,37 @@ export default function TsudanumaPage() {
         {/* ── 津田沼エリアについて ── */}
         <div className={`${styles.section} ${styles.areaBg}`}>
           <div className={styles.sectionInner}>
-            <span className={styles.sectionLabel}>ABOUT TSUDANUMA</span>
-            <h2 className={styles.sectionTitle}>津田沼・習志野エリアで開業された方へ</h2>
-            <p className={styles.areaText}>
-              津田沼駅周辺は習志野市と船橋市にまたがる、千葉県内でも有数の商業・住宅エリアです。
-              モリシア津田沼の再開発が進む駅北口エリア、整骨院・学習塾・美容室が集まる奏の杜、
-              飲食店や医療クリニックが立ち並ぶ駅南口など、地域密着型のビジネスが多く根付いています。
-            </p>
-            <p className={styles.areaText}>
-              最近では「古いホームページをスマホ対応にしたい」「開業したのでゼロからサイトを作りたい」
-              というご相談を津田沼・習志野エリアの方からいただく機会が増えています。
-              特に美容室・整骨院・学習塾・士業など、地域のお客様を大切にされているお仕事の方から
-              多くご連絡をいただいています。
-            </p>
-            <p className={styles.areaText}>
-              「Web制作会社って敷居が高そう…」と感じている方ほど、まずお気軽にご相談ください。
-              津田沼から電車で数分の船橋市に拠点を置いているので、カフェや事務所での対面打ち合わせも可能です。
-            </p>
+            <div className={styles.areaLayout}>
+              <div className={styles.areaBody}>
+                <span className={styles.sectionLabel}>ABOUT TSUDANUMA</span>
+                <h2 className={styles.sectionTitle}>津田沼・習志野エリアで開業された方へ</h2>
+                <p className={styles.areaText}>
+                  津田沼駅周辺は習志野市と船橋市にまたがる、千葉県内でも有数の商業・住宅エリアです。
+                  モリシア津田沼の再開発が進む駅北口エリア、整骨院・学習塾・美容室が集まる奏の杜、
+                  飲食店や医療クリニックが立ち並ぶ駅南口など、地域密着型のビジネスが多く根付いています。
+                </p>
+                <p className={styles.areaText}>
+                  最近では「古いホームページをスマホ対応にしたい」「開業したのでゼロからサイトを作りたい」
+                  というご相談を津田沼・習志野エリアの方からいただく機会が増えています。
+                  特に美容室・整骨院・学習塾・士業など、地域のお客様を大切にされているお仕事の方から
+                  多くご連絡をいただいています。
+                </p>
+                <p className={styles.areaText}>
+                  「Web制作会社って敷居が高そう…」と感じている方ほど、まずお気軽にご相談ください。
+                  津田沼から電車で数分の船橋市に拠点を置いているので、カフェや事務所での対面打ち合わせも可能です。
+                </p>
+              </div>
+              <div className={styles.areaImageWrap}>
+                <Image
+                  src="/tsudanuma-station-area-narashino-chiba.jpg"
+                  alt="津田沼駅前エリアの街並み（習志野市）"
+                  width={640}
+                  height={427}
+                  className={styles.areaImage}
+                  priority={false}
+                />
+              </div>
+            </div>
           </div>
         </div>
 

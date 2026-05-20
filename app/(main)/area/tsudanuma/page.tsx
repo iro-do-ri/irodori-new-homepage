@@ -157,9 +157,11 @@ export default function TsudanumaPage() {
             津田沼のホームページ制作<br />
             個人事業主・中小企業向け
           </h1>
-          <p className={styles.description}>
-            津田沼・習志野で開業した方のホームページ制作をサポートします。美容室・整骨院・学習塾・士業など、地域密着型のお仕事をされている方から多くのご相談をいただいています。相談無料・対面打ち合わせOK。
-          </p>
+          <ul className={styles.heroList}>
+            <li>津田沼・習志野で開業した方のホームページ制作をサポートします。</li>
+            <li>美容室・整骨院・学習塾・士業など、地域密着型のお仕事をされている方から多くのご相談をいただいています。</li>
+            <li>相談無料・対面打ち合わせOK。</li>
+          </ul>
           <Link
             href={URL.Contact}
             className={`${styles.box_button} inline-block`}

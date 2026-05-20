@@ -40,6 +40,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/** HTML文字列を中間の段落区切りで前半・後半に分割する */
+function splitHtmlAtMidpoint(html: string): [string, string] {
+  const mid = Math.floor(html.length / 2);
+  const after = html.slice(mid);
+  const match = after.match(/<\/(p|h2|h3|ul|ol|table)>/);
+  if (!match || match.index === undefined) return [html, ""];
+  const splitAt = mid + match.index + match[0].length;
+  return [html.slice(0, splitAt), html.slice(splitAt)];
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
@@ -119,24 +129,39 @@ export default async function BlogPostPage({ params }: Props) {
                 )}
               </div>
             );
+            const inlineCta = (
+              <div className={styles.inlineCta}>
+                <p className={styles.inlineCtaText}>
+                  <strong>船橋・千葉でホームページ制作をご検討中の方へ</strong><br />
+                  10万円から制作・相談無料。担当者が一人で丁寧に対応します。
+                </p>
+                <Link href="/contact" className={styles.inlineCtaBtn}>無料相談はこちら →</Link>
+              </div>
+            );
             if (html.startsWith('<div style="display:flex')) {
               const closingIndex = html.indexOf('</div>') + '</div>'.length;
               const eyecatchHtml = html.slice(0, closingIndex);
               const restHtml = html.slice(closingIndex);
+              const [firstHalf, secondHalf] = splitHtmlAtMidpoint(restHtml);
               return (
                 <>
                   <div dangerouslySetInnerHTML={{ __html: eyecatchHtml }} />
                   {meta}
                   <h1 className={styles.articleTitle}>{post.title}</h1>
-                  <div dangerouslySetInnerHTML={{ __html: restHtml }} />
+                  <div dangerouslySetInnerHTML={{ __html: firstHalf }} />
+                  {inlineCta}
+                  <div dangerouslySetInnerHTML={{ __html: secondHalf }} />
                 </>
               );
             }
+            const [firstHalf, secondHalf] = splitHtmlAtMidpoint(html);
             return (
               <>
                 {meta}
                 <h1 className={styles.articleTitle}>{post.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
+                <div dangerouslySetInnerHTML={{ __html: firstHalf }} />
+                {inlineCta}
+                <div dangerouslySetInnerHTML={{ __html: secondHalf }} />
               </>
             );
           })()}

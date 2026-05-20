@@ -72,7 +72,7 @@ export default function Main({ works }: { works: Work[] }) {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <h1 className={styles.heroTitle}>
-            <span className="block mb-2">千葉県船橋を拠点にデザインの魅力を伝える<br className="sm:hidden block" />ホームページ・WEBサイト制作会社</span>
+            <span className="block mb-2">千葉県船橋のホームページ制作会社｜WordPressサイト制作・SEO対策</span>
             あなたの理想を<br />デザインで形にします
           </h1>
           <div className={styles.heroSub}>

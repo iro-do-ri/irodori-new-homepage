@@ -154,8 +154,7 @@ export default function TsudanumaPage() {
         <div className={styles.hero}>
           <span className={styles.label}>AREA / TSUDANUMA</span>
           <h1 className={styles.title}>
-            津田沼のホームページ制作<br />
-            個人事業主・中小企業向け
+            津田沼・習志野のホームページ制作会社｜WordPress・SEO対策【イロドリ】
           </h1>
         </div>
 

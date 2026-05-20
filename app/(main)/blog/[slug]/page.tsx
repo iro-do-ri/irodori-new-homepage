@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.description,
       images: ["/og-image.png"],
     },
-    robots: { index: true, follow: true },
+    robots: post.noindex ? { index: false, follow: false } : { index: true, follow: true },
   };
 }
 

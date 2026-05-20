@@ -4,6 +4,7 @@ description: "Anthropicが開発したAIモデル「Claude Mythos（ミュトス
 date: "2026-04-25"
 category: "AI"
 slug: "ai-mythos-toha"
+noindex: true
 ---
 
 <div style="display:flex;justify-content:center;margin:1.5rem 0"><img src="/ai-mythos-toha-robot-woman-laptop.jpg" alt="AIロボットと女性がノートパソコンを前にアイデアを共有するイラスト。AIと人間の協働イメージ" width="768" height="384" /></div>
@@ -18,7 +19,7 @@ Anthropicが開発した「**Claude Mythos（クロード・ミュトス）**」
 
 ---
 
-## 💡 AI ミュトス（Claude Mythos）とは
+## AI ミュトス（Claude Mythos）とは
 
 Claude MythosはAI研究企業**Anthropic（アンソロピック）**が開発した高性能AIモデルです。
 
@@ -48,7 +49,7 @@ Mythosはそのシリーズの中でも、特に高い能力を持つモデル�
 
 ---
 
-## 🔍 Claude Mythosの特徴・できること
+## Claude Mythosの特徴・できること
 
 Mythosが注目を集める最大の理由は、その**圧倒的なサイバーセキュリティ能力**です。
 
@@ -69,7 +70,7 @@ Claude Mythosは、OSやブラウザなどの複雑なソフトウェアから�
 
 ---
 
-## ⚠️ なぜ一般公開されないのか
+## なぜ一般公開されないのか
 
 Claude Mythosは現在、Apple・Google・Microsoftなど限られた信頼できるパートナー企業のみに提供されており、一般向けには公開されていません。
 
@@ -82,7 +83,7 @@ Anthropicは「Project Glasswing（プロジェクト・グラスウィング）
 
 ---
 
-## 🤔 私たちの仕事・生活にどう関係するのか
+## 私たちの仕事・生活にどう関係するのか
 
 「難しい話で自分には関係ない」と感じた方もいるかもしれません。
 しかし、AI Mythosの登場は、一般のビジネス・日常生活にも間接的に大きな影響をもたらします。
@@ -102,7 +103,7 @@ MythosのようなAIが登場することで、他のAI企業も開発競争を�
 
 ---
 
-## 📊 ChatGPT・Gemini・Claudeとの違いは？
+## ChatGPT・Gemini・Claudeとの違いは？
 
 一般的に知られているAIと比較すると、以下のように整理できます。
 
@@ -117,7 +118,7 @@ Claude Mythosは現時点では一般利用できませんが、その技術は�
 
 ---
 
-## 🔮 今後の展望
+## 今後の展望
 
 AI Mythosの登場は、AIが「便利なツール」から「自律的に問題を解決するパートナー」へと進化する大きな転換点を示しています。
 
@@ -132,7 +133,7 @@ AI Mythosの登場は、AIが「便利なツール」から「自律的に問題
 
 ---
 
-## 📝 まとめ
+## まとめ
 
 - **AI ミュトス（Claude Mythos）**はAnthropicが2026年4月に発表した最先端AIモデル
 - ゼロデイ脆弱性の自動発見など、サイバーセキュリティ分野で圧倒的な能力を持つ

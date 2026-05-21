@@ -342,6 +342,53 @@ export default function Main({ works }: { works: Work[] }) {
         </div>
       </section>
 
+      {/* ── 対応エリア ── */}
+      <section className={styles.areaSection}>
+        <div className={styles.areaSectionInner}>
+          <span className={styles.curtainEyebrow}>SERVICE AREA</span>
+          <h2 className="mb-3">対応エリア｜千葉県内の近隣エリアも歓迎</h2>
+          <p className="mb-10 opacity-60 text-sm leading-relaxed">
+            船橋市を拠点に、津田沼・八千代・鎌ヶ谷など近隣エリアからのご依頼も対応しています。<br className="hidden sm:block" />
+            対面でのお打ち合わせも可能ですので、お気軽にご相談ください。
+          </p>
+          <div className={styles.areaGrid}>
+            {[
+              {
+                label: "TSUDANUMA / NARASHINO",
+                title: "津田沼・習志野",
+                desc: "モリシア津田沼・奏の杜エリアの個人事業主・中小企業のホームページ制作に対応。船橋から最短15分圏内で対面打ち合わせも可能です。",
+                href: URL.AreaTsudanuma,
+              },
+              {
+                label: "YACHIYO",
+                title: "八千代",
+                desc: "八千代緑が丘の新規開業者から八千代台の老舗店舗まで幅広く対応。「まだ何も決まっていない」という段階からご相談いただけます。",
+                href: URL.AreaYachiyo,
+              },
+              {
+                label: "KAMAGAYA",
+                title: "鎌ヶ谷",
+                desc: "新鎌ケ谷駅周辺の個人経営店舗・士業事務所など、地域密着型ビジネスのホームページ制作をサポートします。",
+                href: URL.AreaKamagaya,
+              },
+            ].map((area) => (
+              <Link key={area.href} href={area.href} className={styles.areaCard} aria-label={`${area.title}のホームページ制作ページへ`}>
+                <span className={styles.areaCardLabel}>{area.label}</span>
+                <p className={styles.areaCardTitle}>{area.title}</p>
+                <p className={styles.areaCardDesc}>{area.desc}</p>
+                <span className={styles.areaCardArrow}>詳しく見る →</span>
+              </Link>
+            ))}
+          </div>
+          <div className="flex justify-center mt-10">
+            <Link href={URL.Area} className={`${styles.box_button} inline-block`} aria-label="対応エリア一覧ページへ移動します">
+              <span className={`${styles.background_button} ${styles.other_button}`}></span>
+              <span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>対応エリアをすべて見る</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.seoText}>
         <div className={styles.seoTextInner}>
           <h2 className={styles.seoTextTitle}>千葉県船橋のホームページ制作はイロドリへ</h2>

@@ -8,4 +8,8 @@ export const URL = {
     News: "/news",
     Privacy: "/privacy",
     Estimate: "/estimate",
+    Area: "/area",
+    AreaTsudanuma: "/area/tsudanuma",
+    AreaYachiyo: "/area/yachiyo",
+    AreaKamagaya: "/area/kamagaya",
 }

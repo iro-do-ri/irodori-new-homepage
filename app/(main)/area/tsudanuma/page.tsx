@@ -281,6 +281,28 @@ export default function TsudanumaPage() {
           </div>
         </div>
 
+        {/* ── 関連エリア ── */}
+        <div className={`${styles.section} ${styles.relatedBg}`}>
+          <div className={styles.sectionInner}>
+            <span className={styles.sectionLabel}>OTHER AREAS</span>
+            <h2 className={styles.sectionTitle}>他の対応エリア</h2>
+            <div className={styles.relatedGrid}>
+              <Link href={URL.AreaYachiyo} className={styles.relatedCard} aria-label="八千代のホームページ制作ページへ">
+                <span className={styles.relatedCardLabel}>YACHIYO</span>
+                <p className={styles.relatedCardTitle}>八千代</p>
+                <p className={styles.relatedCardDesc}>八千代緑が丘・八千代台エリアの個人事業主・中小企業向けにホームページ制作をご提供しています。</p>
+                <span className={styles.relatedCardArrow}>詳しく見る →</span>
+              </Link>
+              <Link href={URL.AreaKamagaya} className={styles.relatedCard} aria-label="鎌ヶ谷のホームページ制作ページへ">
+                <span className={styles.relatedCardLabel}>KAMAGAYA</span>
+                <p className={styles.relatedCardTitle}>鎌ヶ谷</p>
+                <p className={styles.relatedCardDesc}>新鎌ケ谷駅周辺の個人経営店舗・士業事務所など、地域密着型ビジネスのホームページ制作に対応しています。</p>
+                <span className={styles.relatedCardArrow}>詳しく見る →</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* ── CTA ── */}
         <div className={styles.cta}>
           <span className={styles.ctaLabel}>CONTACT</span>

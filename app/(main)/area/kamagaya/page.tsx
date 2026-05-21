@@ -259,6 +259,28 @@ export default function KamagayaPage() {
           </div>
         </div>
 
+        {/* ── 関連エリア ── */}
+        <div className={`${styles.section} ${styles.relatedBg}`}>
+          <div className={styles.sectionInner}>
+            <span className={styles.sectionLabel}>OTHER AREAS</span>
+            <h2 className={styles.sectionTitle}>他の対応エリア</h2>
+            <div className={styles.relatedGrid}>
+              <Link href={URL.AreaTsudanuma} className={styles.relatedCard} aria-label="津田沼のホームページ制作ページへ">
+                <span className={styles.relatedCardLabel}>TSUDANUMA / NARASHINO</span>
+                <p className={styles.relatedCardTitle}>津田沼・習志野</p>
+                <p className={styles.relatedCardDesc}>モリシア津田沼・奏の杜エリアの個人事業主・中小企業向けにホームページ制作をご提供しています。</p>
+                <span className={styles.relatedCardArrow}>詳しく見る →</span>
+              </Link>
+              <Link href={URL.AreaYachiyo} className={styles.relatedCard} aria-label="八千代のホームページ制作ページへ">
+                <span className={styles.relatedCardLabel}>YACHIYO</span>
+                <p className={styles.relatedCardTitle}>八千代</p>
+                <p className={styles.relatedCardDesc}>八千代緑が丘・八千代台エリアの個人事業主・中小企業向けにホームページ制作をご提供しています。</p>
+                <span className={styles.relatedCardArrow}>詳しく見る →</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* ── CTA ── */}
         <div className={styles.cta}>
           <span className={styles.ctaLabel}>CONTACT</span>

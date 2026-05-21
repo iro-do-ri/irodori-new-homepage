@@ -384,6 +384,67 @@
     }
 }
 
+// ── 関連エリア ──────────────────────────────────
+.relatedBg {
+    background: $main-color;
+}
+
+.relatedGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+
+    @media (max-width: 639px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.relatedCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: $bg-color;
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+    text-decoration: none;
+    border-left: 3px solid $button-color;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 6px 20px rgba(5, 8, 40, 0.1);
+        transform: translateY(-2px);
+    }
+}
+
+.relatedCardLabel {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: $button-color;
+    text-transform: uppercase;
+}
+
+.relatedCardTitle {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+    color: $text-color;
+    line-height: 1.3;
+}
+
+.relatedCardDesc {
+    font-size: 12px;
+    line-height: 1.7;
+    color: rgba(5, 8, 40, 0.55);
+    flex: 1;
+}
+
+.relatedCardArrow {
+    font-size: 12px;
+    font-weight: 600;
+    color: $button-color;
+    margin-top: 0.25rem;
+}
+
 // ── CTA ─────────────────────────────────────────
 .cta {
     background: $text-color;

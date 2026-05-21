@@ -11,7 +11,6 @@ export default function MyModel(
   props: ThreeElements["group"]
 ) {
   const { scene, animations } = useGLTF("/models/irodori.glb");
-  console.log("animations:", animations.map(a => a.name));
   const { actions } = useAnimations(animations, scene);
   useEffect(() => {
     const action = actions["ArmatureAction.002"];

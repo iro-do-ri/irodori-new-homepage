@@ -163,10 +163,10 @@ export default function TsudanumaPage() {
         {/* ── 津田沼エリアについて ── */}
         <div className={`${styles.section} ${styles.areaBg}`}>
           <div className={styles.sectionInner}>
+            <span className={styles.sectionLabel}>ABOUT TSUDANUMA</span>
+            <h2 className={styles.sectionTitle}>津田沼・習志野エリアで開業された方へ</h2>
             <div className={styles.areaLayout}>
               <div className={styles.areaBody}>
-                <span className={styles.sectionLabel}>ABOUT TSUDANUMA</span>
-                <h2 className={styles.sectionTitle}>津田沼・習志野エリアで開業された方へ</h2>
                 <p className={styles.areaText}>
                   津田沼駅周辺は習志野市と船橋市にまたがる、千葉県内でも有数の商業・住宅エリアです。
                   モリシア津田沼の再開発が進む駅北口エリア、整骨院・学習塾・美容室が集まる奏の杜、
@@ -190,7 +190,6 @@ export default function TsudanumaPage() {
                   width={640}
                   height={427}
                   className={styles.areaImage}
-                  priority={false}
                 />
               </div>
             </div>

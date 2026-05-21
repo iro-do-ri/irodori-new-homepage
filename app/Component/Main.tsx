@@ -80,7 +80,7 @@ const [back,setBack] = useState(1);
     )
   })
 
-  const fifth = [{support:"更新を希望",image:"image/fifth/update.png"},{support:"更新を希望しない",image:"image/fifth/noupdate.png"}]
+  const fifth = [{support:"更新を希望",image:"image/fifth/update.webp"},{support:"更新を希望しない",image:"image/fifth/noupdate.webp"}]
 
   const fifth_box = fifth.map((itemFifth)=>{
     return (
@@ -96,7 +96,7 @@ const [back,setBack] = useState(1);
     )
   })
 
-  const sixth = [{contact:"お問い合わせフォームを希望",image:"image/sixth/contact.png"},{contact:"お問い合わせフォームを希望しない",image:"image/sixth/nocontact.png"}]
+  const sixth = [{contact:"お問い合わせフォームを希望",image:"image/sixth/contact.webp"},{contact:"お問い合わせフォームを希望しない",image:"image/sixth/nocontact.webp"}]
 
   const six_box = sixth.map((itemSixth)=>{
     return (

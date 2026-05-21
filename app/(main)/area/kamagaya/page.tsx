@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { URL } from "../../url/Url";
 import Breadcrumb from "../../parts/Breadcrumb";
 import styles from "./Kamagaya.module.scss";
@@ -162,20 +163,33 @@ export default function KamagayaPage() {
           <div className={styles.sectionInner}>
             <span className={styles.sectionLabel}>ABOUT KAMAGAYA</span>
             <h2 className={styles.sectionTitle}>鎌ヶ谷市で事業をされている方へ</h2>
-            <p className={styles.areaText}>
-              鎌ヶ谷市は東武野田線・京成線・北総線・成田スカイアクセス線の4路線が乗り入れる交通利便性の高い住宅都市です。
-              新鎌ケ谷駅前にはアクロスモール新鎌ケ谷やイオン鎌ヶ谷SCが立地し、飲食・美容・日用品など生活に根ざした
-              お店が多く集まっています。
-            </p>
-            <p className={styles.areaText}>
-              住宅都市である鎌ヶ谷市は、地域のお客様を大切にする個人経営の店舗が多いエリアです。
-              「Googleで名前を検索したときに何も出てこない」「友人に紹介するときにURLを教えられない」
-              といった理由でホームページ制作のご相談をいただくケースが多くあります。
-            </p>
-            <p className={styles.areaText}>
-              船橋市に拠点を置くイロドリは、鎌ヶ谷市と隣接した距離感です。
-              「Web制作会社は敷居が高い」と感じている方も、まず気軽にお声がけください。
-            </p>
+            <div className={styles.areaLayout}>
+              <div className={styles.areaBody}>
+                <p className={styles.areaText}>
+                  鎌ヶ谷市は東武野田線・京成線・北総線・成田スカイアクセス線の4路線が乗り入れる交通利便性の高い住宅都市です。
+                  新鎌ケ谷駅前にはアクロスモール新鎌ケ谷やイオン鎌ヶ谷SCが立地し、飲食・美容・日用品など生活に根ざした
+                  お店が多く集まっています。
+                </p>
+                <p className={styles.areaText}>
+                  住宅都市である鎌ヶ谷市は、地域のお客様を大切にする個人経営の店舗が多いエリアです。
+                  「Googleで名前を検索したときに何も出てこない」「友人に紹介するときにURLを教えられない」
+                  といった理由でホームページ制作のご相談をいただくケースが多くあります。
+                </p>
+                <p className={styles.areaText}>
+                  船橋市に拠点を置くイロドリは、鎌ヶ谷市と隣接した距離感です。
+                  「Web制作会社は敷居が高い」と感じている方も、まず気軽にお声がけください。
+                </p>
+              </div>
+              <div className={styles.areaImageWrap}>
+                <Image
+                  src="/kamagaya-station-area-kamagaya-chiba.jpg"
+                  alt="鎌ヶ谷駅前エリアの街並み（鎌ヶ谷市）"
+                  width={640}
+                  height={427}
+                  className={styles.areaImage}
+                />
+              </div>
+            </div>
           </div>
         </div>
 

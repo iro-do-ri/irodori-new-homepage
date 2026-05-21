@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { URL } from "../../url/Url";
 import Breadcrumb from "../../parts/Breadcrumb";
 import styles from "./Yachiyo.module.scss";
@@ -163,20 +164,33 @@ export default function YachiyoPage() {
           <div className={styles.sectionInner}>
             <span className={styles.sectionLabel}>ABOUT YACHIYO</span>
             <h2 className={styles.sectionTitle}>八千代市で開業された方へ</h2>
-            <p className={styles.areaText}>
-              八千代市は、東葉高速線の開通以来、八千代緑が丘エリアを中心に人口が増え続けている千葉県内でも注目の住宅都市です。
-              イオンモール八千代緑が丘周辺には新規開業の店舗が相次ぎ、パーソナルジム・トリミングサロン・教室系など
-              個人事業主の方が多く活躍しています。
-            </p>
-            <p className={styles.areaText}>
-              一方、京成本線の八千代台エリアはユアエルムを中心とした老舗の商業エリアで、
-              地域に根ざした飲食店・美容室・士業事務所など、長く地元のお客様に愛されているお店が多いエリアです。
-              「古いホームページをリニューアルしたい」「スマホ対応させたい」というご相談もよくいただきます。
-            </p>
-            <p className={styles.areaText}>
-              イロドリは船橋市に拠点を置いており、八千代市からは車で30分圏内。
-              対面でのお打ち合わせも可能ですので、初めての方もお気軽にご連絡ください。
-            </p>
+            <div className={styles.areaLayout}>
+              <div className={styles.areaBody}>
+                <p className={styles.areaText}>
+                  八千代市は、東葉高速線の開通以来、八千代緑が丘エリアを中心に人口が増え続けている千葉県内でも注目の住宅都市です。
+                  イオンモール八千代緑が丘周辺には新規開業の店舗が相次ぎ、パーソナルジム・トリミングサロン・教室系など
+                  個人事業主の方が多く活躍しています。
+                </p>
+                <p className={styles.areaText}>
+                  一方、京成本線の八千代台エリアはユアエルムを中心とした老舗の商業エリアで、
+                  地域に根ざした飲食店・美容室・士業事務所など、長く地元のお客様に愛されているお店が多いエリアです。
+                  「古いホームページをリニューアルしたい」「スマホ対応させたい」というご相談もよくいただきます。
+                </p>
+                <p className={styles.areaText}>
+                  イロドリは船橋市に拠点を置いており、八千代市からは車で30分圏内。
+                  対面でのお打ち合わせも可能ですので、初めての方もお気軽にご連絡ください。
+                </p>
+              </div>
+              <div className={styles.areaImageWrap}>
+                <Image
+                  src="/yachiyo-midorigaoka-area-yachiyo-chiba.jpg"
+                  alt="八千代緑が丘エリアの街並み（八千代市）"
+                  width={640}
+                  height={480}
+                  className={styles.areaImage}
+                />
+              </div>
+            </div>
           </div>
         </div>
 

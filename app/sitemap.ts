@@ -1,15 +1,16 @@
 import { MetadataRoute } from "next";
-import { getAllPostSlugs } from "./(main)/lib/posts";
+import { getAllPosts } from "./(main)/lib/posts";
 import { client } from "./(main)/lib/Micro";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const slugs = getAllPostSlugs();
-  const blogPosts = slugs.map((slug) => ({
-    url: `https://iro-do-ri.jp/blog/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  const blogPosts = getAllPosts()
+    .filter((post) => !post.noindex)
+    .map((post) => ({
+      url: `https://iro-do-ri.jp/blog/${post.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
 
   let newsPosts: MetadataRoute.Sitemap = [];
   try {

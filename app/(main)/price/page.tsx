@@ -7,7 +7,7 @@ import Breadcrumb from "../parts/Breadcrumb";
 export const metadata: Metadata = {
   title: "料金プラン｜千葉県船橋のホームページ制作・チラシデザイン【イロドリ】",
   description:
-    "千葉県船橋のホームページ制作会社イロドリの料金プラン。ホームページ制作10万円〜、チラシ片面デザイン3万円〜・両面5万円〜。WordPress・SEO設計込み。見積もり無料でご相談ください。",
+    "千葉県船橋のホームページ制作会社イロドリの料金プラン。ホームページ制作10万円〜、SEO対策月3万円〜、チラシデザイン3万円〜。既存サイトへのSEO単体対応も可。見積もり無料でご相談ください。",
   keywords: ["千葉", "船橋", "千葉県船橋", "千葉 ホームページ制作", "料金プラン", "ホームページ制作", "チラシデザイン", "フライヤーデザイン", "格安", "WordPress", "SEO対策", "イロドリ"],
   alternates: { canonical: "https://iro-do-ri.jp/price" },
   openGraph: {
@@ -229,6 +229,57 @@ export default function Price() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+
+        {/* ── SEO対策料金 ── */}
+        <div className={styles.section}>
+          <div className={styles.sectionInner}>
+            <span className={styles.sectionLabel}>SEO</span>
+            <h2 className={styles.sectionTitle}>SEO対策料金</h2>
+            <p className={styles.sectionDesc}>
+              船橋・千葉エリアを中心に、検索上位表示を目指すSEO対策をご提供。<br />
+              ホームページ制作とセットでも、既存サイトへの単体対応も承ります。<br />
+              ※表示価格は税抜きの目安です。詳細はお見積りにてご確認ください。
+            </p>
+            <div className={styles.planGrid}>
+              <div className={`${styles.planCard} ${styles.featured}`}>
+                <span className={styles.featuredBadge}>単体・セット共通</span>
+                <div className={styles.planHeader}>
+                  <span className={styles.planType}>SEO</span>
+                  <p className={styles.planName}>SEO対策プラン</p>
+                  <div className={styles.planPriceRow}>
+                    <span className={styles.planPrice}>¥30,000</span>
+                    <span style={{ fontSize: "0.85rem", color: "#888", marginLeft: "0.5rem" }}>/月</span>
+                  </div>
+                </div>
+                <div className={styles.planBody}>
+                  <p className={styles.planDesc}>
+                    既存サイトへの単体対応も、ホームページ制作とのセットも月額3万円。
+                    検索順位レポートと改善提案を毎月お届けします。
+                  </p>
+                  <hr className={styles.planDivider} />
+                  <ul className={styles.featureList}>
+                    <li className={styles.featureItem}>キーワード選定・競合調査</li>
+                    <li className={styles.featureItem}>タイトル・メタディスクリプション最適化</li>
+                    <li className={styles.featureItem}>内部リンク・構造改善</li>
+                    <li className={styles.featureItem}>月次検索順位レポート</li>
+                    <li className={styles.featureItem}>Google Search Console 分析・改善提案</li>
+                    <li className={styles.featureItem}>既存サイト単体でも対応可</li>
+                  </ul>
+                  <div className="flex justify-center mt-6">
+                    <Link
+                      href={`${URL.Contact}?plan=${encodeURIComponent("SEO対策プラン")}`}
+                      className={`${styles.box_button} inline-block`}
+                      aria-label="SEO対策プランで無料相談する"
+                    >
+                      <span className={`${styles.background_button} ${styles.contact_button}`}></span>
+                      <span className={`${styles.contents_button} px-8 py-3 inline-block`}>このプランで相談する</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -53,6 +53,10 @@ export default function Contact() {
       if (data.success) {
         setForm({ company: "", name: "", email: "", phone: "", message: "", _hp: "" });
         setStatus("success");
+        if (typeof window !== "undefined") {
+          (window as any).dataLayer = (window as any).dataLayer || [];
+          (window as any).dataLayer.push({ event: "contact_form_submit" });
+        }
       } else {
         setStatus("error");
       }
@@ -100,7 +104,8 @@ export default function Contact() {
                 name="company"
                 value={form.company}
                 type="text"
-                placeholder="株式会社山田商事 / 個人の方は個人で可"
+                placeholder="株式会社山田商事 / 個人の方は「個人」で可"
+                required
                 onChange={handleChange}
               />
             </div>

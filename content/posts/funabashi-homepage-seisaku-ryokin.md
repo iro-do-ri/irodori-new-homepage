@@ -4,6 +4,7 @@ description: "船橋でホームページ制作を依頼する際の料金相場
 date: "2026-03-06"
 category: "ホームページ制作"
 slug: "funabashi-homepage-seisaku-ryokin"
+canonical: "https://iro-do-ri.jp"
 ---
 
 船橋でホームページ制作を検討しているものの、「費用がいくらかかるかわからない」「安いと品質が落ちるのでは」と不安を感じていませんか？

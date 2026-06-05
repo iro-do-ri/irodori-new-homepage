@@ -20,6 +20,7 @@ export type PostMeta = {
   image?: string;
   faq?: FaqItem[];
   noindex?: boolean;
+  canonical?: string;
 };
 
 export type Post = PostMeta & {
@@ -52,6 +53,7 @@ export function getAllPosts(): PostMeta[] {
         image: data.image ?? undefined,
         faq: data.faq ?? undefined,
         noindex: data.noindex ?? undefined,
+        canonical: data.canonical ?? undefined,
       } satisfies PostMeta;
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -87,6 +89,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     category: data.category ?? "",
     faq: data.faq ?? undefined,
     noindex: data.noindex ?? undefined,
+    canonical: data.canonical ?? undefined,
     contentHtml,
   };
 }

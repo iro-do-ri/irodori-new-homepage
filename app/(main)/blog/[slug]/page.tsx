@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: { absolute: title },
     description: post.description,
     keywords: ["船橋", "千葉", "千葉県船橋", "千葉 ホームページ制作", "ホームページ制作", "Webデザイン", "イロドリ"],
-    alternates: { canonical: url },
+    alternates: { canonical: post.canonical ?? url },
     openGraph: {
       type: "article",
       title,

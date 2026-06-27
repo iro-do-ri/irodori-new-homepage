@@ -4,7 +4,8 @@ import styles from "./Contact.module.scss";
 import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function Contact() {
+export default function Contact({ headingLevel = "h1" }: { headingLevel?: "h1" | "h2" }) {
+  const Heading = headingLevel;
   const searchParams = useSearchParams();
   const loadedAt = useRef<number>(Date.now());
   const hasHovered = useRef(false);
@@ -75,7 +76,7 @@ export default function Contact() {
       <div className={styles.card}>
         <div className={styles.cardHeader}>
           <span className={styles.en}>Contact</span>
-          <h1>お問い合わせ</h1>
+          <Heading>お問い合わせ</Heading>
           <p className={styles.subtitle}>まだ依頼が決まっていなくても大丈夫。相談・見積りだけでもお気軽にどうぞ。</p>
         </div>
 

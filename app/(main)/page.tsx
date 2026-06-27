@@ -35,7 +35,7 @@ export default async function Page() {
   <section className="relative">
       <Main works={worksData.contents} />
       <Suspense fallback={null}>
-        <Contact />
+        <Contact headingLevel="h2" />
       </Suspense>
   </section>
   );

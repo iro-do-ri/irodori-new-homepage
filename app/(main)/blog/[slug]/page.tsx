@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
   const title = `${post.title}｜千葉県船橋のホームページ制作 イロドリ`;
   const url = `https://iro-do-ri.jp/blog/${slug}`;
+  const imageUrl = post.image ?? "/og-image.png";
   return {
     title: { absolute: title },
     description: post.description,
@@ -28,13 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description: post.description,
       url,
-      images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+      images: [{ url: imageUrl, width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: post.description,
-      images: ["/og-image.png"],
+      images: [imageUrl],
     },
     robots: post.noindex ? { index: false, follow: false } : { index: true, follow: true },
   };
@@ -57,6 +58,10 @@ export default async function BlogPostPage({ params }: Props) {
         day: "2-digit",
       })
     : "";
+  const hasInlineEyecatch = post.contentHtml.trimStart().startsWith('<div style="display:flex');
+  const structuredImage = post.image?.startsWith("http")
+    ? post.image
+    : `https://iro-do-ri.jp${post.image ?? "/og-image.png"}`;
 
   return (
     <section className="flex">
@@ -99,6 +104,7 @@ export default async function BlogPostPage({ params }: Props) {
           },
           url: `https://iro-do-ri.jp/blog/${slug}`,
           mainEntityOfPage: { "@type": "WebPage", "@id": `https://iro-do-ri.jp/blog/${slug}` },
+          image: structuredImage,
         }) }} />
 
         {/* ── ナビバー（戻るのみ） ── */}
@@ -120,7 +126,7 @@ export default async function BlogPostPage({ params }: Props) {
                 )}
               </div>
             );
-            if (html.startsWith('<div style="display:flex')) {
+            if (hasInlineEyecatch) {
               const closingIndex = html.indexOf('</div>') + '</div>'.length;
               const eyecatchHtml = html.slice(0, closingIndex);
               const restHtml = html.slice(closingIndex);
@@ -137,6 +143,18 @@ export default async function BlogPostPage({ params }: Props) {
               <>
                 {meta}
                 <h1 className={styles.articleTitle}>{post.title}</h1>
+                {post.image && (
+                  <figure className={styles.articleImageWrap}>
+                    <Image
+                      src={post.image}
+                      alt={post.imageAlt ?? `${post.title}のイメージ`}
+                      width={768}
+                      height={384}
+                      className={styles.articleImage}
+                      priority
+                    />
+                  </figure>
+                )}
                 <div dangerouslySetInnerHTML={{ __html: html }} />
               </>
             );

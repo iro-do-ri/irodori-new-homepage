@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { URL } from "../url/Url";
 import { getAllPosts } from "../lib/posts";
@@ -107,6 +108,7 @@ export default async function BlogPage({
             headline: post.title,
             url: `https://iro-do-ri.jp/blog/${post.slug}`,
             datePublished: post.date ?? new Date().toISOString(),
+            image: post.image?.startsWith("http") ? post.image : `https://iro-do-ri.jp${post.image}`,
           })),
         }) }} />
 
@@ -137,6 +139,16 @@ export default async function BlogPage({
               <div className={styles.grid}>
                 {posts.map((post) => (
                   <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
+                    {post.image && (
+                      <div className={styles.cardImage}>
+                        <Image
+                          src={post.image}
+                          alt={post.imageAlt ?? `${post.title}のイメージ`}
+                          fill
+                          sizes="(max-width: 639px) 100vw, (max-width: 900px) 50vw, 33vw"
+                        />
+                      </div>
+                    )}
                     <div className={styles.cardBody}>
                       <div className={styles.cardMeta}>
                         <span className={styles.cardCategory}>{post.category}</span>

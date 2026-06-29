@@ -85,6 +85,21 @@
     letter-spacing: 0.03em;
 }
 
+.articleImageWrap {
+    margin: 0 0 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(5, 8, 40, 0.04);
+    box-shadow: 0 12px 28px -20px rgba(5, 8, 40, 0.35);
+}
+
+.articleImage {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .article {
     padding: 0 2rem clamp(2.5rem, 5vw, 4rem);
     max-width: 768px;
@@ -120,6 +135,13 @@
             line-height: 1.6;
             color: rgba(5, 8, 40, 0.75);
             margin-bottom: 1.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 12px 28px -20px rgba(5, 8, 40, 0.35);
         }
 
         ul {

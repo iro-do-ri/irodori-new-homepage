@@ -149,4 +149,9 @@ slug: "inshokuten-homepage-seisaku"
 
 「何から始めればいいかわからない」という段階でも、まずはお気軽にご相談ください。ご予算・ご要望に合わせてプランをご提案します。
 
+## 関連記事
+
+- [整骨院・治療院のホームページ制作｜新規患者を増やすサイトの作り方](/blog/seikotsuin-homepage-seisaku)
+- [美容室・サロンのホームページ制作で必要なこと](/blog/beauty-salon-homepage-seisaku)
+
 [無料相談はこちら](/contact) | [料金プランを見る](/price)

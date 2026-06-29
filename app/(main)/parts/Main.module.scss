@@ -1051,6 +1051,16 @@
   margin-top: 0.5rem;
 }
 
+// 業種別お役立ち記事 — columnSection
+.columnSection {
+  @include mirrorSection("COLUMN");
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.columnSectionInner {
+  @include mirrorSectionInner;
+}
+
 // SEOテキストセクション
 .seoText {
   position: relative;

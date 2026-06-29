@@ -149,4 +149,10 @@ slug: "seikotsuin-homepage-seisaku"
 
 「どんなサイトにすればいいかわからない」という段階でも、まずはお気軽にご相談ください。ご予算・ご要望に合わせてプランをご提案します。
 
+## 関連記事
+
+- [千葉の整骨院がホームページで新患を増やす方法](/blog/chiba-seikotsuin-homepage-shukyaku)
+- [飲食店のホームページ制作｜集客につながるサイトの作り方](/blog/inshokuten-homepage-seisaku)
+- [美容室・サロンのホームページ制作で必要なこと](/blog/beauty-salon-homepage-seisaku)
+
 [無料相談はこちら](/contact) | [料金プランを見る](/price)

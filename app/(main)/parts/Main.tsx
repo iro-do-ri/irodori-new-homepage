@@ -392,6 +392,41 @@ export default function Main({ works }: { works: Work[] }) {
         </div>
       </section>
 
+      {/* ── 業種別お役立ち記事 ── */}
+      <section className={styles.columnSection}>
+        <div className={styles.columnSectionInner}>
+          <span className={styles.curtainEyebrow}>USEFUL ARTICLES</span>
+          <h2 className="mb-3">千葉県船橋｜業種別ホームページのお役立ち記事</h2>
+          <p className="mb-10 opacity-60 text-sm leading-relaxed">
+            船橋・千葉エリアの業種別に、集客につながるホームページの作り方を解説しています。<br className="hidden sm:block" />
+            飲食店・整骨院・美容室・士業など、あなたの業種に近い記事からご覧ください。
+          </p>
+          <div className={styles.areaGrid}>
+            {[
+              { label: "RESTAURANT", title: "飲食店のホームページ制作", desc: "写真・メニュー・予約導線で集客につなげる飲食店サイトの作り方。", href: "/blog/inshokuten-homepage-seisaku" },
+              { label: "CLINIC", title: "整骨院・治療院のホームページ制作", desc: "症状訴求と信頼設計で新規患者を増やす整骨院サイトの基本。", href: "/blog/seikotsuin-homepage-seisaku" },
+              { label: "HAIR SALON", title: "美容室・サロンのホームページ制作", desc: "世界観・予約・採用まで、集客できる美容室サイトのポイント。", href: "/blog/beauty-salon-homepage-seisaku" },
+              { label: "CLINIC × CHIBA", title: "千葉の整骨院｜新患を増やす方法", desc: "地域SEOとMEO連携で千葉の整骨院の新患を増やす実践法。", href: "/blog/chiba-seikotsuin-homepage-shukyaku" },
+              { label: "SALON × TSUDANUMA", title: "津田沼の美容室｜押さえる5つのこと", desc: "ホットペッパー脱却と採用に効く津田沼サロンのHP戦略。", href: "/blog/tsudanuma-biyoshitsu-homepage" },
+              { label: "TAX & LEGAL × KAMAGAYA", title: "鎌ヶ谷の士業｜HPの作り方", desc: "信頼・分野特化・地域SEOで相談を増やす士業サイトの作り方。", href: "/blog/kamagaya-shigyo-homepage" },
+            ].map((post) => (
+              <Link key={post.href} href={post.href} className={styles.areaCard} aria-label={`${post.title}の記事を読む`}>
+                <span className={styles.areaCardLabel}>{post.label}</span>
+                <p className={styles.areaCardTitle}>{post.title}</p>
+                <p className={styles.areaCardDesc}>{post.desc}</p>
+                <span className={styles.areaCardArrow}>記事を読む →</span>
+              </Link>
+            ))}
+          </div>
+          <div className="flex justify-center mt-10">
+            <Link href="/blog" className={`${styles.box_button} inline-block`} aria-label="ブログ一覧ページへ移動します">
+              <span className={`${styles.background_button} ${styles.other_button}`}></span>
+              <span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>お役立ち記事をすべて見る</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.seoText}>
         <div className={styles.seoTextInner}>
           <h2 className={styles.seoTextTitle}>千葉県船橋のホームページ制作はイロドリへ</h2>

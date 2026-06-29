@@ -282,69 +282,6 @@ export default function Main({ works }: { works: Work[] }) {
         </div>
       </section>
 
-      {/* ── 選ばれる理由 ── */}
-      <section className={styles.features}>
-        <div className={styles.featuresInner}>
-          <h2 className={styles.secTitle}>
-            千葉県船橋のホームページ制作なら<br />
-            イロドリが選ばれる理由
-          </h2>
-          <div className={styles.featuresGrid}>
-            {[
-              { num: "01", title: "地域名・業種名を意識したSEO設計", body: "船橋・津田沼・八千代など、地域で探される検索キーワードをもとにページ構成を設計します。" },
-              { num: "02", title: "自分で更新できるWordPress構築", body: "お知らせ・ブログ・実績を自社で更新できるようにし、公開後の運用まで見据えて制作します。" },
-              { num: "03", title: "10万円から始められる明朗な料金", body: "開業直後や小規模事業でも導入しやすい価格から、目的に合わせたプランを選べます。" },
-              { num: "04", title: "相談から公開後まで一貫対応", body: "ヒアリング、デザイン、構築、公開後の修正まで、担当者が変わらず丁寧に対応します。" },
-            ].map((f) => (
-              <div key={f.num} className={styles.featureCard} data-num={f.num}>
-                <span className={styles.featureNum}>{f.num}</span>
-                <h3 className={styles.featureTitle}>{f.title}</h3>
-                <p className={styles.featureBody}>{f.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 制作の流れ ── */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "HowTo",
-        name: "千葉県船橋のホームページ制作の流れ",
-        description: "イロドリのホームページ制作は無料相談から公開後のサポートまで4ステップでご対応します。",
-        step: [
-          { "@type": "HowToStep", position: 1, name: "無料相談・ヒアリング", text: "目的・予算・スケジュールなどを丁寧にヒアリングします。まずはお気軽にご連絡ください。" },
-          { "@type": "HowToStep", position: 2, name: "提案・お見積もり", text: "ヒアリング内容をもとに最適なプランと詳細なお見積もりをご提示します。" },
-          { "@type": "HowToStep", position: 3, name: "デザイン・開発", text: "ブランドイメージに合ったオリジナルデザインを制作。確認・修正を重ねて仕上げます。" },
-          { "@type": "HowToStep", position: 4, name: "公開・アフターサポート", text: "サイト公開後も修正対応・SEO分析・操作説明で長期的にバックアップします。" },
-        ],
-      }) }} />
-      <section className={styles.process}>
-        <div className={styles.processInner}>
-          <h2 className={styles.secTitle}>ホームページ制作の流れ</h2>
-          <p className={styles.secDesc}>
-            無料相談から公開後のサポートまで、<br className="hidden sm:block" />
-            千葉県船橋のホームページ制作会社イロドリが丁寧にサポートします。
-          </p>
-          <div className={styles.processSteps}>
-            {[
-              { step: "01", title: "無料相談・ヒアリング", desc: "目的・予算・スケジュールなどを丁寧にヒアリングします。まずはお気軽にご連絡ください。" },
-              { step: "02", title: "提案・お見積もり", desc: "ヒアリング内容をもとに最適なプランと詳細なお見積もりをご提示します。" },
-              { step: "03", title: "デザイン・開発", desc: "ブランドイメージに合ったオリジナルデザインを制作。確認・修正を重ねて仕上げます。" },
-              { step: "04", title: "公開・アフターサポート", desc: "サイト公開後も修正対応・SEO分析・操作説明で長期的にバックアップします。" },
-            ].map((item) => (
-              <div key={item.step} className={styles.processStep}>
-                <span className={styles.processNum}>{item.step}</span>
-                <div className={styles.processContent}>
-                  <h3 className={styles.processStepTitle}>{item.title}</h3>
-                  <p className={styles.processStepDesc}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── 対応エリア ── */}
       <section className={styles.areaSection}>
         <div className={styles.areaSectionInner}>
@@ -423,6 +360,69 @@ export default function Main({ works }: { works: Work[] }) {
               <span className={`${styles.background_button} ${styles.other_button}`}></span>
               <span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>お役立ち記事をすべて見る</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 選ばれる理由 ── */}
+      <section className={styles.features}>
+        <div className={styles.featuresInner}>
+          <h2 className={styles.secTitle}>
+            千葉県船橋のホームページ制作なら<br />
+            イロドリが選ばれる理由
+          </h2>
+          <div className={styles.featuresGrid}>
+            {[
+              { num: "01", title: "地域名・業種名を意識したSEO設計", body: "船橋・津田沼・八千代など、地域で探される検索キーワードをもとにページ構成を設計します。" },
+              { num: "02", title: "自分で更新できるWordPress構築", body: "お知らせ・ブログ・実績を自社で更新できるようにし、公開後の運用まで見据えて制作します。" },
+              { num: "03", title: "10万円から始められる明朗な料金", body: "開業直後や小規模事業でも導入しやすい価格から、目的に合わせたプランを選べます。" },
+              { num: "04", title: "相談から公開後まで一貫対応", body: "ヒアリング、デザイン、構築、公開後の修正まで、担当者が変わらず丁寧に対応します。" },
+            ].map((f) => (
+              <div key={f.num} className={styles.featureCard} data-num={f.num}>
+                <span className={styles.featureNum}>{f.num}</span>
+                <h3 className={styles.featureTitle}>{f.title}</h3>
+                <p className={styles.featureBody}>{f.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 制作の流れ ── */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: "千葉県船橋のホームページ制作の流れ",
+        description: "イロドリのホームページ制作は無料相談から公開後のサポートまで4ステップでご対応します。",
+        step: [
+          { "@type": "HowToStep", position: 1, name: "無料相談・ヒアリング", text: "目的・予算・スケジュールなどを丁寧にヒアリングします。まずはお気軽にご連絡ください。" },
+          { "@type": "HowToStep", position: 2, name: "提案・お見積もり", text: "ヒアリング内容をもとに最適なプランと詳細なお見積もりをご提示します。" },
+          { "@type": "HowToStep", position: 3, name: "デザイン・開発", text: "ブランドイメージに合ったオリジナルデザインを制作。確認・修正を重ねて仕上げます。" },
+          { "@type": "HowToStep", position: 4, name: "公開・アフターサポート", text: "サイト公開後も修正対応・SEO分析・操作説明で長期的にバックアップします。" },
+        ],
+      }) }} />
+      <section className={styles.process}>
+        <div className={styles.processInner}>
+          <h2 className={styles.secTitle}>ホームページ制作の流れ</h2>
+          <p className={styles.secDesc}>
+            無料相談から公開後のサポートまで、<br className="hidden sm:block" />
+            千葉県船橋のホームページ制作会社イロドリが丁寧にサポートします。
+          </p>
+          <div className={styles.processSteps}>
+            {[
+              { step: "01", title: "無料相談・ヒアリング", desc: "目的・予算・スケジュールなどを丁寧にヒアリングします。まずはお気軽にご連絡ください。" },
+              { step: "02", title: "提案・お見積もり", desc: "ヒアリング内容をもとに最適なプランと詳細なお見積もりをご提示します。" },
+              { step: "03", title: "デザイン・開発", desc: "ブランドイメージに合ったオリジナルデザインを制作。確認・修正を重ねて仕上げます。" },
+              { step: "04", title: "公開・アフターサポート", desc: "サイト公開後も修正対応・SEO分析・操作説明で長期的にバックアップします。" },
+            ].map((item) => (
+              <div key={item.step} className={styles.processStep}>
+                <span className={styles.processNum}>{item.step}</span>
+                <div className={styles.processContent}>
+                  <h3 className={styles.processStepTitle}>{item.title}</h3>
+                  <p className={styles.processStepDesc}>{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

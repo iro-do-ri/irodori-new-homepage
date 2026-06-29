@@ -91,6 +91,11 @@
     margin: 0 auto;
     letter-spacing: 0.05em;
 
+    @include sm {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     :global {
         h2 {
             font-size: clamp(18px, 2.5vw, 26px);

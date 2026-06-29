@@ -224,6 +224,11 @@
     margin: 0 auto;
     padding: 1.25rem 2rem;
     border-bottom: 1px solid rgba(5, 8, 40, 0.07);
+
+    @include sm {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .backLink {

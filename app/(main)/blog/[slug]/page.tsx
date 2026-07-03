@@ -196,9 +196,13 @@ export default async function BlogPostPage({ params }: Props) {
           </h2>
           <p className={styles.ctaDesc}>
             まずはお気軽にご相談ください。<br />
-            要件整理から提案・見積まで、無料でご対応しています。
+            要件整理から提案・見積まで、無料でご対応しています。<br />
+            すでにホームページをお持ちの方には、改善ポイントをまとめてお渡しする「無料診断」も行っています。
           </p>
-          <Link href="/contact" className={`${styles.box_button} inline-block`} aria-label="無料相談ページへ移動します"><span className={`${styles.background_button} ${styles.contact_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料で相談してみる</span></Link>
+          <div className={styles.ctaButtons}>
+            <Link href="/contact" className={`${styles.box_button} inline-block`} aria-label="無料相談ページへ移動します"><span className={`${styles.background_button} ${styles.contact_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料で相談してみる</span></Link>
+            <Link href={`/contact?plan=${encodeURIComponent("無料診断")}`} className={`${styles.box_button} inline-block`} aria-label="ホームページ無料診断を申し込む"><span className={`${styles.background_button} ${styles.diagnosis_button}`}></span><span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>ホームページ無料診断</span></Link>
+          </div>
         </div>
       </div>
     </section>

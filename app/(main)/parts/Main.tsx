@@ -233,6 +233,32 @@ export default function Main({ works }: { works: Work[] }) {
         </div>
       </section>
 
+      {/* ── ホームページ無料診断 ── */}
+      <section className={styles.diagnosis}>
+        <div className={styles.diagnosisInner}>
+          <div className={styles.diagnosisBadgeWrap}>
+            <span className={styles.diagnosisBadge}>費用0円・営業なし</span>
+          </div>
+          <p className={styles.diagnosisTarget}>「今のホームページ、なぜ問い合わせが来ないんだろう？」とお悩みの方へ</p>
+          <h2 className={styles.diagnosisTitle}>
+            ホームページ<em className={styles.diagnosisEm}>無料診断</em>、やっています。
+          </h2>
+          <p className={styles.diagnosisDesc}>
+            現在お使いのホームページを拝見し、デザイン・SEO・問い合わせ導線の<br className="hidden sm:block" />
+            改善ポイントをまとめてお伝えします。診断結果だけ受け取っていただいてもOKです。
+          </p>
+          <ul className={styles.diagnosisPoints}>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>完全無料・しつこい営業なし</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>オンラインで完結</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>URLを送るだけでOK</li>
+          </ul>
+          <Link href={`${URL.Contact}?plan=${encodeURIComponent("無料診断")}`} className={`${styles.box_button} inline-block`} aria-label="ホームページ無料診断を申し込む">
+            <span className={`${styles.background_button} ${styles.campaign_button}`}></span>
+            <span className={`${styles.contents_button} sm:px-12 px-6 sm:py-6 py-3 inline-block`}>無料診断を申し込む</span>
+          </Link>
+        </div>
+      </section>
+
       {/* ── ホームページデザイン制作 ── */}
       <section className={`${styles.webSection} relative`}>
         <div className={styles.webSectionInner}>

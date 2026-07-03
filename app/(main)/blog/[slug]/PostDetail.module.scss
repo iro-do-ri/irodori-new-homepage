@@ -284,6 +284,17 @@
     background-color: var(--contactcolor);
 }
 
+.diagnosis_button {
+    background-color: #3364ae;
+}
+
+.ctaButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+}
+
 .box_button {
     position: relative;
     border-radius: 50rem;

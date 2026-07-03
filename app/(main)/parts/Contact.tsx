@@ -3,6 +3,7 @@
 import styles from "./Contact.module.scss";
 import { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
+import { LINE_URL } from "../url/Url";
 
 export default function Contact({ headingLevel = "h1" }: { headingLevel?: "h1" | "h2" }) {
   const Heading = headingLevel;
@@ -33,7 +34,12 @@ export default function Contact({ headingLevel = "h1" }: { headingLevel?: "h1" |
 
   useEffect(() => {
     const plan = searchParams.get("plan");
-    if (plan) {
+    if (plan === "無料診断") {
+      setForm((prev) => ({
+        ...prev,
+        message: "【ホームページ無料診断を希望】\n診断してほしいホームページのURL：\n特に気になっていること（任意）：\n",
+      }));
+    } else if (plan) {
       setForm((prev) => ({ ...prev, message: `【${plan}】について相談したいです。\n\n` }));
     }
   }, [searchParams]);
@@ -78,6 +84,18 @@ export default function Contact({ headingLevel = "h1" }: { headingLevel?: "h1" |
           <span className={styles.en}>Contact</span>
           <Heading>お問い合わせ</Heading>
           <p className={styles.subtitle}>まだ依頼が決まっていなくても大丈夫。相談・見積りだけでもお気軽にどうぞ。</p>
+          {LINE_URL && (
+            <a
+              href={LINE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.lineButton}
+              aria-label="LINEで気軽に相談する"
+            >
+              <span className={styles.lineBadge}>LINE</span>
+              LINEで気軽に相談する
+            </a>
+          )}
         </div>
 
         <div className={styles.form}>

@@ -380,6 +380,12 @@ export default function Main({ works }: { works: Work[] }) {
                 <span className={styles.areaCardArrow}>記事を読む →</span>
               </Link>
             ))}
+            <Link href="/blog/chiba-homepage-seisaku-complete-guide" className={styles.areaCard} style={{ gridColumn: "1 / -1" }} aria-label="千葉のホームページ制作完全ガイドを読む">
+              <span className={styles.areaCardLabel}>CHIBA COMPLETE GUIDE</span>
+              <p className={styles.areaCardTitle}>千葉のホームページ制作完全ガイド【2026年版】</p>
+              <p className={styles.areaCardDesc}>費用相場・制作会社の選び方・フリーランスへの依頼まで、千葉でホームページを作る前に知っておきたいことを1ページに総まとめしました。</p>
+              <span className={styles.areaCardArrow}>記事を読む →</span>
+            </Link>
           </div>
           <div className="flex justify-center mt-10">
             <Link href="/blog" className={`${styles.box_button} inline-block`} aria-label="ブログ一覧ページへ移動します">
